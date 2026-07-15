@@ -1,0 +1,1001 @@
+transaction_id,customer_id,scenario_id,scenario_name,injected_flag,expected_risk,notes,scenario_group_id
+TXN0000129275,CUS0001544,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0001
+TXN0000195151,CUS0006926,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0001
+TXN0000076930,CUS0002138,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0001
+TXN0000196541,CUS0008852,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0001
+TXN0000050070,CUS0003061,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0002
+TXN0000085002,CUS0007064,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0002
+TXN0000084878,CUS0009622,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0002
+TXN0000118557,CUS0002146,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0002
+TXN0000072857,CUS0004915,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0003
+TXN0000237520,CUS0005809,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0003
+TXN0000139252,CUS0002644,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0003
+TXN0000220729,CUS0003290,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0003
+TXN0000239899,CUS0001658,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0004
+TXN0000062340,CUS0000915,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0004
+TXN0000014957,CUS0000214,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0004
+TXN0000078809,CUS0005383,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0004
+TXN0000107748,CUS0009771,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0005
+TXN0000034536,CUS0003498,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0005
+TXN0000021086,CUS0001817,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0005
+TXN0000067477,CUS0001807,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0005
+TXN0000067703,CUS0001330,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0006
+TXN0000012162,CUS0007760,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0006
+TXN0000191880,CUS0003715,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0006
+TXN0000127738,CUS0001415,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0006
+TXN0000206096,CUS0009620,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0007
+TXN0000048538,CUS0001028,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0007
+TXN0000124112,CUS0002368,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0007
+TXN0000030144,CUS0002759,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0007
+TXN0000084231,CUS0008832,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0008
+TXN0000230845,CUS0009697,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0008
+TXN0000211850,CUS0008423,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0008
+TXN0000095124,CUS0007381,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0008
+TXN0000027086,CUS0006743,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0009
+TXN0000180751,CUS0004032,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0009
+TXN0000212774,CUS0006194,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0009
+TXN0000157850,CUS0005264,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0009
+TXN0000023712,CUS0004541,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0010
+TXN0000082061,CUS0009909,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0010
+TXN0000045628,CUS0006664,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0010
+TXN0000038509,CUS0005349,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0010
+TXN0000007365,CUS0001016,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0011
+TXN0000135732,CUS0003701,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0011
+TXN0000200149,CUS0002478,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0011
+TXN0000115633,CUS0005375,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0011
+TXN0000038060,CUS0001393,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0012
+TXN0000059185,CUS0006464,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0012
+TXN0000076849,CUS0003971,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0012
+TXN0000144602,CUS0002620,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0012
+TXN0000020974,CUS0005882,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0013
+TXN0000224192,CUS0007049,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0013
+TXN0000000514,CUS0000463,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0013
+TXN0000181267,CUS0002934,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0013
+TXN0000225259,CUS0009859,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0014
+TXN0000234985,CUS0004934,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0014
+TXN0000101667,CUS0002088,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0014
+TXN0000106644,CUS0007986,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0014
+TXN0000196359,CUS0002736,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0015
+TXN0000057126,CUS0004011,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0015
+TXN0000003034,CUS0002831,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0015
+TXN0000205254,CUS0004013,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0015
+TXN0000061352,CUS0006053,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0016
+TXN0000121054,CUS0006860,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0016
+TXN0000129098,CUS0009172,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0016
+TXN0000036443,CUS0001362,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0016
+TXN0000141476,CUS0007433,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0017
+TXN0000028608,CUS0007936,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0017
+TXN0000101742,CUS0004871,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0017
+TXN0000058818,CUS0007320,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0017
+TXN0000243731,CUS0000346,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0018
+TXN0000020921,CUS0007086,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0018
+TXN0000085686,CUS0003136,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0018
+TXN0000031741,CUS0001981,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0018
+TXN0000149563,CUS0009342,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0019
+TXN0000038796,CUS0001745,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0019
+TXN0000063731,CUS0009757,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0019
+TXN0000188408,CUS0009898,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0019
+TXN0000067307,CUS0008739,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0020
+TXN0000225695,CUS0007761,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0020
+TXN0000193565,CUS0008875,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0020
+TXN0000094829,CUS0001953,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0020
+TXN0000004957,CUS0008090,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0021
+TXN0000050046,CUS0002393,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0021
+TXN0000141857,CUS0005579,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0021
+TXN0000098585,CUS0003864,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0021
+TXN0000090692,CUS0009268,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0022
+TXN0000062768,CUS0005805,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0022
+TXN0000088515,CUS0009008,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0022
+TXN0000004001,CUS0000739,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0022
+TXN0000197102,CUS0007781,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0023
+TXN0000092607,CUS0005625,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0023
+TXN0000096194,CUS0007344,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0023
+TXN0000221199,CUS0000955,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0023
+TXN0000136043,CUS0003875,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0024
+TXN0000136846,CUS0000388,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0024
+TXN0000069720,CUS0003982,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0024
+TXN0000098694,CUS0006154,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0024
+TXN0000158427,CUS0001121,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0025
+TXN0000034330,CUS0004887,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0025
+TXN0000079841,CUS0003185,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0025
+TXN0000178111,CUS0003396,AML-S01,Structuring / Smurfing,1,High,Synthetic injection for Structuring / Smurfing.,AML-S01-GRP-0025
+TXN0000144919,CUS0002812,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0001
+TXN0000005505,CUS0008986,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0001
+TXN0000231231,CUS0004200,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0001
+TXN0000224047,CUS0001341,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0001
+TXN0000149107,CUS0003226,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0002
+TXN0000202622,CUS0005238,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0002
+TXN0000046333,CUS0003912,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0002
+TXN0000122828,CUS0006479,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0002
+TXN0000182326,CUS0000039,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0003
+TXN0000074470,CUS0005993,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0003
+TXN0000186868,CUS0004962,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0003
+TXN0000101693,CUS0009407,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0003
+TXN0000158769,CUS0003134,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0004
+TXN0000241300,CUS0001985,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0004
+TXN0000147454,CUS0009147,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0004
+TXN0000221033,CUS0008842,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0004
+TXN0000192122,CUS0007030,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0005
+TXN0000040895,CUS0006690,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0005
+TXN0000181589,CUS0004677,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0005
+TXN0000175375,CUS0000451,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0005
+TXN0000059278,CUS0007178,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0006
+TXN0000007266,CUS0004989,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0006
+TXN0000183963,CUS0003027,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0006
+TXN0000201115,CUS0003222,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0006
+TXN0000150356,CUS0009991,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0007
+TXN0000065854,CUS0008381,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0007
+TXN0000230032,CUS0002435,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0007
+TXN0000072860,CUS0004559,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0007
+TXN0000139265,CUS0008779,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0008
+TXN0000057969,CUS0007435,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0008
+TXN0000115309,CUS0001565,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0008
+TXN0000164246,CUS0006112,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0008
+TXN0000242081,CUS0009754,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0009
+TXN0000137671,CUS0002477,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0009
+TXN0000099963,CUS0003704,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0009
+TXN0000161013,CUS0000504,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0009
+TXN0000053960,CUS0009072,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0010
+TXN0000136277,CUS0006597,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0010
+TXN0000247361,CUS0000334,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0010
+TXN0000008541,CUS0000745,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0010
+TXN0000116261,CUS0006615,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0011
+TXN0000037549,CUS0005836,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0011
+TXN0000059602,CUS0009252,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0011
+TXN0000248409,CUS0005622,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0011
+TXN0000106963,CUS0008979,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0012
+TXN0000108769,CUS0004106,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0012
+TXN0000126470,CUS0003054,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0012
+TXN0000013247,CUS0008138,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0012
+TXN0000174771,CUS0000424,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0013
+TXN0000057048,CUS0001306,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0013
+TXN0000116046,CUS0004938,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0013
+TXN0000103833,CUS0004789,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0013
+TXN0000200606,CUS0002823,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0014
+TXN0000131289,CUS0002854,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0014
+TXN0000232744,CUS0000226,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0014
+TXN0000193351,CUS0003240,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0014
+TXN0000078047,CUS0003847,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0015
+TXN0000057161,CUS0009385,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0015
+TXN0000120749,CUS0001935,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0015
+TXN0000210667,CUS0004242,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0015
+TXN0000040720,CUS0008997,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0016
+TXN0000169065,CUS0009506,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0016
+TXN0000073846,CUS0007307,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0016
+TXN0000218875,CUS0003014,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0016
+TXN0000198393,CUS0006739,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0017
+TXN0000064726,CUS0005854,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0017
+TXN0000029777,CUS0008858,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0017
+TXN0000203232,CUS0006586,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0017
+TXN0000128124,CUS0006807,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0018
+TXN0000086845,CUS0004575,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0018
+TXN0000220733,CUS0004105,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0018
+TXN0000066447,CUS0003891,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0018
+TXN0000137081,CUS0009121,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0019
+TXN0000149613,CUS0008456,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0019
+TXN0000200102,CUS0000088,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0019
+TXN0000199950,CUS0005494,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0019
+TXN0000002312,CUS0000411,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0020
+TXN0000098539,CUS0002638,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0020
+TXN0000164613,CUS0007960,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0020
+TXN0000032508,CUS0001367,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0020
+TXN0000152554,CUS0003599,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0021
+TXN0000124952,CUS0001821,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0021
+TXN0000048109,CUS0007964,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0021
+TXN0000156999,CUS0003095,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0021
+TXN0000157252,CUS0008988,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0022
+TXN0000223582,CUS0002192,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0022
+TXN0000049022,CUS0006791,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0022
+TXN0000235139,CUS0000323,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0022
+TXN0000040926,CUS0005520,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0023
+TXN0000060665,CUS0004962,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0023
+TXN0000010635,CUS0003692,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0023
+TXN0000030888,CUS0009247,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0023
+TXN0000249640,CUS0007281,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0024
+TXN0000019113,CUS0006874,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0024
+TXN0000038109,CUS0004426,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0024
+TXN0000245156,CUS0003945,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0024
+TXN0000071905,CUS0001695,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0025
+TXN0000236387,CUS0003702,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0025
+TXN0000198298,CUS0005166,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0025
+TXN0000144892,CUS0005805,AML-S02,Sudden Transaction Spike,1,High,Synthetic injection for Sudden Transaction Spike.,AML-S02-GRP-0025
+TXN0000242475,CUS0000062,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0001
+TXN0000093579,CUS0009051,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0001
+TXN0000058719,CUS0006028,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0001
+TXN0000225410,CUS0006691,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0001
+TXN0000109569,CUS0004697,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0002
+TXN0000220844,CUS0009218,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0002
+TXN0000117487,CUS0008412,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0002
+TXN0000107754,CUS0001907,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0002
+TXN0000071652,CUS0005781,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0003
+TXN0000110919,CUS0007152,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0003
+TXN0000233752,CUS0006778,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0003
+TXN0000153316,CUS0003053,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0003
+TXN0000000419,CUS0001158,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0004
+TXN0000034934,CUS0005153,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0004
+TXN0000171057,CUS0005854,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0004
+TXN0000171443,CUS0001584,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0004
+TXN0000004207,CUS0007284,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0005
+TXN0000077363,CUS0000412,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0005
+TXN0000096605,CUS0000828,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0005
+TXN0000176866,CUS0005692,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0005
+TXN0000189641,CUS0002037,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0006
+TXN0000227873,CUS0005017,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0006
+TXN0000054009,CUS0003113,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0006
+TXN0000034861,CUS0001029,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0006
+TXN0000048193,CUS0000886,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0007
+TXN0000037946,CUS0006666,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0007
+TXN0000206498,CUS0007182,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0007
+TXN0000046193,CUS0003319,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0007
+TXN0000185812,CUS0001757,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0008
+TXN0000104028,CUS0005917,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0008
+TXN0000182589,CUS0005423,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0008
+TXN0000193329,CUS0000833,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0008
+TXN0000160505,CUS0009582,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0009
+TXN0000230469,CUS0002625,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0009
+TXN0000167999,CUS0000484,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0009
+TXN0000137568,CUS0009008,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0009
+TXN0000180866,CUS0005936,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0010
+TXN0000137137,CUS0000722,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0010
+TXN0000056005,CUS0009572,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0010
+TXN0000053147,CUS0006262,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0010
+TXN0000049682,CUS0001226,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0011
+TXN0000118019,CUS0007123,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0011
+TXN0000226373,CUS0002326,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0011
+TXN0000164090,CUS0007294,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0011
+TXN0000247764,CUS0005637,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0012
+TXN0000079738,CUS0005110,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0012
+TXN0000209455,CUS0003406,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0012
+TXN0000206799,CUS0003031,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0012
+TXN0000022026,CUS0006732,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0013
+TXN0000187075,CUS0001651,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0013
+TXN0000038806,CUS0009391,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0013
+TXN0000078221,CUS0002102,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0013
+TXN0000197852,CUS0005756,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0014
+TXN0000201028,CUS0003240,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0014
+TXN0000103709,CUS0005293,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0014
+TXN0000143649,CUS0006056,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0014
+TXN0000006345,CUS0002487,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0015
+TXN0000117756,CUS0006638,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0015
+TXN0000016231,CUS0002011,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0015
+TXN0000047205,CUS0008642,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0015
+TXN0000135171,CUS0008173,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0016
+TXN0000024970,CUS0008172,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0016
+TXN0000077205,CUS0005252,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0016
+TXN0000229038,CUS0000796,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0016
+TXN0000189599,CUS0009768,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0017
+TXN0000104263,CUS0007564,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0017
+TXN0000172677,CUS0008124,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0017
+TXN0000195544,CUS0002914,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0017
+TXN0000200807,CUS0000173,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0018
+TXN0000112278,CUS0006184,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0018
+TXN0000000065,CUS0004069,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0018
+TXN0000174210,CUS0008091,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0018
+TXN0000247641,CUS0004319,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0019
+TXN0000133098,CUS0000843,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0019
+TXN0000091748,CUS0006871,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0019
+TXN0000098094,CUS0002842,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0019
+TXN0000118956,CUS0003747,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0020
+TXN0000160436,CUS0001752,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0020
+TXN0000204221,CUS0001907,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0020
+TXN0000137247,CUS0008424,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0020
+TXN0000140643,CUS0003944,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0021
+TXN0000221895,CUS0009886,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0021
+TXN0000235782,CUS0007559,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0021
+TXN0000236620,CUS0005213,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0021
+TXN0000004528,CUS0009758,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0022
+TXN0000131384,CUS0006433,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0022
+TXN0000048905,CUS0007084,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0022
+TXN0000199339,CUS0000386,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0022
+TXN0000034728,CUS0001261,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0023
+TXN0000059922,CUS0008418,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0023
+TXN0000023756,CUS0004368,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0023
+TXN0000235273,CUS0006076,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0023
+TXN0000042818,CUS0006750,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0024
+TXN0000003116,CUS0000979,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0024
+TXN0000016232,CUS0009928,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0024
+TXN0000077359,CUS0005114,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0024
+TXN0000044194,CUS0008800,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0025
+TXN0000079540,CUS0005856,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0025
+TXN0000225858,CUS0000818,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0025
+TXN0000168678,CUS0007614,AML-S03,Rapid Movement of Funds,1,Critical,Synthetic injection for Rapid Movement of Funds.,AML-S03-GRP-0025
+TXN0000207511,CUS0002937,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0001
+TXN0000201884,CUS0004208,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0001
+TXN0000076613,CUS0006203,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0001
+TXN0000231685,CUS0005624,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0001
+TXN0000162515,CUS0007289,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0002
+TXN0000152963,CUS0006512,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0002
+TXN0000178442,CUS0003655,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0002
+TXN0000123760,CUS0006312,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0002
+TXN0000225663,CUS0005084,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0003
+TXN0000108620,CUS0009387,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0003
+TXN0000198432,CUS0001192,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0003
+TXN0000213723,CUS0004560,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0003
+TXN0000121971,CUS0000019,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0004
+TXN0000234564,CUS0002103,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0004
+TXN0000204544,CUS0001329,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0004
+TXN0000220253,CUS0007554,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0004
+TXN0000243706,CUS0002994,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0005
+TXN0000184190,CUS0006033,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0005
+TXN0000063253,CUS0006859,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0005
+TXN0000061286,CUS0004390,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0005
+TXN0000025712,CUS0005935,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0006
+TXN0000056879,CUS0002244,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0006
+TXN0000030520,CUS0001562,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0006
+TXN0000029656,CUS0005967,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0006
+TXN0000229579,CUS0001410,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0007
+TXN0000208737,CUS0000406,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0007
+TXN0000207713,CUS0002838,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0007
+TXN0000052723,CUS0007899,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0007
+TXN0000184957,CUS0009818,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0008
+TXN0000174826,CUS0007001,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0008
+TXN0000102709,CUS0002065,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0008
+TXN0000108601,CUS0007280,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0008
+TXN0000010458,CUS0007685,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0009
+TXN0000236662,CUS0001544,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0009
+TXN0000141546,CUS0006383,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0009
+TXN0000090229,CUS0004786,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0009
+TXN0000154969,CUS0008848,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0010
+TXN0000122432,CUS0005529,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0010
+TXN0000084582,CUS0006364,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0010
+TXN0000084021,CUS0007666,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0010
+TXN0000153670,CUS0002765,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0011
+TXN0000054907,CUS0007635,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0011
+TXN0000072114,CUS0007910,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0011
+TXN0000080544,CUS0008982,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0011
+TXN0000006545,CUS0005810,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0012
+TXN0000023301,CUS0003476,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0012
+TXN0000032724,CUS0006050,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0012
+TXN0000064044,CUS0002398,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0012
+TXN0000099411,CUS0007430,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0013
+TXN0000217540,CUS0005476,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0013
+TXN0000220946,CUS0006993,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0013
+TXN0000012258,CUS0001328,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0013
+TXN0000053391,CUS0005165,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0014
+TXN0000051828,CUS0002440,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0014
+TXN0000191306,CUS0003074,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0014
+TXN0000101280,CUS0003291,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0014
+TXN0000180096,CUS0009947,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0015
+TXN0000103911,CUS0002923,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0015
+TXN0000078676,CUS0008094,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0015
+TXN0000247725,CUS0004179,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0015
+TXN0000195654,CUS0008884,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0016
+TXN0000211172,CUS0002703,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0016
+TXN0000066120,CUS0007735,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0016
+TXN0000176933,CUS0007904,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0016
+TXN0000144134,CUS0002217,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0017
+TXN0000184436,CUS0000893,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0017
+TXN0000053907,CUS0001094,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0017
+TXN0000079253,CUS0009584,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0017
+TXN0000203500,CUS0006314,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0018
+TXN0000018186,CUS0004730,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0018
+TXN0000236403,CUS0007918,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0018
+TXN0000058956,CUS0006011,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0018
+TXN0000241122,CUS0001144,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0019
+TXN0000024068,CUS0000432,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0019
+TXN0000137667,CUS0001546,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0019
+TXN0000188341,CUS0007139,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0019
+TXN0000162588,CUS0004362,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0020
+TXN0000066704,CUS0005614,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0020
+TXN0000103494,CUS0005472,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0020
+TXN0000010956,CUS0005938,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0020
+TXN0000045913,CUS0007221,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0021
+TXN0000046359,CUS0003811,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0021
+TXN0000130102,CUS0007044,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0021
+TXN0000194589,CUS0000141,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0021
+TXN0000108233,CUS0005219,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0022
+TXN0000073698,CUS0001374,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0022
+TXN0000145613,CUS0004424,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0022
+TXN0000051042,CUS0000537,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0022
+TXN0000074105,CUS0004503,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0023
+TXN0000189114,CUS0000360,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0023
+TXN0000218857,CUS0006023,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0023
+TXN0000078225,CUS0006159,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0023
+TXN0000036050,CUS0000938,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0024
+TXN0000119422,CUS0002370,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0024
+TXN0000164020,CUS0000303,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0024
+TXN0000243777,CUS0001276,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0024
+TXN0000193602,CUS0008850,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0025
+TXN0000107732,CUS0000106,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0025
+TXN0000060024,CUS0007103,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0025
+TXN0000248311,CUS0009125,AML-S04,Dormant Account Reactivation,1,Critical,Synthetic injection for Dormant Account Reactivation.,AML-S04-GRP-0025
+TXN0000015615,CUS0003316,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0001
+TXN0000146695,CUS0006518,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0001
+TXN0000037462,CUS0007850,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0001
+TXN0000108672,CUS0009049,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0001
+TXN0000087412,CUS0007021,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0002
+TXN0000142077,CUS0000475,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0002
+TXN0000200040,CUS0001061,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0002
+TXN0000013656,CUS0003570,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0002
+TXN0000157289,CUS0005809,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0003
+TXN0000030675,CUS0001977,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0003
+TXN0000195656,CUS0009636,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0003
+TXN0000132408,CUS0005142,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0003
+TXN0000205359,CUS0009549,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0004
+TXN0000218535,CUS0001200,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0004
+TXN0000196455,CUS0001359,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0004
+TXN0000130073,CUS0007111,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0004
+TXN0000044933,CUS0000169,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0005
+TXN0000153061,CUS0009793,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0005
+TXN0000168019,CUS0006996,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0005
+TXN0000043997,CUS0001151,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0005
+TXN0000178677,CUS0004566,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0006
+TXN0000074933,CUS0008164,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0006
+TXN0000058693,CUS0003521,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0006
+TXN0000137644,CUS0002179,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0006
+TXN0000115349,CUS0001504,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0007
+TXN0000139324,CUS0009376,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0007
+TXN0000147844,CUS0008620,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0007
+TXN0000208526,CUS0003699,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0007
+TXN0000122109,CUS0009342,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0008
+TXN0000139174,CUS0009829,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0008
+TXN0000187892,CUS0005278,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0008
+TXN0000071433,CUS0004077,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0008
+TXN0000017648,CUS0006803,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0009
+TXN0000108885,CUS0003654,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0009
+TXN0000138711,CUS0007412,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0009
+TXN0000177675,CUS0000311,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0009
+TXN0000078543,CUS0003353,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0010
+TXN0000184106,CUS0000927,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0010
+TXN0000204910,CUS0000591,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0010
+TXN0000178912,CUS0001647,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0010
+TXN0000043052,CUS0005078,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0011
+TXN0000079483,CUS0008607,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0011
+TXN0000114094,CUS0003657,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0011
+TXN0000022700,CUS0002604,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0011
+TXN0000028903,CUS0006877,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0012
+TXN0000050684,CUS0002084,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0012
+TXN0000074543,CUS0009259,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0012
+TXN0000190441,CUS0004389,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0012
+TXN0000246305,CUS0005685,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0013
+TXN0000164995,CUS0000797,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0013
+TXN0000005545,CUS0005339,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0013
+TXN0000187065,CUS0003580,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0013
+TXN0000023072,CUS0009625,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0014
+TXN0000005017,CUS0006448,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0014
+TXN0000072630,CUS0006854,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0014
+TXN0000241680,CUS0008605,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0014
+TXN0000010054,CUS0008540,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0015
+TXN0000170676,CUS0009444,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0015
+TXN0000129707,CUS0004531,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0015
+TXN0000055555,CUS0002217,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0015
+TXN0000038194,CUS0000573,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0016
+TXN0000005459,CUS0009812,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0016
+TXN0000174069,CUS0009760,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0016
+TXN0000112860,CUS0009886,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0016
+TXN0000085760,CUS0006813,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0017
+TXN0000218773,CUS0006013,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0017
+TXN0000240624,CUS0003732,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0017
+TXN0000095759,CUS0000272,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0017
+TXN0000211474,CUS0008054,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0018
+TXN0000026120,CUS0001907,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0018
+TXN0000119835,CUS0009009,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0018
+TXN0000087390,CUS0004452,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0018
+TXN0000150468,CUS0008104,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0019
+TXN0000067951,CUS0000907,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0019
+TXN0000185026,CUS0007376,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0019
+TXN0000167454,CUS0005323,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0019
+TXN0000115898,CUS0009097,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0020
+TXN0000012933,CUS0007415,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0020
+TXN0000035358,CUS0001406,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0020
+TXN0000126717,CUS0005294,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0020
+TXN0000056512,CUS0005006,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0021
+TXN0000081404,CUS0008215,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0021
+TXN0000120567,CUS0007270,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0021
+TXN0000004253,CUS0007536,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0021
+TXN0000082133,CUS0002494,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0022
+TXN0000103573,CUS0000301,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0022
+TXN0000120595,CUS0004517,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0022
+TXN0000176717,CUS0004969,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0022
+TXN0000196117,CUS0005092,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0023
+TXN0000168978,CUS0006920,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0023
+TXN0000143732,CUS0008586,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0023
+TXN0000123582,CUS0002889,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0023
+TXN0000019274,CUS0002320,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0024
+TXN0000134823,CUS0003908,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0024
+TXN0000213969,CUS0009590,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0024
+TXN0000145687,CUS0008072,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0024
+TXN0000059376,CUS0006211,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0025
+TXN0000158666,CUS0001586,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0025
+TXN0000145088,CUS0000477,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0025
+TXN0000128168,CUS0003736,AML-S05,Multiple Senders to One Receiver,1,High,Synthetic injection for Multiple Senders to One Receiver.,AML-S05-GRP-0025
+TXN0000214899,CUS0001043,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0001
+TXN0000136491,CUS0004413,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0001
+TXN0000134668,CUS0001705,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0001
+TXN0000133749,CUS0008112,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0001
+TXN0000201739,CUS0002299,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0002
+TXN0000058874,CUS0005969,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0002
+TXN0000212959,CUS0001754,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0002
+TXN0000074299,CUS0009334,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0002
+TXN0000007970,CUS0001036,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0003
+TXN0000115528,CUS0006543,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0003
+TXN0000075415,CUS0002793,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0003
+TXN0000069208,CUS0004865,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0003
+TXN0000177314,CUS0001443,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0004
+TXN0000214340,CUS0003505,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0004
+TXN0000226528,CUS0003355,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0004
+TXN0000232708,CUS0000610,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0004
+TXN0000123002,CUS0003216,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0005
+TXN0000011814,CUS0006473,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0005
+TXN0000160991,CUS0009101,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0005
+TXN0000109938,CUS0000917,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0005
+TXN0000221888,CUS0000521,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0006
+TXN0000194964,CUS0008324,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0006
+TXN0000038751,CUS0004605,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0006
+TXN0000188763,CUS0001096,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0006
+TXN0000063059,CUS0004284,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0007
+TXN0000121243,CUS0006428,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0007
+TXN0000023983,CUS0005616,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0007
+TXN0000249532,CUS0003184,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0007
+TXN0000133853,CUS0009062,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0008
+TXN0000121386,CUS0004301,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0008
+TXN0000171091,CUS0004457,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0008
+TXN0000204979,CUS0008746,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0008
+TXN0000153753,CUS0003211,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0009
+TXN0000235508,CUS0001681,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0009
+TXN0000156173,CUS0002581,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0009
+TXN0000152677,CUS0000788,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0009
+TXN0000181154,CUS0006641,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0010
+TXN0000076714,CUS0009108,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0010
+TXN0000249279,CUS0001270,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0010
+TXN0000224448,CUS0003151,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0010
+TXN0000228029,CUS0003453,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0011
+TXN0000132379,CUS0006368,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0011
+TXN0000076391,CUS0009394,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0011
+TXN0000077657,CUS0006454,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0011
+TXN0000101132,CUS0001229,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0012
+TXN0000013838,CUS0005330,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0012
+TXN0000166249,CUS0007309,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0012
+TXN0000044929,CUS0005992,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0012
+TXN0000091016,CUS0002167,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0013
+TXN0000058607,CUS0006676,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0013
+TXN0000067285,CUS0002708,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0013
+TXN0000011323,CUS0003915,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0013
+TXN0000066782,CUS0001329,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0014
+TXN0000028997,CUS0008848,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0014
+TXN0000183854,CUS0006319,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0014
+TXN0000192873,CUS0005170,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0014
+TXN0000189876,CUS0009048,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0015
+TXN0000008131,CUS0002522,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0015
+TXN0000172599,CUS0008707,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0015
+TXN0000126534,CUS0002750,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0015
+TXN0000220954,CUS0004136,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0016
+TXN0000174520,CUS0004028,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0016
+TXN0000119968,CUS0008654,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0016
+TXN0000057104,CUS0006813,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0016
+TXN0000176597,CUS0007548,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0017
+TXN0000112442,CUS0004326,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0017
+TXN0000214956,CUS0005394,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0017
+TXN0000047154,CUS0008287,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0017
+TXN0000141131,CUS0006716,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0018
+TXN0000165912,CUS0001639,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0018
+TXN0000128634,CUS0009993,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0018
+TXN0000130979,CUS0005658,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0018
+TXN0000235543,CUS0006023,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0019
+TXN0000132174,CUS0003811,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0019
+TXN0000225398,CUS0002661,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0019
+TXN0000194564,CUS0007847,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0019
+TXN0000107860,CUS0009602,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0020
+TXN0000008620,CUS0009066,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0020
+TXN0000038407,CUS0001854,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0020
+TXN0000236089,CUS0001004,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0020
+TXN0000083615,CUS0004037,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0021
+TXN0000171393,CUS0001537,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0021
+TXN0000155560,CUS0003559,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0021
+TXN0000244335,CUS0005993,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0021
+TXN0000069894,CUS0009567,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0022
+TXN0000158472,CUS0006499,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0022
+TXN0000121220,CUS0005760,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0022
+TXN0000226426,CUS0009389,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0022
+TXN0000131977,CUS0000694,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0023
+TXN0000135159,CUS0007595,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0023
+TXN0000106795,CUS0000759,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0023
+TXN0000021684,CUS0005229,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0023
+TXN0000032361,CUS0007330,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0024
+TXN0000092308,CUS0009589,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0024
+TXN0000164174,CUS0009571,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0024
+TXN0000002069,CUS0003159,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0024
+TXN0000008834,CUS0007794,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0025
+TXN0000163365,CUS0006579,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0025
+TXN0000166972,CUS0001086,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0025
+TXN0000067267,CUS0000599,AML-S06,One Sender to Multiple Beneficiaries,1,High,Synthetic injection for One Sender to Multiple Beneficiaries.,AML-S06-GRP-0025
+TXN0000176099,CUS0005568,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0001
+TXN0000192960,CUS0007735,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0001
+TXN0000182966,CUS0005882,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0001
+TXN0000206264,CUS0005703,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0001
+TXN0000023109,CUS0001817,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0002
+TXN0000017392,CUS0004375,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0002
+TXN0000067027,CUS0002191,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0002
+TXN0000039912,CUS0007848,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0002
+TXN0000072593,CUS0006497,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0003
+TXN0000077037,CUS0009544,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0003
+TXN0000099908,CUS0005028,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0003
+TXN0000069263,CUS0007442,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0003
+TXN0000046005,CUS0006664,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0004
+TXN0000119017,CUS0002805,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0004
+TXN0000050881,CUS0003527,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0004
+TXN0000024406,CUS0008839,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0004
+TXN0000232301,CUS0008306,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0005
+TXN0000054175,CUS0001734,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0005
+TXN0000142548,CUS0009726,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0005
+TXN0000011380,CUS0004080,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0005
+TXN0000001769,CUS0008875,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0006
+TXN0000089697,CUS0006055,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0006
+TXN0000202879,CUS0009414,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0006
+TXN0000027136,CUS0009649,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0006
+TXN0000139158,CUS0001947,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0007
+TXN0000093528,CUS0009146,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0007
+TXN0000040449,CUS0007357,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0007
+TXN0000077385,CUS0003539,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0007
+TXN0000130588,CUS0000611,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0008
+TXN0000203853,CUS0003856,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0008
+TXN0000123388,CUS0004878,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0008
+TXN0000190372,CUS0000232,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0008
+TXN0000068793,CUS0007006,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0009
+TXN0000196456,CUS0003395,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0009
+TXN0000148745,CUS0002049,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0009
+TXN0000103081,CUS0002480,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0009
+TXN0000098570,CUS0006833,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0010
+TXN0000153045,CUS0000634,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0010
+TXN0000035739,CUS0004396,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0010
+TXN0000022448,CUS0007504,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0010
+TXN0000010602,CUS0000229,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0011
+TXN0000182087,CUS0000334,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0011
+TXN0000061555,CUS0007986,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0011
+TXN0000138317,CUS0000049,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0011
+TXN0000050655,CUS0002612,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0012
+TXN0000169301,CUS0000506,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0012
+TXN0000235246,CUS0000997,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0012
+TXN0000109812,CUS0002973,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0012
+TXN0000025611,CUS0006100,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0013
+TXN0000098764,CUS0008983,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0013
+TXN0000124514,CUS0004861,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0013
+TXN0000120765,CUS0004309,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0013
+TXN0000210056,CUS0000610,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0014
+TXN0000160067,CUS0008659,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0014
+TXN0000138723,CUS0000825,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0014
+TXN0000196675,CUS0004383,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0014
+TXN0000080753,CUS0008398,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0015
+TXN0000185404,CUS0008194,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0015
+TXN0000056428,CUS0000280,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0015
+TXN0000199287,CUS0007670,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0015
+TXN0000173304,CUS0005821,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0016
+TXN0000080770,CUS0005310,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0016
+TXN0000103773,CUS0007858,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0016
+TXN0000063139,CUS0003314,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0016
+TXN0000218167,CUS0006689,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0017
+TXN0000022140,CUS0000447,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0017
+TXN0000090666,CUS0000355,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0017
+TXN0000158002,CUS0008405,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0017
+TXN0000014399,CUS0001540,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0018
+TXN0000113781,CUS0003906,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0018
+TXN0000162520,CUS0000030,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0018
+TXN0000142349,CUS0001152,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0018
+TXN0000121177,CUS0008906,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0019
+TXN0000102290,CUS0007162,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0019
+TXN0000002093,CUS0004561,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0019
+TXN0000021856,CUS0008439,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0019
+TXN0000223444,CUS0000846,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0020
+TXN0000052426,CUS0004209,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0020
+TXN0000138099,CUS0008081,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0020
+TXN0000017810,CUS0005886,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0020
+TXN0000013347,CUS0009633,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0021
+TXN0000015393,CUS0003736,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0021
+TXN0000059508,CUS0005278,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0021
+TXN0000141279,CUS0003675,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0021
+TXN0000206694,CUS0003385,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0022
+TXN0000042694,CUS0000672,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0022
+TXN0000053458,CUS0006950,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0022
+TXN0000095904,CUS0004344,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0022
+TXN0000186861,CUS0005748,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0023
+TXN0000154140,CUS0006055,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0023
+TXN0000019804,CUS0001121,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0023
+TXN0000114926,CUS0007711,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0023
+TXN0000211853,CUS0000544,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0024
+TXN0000150466,CUS0009473,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0024
+TXN0000132720,CUS0006890,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0024
+TXN0000006605,CUS0008868,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0024
+TXN0000079115,CUS0005930,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0025
+TXN0000248086,CUS0001196,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0025
+TXN0000015043,CUS0005828,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0025
+TXN0000029799,CUS0002051,AML-S07,Circular Transaction,1,Critical,Synthetic injection for Circular Transaction.,AML-S07-GRP-0025
+TXN0000201774,CUS0007080,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0001
+TXN0000195808,CUS0002769,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0001
+TXN0000041078,CUS0006562,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0001
+TXN0000084595,CUS0009160,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0001
+TXN0000159243,CUS0001139,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0002
+TXN0000040008,CUS0006460,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0002
+TXN0000243603,CUS0004117,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0002
+TXN0000006624,CUS0000063,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0002
+TXN0000186388,CUS0003949,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0003
+TXN0000099211,CUS0003605,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0003
+TXN0000109171,CUS0003445,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0003
+TXN0000196569,CUS0007471,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0003
+TXN0000116219,CUS0007728,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0004
+TXN0000113871,CUS0007439,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0004
+TXN0000165645,CUS0000294,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0004
+TXN0000166566,CUS0008124,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0004
+TXN0000244916,CUS0008682,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0005
+TXN0000166100,CUS0008161,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0005
+TXN0000225510,CUS0002190,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0005
+TXN0000241409,CUS0003683,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0005
+TXN0000246949,CUS0001513,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0006
+TXN0000197290,CUS0000476,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0006
+TXN0000000475,CUS0000656,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0006
+TXN0000166127,CUS0007743,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0006
+TXN0000050449,CUS0004981,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0007
+TXN0000144396,CUS0004868,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0007
+TXN0000026254,CUS0009536,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0007
+TXN0000158597,CUS0002903,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0007
+TXN0000213127,CUS0003062,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0008
+TXN0000005518,CUS0006190,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0008
+TXN0000009327,CUS0003322,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0008
+TXN0000166979,CUS0005718,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0008
+TXN0000184379,CUS0000888,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0009
+TXN0000101602,CUS0009317,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0009
+TXN0000035802,CUS0008192,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0009
+TXN0000051315,CUS0003013,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0009
+TXN0000178805,CUS0002073,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0010
+TXN0000218870,CUS0000337,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0010
+TXN0000034109,CUS0008232,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0010
+TXN0000006734,CUS0008030,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0010
+TXN0000008108,CUS0006184,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0011
+TXN0000072777,CUS0005121,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0011
+TXN0000147575,CUS0000374,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0011
+TXN0000212009,CUS0007123,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0011
+TXN0000085923,CUS0009125,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0012
+TXN0000121133,CUS0006657,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0012
+TXN0000073438,CUS0008010,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0012
+TXN0000242970,CUS0004204,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0012
+TXN0000153691,CUS0008966,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0013
+TXN0000014676,CUS0010000,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0013
+TXN0000086215,CUS0003631,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0013
+TXN0000206836,CUS0001817,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0013
+TXN0000046445,CUS0009275,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0014
+TXN0000200604,CUS0003053,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0014
+TXN0000045222,CUS0008440,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0014
+TXN0000031526,CUS0006628,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0014
+TXN0000057713,CUS0007601,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0015
+TXN0000153835,CUS0009294,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0015
+TXN0000221117,CUS0005328,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0015
+TXN0000145178,CUS0009921,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0015
+TXN0000042295,CUS0001169,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0016
+TXN0000235530,CUS0001763,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0016
+TXN0000102479,CUS0000352,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0016
+TXN0000105530,CUS0004386,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0016
+TXN0000187012,CUS0004005,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0017
+TXN0000129127,CUS0005090,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0017
+TXN0000207484,CUS0003487,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0017
+TXN0000045424,CUS0008500,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0017
+TXN0000052286,CUS0007163,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0018
+TXN0000198264,CUS0003919,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0018
+TXN0000061754,CUS0000172,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0018
+TXN0000221329,CUS0005126,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0018
+TXN0000221071,CUS0000201,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0019
+TXN0000027224,CUS0004488,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0019
+TXN0000071716,CUS0000323,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0019
+TXN0000122443,CUS0005827,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0019
+TXN0000023932,CUS0001605,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0020
+TXN0000198668,CUS0001852,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0020
+TXN0000084855,CUS0000484,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0020
+TXN0000043079,CUS0003043,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0020
+TXN0000088052,CUS0006336,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0021
+TXN0000042428,CUS0001093,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0021
+TXN0000186346,CUS0002186,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0021
+TXN0000044310,CUS0002517,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0021
+TXN0000183887,CUS0004561,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0022
+TXN0000236674,CUS0002715,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0022
+TXN0000020371,CUS0003595,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0022
+TXN0000232653,CUS0006435,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0022
+TXN0000218790,CUS0001246,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0023
+TXN0000223724,CUS0005459,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0023
+TXN0000161886,CUS0009464,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0023
+TXN0000194895,CUS0003391,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0023
+TXN0000104688,CUS0005043,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0024
+TXN0000074223,CUS0008877,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0024
+TXN0000063591,CUS0007986,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0024
+TXN0000192438,CUS0000226,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0024
+TXN0000238064,CUS0000343,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0025
+TXN0000082282,CUS0004631,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0025
+TXN0000063967,CUS0003099,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0025
+TXN0000085893,CUS0005730,AML-S08,High-Risk Geography,1,High,Synthetic injection for High-Risk Geography.,AML-S08-GRP-0025
+TXN0000018998,CUS0003101,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0001
+TXN0000087722,CUS0001986,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0001
+TXN0000239063,CUS0005448,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0001
+TXN0000138134,CUS0006415,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0001
+TXN0000033211,CUS0001987,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0002
+TXN0000114451,CUS0003708,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0002
+TXN0000182726,CUS0007627,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0002
+TXN0000155853,CUS0009609,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0002
+TXN0000120111,CUS0000972,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0003
+TXN0000218099,CUS0003944,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0003
+TXN0000103236,CUS0006608,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0003
+TXN0000223132,CUS0000086,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0003
+TXN0000108050,CUS0004799,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0004
+TXN0000227176,CUS0007036,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0004
+TXN0000246208,CUS0001003,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0004
+TXN0000000522,CUS0007481,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0004
+TXN0000052333,CUS0001986,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0005
+TXN0000038028,CUS0000562,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0005
+TXN0000223308,CUS0004267,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0005
+TXN0000101324,CUS0000240,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0005
+TXN0000029735,CUS0003949,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0006
+TXN0000078171,CUS0004906,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0006
+TXN0000051894,CUS0002515,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0006
+TXN0000088866,CUS0001785,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0006
+TXN0000002734,CUS0006952,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0007
+TXN0000202765,CUS0003010,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0007
+TXN0000026950,CUS0009477,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0007
+TXN0000241118,CUS0004862,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0007
+TXN0000149639,CUS0004365,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0008
+TXN0000096331,CUS0001492,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0008
+TXN0000112814,CUS0008774,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0008
+TXN0000238413,CUS0006669,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0008
+TXN0000163172,CUS0005833,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0009
+TXN0000223732,CUS0000294,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0009
+TXN0000156674,CUS0002183,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0009
+TXN0000011084,CUS0007328,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0009
+TXN0000071281,CUS0009253,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0010
+TXN0000045366,CUS0009621,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0010
+TXN0000077817,CUS0008455,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0010
+TXN0000032011,CUS0004753,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0010
+TXN0000015738,CUS0004999,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0011
+TXN0000202984,CUS0009724,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0011
+TXN0000095495,CUS0004875,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0011
+TXN0000084360,CUS0002212,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0011
+TXN0000103570,CUS0000691,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0012
+TXN0000200106,CUS0002430,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0012
+TXN0000010864,CUS0001168,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0012
+TXN0000085525,CUS0008624,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0012
+TXN0000142651,CUS0005077,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0013
+TXN0000082704,CUS0009869,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0013
+TXN0000003896,CUS0000195,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0013
+TXN0000220119,CUS0003319,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0013
+TXN0000206783,CUS0007392,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0014
+TXN0000080796,CUS0003409,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0014
+TXN0000184335,CUS0009914,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0014
+TXN0000242713,CUS0004659,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0014
+TXN0000238631,CUS0005856,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0015
+TXN0000241163,CUS0006451,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0015
+TXN0000070457,CUS0009904,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0015
+TXN0000182618,CUS0008361,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0015
+TXN0000146501,CUS0009000,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0016
+TXN0000098701,CUS0009401,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0016
+TXN0000090161,CUS0009863,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0016
+TXN0000222642,CUS0005052,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0016
+TXN0000246666,CUS0004831,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0017
+TXN0000194502,CUS0007975,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0017
+TXN0000165376,CUS0002270,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0017
+TXN0000023171,CUS0002466,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0017
+TXN0000125156,CUS0006015,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0018
+TXN0000249088,CUS0005450,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0018
+TXN0000103614,CUS0002774,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0018
+TXN0000053831,CUS0003800,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0018
+TXN0000098522,CUS0005395,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0019
+TXN0000133171,CUS0008089,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0019
+TXN0000130600,CUS0004284,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0019
+TXN0000244263,CUS0000488,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0019
+TXN0000171054,CUS0006033,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0020
+TXN0000244338,CUS0004171,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0020
+TXN0000180288,CUS0002431,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0020
+TXN0000116911,CUS0008081,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0020
+TXN0000205606,CUS0002256,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0021
+TXN0000166348,CUS0003591,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0021
+TXN0000090848,CUS0005789,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0021
+TXN0000032259,CUS0007833,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0021
+TXN0000137009,CUS0005872,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0022
+TXN0000122358,CUS0005710,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0022
+TXN0000198753,CUS0002003,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0022
+TXN0000080326,CUS0003243,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0022
+TXN0000232791,CUS0004612,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0023
+TXN0000165940,CUS0002151,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0023
+TXN0000080063,CUS0009543,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0023
+TXN0000113762,CUS0006945,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0023
+TXN0000062934,CUS0005301,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0024
+TXN0000181438,CUS0004788,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0024
+TXN0000165529,CUS0001506,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0024
+TXN0000215783,CUS0008969,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0024
+TXN0000015927,CUS0009741,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0025
+TXN0000037338,CUS0006207,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0025
+TXN0000016921,CUS0000955,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0025
+TXN0000175831,CUS0008686,AML-S09,Unusual Transaction Purpose,1,High,Synthetic injection for Unusual Transaction Purpose.,AML-S09-GRP-0025
+TXN0000019812,CUS0007382,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0001
+TXN0000168520,CUS0008289,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0001
+TXN0000159907,CUS0001769,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0001
+TXN0000114287,CUS0002221,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0001
+TXN0000085897,CUS0002852,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0002
+TXN0000021197,CUS0005816,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0002
+TXN0000116407,CUS0001437,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0002
+TXN0000133036,CUS0009084,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0002
+TXN0000108560,CUS0002884,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0003
+TXN0000208649,CUS0001340,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0003
+TXN0000198772,CUS0006835,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0003
+TXN0000096519,CUS0007243,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0003
+TXN0000011628,CUS0004244,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0004
+TXN0000173411,CUS0002122,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0004
+TXN0000209519,CUS0004861,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0004
+TXN0000011663,CUS0000082,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0004
+TXN0000211822,CUS0000936,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0005
+TXN0000069285,CUS0007929,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0005
+TXN0000132062,CUS0002122,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0005
+TXN0000164874,CUS0003750,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0005
+TXN0000170263,CUS0007030,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0006
+TXN0000238667,CUS0009550,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0006
+TXN0000131394,CUS0002538,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0006
+TXN0000036179,CUS0005591,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0006
+TXN0000218641,CUS0007136,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0007
+TXN0000093301,CUS0004415,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0007
+TXN0000207011,CUS0004968,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0007
+TXN0000034494,CUS0003805,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0007
+TXN0000247304,CUS0007508,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0008
+TXN0000048111,CUS0007855,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0008
+TXN0000013929,CUS0006095,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0008
+TXN0000200798,CUS0008978,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0008
+TXN0000202666,CUS0007870,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0009
+TXN0000056151,CUS0000453,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0009
+TXN0000195966,CUS0002745,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0009
+TXN0000020423,CUS0002328,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0009
+TXN0000165553,CUS0000566,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0010
+TXN0000198265,CUS0007985,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0010
+TXN0000026634,CUS0000947,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0010
+TXN0000241773,CUS0008788,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0010
+TXN0000133618,CUS0005461,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0011
+TXN0000016754,CUS0000048,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0011
+TXN0000042753,CUS0005529,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0011
+TXN0000165546,CUS0009872,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0011
+TXN0000107551,CUS0001157,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0012
+TXN0000122228,CUS0004482,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0012
+TXN0000146805,CUS0003027,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0012
+TXN0000042485,CUS0009039,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0012
+TXN0000188027,CUS0007050,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0013
+TXN0000038677,CUS0008861,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0013
+TXN0000067430,CUS0004234,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0013
+TXN0000197000,CUS0000759,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0013
+TXN0000005903,CUS0001815,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0014
+TXN0000221616,CUS0009386,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0014
+TXN0000232692,CUS0002880,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0014
+TXN0000229746,CUS0008510,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0014
+TXN0000062917,CUS0006813,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0015
+TXN0000025060,CUS0003652,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0015
+TXN0000204645,CUS0009104,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0015
+TXN0000007735,CUS0009392,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0015
+TXN0000249005,CUS0009830,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0016
+TXN0000158791,CUS0005938,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0016
+TXN0000146832,CUS0006806,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0016
+TXN0000077327,CUS0001193,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0016
+TXN0000007433,CUS0007971,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0017
+TXN0000217763,CUS0008969,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0017
+TXN0000139521,CUS0003573,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0017
+TXN0000066219,CUS0007462,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0017
+TXN0000076636,CUS0001747,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0018
+TXN0000222015,CUS0005882,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0018
+TXN0000141467,CUS0007529,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0018
+TXN0000199639,CUS0004296,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0018
+TXN0000243151,CUS0008779,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0019
+TXN0000082783,CUS0005112,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0019
+TXN0000038434,CUS0006033,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0019
+TXN0000218227,CUS0008874,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0019
+TXN0000247370,CUS0005935,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0020
+TXN0000155513,CUS0002214,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0020
+TXN0000189228,CUS0002560,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0020
+TXN0000225612,CUS0001015,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0020
+TXN0000236553,CUS0005897,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0021
+TXN0000223234,CUS0000847,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0021
+TXN0000122384,CUS0007339,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0021
+TXN0000098892,CUS0001551,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0021
+TXN0000141054,CUS0005755,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0022
+TXN0000148349,CUS0004385,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0022
+TXN0000177443,CUS0000594,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0022
+TXN0000094678,CUS0001381,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0022
+TXN0000005304,CUS0003709,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0023
+TXN0000215600,CUS0001836,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0023
+TXN0000055312,CUS0000715,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0023
+TXN0000073305,CUS0006270,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0023
+TXN0000108238,CUS0000118,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0024
+TXN0000139375,CUS0009238,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0024
+TXN0000010258,CUS0004956,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0024
+TXN0000095486,CUS0000787,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0024
+TXN0000049873,CUS0003826,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0025
+TXN0000014324,CUS0001578,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0025
+TXN0000237304,CUS0007619,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0025
+TXN0000044863,CUS0005845,AML-S10,Potential Mule Account,1,Critical,Synthetic injection for Potential Mule Account.,AML-S10-GRP-0025

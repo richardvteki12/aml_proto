@@ -1,0 +1,751 @@
+transaction_id,watchlist_id,injected_name,original_name,variation_type,expected_match
+TXN0000217118,WL000439,L. Ivanov,Laila Ivanov,Abbreviation,1
+TXN0000110816,WL000324,Karix Volkov,Karim Volkov,Typo,1
+TXN0000234443,WL000140,Sergei  Abramov,Sergei Abramov,Spacing,1
+TXN0000139182,WL000867,K. Ivanov,Karim Ivanov,Abbreviation,1
+TXN0000145987,WL000640,H. Global Holdings,Haddad Global Holdings,Abbreviation,1
+TXN0000249409,WL000872,Hassax Volkov,Hassan Volkov,Typo,1
+TXN0000028951,WL000038,A. Karimov,Alexander Karimov,Abbreviation,1
+TXN0000123833,WL001102,Karix Abramov,Karim Abramov,Typo,1
+TXN0000042276,WL000083,Karim Bashir,Karim Bashir,Exact,1
+TXN0000198555,WL000652,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000181159,WL001032,Abramov Laila,Laila Abramov,Reversed,1
+TXN0000024256,WL000629,V. Global Holdings,Volkov Global Holdings,Abbreviation,1
+TXN0000238249,WL000010,K. Haddad,Karim Haddad,Abbreviation,1
+TXN0000210279,WL000890,Omar  Karimov,Omar Karimov,Spacing,1
+TXN0000097084,WL000566,Farid Karimov,Farid Karimov,Exact,1
+TXN0000151809,WL000078,Hassax Sokolov,Hassan Sokolov,Typo,1
+TXN0000109428,WL001125,Dmitri Volkov,Dmitri Volkov,Exact,1
+TXN0000012448,WL000473,Omar Haddad,Omar Haddad,Alias,1
+TXN0000108181,WL000795,Sergei  Abramov,Sergei Abramov,Spacing,1
+TXN0000037358,WL001150,Elenx Bashir,Elena Bashir,Typo,1
+TXN0000119880,WL000823,Laila Karimov,Laila Karimov,Alias,1
+TXN0000246783,WL000864,B. Global Holdings,Bashir Global Holdings,Abbreviation,1
+TXN0000165850,WL000027,Lailx Sokolov,Laila Sokolov,Typo,1
+TXN0000054310,WL000373,Haddad  Global  Holdings,Haddad Global Holdings,Spacing,1
+TXN0000180155,WL000824,Karim Petrov,Karim Petrov,Exact,1
+TXN0000039170,WL000527,Elenx Petrov,Elena Petrov,Typo,1
+TXN0000109182,WL000447,Holdings Global Volkov,Volkov Global Holdings,Reversed,1
+TXN0000184176,WL000022,Haddad Sergei,Sergei Haddad,Reversed,1
+TXN0000210962,WL000525,Karimov Laila,Laila Karimov,Reversed,1
+TXN0000239808,WL000897,Sokolov  Global  Holdings,Sokolov Global Holdings,Spacing,1
+TXN0000199037,WL000906,Sergex Volkov,Sergei Volkov,Typo,1
+TXN0000096976,WL000465,Omax Sokolov,Omar Sokolov,Typo,1
+TXN0000193712,WL001055,Bashix Global Holdings,Bashir Global Holdings,Typo,1
+TXN0000167786,WL000603,Omar Petrov,Omar Petrov,Alias,1
+TXN0000152775,WL000553,Laila Abramov,Laila Abramov,Alias,1
+TXN0000137783,WL000551,Laila Haddad,Laila Haddad,Exact,1
+TXN0000026536,WL000710,Hassan Bashir,Hassan Bashir,Exact,1
+TXN0000031603,WL000815,Bashir Dmitri,Dmitri Bashir,Reversed,1
+TXN0000103127,WL000652,Abramox Global Holdings,Abramov Global Holdings,Typo,1
+TXN0000085922,WL000475,Ivanov Omar,Omar Ivanov,Reversed,1
+TXN0000020706,WL000570,Haddad Karim,Karim Haddad,Reversed,1
+TXN0000101194,WL000823,Karimov Laila,Laila Karimov,Reversed,1
+TXN0000217126,WL000832,Ivan  Bashir,Ivan Bashir,Spacing,1
+TXN0000035442,WL000851,Volkov Alexander,Alexander Volkov,Reversed,1
+TXN0000193675,WL001071,Petrov Dmitri,Dmitri Petrov,Reversed,1
+TXN0000048543,WL001058,O. Ivanov,Omar Ivanov,Abbreviation,1
+TXN0000240420,WL000787,D. Ivanov,Dmitri Ivanov,Abbreviation,1
+TXN0000192645,WL000889,B. Global Holdings,Bashir Global Holdings,Abbreviation,1
+TXN0000230288,WL000393,Sokolov Global Holdings,Sokolov Global Holdings,Exact,1
+TXN0000201023,WL000886,Sokolov Sergei,Sergei Sokolov,Reversed,1
+TXN0000207547,WL000050,Omax Volkov,Omar Volkov,Typo,1
+TXN0000209328,WL001082,Dmitri Karimov,Dmitri Karimov,Alias,1
+TXN0000248475,WL000498,Ivanov Group,Ivanov Global Holdings,Alias,1
+TXN0000130099,WL001172,Omar  Bashir,Omar Bashir,Spacing,1
+TXN0000165740,WL000791,Dmitrx Abramov,Dmitri Abramov,Typo,1
+TXN0000117697,WL000066,Farid Bashir,Farid Bashir,Alias,1
+TXN0000134517,WL000676,Sokolov Laila,Laila Sokolov,Reversed,1
+TXN0000218366,WL001044,Dmitri  Haddad,Dmitri Haddad,Spacing,1
+TXN0000010394,WL000989,Holdings Global Abramov,Abramov Global Holdings,Reversed,1
+TXN0000195672,WL001047,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000130566,WL000683,Sokolov Farid,Farid Sokolov,Reversed,1
+TXN0000068500,WL001098,Elena  Abramov,Elena Abramov,Spacing,1
+TXN0000174428,WL000857,O. Sokolov,Omar Sokolov,Abbreviation,1
+TXN0000127890,WL001195,Karimov Global Holdings,Karimov Global Holdings,Exact,1
+TXN0000128403,WL000063,Holdings Global Ivanov,Ivanov Global Holdings,Reversed,1
+TXN0000150329,WL000475,Omar Ivanov,Omar Ivanov,Alias,1
+TXN0000035881,WL000384,P. Global Holdings,Petrov Global Holdings,Abbreviation,1
+TXN0000166180,WL000619,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000160326,WL000669,Hassax Sokolov,Hassan Sokolov,Typo,1
+TXN0000048943,WL001102,Karix Abramov,Karim Abramov,Typo,1
+TXN0000136788,WL001075,Sergei Sokolov,Sergei Sokolov,Exact,1
+TXN0000079915,WL000302,Sergei  Petrov,Sergei Petrov,Spacing,1
+TXN0000156680,WL000668,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000083989,WL001020,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000097903,WL000882,Alexander Volkov,Alexander Volkov,Alias,1
+TXN0000040917,WL000726,Sergei Bashir,Sergei Bashir,Exact,1
+TXN0000107267,WL001108,Alexander Abramov,Alexander Abramov,Alias,1
+TXN0000068556,WL000703,Bashir Global Holdings,Bashir Global Holdings,Exact,1
+TXN0000106268,WL000790,E. Sokolov,Elena Sokolov,Abbreviation,1
+TXN0000051298,WL000704,Volkov Global Holdings,Volkov Global Holdings,Exact,1
+TXN0000207836,WL000426,Ivan  Bashir,Ivan Bashir,Spacing,1
+TXN0000063033,WL000781,Omax Karimov,Omar Karimov,Typo,1
+TXN0000202037,WL000775,Farid Abramov,Farid Abramov,Exact,1
+TXN0000094557,WL000897,Sokolov Group,Sokolov Global Holdings,Alias,1
+TXN0000229589,WL000424,Karim Ivanov,Karim Ivanov,Alias,1
+TXN0000080333,WL000156,Volkov Omar,Omar Volkov,Reversed,1
+TXN0000134852,WL001116,Karimov Global Holdings,Karimov Global Holdings,Exact,1
+TXN0000176660,WL001042,Farid Abramov,Farid Abramov,Exact,1
+TXN0000095450,WL000017,Sokolov Group,Sokolov Global Holdings,Alias,1
+TXN0000029093,WL000937,Dmitri  Haddad,Dmitri Haddad,Spacing,1
+TXN0000128070,WL000001,Petrov Farid,Farid Petrov,Reversed,1
+TXN0000044640,WL000264,V. Global Holdings,Volkov Global Holdings,Abbreviation,1
+TXN0000197948,WL001137,I. Global Holdings,Ivanov Global Holdings,Abbreviation,1
+TXN0000008431,WL000180,Abramox Global Holdings,Abramov Global Holdings,Typo,1
+TXN0000239659,WL000157,Omar  Haddad,Omar Haddad,Spacing,1
+TXN0000117649,WL000061,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000183852,WL001005,Farid Sokolov,Farid Sokolov,Exact,1
+TXN0000242023,WL000657,H. Global Holdings,Haddad Global Holdings,Abbreviation,1
+TXN0000008241,WL001196,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000204437,WL000576,Karim Karimov,Karim Karimov,Exact,1
+TXN0000248462,WL000240,L. Ivanov,Laila Ivanov,Abbreviation,1
+TXN0000079032,WL000453,Farid  Ivanov,Farid Ivanov,Spacing,1
+TXN0000223603,WL000614,Holdings Global Abramov,Abramov Global Holdings,Reversed,1
+TXN0000023751,WL000161,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000132853,WL001182,Elenx Haddad,Elena Haddad,Typo,1
+TXN0000204946,WL000995,Karim  Karimov,Karim Karimov,Spacing,1
+TXN0000072320,WL001093,Ivanov  Global  Holdings,Ivanov Global Holdings,Spacing,1
+TXN0000035663,WL000198,Bashir Group,Bashir Global Holdings,Alias,1
+TXN0000204117,WL000845,Hassan Abramov,Hassan Abramov,Alias,1
+TXN0000085008,WL000950,Omar  Abramov,Omar Abramov,Spacing,1
+TXN0000081731,WL000136,D. Haddad,Dmitri Haddad,Abbreviation,1
+TXN0000041313,WL000288,I. Global Holdings,Ivanov Global Holdings,Abbreviation,1
+TXN0000019609,WL000301,I. Karimov,Ivan Karimov,Abbreviation,1
+TXN0000106923,WL000060,Omar  Petrov,Omar Petrov,Spacing,1
+TXN0000006499,WL000995,Karim Karimov,Karim Karimov,Exact,1
+TXN0000116434,WL000533,Hassan Sokolov,Hassan Sokolov,Exact,1
+TXN0000142064,WL000335,Haddad Group,Haddad Global Holdings,Alias,1
+TXN0000103489,WL001140,Karimov Omar,Omar Karimov,Reversed,1
+TXN0000247240,WL000576,Karim Karimov,Karim Karimov,Exact,1
+TXN0000019765,WL000127,Abramov Ivan,Ivan Abramov,Reversed,1
+TXN0000163451,WL001041,L. Ivanov,Laila Ivanov,Abbreviation,1
+TXN0000242105,WL000647,Dmitri  Abramov,Dmitri Abramov,Spacing,1
+TXN0000191644,WL000476,Alexander Karimov,Alexander Karimov,Alias,1
+TXN0000048565,WL000718,Elena Abramov,Elena Abramov,Alias,1
+TXN0000172253,WL001088,Farix Volkov,Farid Volkov,Typo,1
+TXN0000066960,WL000760,Laila Bashir,Laila Bashir,Exact,1
+TXN0000206461,WL001085,Haddad Hassan,Hassan Haddad,Reversed,1
+TXN0000246536,WL000443,Bashix Global Holdings,Bashir Global Holdings,Typo,1
+TXN0000119685,WL001019,F. Abramov,Farid Abramov,Abbreviation,1
+TXN0000220648,WL001195,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000046555,WL000304,Karim Petrov,Karim Petrov,Exact,1
+TXN0000008862,WL000986,Ivax Ivanov,Ivan Ivanov,Typo,1
+TXN0000093102,WL000172,Farix Haddad,Farid Haddad,Typo,1
+TXN0000211734,WL000790,E. Sokolov,Elena Sokolov,Abbreviation,1
+TXN0000183033,WL001000,Ivanov Group,Ivanov Global Holdings,Alias,1
+TXN0000015140,WL000319,Ivanov Ivan,Ivan Ivanov,Reversed,1
+TXN0000138827,WL000821,Karimov Alexander,Alexander Karimov,Reversed,1
+TXN0000178463,WL000253,Lailx Abramov,Laila Abramov,Typo,1
+TXN0000025863,WL000738,Sokolov Alexander,Alexander Sokolov,Reversed,1
+TXN0000064057,WL000925,Sergei Haddad,Sergei Haddad,Alias,1
+TXN0000168419,WL000205,Holdings Global Karimov,Karimov Global Holdings,Reversed,1
+TXN0000205309,WL000533,H. Sokolov,Hassan Sokolov,Abbreviation,1
+TXN0000064631,WL000242,Hassax Ivanov,Hassan Ivanov,Typo,1
+TXN0000123504,WL001124,Sergex Haddad,Sergei Haddad,Typo,1
+TXN0000129599,WL000438,B. Global Holdings,Bashir Global Holdings,Abbreviation,1
+TXN0000171281,WL000151,Haddad Group,Haddad Global Holdings,Alias,1
+TXN0000045161,WL000685,Farix Bashir,Farid Bashir,Typo,1
+TXN0000240907,WL000950,O. Abramov,Omar Abramov,Abbreviation,1
+TXN0000113906,WL000923,Hassax Abramov,Hassan Abramov,Typo,1
+TXN0000156742,WL000919,Alexandex Ivanov,Alexander Ivanov,Typo,1
+TXN0000197408,WL000888,Haddad Laila,Laila Haddad,Reversed,1
+TXN0000190491,WL000878,Abramov Farid,Farid Abramov,Reversed,1
+TXN0000169135,WL000886,Sergex Sokolov,Sergei Sokolov,Typo,1
+TXN0000221362,WL000539,Dmitri Karimov,Dmitri Karimov,Exact,1
+TXN0000191628,WL001155,Farid Abramov,Farid Abramov,Alias,1
+TXN0000201934,WL000203,Elena Karimov,Elena Karimov,Exact,1
+TXN0000001315,WL000258,Elenx Abramov,Elena Abramov,Typo,1
+TXN0000022215,WL000777,Dmitrx Volkov,Dmitri Volkov,Typo,1
+TXN0000127452,WL000226,Dmitri  Volkov,Dmitri Volkov,Spacing,1
+TXN0000193990,WL000498,I. Global Holdings,Ivanov Global Holdings,Abbreviation,1
+TXN0000177837,WL000601,Abramov Sergei,Sergei Abramov,Reversed,1
+TXN0000128264,WL000674,Sokolov Farid,Farid Sokolov,Reversed,1
+TXN0000217916,WL000816,Ivanov Karim,Karim Ivanov,Reversed,1
+TXN0000247651,WL000643,Petrov  Global  Holdings,Petrov Global Holdings,Spacing,1
+TXN0000110906,WL000057,Elena  Petrov,Elena Petrov,Spacing,1
+TXN0000123377,WL000863,Alexander  Haddad,Alexander Haddad,Spacing,1
+TXN0000133842,WL000524,A. Bashir,Alexander Bashir,Abbreviation,1
+TXN0000190111,WL000763,Hassan Volkov,Hassan Volkov,Exact,1
+TXN0000221353,WL000894,Farid  Ivanov,Farid Ivanov,Spacing,1
+TXN0000119602,WL000571,Karim Haddad,Karim Haddad,Exact,1
+TXN0000111054,WL000611,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000117757,WL000666,Ivanov Global Holdings,Ivanov Global Holdings,Exact,1
+TXN0000160141,WL000603,Omar Petrov,Omar Petrov,Alias,1
+TXN0000185424,WL000295,Laila  Petrov,Laila Petrov,Spacing,1
+TXN0000068539,WL000689,Dmitri  Petrov,Dmitri Petrov,Spacing,1
+TXN0000235460,WL000954,Volkov Alexander,Alexander Volkov,Reversed,1
+TXN0000004704,WL000002,Ivan Volkov,Ivan Volkov,Exact,1
+TXN0000038304,WL000507,Farid Bashir,Farid Bashir,Exact,1
+TXN0000226745,WL000199,Sokolox Global Holdings,Sokolov Global Holdings,Typo,1
+TXN0000188141,WL001046,Volkov Global Holdings,Volkov Global Holdings,Exact,1
+TXN0000147331,WL000381,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000197476,WL000427,K. Karimov,Karim Karimov,Abbreviation,1
+TXN0000099055,WL000939,Hassan  Haddad,Hassan Haddad,Spacing,1
+TXN0000046916,WL000570,Karim Haddad,Karim Haddad,Alias,1
+TXN0000203227,WL000070,Hassax Bashir,Hassan Bashir,Typo,1
+TXN0000085971,WL000888,L. Haddad,Laila Haddad,Abbreviation,1
+TXN0000167012,WL000902,Dmitri Petrov,Dmitri Petrov,Alias,1
+TXN0000210245,WL001029,Karimov  Global  Holdings,Karimov Global Holdings,Spacing,1
+TXN0000097490,WL000121,E. Petrov,Elena Petrov,Abbreviation,1
+TXN0000065452,WL000028,Volkov Dmitri,Dmitri Volkov,Reversed,1
+TXN0000224882,WL000204,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000157028,WL000653,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000221628,WL000357,Haddad Dmitri,Dmitri Haddad,Reversed,1
+TXN0000114987,WL000015,Farix Bashir,Farid Bashir,Typo,1
+TXN0000248874,WL000093,Elenx Karimov,Elena Karimov,Typo,1
+TXN0000020459,WL000479,Hassan Bashir,Hassan Bashir,Exact,1
+TXN0000087758,WL001169,Laila  Karimov,Laila Karimov,Spacing,1
+TXN0000136185,WL000966,Sergei Karimov,Sergei Karimov,Exact,1
+TXN0000055133,WL000907,Dmitri Sokolov,Dmitri Sokolov,Alias,1
+TXN0000120557,WL000596,Sergei Ivanov,Sergei Ivanov,Exact,1
+TXN0000050206,WL001051,Ivan Haddad,Ivan Haddad,Alias,1
+TXN0000220196,WL000487,Ivax Bashir,Ivan Bashir,Typo,1
+TXN0000085520,WL000525,Laila  Karimov,Laila Karimov,Spacing,1
+TXN0000068138,WL000569,Karim  Haddad,Karim Haddad,Spacing,1
+TXN0000121613,WL000113,Farid Petrov,Farid Petrov,Alias,1
+TXN0000127407,WL000270,Sokolov Group,Sokolov Global Holdings,Alias,1
+TXN0000062400,WL000018,Ivan  Volkov,Ivan Volkov,Spacing,1
+TXN0000066916,WL001011,Dmitri Haddad,Dmitri Haddad,Alias,1
+TXN0000053530,WL001144,Alexandex Bashir,Alexander Bashir,Typo,1
+TXN0000206364,WL000774,Laila Bashir,Laila Bashir,Exact,1
+TXN0000153578,WL001156,Elena Volkov,Elena Volkov,Alias,1
+TXN0000149102,WL000490,Sergei Karimov,Sergei Karimov,Alias,1
+TXN0000154988,WL001008,Abramov Sergei,Sergei Abramov,Reversed,1
+TXN0000071840,WL000247,K. Bashir,Karim Bashir,Abbreviation,1
+TXN0000153046,WL000771,Holdings Global Haddad,Haddad Global Holdings,Reversed,1
+TXN0000106249,WL000535,Karimov Alexander,Alexander Karimov,Reversed,1
+TXN0000179599,WL001081,Haddad Ivan,Ivan Haddad,Reversed,1
+TXN0000243823,WL000378,Volkov Alexander,Alexander Volkov,Reversed,1
+TXN0000070781,WL000722,Laila Haddad,Laila Haddad,Exact,1
+TXN0000027330,WL000283,Volkov Group,Volkov Global Holdings,Alias,1
+TXN0000019928,WL001140,Karimov Omar,Omar Karimov,Reversed,1
+TXN0000111985,WL001130,Farix Sokolov,Farid Sokolov,Typo,1
+TXN0000048447,WL000236,Alexander  Haddad,Alexander Haddad,Spacing,1
+TXN0000151964,WL001033,H. Karimov,Hassan Karimov,Abbreviation,1
+TXN0000049849,WL001006,Haddad Group,Haddad Global Holdings,Alias,1
+TXN0000015189,WL000763,Hassan Volkov,Hassan Volkov,Alias,1
+TXN0000035960,WL000277,Sergei Karimov,Sergei Karimov,Alias,1
+TXN0000008349,WL000847,Dmitri Sokolov,Dmitri Sokolov,Alias,1
+TXN0000169470,WL000890,Omar Karimov,Omar Karimov,Exact,1
+TXN0000222841,WL000898,Farix Volkov,Farid Volkov,Typo,1
+TXN0000187150,WL001158,Abramov Hassan,Hassan Abramov,Reversed,1
+TXN0000017863,WL000217,Sergex Abramov,Sergei Abramov,Typo,1
+TXN0000086522,WL000507,Farid Bashir,Farid Bashir,Exact,1
+TXN0000050137,WL000509,Ivan  Ivanov,Ivan Ivanov,Spacing,1
+TXN0000213663,WL000392,Elena  Abramov,Elena Abramov,Spacing,1
+TXN0000075387,WL000531,Sergei  Volkov,Sergei Volkov,Spacing,1
+TXN0000216929,WL000698,E. Volkov,Elena Volkov,Abbreviation,1
+TXN0000155711,WL000344,Karim  Haddad,Karim Haddad,Spacing,1
+TXN0000121357,WL000501,F. Ivanov,Farid Ivanov,Abbreviation,1
+TXN0000192476,WL000973,Ivax Ivanov,Ivan Ivanov,Typo,1
+TXN0000083755,WL000518,O. Haddad,Omar Haddad,Abbreviation,1
+TXN0000054491,WL001105,P. Global Holdings,Petrov Global Holdings,Abbreviation,1
+TXN0000007090,WL000571,Karix Haddad,Karim Haddad,Typo,1
+TXN0000202996,WL000648,Volkox Global Holdings,Volkov Global Holdings,Typo,1
+TXN0000100518,WL000130,S. Karimov,Sergei Karimov,Abbreviation,1
+TXN0000101246,WL001010,Ivan Petrov,Ivan Petrov,Exact,1
+TXN0000048119,WL000386,D. Volkov,Dmitri Volkov,Abbreviation,1
+TXN0000193125,WL000517,K. Global Holdings,Karimov Global Holdings,Abbreviation,1
+TXN0000108661,WL001015,Petrov Farid,Farid Petrov,Reversed,1
+TXN0000228458,WL000529,Dmitri Sokolov,Dmitri Sokolov,Exact,1
+TXN0000142636,WL001099,A. Ivanov,Alexander Ivanov,Abbreviation,1
+TXN0000058400,WL000588,Alexandex Haddad,Alexander Haddad,Typo,1
+TXN0000223304,WL000182,Laila  Karimov,Laila Karimov,Spacing,1
+TXN0000220639,WL000963,Karimov Group,Karimov Global Holdings,Alias,1
+TXN0000110819,WL001111,S. Global Holdings,Sokolov Global Holdings,Abbreviation,1
+TXN0000150275,WL000678,Omar Bashir,Omar Bashir,Exact,1
+TXN0000243557,WL000826,V. Global Holdings,Volkov Global Holdings,Abbreviation,1
+TXN0000117485,WL000550,Petrov  Global  Holdings,Petrov Global Holdings,Spacing,1
+TXN0000206641,WL000661,Holdings Global Bashir,Bashir Global Holdings,Reversed,1
+TXN0000097489,WL000971,K. Karimov,Karim Karimov,Abbreviation,1
+TXN0000210469,WL000523,Elena Ivanov,Elena Ivanov,Alias,1
+TXN0000236361,WL000516,Karix Bashir,Karim Bashir,Typo,1
+TXN0000174055,WL000224,Holdings Global Sokolov,Sokolov Global Holdings,Reversed,1
+TXN0000231425,WL000964,Petrox Global Holdings,Petrov Global Holdings,Typo,1
+TXN0000060300,WL000358,Lailx Ivanov,Laila Ivanov,Typo,1
+TXN0000156735,WL000677,Abramov Global Holdings,Abramov Global Holdings,Exact,1
+TXN0000052414,WL000699,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000207365,WL000674,Sokolov Farid,Farid Sokolov,Reversed,1
+TXN0000023559,WL000595,Abramov Global Holdings,Abramov Global Holdings,Exact,1
+TXN0000109147,WL000586,Karimov  Global  Holdings,Karimov Global Holdings,Spacing,1
+TXN0000003897,WL000214,E. Sokolov,Elena Sokolov,Abbreviation,1
+TXN0000170256,WL000594,Volkov  Global  Holdings,Volkov Global Holdings,Spacing,1
+TXN0000130888,WL000551,L. Haddad,Laila Haddad,Abbreviation,1
+TXN0000087838,WL001012,Petrox Global Holdings,Petrov Global Holdings,Typo,1
+TXN0000127147,WL000278,Dmitri Petrov,Dmitri Petrov,Alias,1
+TXN0000074200,WL000773,E. Volkov,Elena Volkov,Abbreviation,1
+TXN0000052464,WL000038,Alexandex Karimov,Alexander Karimov,Typo,1
+TXN0000028567,WL000107,Dmitri  Abramov,Dmitri Abramov,Spacing,1
+TXN0000049922,WL000689,Dmitri Petrov,Dmitri Petrov,Alias,1
+TXN0000064357,WL000032,F. Volkov,Farid Volkov,Abbreviation,1
+TXN0000151426,WL001169,L. Karimov,Laila Karimov,Abbreviation,1
+TXN0000171723,WL000917,Petrov  Global  Holdings,Petrov Global Holdings,Spacing,1
+TXN0000131821,WL000952,Sergei  Haddad,Sergei Haddad,Spacing,1
+TXN0000141203,WL000300,Elena Abramov,Elena Abramov,Exact,1
+TXN0000241156,WL000640,Haddad  Global  Holdings,Haddad Global Holdings,Spacing,1
+TXN0000226776,WL000618,Ivax Ivanov,Ivan Ivanov,Typo,1
+TXN0000011189,WL000708,Petrov  Global  Holdings,Petrov Global Holdings,Spacing,1
+TXN0000063478,WL000330,A. Bashir,Alexander Bashir,Abbreviation,1
+TXN0000066912,WL000150,Hassax Karimov,Hassan Karimov,Typo,1
+TXN0000075103,WL000221,Abramov Elena,Elena Abramov,Reversed,1
+TXN0000195623,WL000780,Dmitri Petrov,Dmitri Petrov,Alias,1
+TXN0000199991,WL000216,Karim Bashir,Karim Bashir,Exact,1
+TXN0000237590,WL001036,Haddad  Global  Holdings,Haddad Global Holdings,Spacing,1
+TXN0000032870,WL000177,Farix Ivanov,Farid Ivanov,Typo,1
+TXN0000192565,WL000571,Karim Haddad,Karim Haddad,Alias,1
+TXN0000117359,WL000288,Ivanox Global Holdings,Ivanov Global Holdings,Typo,1
+TXN0000073092,WL000863,Haddad Alexander,Alexander Haddad,Reversed,1
+TXN0000011462,WL000950,Omar Abramov,Omar Abramov,Alias,1
+TXN0000031350,WL000841,Haddad  Global  Holdings,Haddad Global Holdings,Spacing,1
+TXN0000012929,WL000698,Elena Volkov,Elena Volkov,Exact,1
+TXN0000138001,WL000733,Ivan Sokolov,Ivan Sokolov,Exact,1
+TXN0000177834,WL000412,Omar Abramov,Omar Abramov,Exact,1
+TXN0000091116,WL000625,Ivax Ivanov,Ivan Ivanov,Typo,1
+TXN0000202127,WL000910,Omar Bashir,Omar Bashir,Exact,1
+TXN0000210768,WL001082,Dmitrx Karimov,Dmitri Karimov,Typo,1
+TXN0000237124,WL000115,I. Abramov,Ivan Abramov,Abbreviation,1
+TXN0000052006,WL000361,Farix Bashir,Farid Bashir,Typo,1
+TXN0000034811,WL000515,Karix Petrov,Karim Petrov,Typo,1
+TXN0000072646,WL000564,Karix Volkov,Karim Volkov,Typo,1
+TXN0000104718,WL000493,Sokolov Ivan,Ivan Sokolov,Reversed,1
+TXN0000101894,WL000740,Holdings Global Haddad,Haddad Global Holdings,Reversed,1
+TXN0000205752,WL000414,Abramov Group,Abramov Global Holdings,Alias,1
+TXN0000243764,WL001099,Alexander Ivanov,Alexander Ivanov,Exact,1
+TXN0000104083,WL000988,Elena  Petrov,Elena Petrov,Spacing,1
+TXN0000015961,WL000935,A. Karimov,Alexander Karimov,Abbreviation,1
+TXN0000246218,WL000820,D. Sokolov,Dmitri Sokolov,Abbreviation,1
+TXN0000245777,WL000755,L. Petrov,Laila Petrov,Abbreviation,1
+TXN0000234779,WL000228,Ivax Haddad,Ivan Haddad,Typo,1
+TXN0000002711,WL000947,Abramov Group,Abramov Global Holdings,Alias,1
+TXN0000105590,WL000430,L. Abramov,Laila Abramov,Abbreviation,1
+TXN0000180591,WL001191,Laila Petrov,Laila Petrov,Alias,1
+TXN0000200075,WL000131,Omax Sokolov,Omar Sokolov,Typo,1
+TXN0000127774,WL000335,H. Global Holdings,Haddad Global Holdings,Abbreviation,1
+TXN0000082411,WL000025,Omar  Volkov,Omar Volkov,Spacing,1
+TXN0000155994,WL000791,Dmitri Abramov,Dmitri Abramov,Alias,1
+TXN0000162155,WL000852,Karimov Global Holdings,Karimov Global Holdings,Exact,1
+TXN0000223542,WL000033,Ivax Karimov,Ivan Karimov,Typo,1
+TXN0000204331,WL001096,Omar Abramov,Omar Abramov,Alias,1
+TXN0000041174,WL000013,Sergei Karimov,Sergei Karimov,Alias,1
+TXN0000206708,WL000639,Ivan  Haddad,Ivan Haddad,Spacing,1
+TXN0000240321,WL000673,Elena Ivanov,Elena Ivanov,Exact,1
+TXN0000057484,WL000522,Holdings Global Volkov,Volkov Global Holdings,Reversed,1
+TXN0000023927,WL000150,Hassax Karimov,Hassan Karimov,Typo,1
+TXN0000091319,WL000814,Ivanov Global Holdings,Ivanov Global Holdings,Exact,1
+TXN0000079424,WL001017,Alexander Sokolov,Alexander Sokolov,Alias,1
+TXN0000051430,WL001068,A. Petrov,Alexander Petrov,Abbreviation,1
+TXN0000098977,WL001147,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000036437,WL000023,Hassan Haddad,Hassan Haddad,Exact,1
+TXN0000152620,WL000471,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000107361,WL000913,F. Sokolov,Farid Sokolov,Abbreviation,1
+TXN0000192948,WL000390,Farid Volkov,Farid Volkov,Alias,1
+TXN0000049406,WL000106,Hassan Petrov,Hassan Petrov,Exact,1
+TXN0000099254,WL001184,Farid  Haddad,Farid Haddad,Spacing,1
+TXN0000117188,WL000340,S. Ivanov,Sergei Ivanov,Abbreviation,1
+TXN0000012603,WL000707,Lailx Volkov,Laila Volkov,Typo,1
+TXN0000059658,WL000198,Bashir Group,Bashir Global Holdings,Alias,1
+TXN0000058292,WL000125,Omar Bashir,Omar Bashir,Alias,1
+TXN0000113942,WL000383,Sergex Karimov,Sergei Karimov,Typo,1
+TXN0000131804,WL000354,Haddad Ivan,Ivan Haddad,Reversed,1
+TXN0000093859,WL000463,Haddad Omar,Omar Haddad,Reversed,1
+TXN0000131892,WL000520,Laila Ivanov,Laila Ivanov,Alias,1
+TXN0000128015,WL000150,Hassan Karimov,Hassan Karimov,Exact,1
+TXN0000033591,WL000623,Laila Volkov,Laila Volkov,Alias,1
+TXN0000006980,WL000937,Haddad Dmitri,Dmitri Haddad,Reversed,1
+TXN0000097756,WL001080,Petrov Dmitri,Dmitri Petrov,Reversed,1
+TXN0000063007,WL000445,Sergei  Ivanov,Sergei Ivanov,Spacing,1
+TXN0000047708,WL000255,Abramov  Global  Holdings,Abramov Global Holdings,Spacing,1
+TXN0000111409,WL000731,Haddad Omar,Omar Haddad,Reversed,1
+TXN0000070044,WL000404,L. Volkov,Laila Volkov,Abbreviation,1
+TXN0000111993,WL000035,Ivan Abramov,Ivan Abramov,Alias,1
+TXN0000193208,WL000953,Volkov  Global  Holdings,Volkov Global Holdings,Spacing,1
+TXN0000211571,WL001147,Petrov Global Holdings,Petrov Global Holdings,Exact,1
+TXN0000112533,WL000364,Hassan Abramov,Hassan Abramov,Exact,1
+TXN0000138490,WL000855,O. Ivanov,Omar Ivanov,Abbreviation,1
+TXN0000244277,WL000007,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000174352,WL000989,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000178971,WL000600,Omar Haddad,Omar Haddad,Alias,1
+TXN0000163839,WL000543,Farid  Ivanov,Farid Ivanov,Spacing,1
+TXN0000025930,WL000784,Sokolov Group,Sokolov Global Holdings,Alias,1
+TXN0000232829,WL000720,Petrov Sergei,Sergei Petrov,Reversed,1
+TXN0000187964,WL000228,I. Haddad,Ivan Haddad,Abbreviation,1
+TXN0000218184,WL000987,Hassan Bashir,Hassan Bashir,Alias,1
+TXN0000192774,WL000130,Sergei  Karimov,Sergei Karimov,Spacing,1
+TXN0000203445,WL001074,Omar Haddad,Omar Haddad,Alias,1
+TXN0000117778,WL000818,Ivax Abramov,Ivan Abramov,Typo,1
+TXN0000113374,WL000796,Dmitri  Karimov,Dmitri Karimov,Spacing,1
+TXN0000110624,WL000853,Holdings Global Petrov,Petrov Global Holdings,Reversed,1
+TXN0000168703,WL000044,Sergei  Ivanov,Sergei Ivanov,Spacing,1
+TXN0000070635,WL000023,Hassan  Haddad,Hassan Haddad,Spacing,1
+TXN0000049749,WL000699,Karimov Global Holdings,Karimov Global Holdings,Exact,1
+TXN0000234047,WL000153,Alexander  Haddad,Alexander Haddad,Spacing,1
+TXN0000178543,WL000561,Laila  Volkov,Laila Volkov,Spacing,1
+TXN0000077525,WL000396,Ivanov  Global  Holdings,Ivanov Global Holdings,Spacing,1
+TXN0000193575,WL000395,D. Haddad,Dmitri Haddad,Abbreviation,1
+TXN0000025916,WL001072,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000116000,WL000211,Karimov Ivan,Ivan Karimov,Reversed,1
+TXN0000201445,WL000291,Volkov Omar,Omar Volkov,Reversed,1
+TXN0000229983,WL001008,Abramov Sergei,Sergei Abramov,Reversed,1
+TXN0000183454,WL000026,Karimov Alexander,Alexander Karimov,Reversed,1
+TXN0000104900,WL001010,Petrov Ivan,Ivan Petrov,Reversed,1
+TXN0000248735,WL000374,Karim  Sokolov,Karim Sokolov,Spacing,1
+TXN0000102722,WL000246,Elenx Volkov,Elena Volkov,Typo,1
+TXN0000201490,WL000660,Alexander Karimov,Alexander Karimov,Exact,1
+TXN0000004558,WL000837,Farid Volkov,Farid Volkov,Alias,1
+TXN0000058513,WL000333,Sergei  Haddad,Sergei Haddad,Spacing,1
+TXN0000129026,WL000264,Volkox Global Holdings,Volkov Global Holdings,Typo,1
+TXN0000084515,WL000109,Elena Karimov,Elena Karimov,Exact,1
+TXN0000032201,WL001051,Ivan Haddad,Ivan Haddad,Alias,1
+TXN0000133464,WL000244,Hassax Abramov,Hassan Abramov,Typo,1
+TXN0000108354,WL000571,Karim Haddad,Karim Haddad,Alias,1
+TXN0000140276,WL000077,Sergex Karimov,Sergei Karimov,Typo,1
+TXN0000123847,WL000852,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000098757,WL000850,Alexander Abramov,Alexander Abramov,Exact,1
+TXN0000155937,WL000659,Farid Karimov,Farid Karimov,Exact,1
+TXN0000196521,WL001141,Lailx Karimov,Laila Karimov,Typo,1
+TXN0000171770,WL000328,Elenx Petrov,Elena Petrov,Typo,1
+TXN0000243923,WL000052,Elena Abramov,Elena Abramov,Alias,1
+TXN0000039174,WL000904,Karix Haddad,Karim Haddad,Typo,1
+TXN0000149312,WL000093,E. Karimov,Elena Karimov,Abbreviation,1
+TXN0000166876,WL000798,H. Global Holdings,Haddad Global Holdings,Abbreviation,1
+TXN0000179074,WL000962,Ivanov Group,Ivanov Global Holdings,Alias,1
+TXN0000138985,WL000153,Alexander Haddad,Alexander Haddad,Exact,1
+TXN0000128786,WL000585,Alexandex Volkov,Alexander Volkov,Typo,1
+TXN0000054272,WL000979,Abramov Dmitri,Dmitri Abramov,Reversed,1
+TXN0000170756,WL001067,Sergei Petrov,Sergei Petrov,Exact,1
+TXN0000106545,WL001027,Petrov Ivan,Ivan Petrov,Reversed,1
+TXN0000132952,WL000447,V. Global Holdings,Volkov Global Holdings,Abbreviation,1
+TXN0000216379,WL000173,Haddad  Global  Holdings,Haddad Global Holdings,Spacing,1
+TXN0000060150,WL000576,Karim Karimov,Karim Karimov,Exact,1
+TXN0000227319,WL001181,S. Sokolov,Sergei Sokolov,Abbreviation,1
+TXN0000074599,WL000475,Omar Ivanov,Omar Ivanov,Exact,1
+TXN0000185074,WL000161,Karimov Global Holdings,Karimov Global Holdings,Exact,1
+TXN0000165222,WL000407,Karimov Alexander,Alexander Karimov,Reversed,1
+TXN0000039582,WL000456,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000037515,WL000901,Bashir Group,Bashir Global Holdings,Alias,1
+TXN0000143107,WL000742,Elena Ivanov,Elena Ivanov,Alias,1
+TXN0000215355,WL000800,Abramov  Global  Holdings,Abramov Global Holdings,Spacing,1
+TXN0000069275,WL000242,Hassan Ivanov,Hassan Ivanov,Alias,1
+TXN0000123765,WL000001,Farid  Petrov,Farid Petrov,Spacing,1
+TXN0000192825,WL000210,S. Global Holdings,Sokolov Global Holdings,Abbreviation,1
+TXN0000204395,WL000525,Karimov Laila,Laila Karimov,Reversed,1
+TXN0000113160,WL000172,Farix Haddad,Farid Haddad,Typo,1
+TXN0000177417,WL000945,Farid  Sokolov,Farid Sokolov,Spacing,1
+TXN0000034111,WL000643,Petrov Global Holdings,Petrov Global Holdings,Exact,1
+TXN0000070648,WL001092,Sergex Bashir,Sergei Bashir,Typo,1
+TXN0000107597,WL000535,Karimov Alexander,Alexander Karimov,Reversed,1
+TXN0000070871,WL000671,Laila Bashir,Laila Bashir,Exact,1
+TXN0000109335,WL000212,Alexander Haddad,Alexander Haddad,Exact,1
+TXN0000035212,WL001191,Petrov Laila,Laila Petrov,Reversed,1
+TXN0000007539,WL000484,K. Bashir,Karim Bashir,Abbreviation,1
+TXN0000016148,WL000554,Haddad Laila,Laila Haddad,Reversed,1
+TXN0000066267,WL000756,Karimov Alexander,Alexander Karimov,Reversed,1
+TXN0000134493,WL000510,Alexander Bashir,Alexander Bashir,Alias,1
+TXN0000135225,WL000417,Volkov Group,Volkov Global Holdings,Alias,1
+TXN0000201928,WL000694,Ivax Abramov,Ivan Abramov,Typo,1
+TXN0000246051,WL000090,Elena Volkov,Elena Volkov,Alias,1
+TXN0000103225,WL000527,Elenx Petrov,Elena Petrov,Typo,1
+TXN0000162187,WL000182,Lailx Karimov,Laila Karimov,Typo,1
+TXN0000020224,WL000103,Sergei Volkov,Sergei Volkov,Alias,1
+TXN0000181932,WL000301,Ivan  Karimov,Ivan Karimov,Spacing,1
+TXN0000109504,WL000174,Farix Karimov,Farid Karimov,Typo,1
+TXN0000069986,WL000608,I. Karimov,Ivan Karimov,Abbreviation,1
+TXN0000230538,WL000403,Laila Abramov,Laila Abramov,Alias,1
+TXN0000126509,WL000760,Bashir Laila,Laila Bashir,Reversed,1
+TXN0000235156,WL000917,Petrov Global Holdings,Petrov Global Holdings,Exact,1
+TXN0000127873,WL000744,Omar  Sokolov,Omar Sokolov,Spacing,1
+TXN0000101684,WL000605,Holdings Global Ivanov,Ivanov Global Holdings,Reversed,1
+TXN0000205943,WL000272,Hassan Ivanov,Hassan Ivanov,Alias,1
+TXN0000051034,WL000529,Dmitri  Sokolov,Dmitri Sokolov,Spacing,1
+TXN0000104331,WL000506,Alexander  Ivanov,Alexander Ivanov,Spacing,1
+TXN0000228190,WL000674,Farix Sokolov,Farid Sokolov,Typo,1
+TXN0000231622,WL000713,Abramov Global Holdings,Abramov Global Holdings,Exact,1
+TXN0000244843,WL000234,Ivanov Dmitri,Dmitri Ivanov,Reversed,1
+TXN0000175931,WL000621,Karimov Karim,Karim Karimov,Reversed,1
+TXN0000004273,WL000532,Petrov Global Holdings,Petrov Global Holdings,Exact,1
+TXN0000080781,WL001114,Omar Abramov,Omar Abramov,Alias,1
+TXN0000029804,WL001025,Ivanov Global Holdings,Ivanov Global Holdings,Exact,1
+TXN0000118775,WL000637,Hassax Haddad,Hassan Haddad,Typo,1
+TXN0000065765,WL000652,Abramox Global Holdings,Abramov Global Holdings,Typo,1
+TXN0000210077,WL000160,Alexandex Ivanov,Alexander Ivanov,Typo,1
+TXN0000066329,WL000374,Karim  Sokolov,Karim Sokolov,Spacing,1
+TXN0000087249,WL000743,Omar  Bashir,Omar Bashir,Spacing,1
+TXN0000051531,WL000016,H. Sokolov,Hassan Sokolov,Abbreviation,1
+TXN0000239112,WL001200,K. Volkov,Karim Volkov,Abbreviation,1
+TXN0000174316,WL000884,Dmitri  Sokolov,Dmitri Sokolov,Spacing,1
+TXN0000248451,WL000757,Dmitri Karimov,Dmitri Karimov,Alias,1
+TXN0000141862,WL001167,Karix Petrov,Karim Petrov,Typo,1
+TXN0000123092,WL000170,H. Global Holdings,Haddad Global Holdings,Abbreviation,1
+TXN0000161753,WL000355,Petrox Global Holdings,Petrov Global Holdings,Typo,1
+TXN0000003685,WL000193,Farid Abramov,Farid Abramov,Alias,1
+TXN0000089280,WL000892,O. Ivanov,Omar Ivanov,Abbreviation,1
+TXN0000013624,WL000270,Sokolox Global Holdings,Sokolov Global Holdings,Typo,1
+TXN0000225255,WL000045,Omar Abramov,Omar Abramov,Exact,1
+TXN0000159189,WL001024,Ivanov Hassan,Hassan Ivanov,Reversed,1
+TXN0000203009,WL000478,E. Haddad,Elena Haddad,Abbreviation,1
+TXN0000197836,WL000499,Elena Ivanov,Elena Ivanov,Alias,1
+TXN0000050596,WL001072,P. Global Holdings,Petrov Global Holdings,Abbreviation,1
+TXN0000022226,WL000984,Bashir Group,Bashir Global Holdings,Alias,1
+TXN0000241473,WL000389,Dmitri Volkov,Dmitri Volkov,Exact,1
+TXN0000125479,WL001099,Ivanov Alexander,Alexander Ivanov,Reversed,1
+TXN0000194972,WL000727,Sergei Haddad,Sergei Haddad,Exact,1
+TXN0000059558,WL000292,F. Ivanov,Farid Ivanov,Abbreviation,1
+TXN0000068538,WL000498,Ivanov Global Holdings,Ivanov Global Holdings,Exact,1
+TXN0000031340,WL000519,D. Karimov,Dmitri Karimov,Abbreviation,1
+TXN0000200335,WL000171,Abramov Global Holdings,Abramov Global Holdings,Exact,1
+TXN0000017238,WL000001,Farid Petrov,Farid Petrov,Alias,1
+TXN0000109736,WL000881,Abramov Dmitri,Dmitri Abramov,Reversed,1
+TXN0000003756,WL000718,Elena Abramov,Elena Abramov,Exact,1
+TXN0000180741,WL000918,Alexander  Abramov,Alexander Abramov,Spacing,1
+TXN0000133273,WL000099,S. Sokolov,Sergei Sokolov,Abbreviation,1
+TXN0000052466,WL001008,Abramov Sergei,Sergei Abramov,Reversed,1
+TXN0000028321,WL000416,Hassax Karimov,Hassan Karimov,Typo,1
+TXN0000029190,WL001140,O. Karimov,Omar Karimov,Abbreviation,1
+TXN0000165704,WL000672,Ivan Abramov,Ivan Abramov,Exact,1
+TXN0000214002,WL000968,Petrov Farid,Farid Petrov,Reversed,1
+TXN0000171505,WL000170,Haddad Global Holdings,Haddad Global Holdings,Exact,1
+TXN0000219415,WL000716,O. Ivanov,Omar Ivanov,Abbreviation,1
+TXN0000242043,WL000234,D. Ivanov,Dmitri Ivanov,Abbreviation,1
+TXN0000214325,WL000320,F. Haddad,Farid Haddad,Abbreviation,1
+TXN0000201713,WL000578,O. Petrov,Omar Petrov,Abbreviation,1
+TXN0000141494,WL001010,Ivan Petrov,Ivan Petrov,Alias,1
+TXN0000150548,WL000472,H. Sokolov,Hassan Sokolov,Abbreviation,1
+TXN0000159825,WL000815,Dmitri Bashir,Dmitri Bashir,Exact,1
+TXN0000171624,WL000993,Ivanov Global Holdings,Ivanov Global Holdings,Exact,1
+TXN0000234128,WL000032,Farid  Volkov,Farid Volkov,Spacing,1
+TXN0000016970,WL000861,Haddax Global Holdings,Haddad Global Holdings,Typo,1
+TXN0000141760,WL000457,Karimov  Global  Holdings,Karimov Global Holdings,Spacing,1
+TXN0000058856,WL000436,Omar Haddad,Omar Haddad,Exact,1
+TXN0000039375,WL000676,Sokolov Laila,Laila Sokolov,Reversed,1
+TXN0000198659,WL001154,Dmitri  Volkov,Dmitri Volkov,Spacing,1
+TXN0000120069,WL001062,H. Abramov,Hassan Abramov,Abbreviation,1
+TXN0000141170,WL000081,Karimov Group,Karimov Global Holdings,Alias,1
+TXN0000139623,WL000340,Sergex Ivanov,Sergei Ivanov,Typo,1
+TXN0000032953,WL000220,Alexandex Haddad,Alexander Haddad,Typo,1
+TXN0000030046,WL000183,Alexander Haddad,Alexander Haddad,Alias,1
+TXN0000023556,WL000341,Volkov Elena,Elena Volkov,Reversed,1
+TXN0000057722,WL001089,Dmitri  Sokolov,Dmitri Sokolov,Spacing,1
+TXN0000245543,WL000735,Abramox Global Holdings,Abramov Global Holdings,Typo,1
+TXN0000229347,WL000876,O. Haddad,Omar Haddad,Abbreviation,1
+TXN0000170966,WL000474,Karim  Bashir,Karim Bashir,Spacing,1
+TXN0000225993,WL000249,Ivanov Group,Ivanov Global Holdings,Alias,1
+TXN0000154967,WL000125,O. Bashir,Omar Bashir,Abbreviation,1
+TXN0000138324,WL001067,Sergei  Petrov,Sergei Petrov,Spacing,1
+TXN0000105218,WL000568,I. Volkov,Ivan Volkov,Abbreviation,1
+TXN0000036303,WL000519,Dmitrx Karimov,Dmitri Karimov,Typo,1
+TXN0000202556,WL000835,Karim Bashir,Karim Bashir,Alias,1
+TXN0000181552,WL000488,Omar Volkov,Omar Volkov,Exact,1
+TXN0000217133,WL000140,Sergei Abramov,Sergei Abramov,Alias,1
+TXN0000167449,WL000011,K. Global Holdings,Karimov Global Holdings,Abbreviation,1
+TXN0000091215,WL000258,Abramov Elena,Elena Abramov,Reversed,1
+TXN0000166865,WL000351,Sergei  Abramov,Sergei Abramov,Spacing,1
+TXN0000103901,WL000046,Dmitri  Volkov,Dmitri Volkov,Spacing,1
+TXN0000242932,WL000485,Farix Karimov,Farid Karimov,Typo,1
+TXN0000078982,WL000414,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000095128,WL000858,D. Abramov,Dmitri Abramov,Abbreviation,1
+TXN0000185076,WL001178,Sokolov Hassan,Hassan Sokolov,Reversed,1
+TXN0000028314,WL000189,Laila  Petrov,Laila Petrov,Spacing,1
+TXN0000229304,WL000956,Ivax Petrov,Ivan Petrov,Typo,1
+TXN0000082871,WL000024,Sergei Abramov,Sergei Abramov,Alias,1
+TXN0000164119,WL000650,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000127019,WL000716,Omar Ivanov,Omar Ivanov,Exact,1
+TXN0000016089,WL000520,L. Ivanov,Laila Ivanov,Abbreviation,1
+TXN0000062078,WL000683,F. Sokolov,Farid Sokolov,Abbreviation,1
+TXN0000225413,WL000211,Ivan Karimov,Ivan Karimov,Exact,1
+TXN0000062205,WL000234,Ivanov Dmitri,Dmitri Ivanov,Reversed,1
+TXN0000026733,WL000092,Omax Haddad,Omar Haddad,Typo,1
+TXN0000045817,WL000065,H. Abramov,Hassan Abramov,Abbreviation,1
+TXN0000216569,WL001073,A. Haddad,Alexander Haddad,Abbreviation,1
+TXN0000220653,WL000873,Volkox Global Holdings,Volkov Global Holdings,Typo,1
+TXN0000039289,WL000658,Omax Bashir,Omar Bashir,Typo,1
+TXN0000219922,WL000829,Abramov Group,Abramov Global Holdings,Alias,1
+TXN0000191460,WL000777,Volkov Dmitri,Dmitri Volkov,Reversed,1
+TXN0000211115,WL000262,I. Karimov,Ivan Karimov,Abbreviation,1
+TXN0000026555,WL000699,Karimov Group,Karimov Global Holdings,Alias,1
+TXN0000143161,WL000409,Alexander Karimov,Alexander Karimov,Exact,1
+TXN0000234161,WL001043,Volkov Hassan,Hassan Volkov,Reversed,1
+TXN0000200977,WL000307,Petrov Group,Petrov Global Holdings,Alias,1
+TXN0000006176,WL001136,Holdings Global Ivanov,Ivanov Global Holdings,Reversed,1
+TXN0000065696,WL000080,Dmitrx Karimov,Dmitri Karimov,Typo,1
+TXN0000189643,WL001157,Karix Sokolov,Karim Sokolov,Typo,1
+TXN0000201339,WL000199,S. Global Holdings,Sokolov Global Holdings,Abbreviation,1
+TXN0000086489,WL001111,Holdings Global Sokolov,Sokolov Global Holdings,Reversed,1
+TXN0000040944,WL000617,Sokolov Elena,Elena Sokolov,Reversed,1
+TXN0000118033,WL000077,Sergei Karimov,Sergei Karimov,Exact,1
+TXN0000000806,WL000656,Karimov  Global  Holdings,Karimov Global Holdings,Spacing,1
+TXN0000175526,WL000698,E. Volkov,Elena Volkov,Abbreviation,1
+TXN0000017958,WL000678,Omax Bashir,Omar Bashir,Typo,1
+TXN0000020537,WL001046,V. Global Holdings,Volkov Global Holdings,Abbreviation,1
+TXN0000229538,WL000764,Hassan  Bashir,Hassan Bashir,Spacing,1
+TXN0000123991,WL001192,Ivanov Omar,Omar Ivanov,Reversed,1
+TXN0000121875,WL000056,Omar Abramov,Omar Abramov,Alias,1
+TXN0000137802,WL000939,H. Haddad,Hassan Haddad,Abbreviation,1
+TXN0000164722,WL000506,Alexander Ivanov,Alexander Ivanov,Alias,1
+TXN0000029751,WL000329,S. Karimov,Sergei Karimov,Abbreviation,1
+TXN0000249255,WL000983,Farix Haddad,Farid Haddad,Typo,1
+TXN0000044978,WL000776,Omar Bashir,Omar Bashir,Alias,1
+TXN0000197865,WL000217,Sergex Abramov,Sergei Abramov,Typo,1
+TXN0000249285,WL000798,Haddad Global Holdings,Haddad Global Holdings,Exact,1
+TXN0000247278,WL000093,Elenx Karimov,Elena Karimov,Typo,1
+TXN0000181305,WL000704,Volkov Group,Volkov Global Holdings,Alias,1
+TXN0000236006,WL001100,Karix Haddad,Karim Haddad,Typo,1
+TXN0000245601,WL000235,Dmitri Ivanov,Dmitri Ivanov,Exact,1
+TXN0000132165,WL000438,Bashix Global Holdings,Bashir Global Holdings,Typo,1
+TXN0000190809,WL001074,O. Haddad,Omar Haddad,Abbreviation,1
+TXN0000246832,WL000733,Ivan Sokolov,Ivan Sokolov,Exact,1
+TXN0000185810,WL001140,O. Karimov,Omar Karimov,Abbreviation,1
+TXN0000088487,WL000833,Omax Volkov,Omar Volkov,Typo,1
+TXN0000200913,WL000351,Sergex Abramov,Sergei Abramov,Typo,1
+TXN0000068507,WL001195,Karimov  Global  Holdings,Karimov Global Holdings,Spacing,1
+TXN0000100607,WL000798,H. Global Holdings,Haddad Global Holdings,Abbreviation,1
+TXN0000049243,WL001141,Lailx Karimov,Laila Karimov,Typo,1
+TXN0000159875,WL000978,Abramov Ivan,Ivan Abramov,Reversed,1
+TXN0000119314,WL000504,B. Global Holdings,Bashir Global Holdings,Abbreviation,1
+TXN0000110766,WL000946,O. Ivanov,Omar Ivanov,Abbreviation,1
+TXN0000181123,WL000260,Haddad Karim,Karim Haddad,Reversed,1
+TXN0000216468,WL000602,Ivax Petrov,Ivan Petrov,Typo,1
+TXN0000008796,WL000427,Karix Karimov,Karim Karimov,Typo,1
+TXN0000145762,WL001017,Alexander Sokolov,Alexander Sokolov,Alias,1
+TXN0000071447,WL001088,Volkov Farid,Farid Volkov,Reversed,1
+TXN0000045317,WL000253,Laila Abramov,Laila Abramov,Alias,1
+TXN0000090728,WL000375,Ivan Bashir,Ivan Bashir,Alias,1
+TXN0000066115,WL000766,Alexandex Haddad,Alexander Haddad,Typo,1
+TXN0000003666,WL000997,Sokolox Global Holdings,Sokolov Global Holdings,Typo,1
+TXN0000246597,WL000785,Holdings Global Karimov,Karimov Global Holdings,Reversed,1
+TXN0000037542,WL000385,Laila Haddad,Laila Haddad,Alias,1
+TXN0000088113,WL000058,Petrov  Global  Holdings,Petrov Global Holdings,Spacing,1
+TXN0000144790,WL000017,Sokolox Global Holdings,Sokolov Global Holdings,Typo,1
+TXN0000171818,WL000640,Holdings Global Haddad,Haddad Global Holdings,Reversed,1
+TXN0000016571,WL000285,Sergei Abramov,Sergei Abramov,Alias,1
+TXN0000211536,WL000143,Karim Volkov,Karim Volkov,Exact,1
+TXN0000054465,WL000196,Elena Bashir,Elena Bashir,Alias,1
+TXN0000145168,WL000713,Abramov Group,Abramov Global Holdings,Alias,1
+TXN0000210594,WL000443,Bashir  Global  Holdings,Bashir Global Holdings,Spacing,1
+TXN0000208664,WL000576,Karix Karimov,Karim Karimov,Typo,1
+TXN0000159474,WL000628,Dmitri Karimov,Dmitri Karimov,Exact,1
+TXN0000030873,WL000948,Laila  Sokolov,Laila Sokolov,Spacing,1
+TXN0000210848,WL000851,Volkov Alexander,Alexander Volkov,Reversed,1
+TXN0000155389,WL000957,Laila Bashir,Laila Bashir,Exact,1
+TXN0000023929,WL000437,Elena  Ivanov,Elena Ivanov,Spacing,1
+TXN0000076668,WL000704,Volkov Global Holdings,Volkov Global Holdings,Exact,1
+TXN0000150541,WL001014,Dmitri  Volkov,Dmitri Volkov,Spacing,1
+TXN0000240079,WL000519,Dmitri Karimov,Dmitri Karimov,Exact,1
+TXN0000161058,WL000202,Ivan Ivanov,Ivan Ivanov,Exact,1
+TXN0000071290,WL000695,Ivan Abramov,Ivan Abramov,Exact,1
+TXN0000074531,WL000450,Hassax Haddad,Hassan Haddad,Typo,1
+TXN0000074380,WL000046,Volkov Dmitri,Dmitri Volkov,Reversed,1
+TXN0000045521,WL000074,Farid  Abramov,Farid Abramov,Spacing,1
+TXN0000008792,WL000673,Ivanov Elena,Elena Ivanov,Reversed,1
+TXN0000079451,WL000816,Karix Ivanov,Karim Ivanov,Typo,1
+TXN0000248767,WL001081,I. Haddad,Ivan Haddad,Abbreviation,1
+TXN0000226569,WL000077,S. Karimov,Sergei Karimov,Abbreviation,1
+TXN0000067944,WL000826,Volkov  Global  Holdings,Volkov Global Holdings,Spacing,1
+TXN0000176455,WL000152,Hassan  Abramov,Hassan Abramov,Spacing,1
+TXN0000109680,WL000882,Alexander Volkov,Alexander Volkov,Exact,1
+TXN0000195997,WL001184,Farid  Haddad,Farid Haddad,Spacing,1
+TXN0000097683,WL000768,Volkov Omar,Omar Volkov,Reversed,1
+TXN0000135626,WL001169,Karimov Laila,Laila Karimov,Reversed,1
+TXN0000148587,WL000551,Laila Haddad,Laila Haddad,Alias,1
+TXN0000124163,WL000626,Hassan Bashir,Hassan Bashir,Exact,1
+TXN0000149030,WL001054,D. Haddad,Dmitri Haddad,Abbreviation,1
+TXN0000240742,WL000289,Ivax Volkov,Ivan Volkov,Typo,1
+TXN0000023812,WL000264,Holdings Global Volkov,Volkov Global Holdings,Reversed,1
+TXN0000234871,WL000830,Sergex Abramov,Sergei Abramov,Typo,1
+TXN0000124067,WL000739,Sergei Sokolov,Sergei Sokolov,Alias,1
+TXN0000089166,WL000917,P. Global Holdings,Petrov Global Holdings,Abbreviation,1
+TXN0000040809,WL000708,Holdings Global Petrov,Petrov Global Holdings,Reversed,1
+TXN0000152434,WL000804,Haddad Alexander,Alexander Haddad,Reversed,1
+TXN0000005686,WL000685,Farix Bashir,Farid Bashir,Typo,1
+TXN0000236912,WL001158,Hassax Abramov,Hassan Abramov,Typo,1
+TXN0000029308,WL000590,Volkov  Global  Holdings,Volkov Global Holdings,Spacing,1
+TXN0000083592,WL001004,Hassax Haddad,Hassan Haddad,Typo,1
+TXN0000093576,WL000392,E. Abramov,Elena Abramov,Abbreviation,1
+TXN0000014995,WL000159,Alexander Abramov,Alexander Abramov,Exact,1
+TXN0000204993,WL000669,Hassan Sokolov,Hassan Sokolov,Exact,1
+TXN0000126660,WL001093,Ivanov Global Holdings,Ivanov Global Holdings,Exact,1
+TXN0000038247,WL001063,Karim  Sokolov,Karim Sokolov,Spacing,1
+TXN0000212718,WL001097,Dmitri Abramov,Dmitri Abramov,Alias,1
+TXN0000016976,WL000939,Haddad Hassan,Hassan Haddad,Reversed,1
+TXN0000139292,WL000310,Hassan Ivanov,Hassan Ivanov,Alias,1
+TXN0000147592,WL000735,Holdings Global Abramov,Abramov Global Holdings,Reversed,1
+TXN0000004682,WL000401,Ivan  Haddad,Ivan Haddad,Spacing,1
+TXN0000219541,WL000709,Dmitri Petrov,Dmitri Petrov,Alias,1
+TXN0000231817,WL000739,Sergex Sokolov,Sergei Sokolov,Typo,1
+TXN0000232691,WL001143,Farid Karimov,Farid Karimov,Exact,1
+TXN0000222090,WL000744,Omar Sokolov,Omar Sokolov,Exact,1
+TXN0000066898,WL000416,Hassan  Karimov,Hassan Karimov,Spacing,1
+TXN0000018557,WL000541,Laila Sokolov,Laila Sokolov,Exact,1
+TXN0000025450,WL001144,Alexander  Bashir,Alexander Bashir,Spacing,1
+TXN0000153844,WL001128,S. Haddad,Sergei Haddad,Abbreviation,1
+TXN0000067227,WL000177,Farix Ivanov,Farid Ivanov,Typo,1
+TXN0000088968,WL000816,Karim Ivanov,Karim Ivanov,Alias,1
+TXN0000041414,WL000915,Dmitri Karimov,Dmitri Karimov,Alias,1
+TXN0000171519,WL000252,Petrov Alexander,Alexander Petrov,Reversed,1
+TXN0000116837,WL000687,S. Abramov,Sergei Abramov,Abbreviation,1
+TXN0000218571,WL000057,Elenx Petrov,Elena Petrov,Typo,1
+TXN0000197431,WL000869,Sergei  Ivanov,Sergei Ivanov,Spacing,1
+TXN0000162195,WL000494,Farix Abramov,Farid Abramov,Typo,1
+TXN0000046329,WL001170,Sergei Karimov,Sergei Karimov,Alias,1
+TXN0000141759,WL000882,Alexander  Volkov,Alexander Volkov,Spacing,1
+TXN0000221948,WL000719,Karix Abramov,Karim Abramov,Typo,1
+TXN0000086201,WL000333,Haddad Sergei,Sergei Haddad,Reversed,1
+TXN0000197652,WL000656,Holdings Global Karimov,Karimov Global Holdings,Reversed,1
+TXN0000167292,WL000623,Laila  Volkov,Laila Volkov,Spacing,1
+TXN0000248738,WL000126,H. Ivanov,Hassan Ivanov,Abbreviation,1
+TXN0000007685,WL000798,Haddad Group,Haddad Global Holdings,Alias,1
+TXN0000038916,WL000774,Laila Bashir,Laila Bashir,Exact,1
+TXN0000032526,WL000129,A. Global Holdings,Abramov Global Holdings,Abbreviation,1
+TXN0000230139,WL000366,Sergei Volkov,Sergei Volkov,Exact,1
+TXN0000159478,WL001172,Omar Bashir,Omar Bashir,Exact,1
+TXN0000001067,WL000778,Lailx Abramov,Laila Abramov,Typo,1
+TXN0000038675,WL000932,Bashir Hassan,Hassan Bashir,Reversed,1
+TXN0000027447,WL001188,Hassan  Ivanov,Hassan Ivanov,Spacing,1
+TXN0000222469,WL000861,Haddad  Global  Holdings,Haddad Global Holdings,Spacing,1
+TXN0000105503,WL000669,Hassan  Sokolov,Hassan Sokolov,Spacing,1
+TXN0000127797,WL000424,Karim Ivanov,Karim Ivanov,Alias,1
+TXN0000100680,WL000097,L. Ivanov,Laila Ivanov,Abbreviation,1
+TXN0000216890,WL000046,Dmitri  Volkov,Dmitri Volkov,Spacing,1
+TXN0000183738,WL000694,Ivan  Abramov,Ivan Abramov,Spacing,1
+TXN0000149263,WL000984,Bashix Global Holdings,Bashir Global Holdings,Typo,1
+TXN0000246426,WL000308,Farid Volkov,Farid Volkov,Exact,1
+TXN0000082800,WL000131,Sokolov Omar,Omar Sokolov,Reversed,1
+TXN0000103775,WL000735,Abramov Group,Abramov Global Holdings,Alias,1
+TXN0000079659,WL000151,Haddad  Global  Holdings,Haddad Global Holdings,Spacing,1
+TXN0000160135,WL000522,Volkov  Global  Holdings,Volkov Global Holdings,Spacing,1
+TXN0000032396,WL001188,Hassax Ivanov,Hassan Ivanov,Typo,1
+TXN0000124714,WL000659,Farix Karimov,Farid Karimov,Typo,1
+TXN0000114361,WL000839,Laila  Volkov,Laila Volkov,Spacing,1
+TXN0000096701,WL000093,E. Karimov,Elena Karimov,Abbreviation,1
+TXN0000040163,WL000505,Volkov Group,Volkov Global Holdings,Alias,1
+TXN0000036963,WL000085,Sokolox Global Holdings,Sokolov Global Holdings,Typo,1
+TXN0000236713,WL000947,Abramox Global Holdings,Abramov Global Holdings,Typo,1
+TXN0000017269,WL000207,Bashir Omar,Omar Bashir,Reversed,1
+TXN0000025926,WL000507,Bashir Farid,Farid Bashir,Reversed,1
+TXN0000247809,WL000681,L. Abramov,Laila Abramov,Abbreviation,1
+TXN0000227643,WL000609,Sokolov Elena,Elena Sokolov,Reversed,1
+TXN0000244004,WL000648,Volkov Group,Volkov Global Holdings,Alias,1
+TXN0000240078,WL000515,Karim Petrov,Karim Petrov,Exact,1
+TXN0000036598,WL000225,H. Petrov,Hassan Petrov,Abbreviation,1
+TXN0000184819,WL000735,Abramov Global Holdings,Abramov Global Holdings,Exact,1
+TXN0000116404,WL000115,Abramov Ivan,Ivan Abramov,Reversed,1
+TXN0000101089,WL000144,Dmitri Volkov,Dmitri Volkov,Alias,1
+TXN0000064232,WL000427,Karim Karimov,Karim Karimov,Alias,1
+TXN0000003401,WL000683,F. Sokolov,Farid Sokolov,Abbreviation,1
+TXN0000006483,WL000622,Ivan Bashir,Ivan Bashir,Alias,1
+TXN0000162045,WL001138,Laila Karimov,Laila Karimov,Exact,1
+TXN0000073294,WL000440,A. Haddad,Alexander Haddad,Abbreviation,1
+TXN0000135875,WL001070,I. Global Holdings,Ivanov Global Holdings,Abbreviation,1
+TXN0000079439,WL000726,Sergei  Bashir,Sergei Bashir,Spacing,1
+TXN0000124423,WL000237,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000044797,WL000758,Hassax Ivanov,Hassan Ivanov,Typo,1
+TXN0000008014,WL000195,Alexander Abramov,Alexander Abramov,Exact,1
+TXN0000139600,WL001021,Laila  Ivanov,Laila Ivanov,Spacing,1
+TXN0000005992,WL000355,Petrov Global Holdings,Petrov Global Holdings,Exact,1
+TXN0000160106,WL000911,Karim Abramov,Karim Abramov,Exact,1
+TXN0000197955,WL000228,I. Haddad,Ivan Haddad,Abbreviation,1
+TXN0000150392,WL001024,Hassax Ivanov,Hassan Ivanov,Typo,1
+TXN0000029637,WL001114,Omax Abramov,Omar Abramov,Typo,1
+TXN0000131310,WL000139,Omax Bashir,Omar Bashir,Typo,1
+TXN0000161379,WL000325,Karimox Global Holdings,Karimov Global Holdings,Typo,1
+TXN0000135325,WL000953,Volkox Global Holdings,Volkov Global Holdings,Typo,1

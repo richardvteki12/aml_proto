@@ -1,0 +1,5063 @@
+--
+-- PostgreSQL database dump
+--
+
+\restrict dQFp28Ox7iWGzEJWjChX2YzdfvhhvJiiYGfhhAB4UcMmhwkSaN2qS549Tfp5DCJ
+
+-- Dumped from database version 18.1
+-- Dumped by pg_dump version 18.1
+
+SET statement_timeout = 0;
+SET lock_timeout = 0;
+SET idle_in_transaction_session_timeout = 0;
+SET transaction_timeout = 0;
+SET client_encoding = 'UTF8';
+SET standard_conforming_strings = on;
+SELECT pg_catalog.set_config('search_path', '', false);
+SET check_function_bodies = false;
+SET xmloption = content;
+SET client_min_messages = warning;
+SET row_security = off;
+
+SET default_tablespace = '';
+
+SET default_table_access_method = heap;
+
+--
+-- Name: counterparties; Type: TABLE; Schema: raw; Owner: -
+--
+
+CREATE TABLE raw.counterparties (
+    counterparty_id text,
+    counterparty_name text,
+    entity_type text,
+    alias_name text,
+    date_of_birth text,
+    registration_date text,
+    address text,
+    city text,
+    country text,
+    nationality text,
+    bank_name text,
+    account_number bigint,
+    industry text,
+    risk_level text,
+    has_date_of_birth bigint,
+    has_registration_date bigint
+);
+
+
+--
+-- Data for Name: counterparties; Type: TABLE DATA; Schema: raw; Owner: -
+--
+
+COPY raw.counterparties (counterparty_id, counterparty_name, entity_type, alias_name, date_of_birth, registration_date, address, city, country, nationality, bank_name, account_number, industry, risk_level, has_date_of_birth, has_registration_date) FROM stdin;
+CP0000001	PT Gunawan Synthetic	Company	Naufal Gunawan	1900-01-01	2018-01-01	191 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777760000332	Healthcare	Low	0	1
+CP0000002	PT Putra Synthetic	Company	Bima Putra	1900-01-01	2018-01-01	94 Synthetic Avenue	Medan	AE	AE	Asia Commerce Bank	770813161004	Manufacturing	Low	0	1
+CP0000003	Fajar Gunawan	Individual	Fajar Gunawan	1985-01-01	1900-01-01	78 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773669412456	Manufacturing	Medium	1	0
+CP0000004	Wulan Iskandar	Individual	Wulan Iskandar	1985-01-01	1900-01-01	366 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778717684684	Construction	Medium	1	0
+CP0000005	PT Iskandar Synthetic	Company	Sari Iskandar	1900-01-01	2018-01-01	295 Synthetic Avenue	Semarang	AE	AE	Bank Nusantara	772808178341	Logistics	Low	0	1
+CP0000006	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	83 Synthetic Avenue	Medan	JP	JP	Bank Sentra	771065496083	Technology	Medium	1	0
+CP0000007	Intan Budiman	Individual	Intan Budiman	1985-01-01	1900-01-01	38 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776353297206	Construction	Medium	1	0
+CP0000008	PT Halim Synthetic	Company	Bima Halim	1900-01-01	2018-01-01	455 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777686440227	Manufacturing	Low	0	1
+CP0000009	PT Santoso Synthetic	Company	Hana Santoso	1900-01-01	2018-01-01	158 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	778015596201	Logistics	High	0	1
+CP0000010	Raka Hartono	Individual	Raka Hartono	1985-01-01	1900-01-01	272 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779368746789	Healthcare	Low	1	0
+CP0000011	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	708 Synthetic Avenue	Surabaya	US	US	Bank Sentra	770089658865	Retail	High	1	0
+CP0000012	PT Adinata Synthetic	Company	Bima Adinata	1900-01-01	2018-01-01	732 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	774353763454	Retail	Medium	0	1
+CP0000013	Arif Permana	Individual	Arif Permana	1985-01-01	1900-01-01	666 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779461363518	Construction	Low	1	0
+CP0000014	Raka Budiman	Individual	Raka Budiman	1985-01-01	1900-01-01	499 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775287977207	Construction	Medium	1	0
+CP0000015	PT Santoso Synthetic	Company	Anisa Santoso	1900-01-01	2018-01-01	444 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	770274141341	Healthcare	Low	0	1
+CP0000016	Teguh Halim	Individual	Teguh Halim	1985-01-01	1900-01-01	171 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770556645376	Construction	Medium	1	0
+CP0000017	Rani Hartono	Individual	Rani Hartono	1985-01-01	1900-01-01	31 Synthetic Avenue	Jakarta	AE	AE	Bank Nusantara	775532094077	Construction	High	1	0
+CP0000018	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	25 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	779406321473	Technology	Low	1	0
+CP0000019	Laras Santoso	Individual	Laras Santoso	1985-01-01	1900-01-01	65 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778140819510	Manufacturing	Low	1	0
+CP0000020	Kevin Mahendra	Individual	Kevin Mahendra	1985-01-01	1900-01-01	259 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	774811194625	Retail	Medium	1	0
+CP0000021	Indra Wijaya	Individual	Indra Wijaya	1985-01-01	1900-01-01	457 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771835021535	Manufacturing	Low	1	0
+CP0000022	Anisa Iskandar	Individual	Anisa Iskandar	1985-01-01	1900-01-01	330 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	771682747713	Manufacturing	Low	1	0
+CP0000023	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	800 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775415594862	Logistics	Low	1	0
+CP0000024	Adit Gunawan	Individual	Adit Gunawan	1985-01-01	1900-01-01	403 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779596733899	Manufacturing	Medium	1	0
+CP0000025	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	683 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776201119948	Manufacturing	Medium	1	0
+CP0000026	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	237 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	771938594438	Construction	Low	1	0
+CP0000027	Fajar Putra	Individual	Fajar Putra	1985-01-01	1900-01-01	348 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771483382559	Healthcare	High	1	0
+CP0000028	PT Yulianto Synthetic	Company	Citra Yulianto	1900-01-01	2018-01-01	771 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773768527364	Healthcare	Low	0	1
+CP0000029	Laras Iskandar	Individual	Laras Iskandar	1985-01-01	1900-01-01	48 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776148903848	Healthcare	Low	1	0
+CP0000030	PT Gunawan Synthetic	Company	Bima Gunawan	1900-01-01	2018-01-01	293 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778716449209	Technology	Medium	0	1
+CP0000031	PT Suryadi Synthetic	Company	Farah Suryadi	1900-01-01	2018-01-01	103 Synthetic Avenue	Medan	US	US	Bank Sentra	777121422238	Technology	Low	0	1
+CP0000032	Putri Siregar	Individual	Putri Siregar	1985-01-01	1900-01-01	127 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770658250797	Technology	Medium	1	0
+CP0000033	PT Mahendra Synthetic	Company	Joko Mahendra	1900-01-01	2018-01-01	722 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	776663786971	Manufacturing	Low	0	1
+CP0000034	Hana Suryadi	Individual	Hana Suryadi	1985-01-01	1900-01-01	376 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771029378721	Healthcare	Low	1	0
+CP0000035	Dimas Siregar	Individual	Dimas Siregar	1985-01-01	1900-01-01	207 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774534789230	Construction	Low	1	0
+CP0000036	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	788 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774248867139	Healthcare	High	1	0
+CP0000037	Joko Wijaya	Individual	Joko Wijaya	1985-01-01	1900-01-01	867 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	770011641461	Construction	Low	1	0
+CP0000038	Bagus Budiman	Individual	Bagus Budiman	1985-01-01	1900-01-01	406 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775521129116	Construction	Medium	1	0
+CP0000039	Hana Gunawan	Individual	Hana Gunawan	1985-01-01	1900-01-01	748 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778882788168	Logistics	Low	1	0
+CP0000040	PT Rahardjo Synthetic	Company	Hana Rahardjo	1900-01-01	2018-01-01	440 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776401325234	Technology	Low	0	1
+CP0000041	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	277 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772427793099	Technology	Medium	1	0
+CP0000042	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	151 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777556281500	Manufacturing	Medium	1	0
+CP0000043	PT Budiman Synthetic	Company	Kevin Budiman	1900-01-01	2018-01-01	169 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779213246270	Construction	Low	0	1
+CP0000044	PT Putra Synthetic	Company	Farah Putra	1900-01-01	2018-01-01	607 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778513754031	Manufacturing	Low	0	1
+CP0000045	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	493 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773269639330	Manufacturing	Low	1	0
+CP0000046	Adit Firmansyah	Individual	Adit Firmansyah	1985-01-01	1900-01-01	622 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775606103227	Retail	Low	1	0
+CP0000047	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	583 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772839948053	Manufacturing	Low	1	0
+CP0000048	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	271 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778990278700	Construction	Low	1	0
+CP0000049	Indra Iskandar	Individual	Indra Iskandar	1985-01-01	1900-01-01	632 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771431351213	Manufacturing	Low	1	0
+CP0000050	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	575 Synthetic Avenue	Makassar	JP	JP	Bank Sentra	773442945300	Construction	Low	1	0
+CP0000051	Raka Permana	Individual	Raka Permana	1985-01-01	1900-01-01	6 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775061845178	Manufacturing	Low	1	0
+CP0000052	Bagus Firmansyah	Individual	Bagus Firmansyah	1985-01-01	1900-01-01	711 Synthetic Avenue	Semarang	US	US	Bank Nusantara	774216871551	Technology	Medium	1	0
+CP0000053	Rani Setiawan	Individual	Rani Setiawan	1985-01-01	1900-01-01	632 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	779035561703	Healthcare	Medium	1	0
+CP0000054	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	194 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	774965481811	Logistics	Low	1	0
+CP0000055	Rani Siregar	Individual	Rani Siregar	1985-01-01	1900-01-01	324 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775471403261	Logistics	Low	1	0
+CP0000056	Intan Firmansyah	Individual	Intan Firmansyah	1985-01-01	1900-01-01	670 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772279891348	Manufacturing	Low	1	0
+CP0000057	Arif Adinata	Individual	Arif Adinata	1985-01-01	1900-01-01	375 Synthetic Avenue	Denpasar	AE	AE	Bank Sentra	774941111243	Retail	Low	1	0
+CP0000058	Arif Nugraha	Individual	Arif Nugraha	1985-01-01	1900-01-01	732 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779609467861	Retail	Medium	1	0
+CP0000059	Citra Setiawan	Individual	Citra Setiawan	1985-01-01	1900-01-01	551 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778229230526	Retail	Low	1	0
+CP0000060	Nadia Budiman	Individual	Nadia Budiman	1985-01-01	1900-01-01	272 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779529861106	Manufacturing	Low	1	0
+CP0000061	Alya Iskandar	Individual	Alya Iskandar	1985-01-01	1900-01-01	54 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772997402021	Construction	Low	1	0
+CP0000062	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	415 Synthetic Avenue	Surabaya	GB	GB	Bank Sentra	771160062785	Construction	Medium	1	0
+CP0000063	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	10 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778196691750	Retail	Low	1	0
+CP0000064	Adit Chandra	Individual	Adit Chandra	1985-01-01	1900-01-01	896 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773744754128	Retail	Low	1	0
+CP0000065	PT Nugraha Synthetic	Company	Intan Nugraha	1900-01-01	2018-01-01	41 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774461311073	Healthcare	Low	0	1
+CP0000066	PT Gunawan Synthetic	Company	Farah Gunawan	1900-01-01	2018-01-01	588 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	775858334913	Technology	Low	0	1
+CP0000067	Gita Permana	Individual	Gita Permana	1985-01-01	1900-01-01	822 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	774876774755	Logistics	Low	1	0
+CP0000068	Intan Rahardjo	Individual	Intan Rahardjo	1985-01-01	1900-01-01	340 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771744814617	Construction	Low	1	0
+CP0000069	Joko Wijaya	Individual	Joko Wijaya	1985-01-01	1900-01-01	883 Synthetic Avenue	Denpasar	US	US	Bank Sentra	777535584785	Technology	Medium	1	0
+CP0000070	PT Firmansyah Synthetic	Company	Nadia Firmansyah	1900-01-01	2018-01-01	85 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773224819599	Manufacturing	Low	0	1
+CP0000071	Rizky Wijaya	Individual	Rizky Wijaya	1985-01-01	1900-01-01	816 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776069746677	Logistics	Medium	1	0
+CP0000072	Indra Prakoso	Individual	Indra Prakoso	1985-01-01	1900-01-01	864 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770409484350	Logistics	Low	1	0
+CP0000073	Nadia Santoso	Individual	Nadia Santoso	1985-01-01	1900-01-01	343 Synthetic Avenue	Makassar	JP	JP	Bank Nusantara	777842158036	Construction	Low	1	0
+CP0000074	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	735 Synthetic Avenue	Makassar	US	US	Bank Sentra	775464104183	Manufacturing	Low	1	0
+CP0000075	Laras Rahardjo	Individual	Laras Rahardjo	1985-01-01	1900-01-01	128 Synthetic Avenue	Medan	JP	JP	Bank Sentra	777378168248	Healthcare	Medium	1	0
+CP0000076	Dewi Rahardjo	Individual	Dewi Rahardjo	1985-01-01	1900-01-01	781 Synthetic Avenue	Yogyakarta	AE	AE	Asia Commerce Bank	772685184489	Manufacturing	Low	1	0
+CP0000077	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	260 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777780892244	Manufacturing	Medium	1	0
+CP0000078	Wulan Budiman	Individual	Wulan Budiman	1985-01-01	1900-01-01	348 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775974560987	Manufacturing	Low	1	0
+CP0000079	PT Budiman Synthetic	Company	Intan Budiman	1900-01-01	2018-01-01	124 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	772337002260	Construction	Low	0	1
+CP0000080	PT Yulianto Synthetic	Company	Raka Yulianto	1900-01-01	2018-01-01	254 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774218983584	Retail	Low	0	1
+CP0000081	Dimas Halim	Individual	Dimas Halim	1985-01-01	1900-01-01	577 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777183953590	Healthcare	Low	1	0
+CP0000082	PT Putra Synthetic	Company	Rani Putra	1900-01-01	2018-01-01	467 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	775117572392	Healthcare	Low	0	1
+CP0000083	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	248 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774688290344	Retail	High	1	0
+CP0000084	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	38 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777808364195	Manufacturing	Medium	1	0
+CP0000085	Dimas Lesmana	Individual	Dimas Lesmana	1985-01-01	1900-01-01	275 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770995265512	Technology	High	1	0
+CP0000086	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	724 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	778504345557	Construction	Medium	1	0
+CP0000087	PT Mahendra Synthetic	Company	Arif Mahendra	1900-01-01	2018-01-01	499 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773457852728	Manufacturing	Low	0	1
+CP0000088	Dewi Halim	Individual	Dewi Halim	1985-01-01	1900-01-01	271 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770276307058	Construction	Medium	1	0
+CP0000089	PT Hartono Synthetic	Company	Naufal Hartono	1900-01-01	2018-01-01	879 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777708505165	Manufacturing	Medium	0	1
+CP0000090	PT Prakoso Synthetic	Company	Indra Prakoso	1900-01-01	2018-01-01	209 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775627438570	Construction	Low	0	1
+CP0000091	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	724 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779189060674	Construction	Low	1	0
+CP0000092	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	496 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	774303008640	Healthcare	Low	1	0
+CP0000093	Rani Siregar	Individual	Rani Siregar	1985-01-01	1900-01-01	240 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774405763717	Technology	Low	1	0
+CP0000094	Eka Wijaya	Individual	Eka Wijaya	1985-01-01	1900-01-01	448 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775075947227	Retail	Low	1	0
+CP0000095	Rizky Santoso	Individual	Rizky Santoso	1985-01-01	1900-01-01	133 Synthetic Avenue	Bandung	AU	AU	Bank Nusantara	772732120899	Technology	Low	1	0
+CP0000096	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	547 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	775730589997	Manufacturing	Low	1	0
+CP0000097	PT Halim Synthetic	Company	Nadia Halim	1900-01-01	2018-01-01	524 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772243678661	Technology	Low	0	1
+CP0000098	Indra Permana	Individual	Indra Permana	1985-01-01	1900-01-01	652 Synthetic Avenue	Medan	US	US	Bank Nusantara	773999354758	Logistics	Low	1	0
+CP0000099	Putri Kurniawan	Individual	Putri Kurniawan	1985-01-01	1900-01-01	404 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777303970691	Technology	Low	1	0
+CP0000100	Naufal Santoso	Individual	Naufal Santoso	1985-01-01	1900-01-01	439 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	770194323351	Manufacturing	Low	1	0
+CP0000101	PT Chandra Synthetic	Company	Eka Chandra	1900-01-01	2018-01-01	833 Synthetic Avenue	Medan	AE	AE	Asia Commerce Bank	774705784379	Healthcare	Low	0	1
+CP0000102	PT Setiawan Synthetic	Company	Sari Setiawan	1900-01-01	2018-01-01	173 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774859981211	Healthcare	Low	0	1
+CP0000103	PT Putra Synthetic	Company	Hana Putra	1900-01-01	2018-01-01	588 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773082176790	Logistics	Low	0	1
+CP0000104	Putri Yulianto	Individual	Putri Yulianto	1985-01-01	1900-01-01	625 Synthetic Avenue	Bandung	US	US	Bank Nusantara	770688768043	Retail	Low	1	0
+CP0000105	PT Setiawan Synthetic	Company	Bagus Setiawan	1900-01-01	2018-01-01	466 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777680072400	Logistics	Medium	0	1
+CP0000106	PT Siregar Synthetic	Company	Adit Siregar	1900-01-01	2018-01-01	80 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772978051987	Construction	Low	0	1
+CP0000107	Hana Darmawan	Individual	Hana Darmawan	1985-01-01	1900-01-01	456 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773837781656	Construction	Low	1	0
+CP0000108	PT Yulianto Synthetic	Company	Alya Yulianto	1900-01-01	2018-01-01	499 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772894108913	Construction	Low	0	1
+CP0000109	Intan Suryadi	Individual	Intan Suryadi	1985-01-01	1900-01-01	318 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776247068653	Manufacturing	High	1	0
+CP0000110	Citra Yulianto	Individual	Citra Yulianto	1985-01-01	1900-01-01	728 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	778563954592	Logistics	Low	1	0
+CP0000111	PT Yulianto Synthetic	Company	Alya Yulianto	1900-01-01	2018-01-01	679 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770757626183	Healthcare	Low	0	1
+CP0000112	PT Wibowo Synthetic	Company	Sari Wibowo	1900-01-01	2018-01-01	848 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778387634433	Retail	Medium	0	1
+CP0000113	PT Yulianto Synthetic	Company	Putri Yulianto	1900-01-01	2018-01-01	801 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	771488770350	Manufacturing	Low	0	1
+CP0000114	Naufal Budiman	Individual	Naufal Budiman	1985-01-01	1900-01-01	543 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770818450899	Technology	Low	1	0
+CP0000115	PT Budiman Synthetic	Company	Eka Budiman	1900-01-01	2018-01-01	262 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774136340740	Retail	Medium	0	1
+CP0000116	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	363 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776265343674	Manufacturing	Low	1	0
+CP0000117	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	437 Synthetic Avenue	Surabaya	AU	AU	Asia Commerce Bank	776075262920	Healthcare	Low	1	0
+CP0000118	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	766 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774283980236	Logistics	Medium	1	0
+CP0000119	Eka Permana	Individual	Eka Permana	1985-01-01	1900-01-01	56 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771608355880	Retail	Medium	1	0
+CP0000120	PT Chandra Synthetic	Company	Nadia Chandra	1900-01-01	2018-01-01	764 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	775334503306	Retail	Low	0	1
+CP0000121	Teguh Santoso	Individual	Teguh Santoso	1985-01-01	1900-01-01	601 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776490719355	Technology	Low	1	0
+CP0000122	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	640 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	775700771011	Logistics	Low	1	0
+CP0000123	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	309 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772282562979	Retail	Medium	1	0
+CP0000124	Arif Hartono	Individual	Arif Hartono	1985-01-01	1900-01-01	82 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777073254288	Retail	Low	1	0
+CP0000125	Wulan Halim	Individual	Wulan Halim	1985-01-01	1900-01-01	862 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770323870288	Retail	Low	1	0
+CP0000126	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	6 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771320608522	Retail	Low	1	0
+CP0000127	Alya Yulianto	Individual	Alya Yulianto	1985-01-01	1900-01-01	508 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776865699962	Construction	Low	1	0
+CP0000128	PT Budiman Synthetic	Company	Adit Budiman	1900-01-01	2018-01-01	803 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774042891453	Technology	Low	0	1
+CP0000129	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	115 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	772814276846	Logistics	Low	1	0
+CP0000130	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	696 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775170772224	Technology	Low	1	0
+CP0000131	Laras Putra	Individual	Laras Putra	1985-01-01	1900-01-01	294 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772873120391	Manufacturing	Medium	1	0
+CP0000132	Rizky Darmawan	Individual	Rizky Darmawan	1985-01-01	1900-01-01	638 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772193603642	Manufacturing	Medium	1	0
+CP0000133	PT Wijaya Synthetic	Company	Putri Wijaya	1900-01-01	2018-01-01	178 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	775118160279	Technology	Low	0	1
+CP0000134	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	798 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	773138924614	Healthcare	Low	1	0
+CP0000135	PT Santoso Synthetic	Company	Sari Santoso	1900-01-01	2018-01-01	148 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776127950585	Manufacturing	Low	0	1
+CP0000136	PT Permana Synthetic	Company	Intan Permana	1900-01-01	2018-01-01	212 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772751723862	Retail	Low	0	1
+CP0000137	Sari Prakoso	Individual	Sari Prakoso	1985-01-01	1900-01-01	491 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	775445518235	Construction	Low	1	0
+CP0000138	Dimas Hartono	Individual	Dimas Hartono	1985-01-01	1900-01-01	201 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779197744811	Manufacturing	Low	1	0
+CP0000139	Rizky Suryadi	Individual	Rizky Suryadi	1985-01-01	1900-01-01	255 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770173640845	Technology	Low	1	0
+CP0000140	Rani Halim	Individual	Rani Halim	1985-01-01	1900-01-01	485 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770058292716	Construction	Low	1	0
+CP0000141	Wulan Setiawan	Individual	Wulan Setiawan	1985-01-01	1900-01-01	413 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772307110320	Manufacturing	Low	1	0
+CP0000142	PT Wibowo Synthetic	Company	Naufal Wibowo	1900-01-01	2018-01-01	13 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775662948951	Technology	Medium	0	1
+CP0000143	Raka Prakoso	Individual	Raka Prakoso	1985-01-01	1900-01-01	282 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776558829240	Healthcare	Low	1	0
+CP0000144	Kevin Adinata	Individual	Kevin Adinata	1985-01-01	1900-01-01	484 Synthetic Avenue	Medan	MY	MY	Bank Sentra	772000927358	Manufacturing	Low	1	0
+CP0000145	Alya Lesmana	Individual	Alya Lesmana	1985-01-01	1900-01-01	730 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774901661057	Technology	Low	1	0
+CP0000146	Teguh Prakoso	Individual	Teguh Prakoso	1985-01-01	1900-01-01	555 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779064092615	Healthcare	High	1	0
+CP0000147	PT Mahendra Synthetic	Company	Farah Mahendra	1900-01-01	2018-01-01	225 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779155770861	Retail	Low	0	1
+CP0000148	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	261 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774913997270	Healthcare	Low	1	0
+CP0000149	Sari Firmansyah	Individual	Sari Firmansyah	1985-01-01	1900-01-01	776 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772614995772	Construction	High	1	0
+CP0000150	Putri Putra	Individual	Putri Putra	1985-01-01	1900-01-01	650 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	778364185669	Manufacturing	Medium	1	0
+CP0000151	Arif Halim	Individual	Arif Halim	1985-01-01	1900-01-01	188 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775659450630	Manufacturing	Medium	1	0
+CP0000152	Laras Setiawan	Individual	Laras Setiawan	1985-01-01	1900-01-01	95 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	774653466685	Technology	Medium	1	0
+CP0000153	Laras Suryadi	Individual	Laras Suryadi	1985-01-01	1900-01-01	767 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	771727679486	Manufacturing	Medium	1	0
+CP0000154	Raka Setiawan	Individual	Raka Setiawan	1985-01-01	1900-01-01	693 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775087128428	Healthcare	Low	1	0
+CP0000155	Indra Darmawan	Individual	Indra Darmawan	1985-01-01	1900-01-01	718 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	775454719736	Retail	Low	1	0
+CP0000156	PT Adinata Synthetic	Company	Bagus Adinata	1900-01-01	2018-01-01	876 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774336971811	Logistics	Low	0	1
+CP0000157	PT Permana Synthetic	Company	Rizky Permana	1900-01-01	2018-01-01	469 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775639933455	Manufacturing	Low	0	1
+CP0000158	Hana Hartono	Individual	Hana Hartono	1985-01-01	1900-01-01	661 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770198328760	Retail	Low	1	0
+CP0000159	Kevin Budiman	Individual	Kevin Budiman	1985-01-01	1900-01-01	46 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774934359369	Construction	Low	1	0
+CP0000160	PT Iskandar Synthetic	Company	Bima Iskandar	1900-01-01	2018-01-01	60 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772881552351	Technology	Medium	0	1
+CP0000161	PT Hartono Synthetic	Company	Fajar Hartono	1900-01-01	2018-01-01	437 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778799284445	Construction	Medium	0	1
+CP0000162	PT Firmansyah Synthetic	Company	Dewi Firmansyah	1900-01-01	2018-01-01	172 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774074777786	Logistics	Low	0	1
+CP0000163	Intan Nugraha	Individual	Intan Nugraha	1985-01-01	1900-01-01	219 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777966036918	Retail	Low	1	0
+CP0000164	Andi Prakoso	Individual	Andi Prakoso	1985-01-01	1900-01-01	75 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777074843321	Retail	Medium	1	0
+CP0000165	Bagus Adinata	Individual	Bagus Adinata	1985-01-01	1900-01-01	426 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	770446562761	Construction	Low	1	0
+CP0000166	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	237 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774934924182	Construction	Low	1	0
+CP0000167	Adit Darmawan	Individual	Adit Darmawan	1985-01-01	1900-01-01	342 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770517484068	Construction	Low	1	0
+CP0000168	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	335 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776365194703	Manufacturing	Medium	1	0
+CP0000169	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	848 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775324199067	Logistics	Low	1	0
+CP0000170	PT Prakoso Synthetic	Company	Rizky Prakoso	1900-01-01	2018-01-01	212 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	774952080129	Healthcare	Low	0	1
+CP0000171	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	602 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774525402186	Healthcare	Low	1	0
+CP0000172	Alya Halim	Individual	Alya Halim	1985-01-01	1900-01-01	195 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773012823707	Healthcare	Low	1	0
+CP0000173	Adit Setiawan	Individual	Adit Setiawan	1985-01-01	1900-01-01	764 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	778232224257	Logistics	Low	1	0
+CP0000174	Adit Darmawan	Individual	Adit Darmawan	1985-01-01	1900-01-01	878 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	772025052711	Healthcare	Low	1	0
+CP0000175	Bagus Gunawan	Individual	Bagus Gunawan	1985-01-01	1900-01-01	164 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	770761057751	Manufacturing	Low	1	0
+CP0000176	PT Iskandar Synthetic	Company	Bagus Iskandar	1900-01-01	2018-01-01	474 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	776342497637	Healthcare	High	0	1
+CP0000177	PT Darmawan Synthetic	Company	Rizky Darmawan	1900-01-01	2018-01-01	569 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777820412390	Construction	Low	0	1
+CP0000178	PT Suryadi Synthetic	Company	Dimas Suryadi	1900-01-01	2018-01-01	611 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774510310407	Construction	Low	0	1
+CP0000179	PT Budiman Synthetic	Company	Bima Budiman	1900-01-01	2018-01-01	286 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	777629631077	Logistics	Medium	0	1
+CP0000180	Kevin Santoso	Individual	Kevin Santoso	1985-01-01	1900-01-01	805 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779748286515	Manufacturing	Medium	1	0
+CP0000181	Eka Chandra	Individual	Eka Chandra	1985-01-01	1900-01-01	211 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775259187855	Logistics	Low	1	0
+CP0000182	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	1 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779087646954	Technology	Low	1	0
+CP0000183	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	471 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	771646171318	Construction	Low	1	0
+CP0000184	Hana Wibowo	Individual	Hana Wibowo	1985-01-01	1900-01-01	891 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	775995301511	Logistics	Medium	1	0
+CP0000185	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	584 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	772212541073	Healthcare	Medium	1	0
+CP0000186	PT Gunawan Synthetic	Company	Eka Gunawan	1900-01-01	2018-01-01	699 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	777962721021	Retail	Medium	0	1
+CP0000187	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	633 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	775705892529	Manufacturing	Low	1	0
+CP0000188	Wulan Mahendra	Individual	Wulan Mahendra	1985-01-01	1900-01-01	835 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	774095038436	Healthcare	Medium	1	0
+CP0000189	PT Setiawan Synthetic	Company	Eka Setiawan	1900-01-01	2018-01-01	864 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	773937459276	Retail	Low	0	1
+CP0000190	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	895 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778619516209	Manufacturing	Medium	1	0
+CP0000191	Dewi Lesmana	Individual	Dewi Lesmana	1985-01-01	1900-01-01	754 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770455333385	Construction	Low	1	0
+CP0000192	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	862 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770081545557	Healthcare	Medium	1	0
+CP0000193	Dewi Kurniawan	Individual	Dewi Kurniawan	1985-01-01	1900-01-01	887 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779143048405	Healthcare	Low	1	0
+CP0000194	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	785 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775740220588	Construction	Medium	1	0
+CP0000195	Wulan Permana	Individual	Wulan Permana	1985-01-01	1900-01-01	496 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772847279103	Technology	Medium	1	0
+CP0000196	PT Halim Synthetic	Company	Dimas Halim	1900-01-01	2018-01-01	225 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	779050025860	Construction	Low	0	1
+CP0000197	Fajar Firmansyah	Individual	Fajar Firmansyah	1985-01-01	1900-01-01	360 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	772721260538	Manufacturing	Low	1	0
+CP0000198	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	580 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775877637723	Healthcare	Low	1	0
+CP0000199	PT Yulianto Synthetic	Company	Naufal Yulianto	1900-01-01	2018-01-01	678 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771936825051	Construction	Medium	0	1
+CP0000200	Alya Permana	Individual	Alya Permana	1985-01-01	1900-01-01	656 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776162426875	Retail	Low	1	0
+CP0000201	Gita Wijaya	Individual	Gita Wijaya	1985-01-01	1900-01-01	227 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773319655987	Logistics	Low	1	0
+CP0000202	Rani Putra	Individual	Rani Putra	1985-01-01	1900-01-01	874 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771766846986	Healthcare	Medium	1	0
+CP0000203	PT Prakoso Synthetic	Company	Maya Prakoso	1900-01-01	2018-01-01	569 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	771096965938	Logistics	Medium	0	1
+CP0000204	PT Darmawan Synthetic	Company	Laras Darmawan	1900-01-01	2018-01-01	513 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773376007908	Healthcare	Medium	0	1
+CP0000205	PT Lesmana Synthetic	Company	Alya Lesmana	1900-01-01	2018-01-01	65 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	771857382616	Technology	Low	0	1
+CP0000206	PT Prakoso Synthetic	Company	Anisa Prakoso	1900-01-01	2018-01-01	174 Synthetic Avenue	Denpasar	JP	JP	Bank Sentra	771374260983	Technology	Low	0	1
+CP0000207	Dimas Permana	Individual	Dimas Permana	1985-01-01	1900-01-01	773 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770590101913	Healthcare	High	1	0
+CP0000208	PT Rahardjo Synthetic	Company	Fajar Rahardjo	1900-01-01	2018-01-01	632 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778750799886	Construction	Medium	0	1
+CP0000209	Rizky Lesmana	Individual	Rizky Lesmana	1985-01-01	1900-01-01	422 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772956426508	Construction	Medium	1	0
+CP0000210	PT Putra Synthetic	Company	Indra Putra	1900-01-01	2018-01-01	713 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774515318841	Construction	High	0	1
+CP0000211	Wulan Budiman	Individual	Wulan Budiman	1985-01-01	1900-01-01	359 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	779016507167	Technology	Medium	1	0
+CP0000212	Adit Permana	Individual	Adit Permana	1985-01-01	1900-01-01	447 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	772417946260	Retail	Medium	1	0
+CP0000213	PT Halim Synthetic	Company	Putri Halim	1900-01-01	2018-01-01	245 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	771961449049	Logistics	Low	0	1
+CP0000214	Putri Adinata	Individual	Putri Adinata	1985-01-01	1900-01-01	574 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	774901221930	Retail	Low	1	0
+CP0000215	Adit Mahendra	Individual	Adit Mahendra	1985-01-01	1900-01-01	418 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771731900090	Technology	Low	1	0
+CP0000216	PT Prakoso Synthetic	Company	Rani Prakoso	1900-01-01	2018-01-01	647 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778080018134	Technology	Low	0	1
+CP0000217	Anisa Santoso	Individual	Anisa Santoso	1985-01-01	1900-01-01	788 Synthetic Avenue	Medan	SG	SG	Bank Sentra	773630890668	Retail	Medium	1	0
+CP0000218	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	278 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772422951666	Logistics	High	1	0
+CP0000219	Rizky Gunawan	Individual	Rizky Gunawan	1985-01-01	1900-01-01	64 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	770881066708	Healthcare	Low	1	0
+CP0000220	PT Rahardjo Synthetic	Company	Anisa Rahardjo	1900-01-01	2018-01-01	167 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	771086374352	Technology	Low	0	1
+CP0000221	Alya Gunawan	Individual	Alya Gunawan	1985-01-01	1900-01-01	647 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	777148242267	Construction	Medium	1	0
+CP0000222	Rani Prakoso	Individual	Rani Prakoso	1985-01-01	1900-01-01	314 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774131796418	Construction	Medium	1	0
+CP0000223	PT Hartono Synthetic	Company	Farah Hartono	1900-01-01	2018-01-01	758 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771744353260	Manufacturing	Low	0	1
+CP0000224	Anisa Setiawan	Individual	Anisa Setiawan	1985-01-01	1900-01-01	326 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772717475693	Technology	Medium	1	0
+CP0000225	Eka Lesmana	Individual	Eka Lesmana	1985-01-01	1900-01-01	884 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775637182850	Construction	High	1	0
+CP0000226	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	258 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776459373175	Logistics	Low	1	0
+CP0000227	Anisa Hartono	Individual	Anisa Hartono	1985-01-01	1900-01-01	616 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	776969138100	Technology	Low	1	0
+CP0000228	PT Adinata Synthetic	Company	Arif Adinata	1900-01-01	2018-01-01	634 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777474875123	Logistics	Medium	0	1
+CP0000229	Dimas Santoso	Individual	Dimas Santoso	1985-01-01	1900-01-01	156 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778701066433	Construction	Low	1	0
+CP0000230	Fajar Santoso	Individual	Fajar Santoso	1985-01-01	1900-01-01	538 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776760381073	Construction	Medium	1	0
+CP0000231	PT Kurniawan Synthetic	Company	Bagus Kurniawan	1900-01-01	2018-01-01	321 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774375132335	Technology	Medium	0	1
+CP0000232	Putri Darmawan	Individual	Putri Darmawan	1985-01-01	1900-01-01	689 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774808471443	Construction	Medium	1	0
+CP0000233	PT Permana Synthetic	Company	Naufal Permana	1900-01-01	2018-01-01	385 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	777168791598	Manufacturing	Low	0	1
+CP0000234	PT Suryadi Synthetic	Company	Adit Suryadi	1900-01-01	2018-01-01	307 Synthetic Avenue	Makassar	US	US	Bank Sentra	771859653747	Logistics	Medium	0	1
+CP0000235	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	443 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	774073241484	Logistics	Medium	1	0
+CP0000236	Sari Wibowo	Individual	Sari Wibowo	1985-01-01	1900-01-01	286 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777216299701	Healthcare	Medium	1	0
+CP0000237	Indra Gunawan	Individual	Indra Gunawan	1985-01-01	1900-01-01	292 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776647895256	Technology	Low	1	0
+CP0000238	PT Chandra Synthetic	Company	Indra Chandra	1900-01-01	2018-01-01	895 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774828548821	Retail	Low	0	1
+CP0000239	PT Gunawan Synthetic	Company	Rani Gunawan	1900-01-01	2018-01-01	603 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776359014546	Healthcare	Low	0	1
+CP0000240	PT Adinata Synthetic	Company	Naufal Adinata	1900-01-01	2018-01-01	387 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770340470323	Retail	Medium	0	1
+CP0000241	Intan Suryadi	Individual	Intan Suryadi	1985-01-01	1900-01-01	698 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	778251891915	Healthcare	Low	1	0
+CP0000242	PT Santoso Synthetic	Company	Putri Santoso	1900-01-01	2018-01-01	352 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772485257011	Retail	Medium	0	1
+CP0000243	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	736 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	773187086939	Healthcare	Medium	1	0
+CP0000244	Teguh Suryadi	Individual	Teguh Suryadi	1985-01-01	1900-01-01	260 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771943438415	Technology	Low	1	0
+CP0000245	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	582 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779908572080	Retail	Low	1	0
+CP0000246	Adit Kurniawan	Individual	Adit Kurniawan	1985-01-01	1900-01-01	136 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776178857105	Technology	Medium	1	0
+CP0000247	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	483 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779758417657	Healthcare	High	1	0
+CP0000248	PT Hartono Synthetic	Company	Fajar Hartono	1900-01-01	2018-01-01	780 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	774672967756	Retail	Low	0	1
+CP0000249	PT Hartono Synthetic	Company	Bima Hartono	1900-01-01	2018-01-01	803 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	774771811994	Construction	Low	0	1
+CP0000250	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	347 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	773265137872	Technology	Low	1	0
+CP0000251	Fajar Setiawan	Individual	Fajar Setiawan	1985-01-01	1900-01-01	112 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779291265266	Healthcare	Low	1	0
+CP0000252	Farah Halim	Individual	Farah Halim	1985-01-01	1900-01-01	474 Synthetic Avenue	Bandung	JP	JP	Bank Nusantara	773887696671	Technology	Low	1	0
+CP0000253	Dimas Prakoso	Individual	Dimas Prakoso	1985-01-01	1900-01-01	120 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	779760797279	Construction	Low	1	0
+CP0000254	Wulan Santoso	Individual	Wulan Santoso	1985-01-01	1900-01-01	83 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	777978885675	Technology	Low	1	0
+CP0000255	PT Santoso Synthetic	Company	Raka Santoso	1900-01-01	2018-01-01	91 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776020588493	Healthcare	Low	0	1
+CP0000256	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	782 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774583847930	Healthcare	Low	1	0
+CP0000257	Hana Santoso	Individual	Hana Santoso	1985-01-01	1900-01-01	200 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777259338639	Retail	Low	1	0
+CP0000258	PT Nugraha Synthetic	Company	Kevin Nugraha	1900-01-01	2018-01-01	482 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776651609671	Manufacturing	Low	0	1
+CP0000259	Rizky Lesmana	Individual	Rizky Lesmana	1985-01-01	1900-01-01	68 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777142892666	Manufacturing	Medium	1	0
+CP0000260	PT Wibowo Synthetic	Company	Rizky Wibowo	1900-01-01	2018-01-01	215 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777427688126	Construction	Low	0	1
+CP0000261	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	312 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773260926233	Manufacturing	Medium	1	0
+CP0000262	Eka Darmawan	Individual	Eka Darmawan	1985-01-01	1900-01-01	147 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770653318856	Manufacturing	Low	1	0
+CP0000263	Dimas Mahendra	Individual	Dimas Mahendra	1985-01-01	1900-01-01	827 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	777464409228	Logistics	Medium	1	0
+CP0000264	PT Nugraha Synthetic	Company	Teguh Nugraha	1900-01-01	2018-01-01	583 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773322895434	Logistics	Low	0	1
+CP0000265	Wulan Gunawan	Individual	Wulan Gunawan	1985-01-01	1900-01-01	45 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777052660800	Construction	Medium	1	0
+CP0000266	Citra Wijaya	Individual	Citra Wijaya	1985-01-01	1900-01-01	208 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773370691083	Construction	Low	1	0
+CP0000267	PT Rahardjo Synthetic	Company	Rizky Rahardjo	1900-01-01	2018-01-01	434 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	770586055897	Construction	Low	0	1
+CP0000268	Citra Mahendra	Individual	Citra Mahendra	1985-01-01	1900-01-01	206 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775365575660	Technology	Low	1	0
+CP0000269	Rizky Rahardjo	Individual	Rizky Rahardjo	1985-01-01	1900-01-01	532 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771783978297	Construction	Low	1	0
+CP0000270	Raka Suryadi	Individual	Raka Suryadi	1985-01-01	1900-01-01	566 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	771500607997	Logistics	Low	1	0
+CP0000271	Naufal Wibowo	Individual	Naufal Wibowo	1985-01-01	1900-01-01	151 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771600873068	Technology	Low	1	0
+CP0000272	Teguh Kurniawan	Individual	Teguh Kurniawan	1985-01-01	1900-01-01	798 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774054625343	Manufacturing	Low	1	0
+CP0000273	PT Permana Synthetic	Company	Putri Permana	1900-01-01	2018-01-01	819 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	776903116388	Technology	Low	0	1
+CP0000274	Fajar Siregar	Individual	Fajar Siregar	1985-01-01	1900-01-01	248 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770850915046	Technology	Low	1	0
+CP0000275	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	728 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	776093225213	Manufacturing	Low	1	0
+CP0000276	Raka Suryadi	Individual	Raka Suryadi	1985-01-01	1900-01-01	326 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	778846219113	Construction	Medium	1	0
+CP0000277	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	491 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772471876797	Construction	High	1	0
+CP0000278	PT Hartono Synthetic	Company	Indra Hartono	1900-01-01	2018-01-01	867 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	776486265750	Healthcare	Low	0	1
+CP0000279	Bima Nugraha	Individual	Bima Nugraha	1985-01-01	1900-01-01	452 Synthetic Avenue	Semarang	US	US	Bank Nusantara	775835670428	Manufacturing	Low	1	0
+CP0000280	Raka Budiman	Individual	Raka Budiman	1985-01-01	1900-01-01	808 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	779279753057	Healthcare	High	1	0
+CP0000281	Anisa Hartono	Individual	Anisa Hartono	1985-01-01	1900-01-01	318 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772976497186	Logistics	High	1	0
+CP0000282	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	22 Synthetic Avenue	Bandung	AU	AU	Asia Commerce Bank	775538791223	Logistics	Low	1	0
+CP0000283	Teguh Nugraha	Individual	Teguh Nugraha	1985-01-01	1900-01-01	743 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778875315590	Technology	Medium	1	0
+CP0000284	Gita Wibowo	Individual	Gita Wibowo	1985-01-01	1900-01-01	763 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	772873002557	Construction	Low	1	0
+CP0000285	Dimas Lesmana	Individual	Dimas Lesmana	1985-01-01	1900-01-01	271 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779503578803	Construction	Low	1	0
+CP0000286	PT Santoso Synthetic	Company	Naufal Santoso	1900-01-01	2018-01-01	851 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777130947473	Manufacturing	Medium	0	1
+CP0000409	Teguh Budiman	Individual	Teguh Budiman	1985-01-01	1900-01-01	209 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770956473150	Technology	Low	1	0
+CP0000287	Dimas Kurniawan	Individual	Dimas Kurniawan	1985-01-01	1900-01-01	168 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770265312771	Healthcare	Medium	1	0
+CP0000288	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	377 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	770088540882	Healthcare	Low	1	0
+CP0000289	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	328 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	776234332408	Healthcare	Low	1	0
+CP0000290	PT Setiawan Synthetic	Company	Rizky Setiawan	1900-01-01	2018-01-01	820 Synthetic Avenue	Semarang	AE	AE	Bank Nusantara	773277132228	Manufacturing	Low	0	1
+CP0000291	Hana Kurniawan	Individual	Hana Kurniawan	1985-01-01	1900-01-01	338 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	777736074423	Manufacturing	Low	1	0
+CP0000292	Rani Hartono	Individual	Rani Hartono	1985-01-01	1900-01-01	705 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774652559711	Technology	Low	1	0
+CP0000293	Alya Suryadi	Individual	Alya Suryadi	1985-01-01	1900-01-01	122 Synthetic Avenue	Surabaya	AU	AU	Asia Commerce Bank	774265960650	Technology	Low	1	0
+CP0000294	Rizky Rahardjo	Individual	Rizky Rahardjo	1985-01-01	1900-01-01	540 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771864398509	Construction	Low	1	0
+CP0000295	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	495 Synthetic Avenue	Surabaya	AE	AE	Bank Nusantara	774725677322	Construction	High	1	0
+CP0000296	Adit Santoso	Individual	Adit Santoso	1985-01-01	1900-01-01	793 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	770233971237	Construction	Low	1	0
+CP0000297	PT Kurniawan Synthetic	Company	Hana Kurniawan	1900-01-01	2018-01-01	338 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770929141179	Manufacturing	Low	0	1
+CP0000298	Teguh Rahardjo	Individual	Teguh Rahardjo	1985-01-01	1900-01-01	173 Synthetic Avenue	Jakarta	AE	AE	Bank Nusantara	779117029754	Technology	Medium	1	0
+CP0000299	PT Budiman Synthetic	Company	Adit Budiman	1900-01-01	2018-01-01	700 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771561557339	Construction	Medium	0	1
+CP0000300	Farah Mahendra	Individual	Farah Mahendra	1985-01-01	1900-01-01	25 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771289344735	Construction	Medium	1	0
+CP0000301	Raka Yulianto	Individual	Raka Yulianto	1985-01-01	1900-01-01	250 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776880542839	Healthcare	Low	1	0
+CP0000302	PT Iskandar Synthetic	Company	Bima Iskandar	1900-01-01	2018-01-01	191 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	779915975448	Technology	Low	0	1
+CP0000303	PT Mahendra Synthetic	Company	Indra Mahendra	1900-01-01	2018-01-01	286 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771969239533	Healthcare	Medium	0	1
+CP0000304	Farah Nugraha	Individual	Farah Nugraha	1985-01-01	1900-01-01	175 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778663937269	Logistics	Low	1	0
+CP0000305	Maya Rahardjo	Individual	Maya Rahardjo	1985-01-01	1900-01-01	766 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	779224978382	Construction	Low	1	0
+CP0000306	Hana Yulianto	Individual	Hana Yulianto	1985-01-01	1900-01-01	162 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778502665930	Manufacturing	Low	1	0
+CP0000307	PT Santoso Synthetic	Company	Alya Santoso	1900-01-01	2018-01-01	459 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773918540814	Construction	Medium	0	1
+CP0000308	Bagus Iskandar	Individual	Bagus Iskandar	1985-01-01	1900-01-01	283 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	771415721217	Technology	Low	1	0
+CP0000309	Naufal Santoso	Individual	Naufal Santoso	1985-01-01	1900-01-01	509 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	774282007818	Technology	Medium	1	0
+CP0000310	PT Permana Synthetic	Company	Farah Permana	1900-01-01	2018-01-01	818 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779945308736	Healthcare	Medium	0	1
+CP0000311	PT Chandra Synthetic	Company	Dewi Chandra	1900-01-01	2018-01-01	240 Synthetic Avenue	Bandung	AU	AU	Asia Commerce Bank	775269259796	Retail	Low	0	1
+CP0000312	Bagus Yulianto	Individual	Bagus Yulianto	1985-01-01	1900-01-01	4 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778980664132	Technology	Low	1	0
+CP0000313	PT Rahardjo Synthetic	Company	Intan Rahardjo	1900-01-01	2018-01-01	730 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776596647615	Retail	Medium	0	1
+CP0000314	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	227 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779181841080	Retail	Low	1	0
+CP0000315	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	607 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	777110712153	Manufacturing	Low	1	0
+CP0000316	PT Permana Synthetic	Company	Hana Permana	1900-01-01	2018-01-01	606 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774910836956	Retail	Low	0	1
+CP0000317	PT Mahendra Synthetic	Company	Dimas Mahendra	1900-01-01	2018-01-01	413 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	772379662634	Technology	Low	0	1
+CP0000318	Laras Yulianto	Individual	Laras Yulianto	1985-01-01	1900-01-01	677 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779830625895	Retail	Low	1	0
+CP0000319	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	121 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	777673003792	Manufacturing	Low	1	0
+CP0000320	PT Suryadi Synthetic	Company	Bagus Suryadi	1900-01-01	2018-01-01	113 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	779348330365	Technology	Medium	0	1
+CP0000321	PT Darmawan Synthetic	Company	Farah Darmawan	1900-01-01	2018-01-01	489 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	772851447996	Manufacturing	Low	0	1
+CP0000322	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	196 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	775707477958	Logistics	Low	1	0
+CP0000323	PT Permana Synthetic	Company	Anisa Permana	1900-01-01	2018-01-01	885 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773905121238	Manufacturing	Low	0	1
+CP0000324	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	308 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772404151592	Manufacturing	Low	1	0
+CP0000325	PT Santoso Synthetic	Company	Citra Santoso	1900-01-01	2018-01-01	820 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776294824000	Healthcare	Low	0	1
+CP0000326	Rani Mahendra	Individual	Rani Mahendra	1985-01-01	1900-01-01	276 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	776917416249	Manufacturing	Low	1	0
+CP0000410	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	347 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770490285307	Construction	Low	1	0
+CP0000327	Putri Kurniawan	Individual	Putri Kurniawan	1985-01-01	1900-01-01	868 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	771089440184	Retail	Medium	1	0
+CP0000328	Hana Wijaya	Individual	Hana Wijaya	1985-01-01	1900-01-01	884 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775604115885	Logistics	Low	1	0
+CP0000329	Arif Darmawan	Individual	Arif Darmawan	1985-01-01	1900-01-01	410 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	779780046524	Technology	Low	1	0
+CP0000330	PT Kurniawan Synthetic	Company	Andi Kurniawan	1900-01-01	2018-01-01	322 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775724153602	Logistics	Low	0	1
+CP0000331	PT Hartono Synthetic	Company	Adit Hartono	1900-01-01	2018-01-01	716 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770373210923	Logistics	Medium	0	1
+CP0000332	PT Putra Synthetic	Company	Gita Putra	1900-01-01	2018-01-01	524 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	779992767303	Manufacturing	Medium	0	1
+CP0000333	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	41 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778602157927	Retail	Medium	1	0
+CP0000334	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	417 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779192851618	Healthcare	Low	1	0
+CP0000335	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	817 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775974883915	Retail	High	1	0
+CP0000336	PT Darmawan Synthetic	Company	Gita Darmawan	1900-01-01	2018-01-01	317 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773220301157	Logistics	High	0	1
+CP0000337	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	387 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779020040154	Healthcare	Low	1	0
+CP0000338	Kevin Hartono	Individual	Kevin Hartono	1985-01-01	1900-01-01	491 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779184128935	Technology	Low	1	0
+CP0000339	PT Halim Synthetic	Company	Kevin Halim	1900-01-01	2018-01-01	144 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774651830248	Logistics	Low	0	1
+CP0000340	Joko Santoso	Individual	Joko Santoso	1985-01-01	1900-01-01	536 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	774340168437	Logistics	Low	1	0
+CP0000341	PT Yulianto Synthetic	Company	Naufal Yulianto	1900-01-01	2018-01-01	858 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776288335458	Technology	Low	0	1
+CP0000342	Arif Permana	Individual	Arif Permana	1985-01-01	1900-01-01	458 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770049605893	Logistics	Low	1	0
+CP0000343	Raka Rahardjo	Individual	Raka Rahardjo	1985-01-01	1900-01-01	880 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772975344178	Construction	Low	1	0
+CP0000344	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	594 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	774258400143	Manufacturing	Medium	1	0
+CP0000345	PT Firmansyah Synthetic	Company	Teguh Firmansyah	1900-01-01	2018-01-01	444 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771312093396	Healthcare	Low	0	1
+CP0000346	PT Darmawan Synthetic	Company	Farah Darmawan	1900-01-01	2018-01-01	396 Synthetic Avenue	Yogyakarta	JP	JP	Bank Sentra	774241714513	Manufacturing	Medium	0	1
+CP0000347	Sari Budiman	Individual	Sari Budiman	1985-01-01	1900-01-01	27 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	773747182402	Manufacturing	Low	1	0
+CP0000348	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	201 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774660700275	Healthcare	Low	1	0
+CP0000349	Bagus Suryadi	Individual	Bagus Suryadi	1985-01-01	1900-01-01	36 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776608070368	Technology	Medium	1	0
+CP0000350	Dimas Rahardjo	Individual	Dimas Rahardjo	1985-01-01	1900-01-01	644 Synthetic Avenue	Jakarta	US	US	Bank Sentra	770924381911	Healthcare	Medium	1	0
+CP0000351	Dewi Nugraha	Individual	Dewi Nugraha	1985-01-01	1900-01-01	343 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	775124972016	Healthcare	Low	1	0
+CP0000352	Teguh Setiawan	Individual	Teguh Setiawan	1985-01-01	1900-01-01	355 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	773880385912	Logistics	Low	1	0
+CP0000353	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	884 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779206931396	Healthcare	Medium	1	0
+CP0000354	PT Lesmana Synthetic	Company	Bima Lesmana	1900-01-01	2018-01-01	842 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779273609081	Healthcare	Medium	0	1
+CP0000355	PT Darmawan Synthetic	Company	Alya Darmawan	1900-01-01	2018-01-01	453 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774078252095	Technology	Medium	0	1
+CP0000356	PT Budiman Synthetic	Company	Andi Budiman	1900-01-01	2018-01-01	798 Synthetic Avenue	Jakarta	AU	AU	Bank Nusantara	776847222755	Construction	Medium	0	1
+CP0000357	PT Nugraha Synthetic	Company	Alya Nugraha	1900-01-01	2018-01-01	534 Synthetic Avenue	Jakarta	AE	AE	Asia Commerce Bank	772641485012	Healthcare	Low	0	1
+CP0000358	Dimas Wijaya	Individual	Dimas Wijaya	1985-01-01	1900-01-01	367 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777010410210	Technology	Low	1	0
+CP0000359	Farah Mahendra	Individual	Farah Mahendra	1985-01-01	1900-01-01	745 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778418843677	Healthcare	Medium	1	0
+CP0000360	Nadia Prakoso	Individual	Nadia Prakoso	1985-01-01	1900-01-01	534 Synthetic Avenue	Medan	GB	GB	Bank Sentra	773578503921	Healthcare	Low	1	0
+CP0000361	Eka Yulianto	Individual	Eka Yulianto	1985-01-01	1900-01-01	176 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773745097653	Retail	Low	1	0
+CP0000362	Rizky Iskandar	Individual	Rizky Iskandar	1985-01-01	1900-01-01	456 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	778005542956	Healthcare	Medium	1	0
+CP0000363	Nadia Mahendra	Individual	Nadia Mahendra	1985-01-01	1900-01-01	393 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772466716680	Manufacturing	Low	1	0
+CP0000364	Andi Suryadi	Individual	Andi Suryadi	1985-01-01	1900-01-01	549 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775277280688	Construction	Medium	1	0
+CP0000365	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	729 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775921367668	Logistics	Low	1	0
+CP0000366	Teguh Gunawan	Individual	Teguh Gunawan	1985-01-01	1900-01-01	661 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772342687129	Logistics	Low	1	0
+CP0000367	PT Permana Synthetic	Company	Dewi Permana	1900-01-01	2018-01-01	316 Synthetic Avenue	Denpasar	GB	GB	Asia Commerce Bank	777229800931	Logistics	Medium	0	1
+CP0000368	PT Nugraha Synthetic	Company	Laras Nugraha	1900-01-01	2018-01-01	261 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774440962990	Construction	Low	0	1
+CP0000369	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	681 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	776702154141	Construction	Low	1	0
+CP0000370	Bagus Santoso	Individual	Bagus Santoso	1985-01-01	1900-01-01	690 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	778861904516	Construction	Medium	1	0
+CP0000371	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	493 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	775349649350	Construction	Medium	1	0
+CP0000372	Fajar Setiawan	Individual	Fajar Setiawan	1985-01-01	1900-01-01	98 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	770664676595	Construction	Low	1	0
+CP0000373	Farah Suryadi	Individual	Farah Suryadi	1985-01-01	1900-01-01	98 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773597726364	Manufacturing	Low	1	0
+CP0000374	Adit Mahendra	Individual	Adit Mahendra	1985-01-01	1900-01-01	633 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771578266016	Technology	Medium	1	0
+CP0000375	Naufal Darmawan	Individual	Naufal Darmawan	1985-01-01	1900-01-01	374 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774088603388	Technology	Low	1	0
+CP0000376	Teguh Setiawan	Individual	Teguh Setiawan	1985-01-01	1900-01-01	130 Synthetic Avenue	Bandung	GB	GB	Asia Commerce Bank	773140276726	Healthcare	Low	1	0
+CP0000377	Rizky Lesmana	Individual	Rizky Lesmana	1985-01-01	1900-01-01	800 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	775603167339	Logistics	Low	1	0
+CP0000378	Joko Rahardjo	Individual	Joko Rahardjo	1985-01-01	1900-01-01	807 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774046457131	Logistics	Medium	1	0
+CP0000379	Gita Lesmana	Individual	Gita Lesmana	1985-01-01	1900-01-01	400 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	779597001363	Logistics	Low	1	0
+CP0000380	Intan Wibowo	Individual	Intan Wibowo	1985-01-01	1900-01-01	119 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774089577038	Technology	Low	1	0
+CP0000381	Bagus Firmansyah	Individual	Bagus Firmansyah	1985-01-01	1900-01-01	442 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778139071881	Retail	Medium	1	0
+CP0000382	Hana Gunawan	Individual	Hana Gunawan	1985-01-01	1900-01-01	25 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	772547210863	Construction	Low	1	0
+CP0000383	Sari Yulianto	Individual	Sari Yulianto	1985-01-01	1900-01-01	208 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775484893671	Manufacturing	Low	1	0
+CP0000384	PT Budiman Synthetic	Company	Eka Budiman	1900-01-01	2018-01-01	390 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773300701857	Technology	Low	0	1
+CP0000385	Kevin Setiawan	Individual	Kevin Setiawan	1985-01-01	1900-01-01	165 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773827979690	Retail	Medium	1	0
+CP0000386	Andi Setiawan	Individual	Andi Setiawan	1985-01-01	1900-01-01	631 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773218986934	Retail	Low	1	0
+CP0000387	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	385 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772628245818	Manufacturing	Low	1	0
+CP0000388	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	215 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	772421098480	Technology	Low	1	0
+CP0000389	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	722 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775217088169	Logistics	Medium	1	0
+CP0000390	PT Yulianto Synthetic	Company	Eka Yulianto	1900-01-01	2018-01-01	324 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776408279413	Manufacturing	Low	0	1
+CP0000391	Laras Nugraha	Individual	Laras Nugraha	1985-01-01	1900-01-01	136 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773644576997	Technology	Low	1	0
+CP0000392	PT Suryadi Synthetic	Company	Indra Suryadi	1900-01-01	2018-01-01	258 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	771050278534	Manufacturing	Medium	0	1
+CP0000393	Laras Darmawan	Individual	Laras Darmawan	1985-01-01	1900-01-01	875 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	770554467878	Construction	Medium	1	0
+CP0000394	Rizky Lesmana	Individual	Rizky Lesmana	1985-01-01	1900-01-01	395 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770201833160	Technology	Low	1	0
+CP0000395	Adit Lesmana	Individual	Adit Lesmana	1985-01-01	1900-01-01	644 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	771685261138	Construction	Medium	1	0
+CP0000396	Eka Santoso	Individual	Eka Santoso	1985-01-01	1900-01-01	822 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770230879058	Technology	Low	1	0
+CP0000397	Intan Darmawan	Individual	Intan Darmawan	1985-01-01	1900-01-01	652 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771646960029	Manufacturing	Low	1	0
+CP0000398	PT Mahendra Synthetic	Company	Rani Mahendra	1900-01-01	2018-01-01	767 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773995415309	Healthcare	Low	0	1
+CP0000399	PT Hartono Synthetic	Company	Wulan Hartono	1900-01-01	2018-01-01	552 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	777806522903	Manufacturing	Medium	0	1
+CP0000400	Bima Putra	Individual	Bima Putra	1985-01-01	1900-01-01	456 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777107115585	Healthcare	Medium	1	0
+CP0000401	PT Budiman Synthetic	Company	Kevin Budiman	1900-01-01	2018-01-01	728 Synthetic Avenue	Semarang	AE	AE	Bank Nusantara	774820207564	Logistics	High	0	1
+CP0000402	PT Santoso Synthetic	Company	Adit Santoso	1900-01-01	2018-01-01	432 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772899903478	Construction	Low	0	1
+CP0000403	PT Rahardjo Synthetic	Company	Maya Rahardjo	1900-01-01	2018-01-01	353 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778154419883	Technology	High	0	1
+CP0000404	PT Siregar Synthetic	Company	Arif Siregar	1900-01-01	2018-01-01	801 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777481737318	Healthcare	Low	0	1
+CP0000405	Maya Chandra	Individual	Maya Chandra	1985-01-01	1900-01-01	473 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778513004688	Technology	Low	1	0
+CP0000406	Dewi Mahendra	Individual	Dewi Mahendra	1985-01-01	1900-01-01	24 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774248617543	Healthcare	High	1	0
+CP0000407	PT Santoso Synthetic	Company	Maya Santoso	1900-01-01	2018-01-01	465 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	774085550370	Healthcare	High	0	1
+CP0000408	Citra Setiawan	Individual	Citra Setiawan	1985-01-01	1900-01-01	766 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	779177294925	Healthcare	Low	1	0
+CP0000411	Anisa Santoso	Individual	Anisa Santoso	1985-01-01	1900-01-01	103 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771654936487	Technology	High	1	0
+CP0000412	PT Gunawan Synthetic	Company	Indra Gunawan	1900-01-01	2018-01-01	92 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777421876842	Technology	Low	0	1
+CP0000413	Joko Firmansyah	Individual	Joko Firmansyah	1985-01-01	1900-01-01	828 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776147353900	Construction	Low	1	0
+CP0000414	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	664 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	778765457154	Technology	Low	1	0
+CP0000415	PT Gunawan Synthetic	Company	Bima Gunawan	1900-01-01	2018-01-01	376 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779770921051	Manufacturing	Low	0	1
+CP0000416	Teguh Wijaya	Individual	Teguh Wijaya	1985-01-01	1900-01-01	258 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776161161943	Retail	Low	1	0
+CP0000417	Alya Mahendra	Individual	Alya Mahendra	1985-01-01	1900-01-01	238 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777454922205	Construction	Low	1	0
+CP0000418	Maya Santoso	Individual	Maya Santoso	1985-01-01	1900-01-01	400 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771562026470	Construction	Medium	1	0
+CP0000419	Laras Prakoso	Individual	Laras Prakoso	1985-01-01	1900-01-01	538 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776012005116	Retail	High	1	0
+CP0000420	PT Darmawan Synthetic	Company	Farah Darmawan	1900-01-01	2018-01-01	816 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779482312710	Technology	Medium	0	1
+CP0000421	Farah Firmansyah	Individual	Farah Firmansyah	1985-01-01	1900-01-01	41 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774676578124	Technology	High	1	0
+CP0000422	PT Chandra Synthetic	Company	Intan Chandra	1900-01-01	2018-01-01	207 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	777102696867	Healthcare	Medium	0	1
+CP0000423	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	73 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771039657286	Manufacturing	Low	1	0
+CP0000424	Gita Setiawan	Individual	Gita Setiawan	1985-01-01	1900-01-01	892 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771197150367	Construction	Low	1	0
+CP0000425	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	156 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775428377938	Technology	Low	1	0
+CP0000426	Arif Adinata	Individual	Arif Adinata	1985-01-01	1900-01-01	215 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	778610095059	Retail	Low	1	0
+CP0000427	Bima Iskandar	Individual	Bima Iskandar	1985-01-01	1900-01-01	655 Synthetic Avenue	Medan	GB	GB	Bank Sentra	777122811606	Manufacturing	Medium	1	0
+CP0000428	PT Wijaya Synthetic	Company	Nadia Wijaya	1900-01-01	2018-01-01	88 Synthetic Avenue	Medan	US	US	Bank Nusantara	776202605388	Healthcare	Low	0	1
+CP0000429	Indra Putra	Individual	Indra Putra	1985-01-01	1900-01-01	390 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777999024840	Manufacturing	Medium	1	0
+CP0000430	Farah Siregar	Individual	Farah Siregar	1985-01-01	1900-01-01	534 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778952477174	Logistics	Low	1	0
+CP0000431	PT Halim Synthetic	Company	Arif Halim	1900-01-01	2018-01-01	61 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771111918546	Technology	Low	0	1
+CP0000432	PT Putra Synthetic	Company	Dimas Putra	1900-01-01	2018-01-01	282 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770944252480	Manufacturing	High	0	1
+CP0000433	Wulan Santoso	Individual	Wulan Santoso	1985-01-01	1900-01-01	488 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	772257863683	Logistics	Low	1	0
+CP0000434	PT Budiman Synthetic	Company	Intan Budiman	1900-01-01	2018-01-01	428 Synthetic Avenue	Makassar	GB	GB	Asia Commerce Bank	777870721499	Construction	Low	0	1
+CP0000435	Bagus Prakoso	Individual	Bagus Prakoso	1985-01-01	1900-01-01	465 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	771977744613	Manufacturing	Medium	1	0
+CP0000436	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	112 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	775314358423	Technology	Low	1	0
+CP0000437	Gita Putra	Individual	Gita Putra	1985-01-01	1900-01-01	270 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773782040614	Technology	Low	1	0
+CP0000438	PT Mahendra Synthetic	Company	Farah Mahendra	1900-01-01	2018-01-01	629 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778596556762	Construction	High	0	1
+CP0000439	PT Prakoso Synthetic	Company	Maya Prakoso	1900-01-01	2018-01-01	203 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776989073056	Retail	Low	0	1
+CP0000440	PT Wijaya Synthetic	Company	Rizky Wijaya	1900-01-01	2018-01-01	203 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772396355036	Construction	Low	0	1
+CP0000441	Wulan Iskandar	Individual	Wulan Iskandar	1985-01-01	1900-01-01	411 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773413318547	Retail	Low	1	0
+CP0000442	Bagus Yulianto	Individual	Bagus Yulianto	1985-01-01	1900-01-01	377 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771013889691	Construction	Low	1	0
+CP0000443	Bagus Halim	Individual	Bagus Halim	1985-01-01	1900-01-01	27 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774117258925	Logistics	High	1	0
+CP0000444	Rani Siregar	Individual	Rani Siregar	1985-01-01	1900-01-01	481 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773795379009	Construction	Low	1	0
+CP0000445	PT Budiman Synthetic	Company	Rani Budiman	1900-01-01	2018-01-01	445 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	778144325591	Manufacturing	Low	0	1
+CP0000446	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	497 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	772222606867	Healthcare	Medium	1	0
+CP0000447	PT Nugraha Synthetic	Company	Dewi Nugraha	1900-01-01	2018-01-01	835 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774662200131	Retail	Medium	0	1
+CP0000448	PT Prakoso Synthetic	Company	Bima Prakoso	1900-01-01	2018-01-01	124 Synthetic Avenue	Bandung	US	US	Bank Sentra	776954803502	Technology	Low	0	1
+CP0000449	Kevin Nugraha	Individual	Kevin Nugraha	1985-01-01	1900-01-01	375 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772617812356	Technology	Low	1	0
+CP0000450	Nadia Budiman	Individual	Nadia Budiman	1985-01-01	1900-01-01	510 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774800245549	Retail	Low	1	0
+CP0000451	PT Gunawan Synthetic	Company	Anisa Gunawan	1900-01-01	2018-01-01	495 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	773798447509	Manufacturing	Low	0	1
+CP0000452	Anisa Firmansyah	Individual	Anisa Firmansyah	1985-01-01	1900-01-01	761 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771530518780	Retail	Medium	1	0
+CP0000453	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	637 Synthetic Avenue	Makassar	US	US	Bank Sentra	774131325811	Manufacturing	High	1	0
+CP0000454	PT Suryadi Synthetic	Company	Rani Suryadi	1900-01-01	2018-01-01	169 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	773932334274	Construction	Low	0	1
+CP0000455	Anisa Halim	Individual	Anisa Halim	1985-01-01	1900-01-01	891 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	775387321521	Logistics	Low	1	0
+CP0000456	Anisa Iskandar	Individual	Anisa Iskandar	1985-01-01	1900-01-01	885 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773168309632	Technology	Low	1	0
+CP0000457	PT Prakoso Synthetic	Company	Dewi Prakoso	1900-01-01	2018-01-01	668 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	772439038485	Technology	Medium	0	1
+CP0000458	Bagus Kurniawan	Individual	Bagus Kurniawan	1985-01-01	1900-01-01	107 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	773893632063	Retail	Low	1	0
+CP0000459	Naufal Gunawan	Individual	Naufal Gunawan	1985-01-01	1900-01-01	425 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778703310355	Construction	Low	1	0
+CP0000460	PT Suryadi Synthetic	Company	Wulan Suryadi	1900-01-01	2018-01-01	811 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776535491315	Construction	Low	0	1
+CP0000461	Andi Mahendra	Individual	Andi Mahendra	1985-01-01	1900-01-01	323 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777927291797	Retail	Medium	1	0
+CP0000462	Bagus Suryadi	Individual	Bagus Suryadi	1985-01-01	1900-01-01	438 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772088649235	Construction	Low	1	0
+CP0000463	Putri Setiawan	Individual	Putri Setiawan	1985-01-01	1900-01-01	246 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773048693015	Technology	High	1	0
+CP0000464	Sari Nugraha	Individual	Sari Nugraha	1985-01-01	1900-01-01	822 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773328622871	Healthcare	Low	1	0
+CP0000465	PT Wibowo Synthetic	Company	Teguh Wibowo	1900-01-01	2018-01-01	894 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	773260090166	Healthcare	Medium	0	1
+CP0000466	Dimas Siregar	Individual	Dimas Siregar	1985-01-01	1900-01-01	481 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771711922642	Manufacturing	High	1	0
+CP0000467	Dimas Adinata	Individual	Dimas Adinata	1985-01-01	1900-01-01	229 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776271814523	Logistics	Low	1	0
+CP0000468	PT Chandra Synthetic	Company	Rani Chandra	1900-01-01	2018-01-01	386 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774989416004	Construction	Medium	0	1
+CP0000469	PT Prakoso Synthetic	Company	Sari Prakoso	1900-01-01	2018-01-01	402 Synthetic Avenue	Medan	GB	GB	Asia Commerce Bank	771925552951	Healthcare	Low	0	1
+CP0000470	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	240 Synthetic Avenue	Denpasar	GB	GB	Bank Sentra	772195540572	Logistics	Medium	1	0
+CP0000471	PT Mahendra Synthetic	Company	Fajar Mahendra	1900-01-01	2018-01-01	689 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777947058920	Construction	Low	0	1
+CP0000472	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	488 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779135821553	Healthcare	Medium	1	0
+CP0000473	Rizky Permana	Individual	Rizky Permana	1985-01-01	1900-01-01	125 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	779475842037	Logistics	Medium	1	0
+CP0000474	Wulan Hartono	Individual	Wulan Hartono	1985-01-01	1900-01-01	526 Synthetic Avenue	Bandung	AE	AE	Bank Nusantara	770191403667	Healthcare	Low	1	0
+CP0000475	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	364 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	773187028388	Healthcare	Medium	1	0
+CP0000476	Alya Mahendra	Individual	Alya Mahendra	1985-01-01	1900-01-01	512 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775900187347	Healthcare	Low	1	0
+CP0000477	Citra Yulianto	Individual	Citra Yulianto	1985-01-01	1900-01-01	60 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	771425824982	Healthcare	Low	1	0
+CP0000478	Intan Prakoso	Individual	Intan Prakoso	1985-01-01	1900-01-01	779 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	775123045571	Construction	Medium	1	0
+CP0000479	PT Kurniawan Synthetic	Company	Naufal Kurniawan	1900-01-01	2018-01-01	855 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773422029212	Healthcare	High	0	1
+CP0000480	PT Permana Synthetic	Company	Nadia Permana	1900-01-01	2018-01-01	741 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772815741117	Healthcare	Low	0	1
+CP0000481	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	155 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775665536537	Healthcare	Low	1	0
+CP0000482	Hana Halim	Individual	Hana Halim	1985-01-01	1900-01-01	259 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	771654813940	Retail	Medium	1	0
+CP0000483	PT Chandra Synthetic	Company	Bima Chandra	1900-01-01	2018-01-01	755 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779454440603	Healthcare	Low	0	1
+CP0000484	PT Chandra Synthetic	Company	Putri Chandra	1900-01-01	2018-01-01	576 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	772135926620	Construction	Medium	0	1
+CP0000485	PT Wibowo Synthetic	Company	Fajar Wibowo	1900-01-01	2018-01-01	495 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773892860555	Healthcare	Low	0	1
+CP0000486	PT Permana Synthetic	Company	Raka Permana	1900-01-01	2018-01-01	578 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773230991899	Retail	Low	0	1
+CP0000487	Indra Gunawan	Individual	Indra Gunawan	1985-01-01	1900-01-01	611 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776281242501	Healthcare	Low	1	0
+CP0000488	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	734 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770547560423	Healthcare	Low	1	0
+CP0000489	PT Yulianto Synthetic	Company	Adit Yulianto	1900-01-01	2018-01-01	289 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773691144585	Retail	Low	0	1
+CP0000490	PT Halim Synthetic	Company	Farah Halim	1900-01-01	2018-01-01	375 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779767033894	Technology	Low	0	1
+CP0000491	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	675 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	774141044521	Healthcare	Low	1	0
+CP0000492	Citra Adinata	Individual	Citra Adinata	1985-01-01	1900-01-01	258 Synthetic Avenue	Medan	AU	AU	Bank Sentra	777428951225	Healthcare	Low	1	0
+CP0000493	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	493 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	770587743428	Construction	Medium	1	0
+CP0000494	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	840 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772289699488	Logistics	Low	1	0
+CP0000495	Eka Setiawan	Individual	Eka Setiawan	1985-01-01	1900-01-01	243 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	779199381547	Healthcare	Medium	1	0
+CP0000496	Dewi Firmansyah	Individual	Dewi Firmansyah	1985-01-01	1900-01-01	132 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774088923928	Construction	High	1	0
+CP0000497	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	17 Synthetic Avenue	Medan	JP	JP	Asia Commerce Bank	774846690976	Construction	Low	1	0
+CP0000498	Wulan Gunawan	Individual	Wulan Gunawan	1985-01-01	1900-01-01	289 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	771872713200	Retail	Medium	1	0
+CP0000499	PT Hartono Synthetic	Company	Teguh Hartono	1900-01-01	2018-01-01	667 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776902108063	Manufacturing	Low	0	1
+CP0000500	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	98 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	774179346853	Manufacturing	High	1	0
+CP0000501	Eka Suryadi	Individual	Eka Suryadi	1985-01-01	1900-01-01	710 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778437923833	Construction	Low	1	0
+CP0000502	PT Prakoso Synthetic	Company	Eka Prakoso	1900-01-01	2018-01-01	419 Synthetic Avenue	Surabaya	JP	JP	Asia Commerce Bank	779315122384	Technology	Low	0	1
+CP0000503	Eka Santoso	Individual	Eka Santoso	1985-01-01	1900-01-01	582 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	775827016396	Manufacturing	Medium	1	0
+CP0000504	PT Nugraha Synthetic	Company	Maya Nugraha	1900-01-01	2018-01-01	114 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771152289548	Manufacturing	Low	0	1
+CP0000505	Naufal Siregar	Individual	Naufal Siregar	1985-01-01	1900-01-01	664 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776375356638	Technology	Medium	1	0
+CP0000506	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	183 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	772371172708	Technology	Low	1	0
+CP0000507	PT Prakoso Synthetic	Company	Rani Prakoso	1900-01-01	2018-01-01	702 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778354847435	Construction	Low	0	1
+CP0000508	Citra Darmawan	Individual	Citra Darmawan	1985-01-01	1900-01-01	495 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774495983831	Manufacturing	Low	1	0
+CP0000509	Bagus Darmawan	Individual	Bagus Darmawan	1985-01-01	1900-01-01	257 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775147289823	Retail	Low	1	0
+CP0000510	Nadia Adinata	Individual	Nadia Adinata	1985-01-01	1900-01-01	294 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779142701911	Technology	Low	1	0
+CP0000511	PT Wijaya Synthetic	Company	Bagus Wijaya	1900-01-01	2018-01-01	514 Synthetic Avenue	Semarang	JP	JP	Bank Sentra	771692278692	Technology	Medium	0	1
+CP0000512	Putri Kurniawan	Individual	Putri Kurniawan	1985-01-01	1900-01-01	40 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	770653592562	Manufacturing	Medium	1	0
+CP0000513	Eka Yulianto	Individual	Eka Yulianto	1985-01-01	1900-01-01	456 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	776348406038	Manufacturing	Low	1	0
+CP0000514	Gita Darmawan	Individual	Gita Darmawan	1985-01-01	1900-01-01	350 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	771612422520	Technology	Low	1	0
+CP0000515	PT Mahendra Synthetic	Company	Hana Mahendra	1900-01-01	2018-01-01	251 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779838274078	Manufacturing	Medium	0	1
+CP0000516	PT Wijaya Synthetic	Company	Fajar Wijaya	1900-01-01	2018-01-01	196 Synthetic Avenue	Medan	SG	SG	Bank Sentra	775136189418	Healthcare	Low	0	1
+CP0000517	PT Darmawan Synthetic	Company	Teguh Darmawan	1900-01-01	2018-01-01	557 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773673628375	Retail	Low	0	1
+CP0000518	Wulan Gunawan	Individual	Wulan Gunawan	1985-01-01	1900-01-01	288 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770552857648	Retail	High	1	0
+CP0000519	Dimas Adinata	Individual	Dimas Adinata	1985-01-01	1900-01-01	301 Synthetic Avenue	Denpasar	JP	JP	Bank Sentra	778457750061	Construction	Medium	1	0
+CP0000520	Teguh Mahendra	Individual	Teguh Mahendra	1985-01-01	1900-01-01	800 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779312172553	Healthcare	Low	1	0
+CP0000521	PT Kurniawan Synthetic	Company	Intan Kurniawan	1900-01-01	2018-01-01	622 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773637548536	Technology	Low	0	1
+CP0000522	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	752 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772388841658	Healthcare	Low	1	0
+CP0000523	Putri Wibowo	Individual	Putri Wibowo	1985-01-01	1900-01-01	540 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773633567142	Healthcare	Low	1	0
+CP0000524	Hana Setiawan	Individual	Hana Setiawan	1985-01-01	1900-01-01	143 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776270559866	Healthcare	Low	1	0
+CP0000525	Rani Mahendra	Individual	Rani Mahendra	1985-01-01	1900-01-01	651 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772084264754	Construction	Low	1	0
+CP0000526	Maya Budiman	Individual	Maya Budiman	1985-01-01	1900-01-01	100 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	777765172236	Retail	Low	1	0
+CP0000527	Joko Kurniawan	Individual	Joko Kurniawan	1985-01-01	1900-01-01	870 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778945321729	Construction	Low	1	0
+CP0000528	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	287 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773310711697	Healthcare	Low	1	0
+CP0000529	Hana Setiawan	Individual	Hana Setiawan	1985-01-01	1900-01-01	731 Synthetic Avenue	Surabaya	AE	AE	Bank Sentra	776867215673	Construction	Low	1	0
+CP0000530	PT Setiawan Synthetic	Company	Andi Setiawan	1900-01-01	2018-01-01	20 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770301724672	Manufacturing	Medium	0	1
+CP0000531	Bagus Chandra	Individual	Bagus Chandra	1985-01-01	1900-01-01	696 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770749946847	Manufacturing	Low	1	0
+CP0000532	Bagus Firmansyah	Individual	Bagus Firmansyah	1985-01-01	1900-01-01	414 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777154160165	Construction	Low	1	0
+CP0000533	Sari Budiman	Individual	Sari Budiman	1985-01-01	1900-01-01	839 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779184082495	Healthcare	Low	1	0
+CP0000534	Naufal Firmansyah	Individual	Naufal Firmansyah	1985-01-01	1900-01-01	383 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778900366986	Construction	High	1	0
+CP0000535	Fajar Wijaya	Individual	Fajar Wijaya	1985-01-01	1900-01-01	43 Synthetic Avenue	Bandung	AU	AU	Bank Nusantara	770533876830	Healthcare	Low	1	0
+CP0000536	Raka Lesmana	Individual	Raka Lesmana	1985-01-01	1900-01-01	349 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776088414708	Technology	Medium	1	0
+CP0000537	PT Lesmana Synthetic	Company	Laras Lesmana	1900-01-01	2018-01-01	615 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	773648808869	Retail	Low	0	1
+CP0000538	Farah Lesmana	Individual	Farah Lesmana	1985-01-01	1900-01-01	870 Synthetic Avenue	Semarang	AE	AE	Bank Sentra	771162010551	Retail	Low	1	0
+CP0000539	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	546 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774772648756	Manufacturing	Low	1	0
+CP0000540	Wulan Siregar	Individual	Wulan Siregar	1985-01-01	1900-01-01	191 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771333308860	Manufacturing	High	1	0
+CP0000541	Andi Gunawan	Individual	Andi Gunawan	1985-01-01	1900-01-01	117 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779851331361	Logistics	Low	1	0
+CP0000542	PT Kurniawan Synthetic	Company	Intan Kurniawan	1900-01-01	2018-01-01	617 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779079581068	Retail	Low	0	1
+CP0000543	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	178 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	779659750646	Retail	Low	1	0
+CP0000544	PT Rahardjo Synthetic	Company	Raka Rahardjo	1900-01-01	2018-01-01	257 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772832797520	Technology	Medium	0	1
+CP0000545	Anisa Darmawan	Individual	Anisa Darmawan	1985-01-01	1900-01-01	342 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	776109761833	Healthcare	Low	1	0
+CP0000546	Anisa Mahendra	Individual	Anisa Mahendra	1985-01-01	1900-01-01	134 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778531330746	Healthcare	High	1	0
+CP0000547	Hana Iskandar	Individual	Hana Iskandar	1985-01-01	1900-01-01	476 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772753379743	Logistics	Medium	1	0
+CP0000548	Intan Wibowo	Individual	Intan Wibowo	1985-01-01	1900-01-01	116 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779563808316	Healthcare	Medium	1	0
+CP0000549	Adit Hartono	Individual	Adit Hartono	1985-01-01	1900-01-01	235 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772968596152	Logistics	Low	1	0
+CP0000550	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	18 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772132418476	Manufacturing	High	1	0
+CP0000551	Rani Permana	Individual	Rani Permana	1985-01-01	1900-01-01	123 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775674693912	Manufacturing	Low	1	0
+CP0000552	Maya Yulianto	Individual	Maya Yulianto	1985-01-01	1900-01-01	355 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	773714370982	Healthcare	Low	1	0
+CP0000553	Sari Setiawan	Individual	Sari Setiawan	1985-01-01	1900-01-01	484 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	771511689372	Manufacturing	Medium	1	0
+CP0000554	Intan Yulianto	Individual	Intan Yulianto	1985-01-01	1900-01-01	213 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	775734823981	Construction	Low	1	0
+CP0000555	Intan Iskandar	Individual	Intan Iskandar	1985-01-01	1900-01-01	636 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774576442271	Manufacturing	High	1	0
+CP0000556	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	292 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776793753886	Healthcare	Low	1	0
+CP0000557	Indra Lesmana	Individual	Indra Lesmana	1985-01-01	1900-01-01	66 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770594324334	Retail	Medium	1	0
+CP0000558	Indra Budiman	Individual	Indra Budiman	1985-01-01	1900-01-01	384 Synthetic Avenue	Bandung	AE	AE	Bank Nusantara	777081604890	Construction	Medium	1	0
+CP0000559	Maya Halim	Individual	Maya Halim	1985-01-01	1900-01-01	383 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771385721972	Technology	Low	1	0
+CP0000560	PT Adinata Synthetic	Company	Dimas Adinata	1900-01-01	2018-01-01	172 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	773022083890	Technology	Low	0	1
+CP0000561	PT Mahendra Synthetic	Company	Andi Mahendra	1900-01-01	2018-01-01	163 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	771288118202	Manufacturing	Low	0	1
+CP0000562	PT Chandra Synthetic	Company	Adit Chandra	1900-01-01	2018-01-01	163 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	779952624408	Manufacturing	Medium	0	1
+CP0000563	PT Firmansyah Synthetic	Company	Naufal Firmansyah	1900-01-01	2018-01-01	94 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774172799251	Healthcare	Low	0	1
+CP0000564	Arif Lesmana	Individual	Arif Lesmana	1985-01-01	1900-01-01	35 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777167064753	Healthcare	Low	1	0
+CP0000565	PT Santoso Synthetic	Company	Naufal Santoso	1900-01-01	2018-01-01	270 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776453094118	Healthcare	Low	0	1
+CP0000566	Sari Chandra	Individual	Sari Chandra	1985-01-01	1900-01-01	279 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776576712052	Healthcare	Medium	1	0
+CP0000567	Rizky Hartono	Individual	Rizky Hartono	1985-01-01	1900-01-01	484 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771587093962	Technology	Low	1	0
+CP0000568	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	260 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770584440495	Logistics	Medium	1	0
+CP0000569	Adit Mahendra	Individual	Adit Mahendra	1985-01-01	1900-01-01	351 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778440589432	Retail	Low	1	0
+CP0000570	Andi Hartono	Individual	Andi Hartono	1985-01-01	1900-01-01	478 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	775234980478	Healthcare	Low	1	0
+CP0000571	Dewi Nugraha	Individual	Dewi Nugraha	1985-01-01	1900-01-01	815 Synthetic Avenue	Medan	AE	AE	Bank Sentra	773739985999	Healthcare	Low	1	0
+CP0000572	PT Nugraha Synthetic	Company	Kevin Nugraha	1900-01-01	2018-01-01	780 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	773911174890	Retail	Medium	0	1
+CP0000573	Fajar Putra	Individual	Fajar Putra	1985-01-01	1900-01-01	635 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777871334288	Manufacturing	Low	1	0
+CP0000574	Sari Mahendra	Individual	Sari Mahendra	1985-01-01	1900-01-01	699 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	774632079625	Healthcare	Low	1	0
+CP0000575	PT Wibowo Synthetic	Company	Fajar Wibowo	1900-01-01	2018-01-01	839 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	771189680495	Healthcare	Medium	0	1
+CP0000576	Laras Prakoso	Individual	Laras Prakoso	1985-01-01	1900-01-01	374 Synthetic Avenue	Medan	GB	GB	Bank Nusantara	776844536868	Technology	Medium	1	0
+CP0000577	Bima Iskandar	Individual	Bima Iskandar	1985-01-01	1900-01-01	780 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775011711248	Construction	Low	1	0
+CP0000578	PT Wibowo Synthetic	Company	Intan Wibowo	1900-01-01	2018-01-01	137 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772859975583	Manufacturing	Medium	0	1
+CP0000579	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	177 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	774318053095	Manufacturing	Low	1	0
+CP0000580	Nadia Chandra	Individual	Nadia Chandra	1985-01-01	1900-01-01	499 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	770049692633	Technology	Medium	1	0
+CP0000581	PT Yulianto Synthetic	Company	Nadia Yulianto	1900-01-01	2018-01-01	148 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778663429469	Construction	Low	0	1
+CP0000582	PT Prakoso Synthetic	Company	Sari Prakoso	1900-01-01	2018-01-01	642 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	778153285050	Healthcare	Low	0	1
+CP0000583	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	825 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771767247749	Manufacturing	High	1	0
+CP0000584	PT Darmawan Synthetic	Company	Dewi Darmawan	1900-01-01	2018-01-01	199 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775919662924	Construction	Low	0	1
+CP0000585	Teguh Darmawan	Individual	Teguh Darmawan	1985-01-01	1900-01-01	291 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774255273358	Retail	Medium	1	0
+CP0000586	Adit Wijaya	Individual	Adit Wijaya	1985-01-01	1900-01-01	61 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	771578743579	Logistics	Low	1	0
+CP0000587	Anisa Kurniawan	Individual	Anisa Kurniawan	1985-01-01	1900-01-01	293 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776653560415	Manufacturing	Medium	1	0
+CP0000588	Alya Rahardjo	Individual	Alya Rahardjo	1985-01-01	1900-01-01	630 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	779352948843	Technology	Low	1	0
+CP0000589	PT Rahardjo Synthetic	Company	Bima Rahardjo	1900-01-01	2018-01-01	569 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	771727407017	Healthcare	High	0	1
+CP0000590	Gita Kurniawan	Individual	Gita Kurniawan	1985-01-01	1900-01-01	729 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776445618750	Manufacturing	High	1	0
+CP0000591	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	398 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	772901251408	Technology	Medium	1	0
+CP0000592	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	78 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777370830498	Construction	Low	1	0
+CP0000593	Andi Siregar	Individual	Andi Siregar	1985-01-01	1900-01-01	698 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774799274127	Healthcare	Low	1	0
+CP0000594	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	288 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776072019383	Logistics	Low	1	0
+CP0000595	Wulan Lesmana	Individual	Wulan Lesmana	1985-01-01	1900-01-01	688 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	778391421099	Manufacturing	High	1	0
+CP0000596	PT Mahendra Synthetic	Company	Hana Mahendra	1900-01-01	2018-01-01	621 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779890815502	Retail	Medium	0	1
+CP0000597	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	705 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777076472604	Manufacturing	Low	1	0
+CP0000598	Indra Permana	Individual	Indra Permana	1985-01-01	1900-01-01	884 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776457827815	Construction	Low	1	0
+CP0000599	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	594 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774436062965	Technology	Low	1	0
+CP0000600	PT Wibowo Synthetic	Company	Sari Wibowo	1900-01-01	2018-01-01	465 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	773028572356	Logistics	Medium	0	1
+CP0000601	Farah Setiawan	Individual	Farah Setiawan	1985-01-01	1900-01-01	457 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777422152066	Construction	Low	1	0
+CP0000602	PT Putra Synthetic	Company	Dewi Putra	1900-01-01	2018-01-01	872 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775823053998	Construction	Medium	0	1
+CP0000603	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	685 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	779348281057	Retail	Medium	1	0
+CP0000604	Anisa Adinata	Individual	Anisa Adinata	1985-01-01	1900-01-01	438 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	779559939826	Healthcare	Medium	1	0
+CP0000605	Rizky Wijaya	Individual	Rizky Wijaya	1985-01-01	1900-01-01	7 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779574555941	Retail	Low	1	0
+CP0000606	Putri Nugraha	Individual	Putri Nugraha	1985-01-01	1900-01-01	334 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	770802259104	Manufacturing	High	1	0
+CP0000607	Fajar Suryadi	Individual	Fajar Suryadi	1985-01-01	1900-01-01	311 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	771723911744	Healthcare	Medium	1	0
+CP0000608	Bagus Yulianto	Individual	Bagus Yulianto	1985-01-01	1900-01-01	562 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770371905924	Healthcare	Medium	1	0
+CP0000609	Indra Kurniawan	Individual	Indra Kurniawan	1985-01-01	1900-01-01	873 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	772612175635	Logistics	Medium	1	0
+CP0000610	Maya Nugraha	Individual	Maya Nugraha	1985-01-01	1900-01-01	725 Synthetic Avenue	Denpasar	AU	AU	Asia Commerce Bank	773383314182	Logistics	Medium	1	0
+CP0000611	Nadia Kurniawan	Individual	Nadia Kurniawan	1985-01-01	1900-01-01	180 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770062537964	Logistics	Low	1	0
+CP0000612	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	589 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771014446223	Manufacturing	Medium	1	0
+CP0000613	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	263 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777247949340	Manufacturing	Medium	1	0
+CP0000614	Rani Putra	Individual	Rani Putra	1985-01-01	1900-01-01	42 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	778952639894	Healthcare	Low	1	0
+CP0000615	Anisa Lesmana	Individual	Anisa Lesmana	1985-01-01	1900-01-01	242 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777170274910	Logistics	Low	1	0
+CP0000616	Dimas Suryadi	Individual	Dimas Suryadi	1985-01-01	1900-01-01	493 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771965850324	Healthcare	Low	1	0
+CP0000617	Gita Budiman	Individual	Gita Budiman	1985-01-01	1900-01-01	750 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	773681302218	Construction	Low	1	0
+CP0000618	Eka Permana	Individual	Eka Permana	1985-01-01	1900-01-01	330 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770235743021	Technology	Low	1	0
+CP0000619	Naufal Wibowo	Individual	Naufal Wibowo	1985-01-01	1900-01-01	541 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772052022048	Retail	Low	1	0
+CP0000620	Gita Rahardjo	Individual	Gita Rahardjo	1985-01-01	1900-01-01	144 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770504530399	Construction	Medium	1	0
+CP0000621	Putri Wijaya	Individual	Putri Wijaya	1985-01-01	1900-01-01	741 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772095449503	Construction	Medium	1	0
+CP0000622	Andi Darmawan	Individual	Andi Darmawan	1985-01-01	1900-01-01	865 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	771620887896	Retail	Low	1	0
+CP0000623	Gita Halim	Individual	Gita Halim	1985-01-01	1900-01-01	491 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	771269939815	Retail	Low	1	0
+CP0000624	Laras Prakoso	Individual	Laras Prakoso	1985-01-01	1900-01-01	558 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776823376672	Healthcare	Low	1	0
+CP0000625	PT Adinata Synthetic	Company	Rani Adinata	1900-01-01	2018-01-01	764 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777624806774	Technology	Low	0	1
+CP0000626	Arif Setiawan	Individual	Arif Setiawan	1985-01-01	1900-01-01	222 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775155131976	Healthcare	Medium	1	0
+CP0000627	PT Suryadi Synthetic	Company	Farah Suryadi	1900-01-01	2018-01-01	657 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773265860493	Logistics	Low	0	1
+CP0000628	PT Nugraha Synthetic	Company	Teguh Nugraha	1900-01-01	2018-01-01	678 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	771096639246	Construction	Low	0	1
+CP0000629	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	377 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	772408591075	Logistics	Low	1	0
+CP0000630	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	883 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774974083775	Retail	High	1	0
+CP0000631	Dimas Kurniawan	Individual	Dimas Kurniawan	1985-01-01	1900-01-01	519 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	771953563246	Retail	Low	1	0
+CP0000632	Dimas Rahardjo	Individual	Dimas Rahardjo	1985-01-01	1900-01-01	370 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773472775614	Logistics	Low	1	0
+CP0000633	PT Setiawan Synthetic	Company	Sari Setiawan	1900-01-01	2018-01-01	239 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775819157112	Manufacturing	Medium	0	1
+CP0000634	PT Prakoso Synthetic	Company	Bagus Prakoso	1900-01-01	2018-01-01	305 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772857860552	Technology	Medium	0	1
+CP0000635	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	133 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771424861251	Construction	Low	1	0
+CP0000636	Bagus Rahardjo	Individual	Bagus Rahardjo	1985-01-01	1900-01-01	652 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775484018386	Manufacturing	Low	1	0
+CP0000637	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	601 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773027143081	Construction	High	1	0
+CP0000638	PT Iskandar Synthetic	Company	Kevin Iskandar	1900-01-01	2018-01-01	502 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	776223863339	Technology	Low	0	1
+CP0000639	Adit Hartono	Individual	Adit Hartono	1985-01-01	1900-01-01	174 Synthetic Avenue	Yogyakarta	AE	AE	Bank Nusantara	779751408986	Technology	Low	1	0
+CP0000640	Teguh Yulianto	Individual	Teguh Yulianto	1985-01-01	1900-01-01	759 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771279534376	Healthcare	Low	1	0
+CP0000641	PT Budiman Synthetic	Company	Rizky Budiman	1900-01-01	2018-01-01	704 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776037060698	Retail	Low	0	1
+CP0000642	PT Mahendra Synthetic	Company	Dewi Mahendra	1900-01-01	2018-01-01	661 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778000774813	Technology	Low	0	1
+CP0000643	PT Putra Synthetic	Company	Andi Putra	1900-01-01	2018-01-01	174 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770207139970	Retail	Low	0	1
+CP0000644	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	228 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778479549583	Construction	Low	1	0
+CP0000645	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	769 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773222598099	Technology	Medium	1	0
+CP0000646	Bima Permana	Individual	Bima Permana	1985-01-01	1900-01-01	326 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774615424801	Logistics	Medium	1	0
+CP0000647	Laras Suryadi	Individual	Laras Suryadi	1985-01-01	1900-01-01	146 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775556853179	Construction	Medium	1	0
+CP0000648	PT Kurniawan Synthetic	Company	Raka Kurniawan	1900-01-01	2018-01-01	732 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	777995429435	Logistics	Medium	0	1
+CP0000649	Farah Chandra	Individual	Farah Chandra	1985-01-01	1900-01-01	856 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774173278549	Healthcare	Low	1	0
+CP0000650	Eka Wijaya	Individual	Eka Wijaya	1985-01-01	1900-01-01	96 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	778147133693	Construction	Low	1	0
+CP0000651	Hana Prakoso	Individual	Hana Prakoso	1985-01-01	1900-01-01	581 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	771796440780	Logistics	Low	1	0
+CP0000652	PT Gunawan Synthetic	Company	Adit Gunawan	1900-01-01	2018-01-01	243 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773531401791	Logistics	Low	0	1
+CP0000653	PT Adinata Synthetic	Company	Joko Adinata	1900-01-01	2018-01-01	713 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778135361501	Retail	Medium	0	1
+CP0000654	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	703 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	779633113689	Logistics	Low	1	0
+CP0000655	PT Mahendra Synthetic	Company	Intan Mahendra	1900-01-01	2018-01-01	218 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777291716496	Construction	Low	0	1
+CP0000656	PT Kurniawan Synthetic	Company	Naufal Kurniawan	1900-01-01	2018-01-01	651 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	778763128237	Construction	Low	0	1
+CP0000657	PT Lesmana Synthetic	Company	Teguh Lesmana	1900-01-01	2018-01-01	160 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770892718502	Logistics	Medium	0	1
+CP0000658	Farah Wibowo	Individual	Farah Wibowo	1985-01-01	1900-01-01	217 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773119351773	Retail	Low	1	0
+CP0000659	Arif Siregar	Individual	Arif Siregar	1985-01-01	1900-01-01	217 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774398030299	Construction	Low	1	0
+CP0000660	Laras Suryadi	Individual	Laras Suryadi	1985-01-01	1900-01-01	541 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773941446127	Construction	Medium	1	0
+CP0000661	PT Mahendra Synthetic	Company	Raka Mahendra	1900-01-01	2018-01-01	239 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773069308613	Logistics	Low	0	1
+CP0000662	PT Firmansyah Synthetic	Company	Sari Firmansyah	1900-01-01	2018-01-01	451 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	770698748538	Manufacturing	Low	0	1
+CP0000663	PT Darmawan Synthetic	Company	Anisa Darmawan	1900-01-01	2018-01-01	412 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770843622744	Logistics	Low	0	1
+CP0000664	Bagus Setiawan	Individual	Bagus Setiawan	1985-01-01	1900-01-01	44 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	777095502283	Manufacturing	Low	1	0
+CP0000665	Maya Putra	Individual	Maya Putra	1985-01-01	1900-01-01	856 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776517391944	Manufacturing	Low	1	0
+CP0000666	Alya Suryadi	Individual	Alya Suryadi	1985-01-01	1900-01-01	106 Synthetic Avenue	Makassar	AU	AU	Asia Commerce Bank	771016013374	Manufacturing	Medium	1	0
+CP0000667	PT Santoso Synthetic	Company	Nadia Santoso	1900-01-01	2018-01-01	683 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777060156186	Technology	Low	0	1
+CP0000668	Gita Lesmana	Individual	Gita Lesmana	1985-01-01	1900-01-01	755 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776506541131	Technology	Medium	1	0
+CP0000669	Arif Santoso	Individual	Arif Santoso	1985-01-01	1900-01-01	646 Synthetic Avenue	Semarang	US	US	Bank Sentra	773685323802	Healthcare	Low	1	0
+CP0000670	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	855 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777036720636	Technology	Low	1	0
+CP0000671	Alya Siregar	Individual	Alya Siregar	1985-01-01	1900-01-01	797 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772485011910	Retail	Medium	1	0
+CP0000672	Rani Wibowo	Individual	Rani Wibowo	1985-01-01	1900-01-01	354 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773676250409	Healthcare	Low	1	0
+CP0000673	Indra Hartono	Individual	Indra Hartono	1985-01-01	1900-01-01	137 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774840818403	Manufacturing	Medium	1	0
+CP0000674	PT Gunawan Synthetic	Company	Bima Gunawan	1900-01-01	2018-01-01	334 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778189560542	Construction	Medium	0	1
+CP0000675	Intan Hartono	Individual	Intan Hartono	1985-01-01	1900-01-01	691 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771850015247	Healthcare	Low	1	0
+CP0000676	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	806 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770587564570	Technology	Low	1	0
+CP0000677	Rani Suryadi	Individual	Rani Suryadi	1985-01-01	1900-01-01	334 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775651559813	Construction	High	1	0
+CP0000678	PT Permana Synthetic	Company	Citra Permana	1900-01-01	2018-01-01	844 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775799683525	Technology	Medium	0	1
+CP0000679	Raka Mahendra	Individual	Raka Mahendra	1985-01-01	1900-01-01	335 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771484894169	Logistics	Low	1	0
+CP0000680	Naufal Budiman	Individual	Naufal Budiman	1985-01-01	1900-01-01	658 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778361662205	Logistics	High	1	0
+CP0000681	Raka Chandra	Individual	Raka Chandra	1985-01-01	1900-01-01	680 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775467370566	Retail	Low	1	0
+CP0000682	Arif Wibowo	Individual	Arif Wibowo	1985-01-01	1900-01-01	270 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774757583491	Retail	High	1	0
+CP0000683	Putri Kurniawan	Individual	Putri Kurniawan	1985-01-01	1900-01-01	391 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773197721020	Manufacturing	Low	1	0
+CP0000684	PT Mahendra Synthetic	Company	Anisa Mahendra	1900-01-01	2018-01-01	663 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779326614604	Technology	Low	0	1
+CP0000685	Maya Halim	Individual	Maya Halim	1985-01-01	1900-01-01	553 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774395887400	Construction	Low	1	0
+CP0000686	PT Siregar Synthetic	Company	Rizky Siregar	1900-01-01	2018-01-01	756 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	771822501883	Retail	Low	0	1
+CP0000687	Eka Nugraha	Individual	Eka Nugraha	1985-01-01	1900-01-01	86 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778410993382	Construction	Low	1	0
+CP0000688	PT Setiawan Synthetic	Company	Nadia Setiawan	1900-01-01	2018-01-01	667 Synthetic Avenue	Yogyakarta	AE	AE	Bank Nusantara	776769860513	Healthcare	Medium	0	1
+CP0000689	PT Gunawan Synthetic	Company	Kevin Gunawan	1900-01-01	2018-01-01	358 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775427827528	Logistics	Medium	0	1
+CP0000690	PT Gunawan Synthetic	Company	Kevin Gunawan	1900-01-01	2018-01-01	330 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779096547703	Logistics	Low	0	1
+CP0000691	Rizky Yulianto	Individual	Rizky Yulianto	1985-01-01	1900-01-01	260 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778789173569	Construction	High	1	0
+CP0000692	Adit Budiman	Individual	Adit Budiman	1985-01-01	1900-01-01	22 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777426968029	Technology	Medium	1	0
+CP0000693	Arif Setiawan	Individual	Arif Setiawan	1985-01-01	1900-01-01	452 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	775797172568	Manufacturing	Medium	1	0
+CP0000694	Citra Mahendra	Individual	Citra Mahendra	1985-01-01	1900-01-01	747 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779307645365	Healthcare	Low	1	0
+CP0000695	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	45 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	778497362459	Manufacturing	Low	1	0
+CP0000696	PT Kurniawan Synthetic	Company	Rizky Kurniawan	1900-01-01	2018-01-01	715 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	778279667270	Construction	High	0	1
+CP0000697	PT Halim Synthetic	Company	Rizky Halim	1900-01-01	2018-01-01	2 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778846328084	Retail	Low	0	1
+CP0000698	PT Adinata Synthetic	Company	Bagus Adinata	1900-01-01	2018-01-01	684 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	771587510872	Healthcare	High	0	1
+CP0000699	Citra Prakoso	Individual	Citra Prakoso	1985-01-01	1900-01-01	37 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771816321864	Logistics	Low	1	0
+CP0000700	Rizky Putra	Individual	Rizky Putra	1985-01-01	1900-01-01	77 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778330189532	Manufacturing	Medium	1	0
+CP0000701	Bima Iskandar	Individual	Bima Iskandar	1985-01-01	1900-01-01	506 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	774899863063	Manufacturing	Low	1	0
+CP0000702	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	116 Synthetic Avenue	Bandung	JP	JP	Bank Sentra	775790906689	Technology	Low	1	0
+CP0000703	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	285 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770540483920	Healthcare	Medium	1	0
+CP0000704	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	183 Synthetic Avenue	Surabaya	AE	AE	Asia Commerce Bank	773306118154	Technology	Low	1	0
+CP0000705	Dimas Suryadi	Individual	Dimas Suryadi	1985-01-01	1900-01-01	22 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	771643435535	Retail	Low	1	0
+CP0000706	PT Setiawan Synthetic	Company	Citra Setiawan	1900-01-01	2018-01-01	238 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777707156480	Technology	High	0	1
+CP0000707	Kevin Yulianto	Individual	Kevin Yulianto	1985-01-01	1900-01-01	491 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772466906500	Healthcare	Medium	1	0
+CP0000708	Raka Chandra	Individual	Raka Chandra	1985-01-01	1900-01-01	895 Synthetic Avenue	Semarang	AE	AE	Asia Commerce Bank	772865841112	Logistics	Low	1	0
+CP0000709	PT Suryadi Synthetic	Company	Bagus Suryadi	1900-01-01	2018-01-01	249 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	776857623477	Construction	Low	0	1
+CP0000710	PT Putra Synthetic	Company	Naufal Putra	1900-01-01	2018-01-01	90 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779860540714	Healthcare	Medium	0	1
+CP0000711	Intan Firmansyah	Individual	Intan Firmansyah	1985-01-01	1900-01-01	303 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	774249443053	Construction	Low	1	0
+CP0000712	Kevin Gunawan	Individual	Kevin Gunawan	1985-01-01	1900-01-01	46 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779219421448	Construction	Low	1	0
+CP0000713	PT Lesmana Synthetic	Company	Rizky Lesmana	1900-01-01	2018-01-01	102 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777527221525	Technology	High	0	1
+CP0000714	PT Nugraha Synthetic	Company	Adit Nugraha	1900-01-01	2018-01-01	778 Synthetic Avenue	Jakarta	AU	AU	Bank Nusantara	772372190283	Healthcare	Low	0	1
+CP0000715	Wulan Lesmana	Individual	Wulan Lesmana	1985-01-01	1900-01-01	740 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777304765974	Healthcare	Low	1	0
+CP0000716	Alya Rahardjo	Individual	Alya Rahardjo	1985-01-01	1900-01-01	449 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770305773230	Retail	Low	1	0
+CP0000717	PT Santoso Synthetic	Company	Bima Santoso	1900-01-01	2018-01-01	125 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773634182018	Retail	Low	0	1
+CP0000718	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	275 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770129617591	Retail	Low	1	0
+CP0000719	Wulan Budiman	Individual	Wulan Budiman	1985-01-01	1900-01-01	423 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776535890596	Technology	Low	1	0
+CP0000720	PT Suryadi Synthetic	Company	Adit Suryadi	1900-01-01	2018-01-01	576 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777643418002	Manufacturing	Medium	0	1
+CP0000721	Fajar Siregar	Individual	Fajar Siregar	1985-01-01	1900-01-01	510 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773887867470	Retail	Low	1	0
+CP0000722	Alya Lesmana	Individual	Alya Lesmana	1985-01-01	1900-01-01	192 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	778077499339	Construction	Medium	1	0
+CP0000723	Sari Budiman	Individual	Sari Budiman	1985-01-01	1900-01-01	818 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	777849261547	Logistics	Low	1	0
+CP0000724	Nadia Rahardjo	Individual	Nadia Rahardjo	1985-01-01	1900-01-01	132 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	772373578431	Retail	High	1	0
+CP0000725	Maya Siregar	Individual	Maya Siregar	1985-01-01	1900-01-01	382 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	777045684933	Healthcare	Low	1	0
+CP0000726	PT Lesmana Synthetic	Company	Fajar Lesmana	1900-01-01	2018-01-01	223 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772673399547	Manufacturing	Low	0	1
+CP0000727	Rani Adinata	Individual	Rani Adinata	1985-01-01	1900-01-01	409 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	772389993384	Construction	Medium	1	0
+CP0000728	PT Iskandar Synthetic	Company	Citra Iskandar	1900-01-01	2018-01-01	507 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775984201616	Technology	Medium	0	1
+CP0000729	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	412 Synthetic Avenue	Surabaya	AU	AU	Asia Commerce Bank	774784509470	Retail	Low	1	0
+CP0000730	PT Santoso Synthetic	Company	Intan Santoso	1900-01-01	2018-01-01	451 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	776161944310	Technology	High	0	1
+CP0000731	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	676 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774356483114	Technology	Medium	1	0
+CP0000732	Maya Prakoso	Individual	Maya Prakoso	1985-01-01	1900-01-01	832 Synthetic Avenue	Jakarta	AE	AE	Asia Commerce Bank	779380447883	Retail	Medium	1	0
+CP0000733	Alya Suryadi	Individual	Alya Suryadi	1985-01-01	1900-01-01	630 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770589953733	Retail	Low	1	0
+CP0000734	Raka Lesmana	Individual	Raka Lesmana	1985-01-01	1900-01-01	547 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	771813652825	Healthcare	Low	1	0
+CP0000735	Wulan Mahendra	Individual	Wulan Mahendra	1985-01-01	1900-01-01	135 Synthetic Avenue	Medan	JP	JP	Bank Sentra	771814347346	Logistics	Low	1	0
+CP0000736	Citra Budiman	Individual	Citra Budiman	1985-01-01	1900-01-01	518 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	779482639273	Construction	Low	1	0
+CP0000737	PT Rahardjo Synthetic	Company	Putri Rahardjo	1900-01-01	2018-01-01	855 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778665791707	Logistics	Low	0	1
+CP0000738	Teguh Rahardjo	Individual	Teguh Rahardjo	1985-01-01	1900-01-01	709 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770148214394	Technology	Low	1	0
+CP0000739	Fajar Firmansyah	Individual	Fajar Firmansyah	1985-01-01	1900-01-01	61 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	771989685002	Manufacturing	Low	1	0
+CP0000740	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	823 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	770849921665	Healthcare	Low	1	0
+CP0000741	PT Gunawan Synthetic	Company	Bima Gunawan	1900-01-01	2018-01-01	572 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771702268384	Retail	Low	0	1
+CP0000742	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	544 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774172808256	Logistics	Low	1	0
+CP0000743	PT Suryadi Synthetic	Company	Dewi Suryadi	1900-01-01	2018-01-01	818 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777097605149	Manufacturing	Low	0	1
+CP0000744	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	192 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772227089207	Technology	Medium	1	0
+CP0000745	PT Setiawan Synthetic	Company	Gita Setiawan	1900-01-01	2018-01-01	628 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779977190044	Construction	High	0	1
+CP0000746	PT Wijaya Synthetic	Company	Dimas Wijaya	1900-01-01	2018-01-01	30 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772697255214	Construction	Medium	0	1
+CP0000747	Nadia Setiawan	Individual	Nadia Setiawan	1985-01-01	1900-01-01	882 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773795595237	Manufacturing	Medium	1	0
+CP0000748	Laras Prakoso	Individual	Laras Prakoso	1985-01-01	1900-01-01	292 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777168637794	Manufacturing	Low	1	0
+CP0000749	Putri Chandra	Individual	Putri Chandra	1985-01-01	1900-01-01	646 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773624145847	Healthcare	Low	1	0
+CP0000750	Gita Putra	Individual	Gita Putra	1985-01-01	1900-01-01	449 Synthetic Avenue	Surabaya	JP	JP	Bank Sentra	774392320459	Manufacturing	Low	1	0
+CP0000751	Teguh Darmawan	Individual	Teguh Darmawan	1985-01-01	1900-01-01	377 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777097062699	Healthcare	Low	1	0
+CP0000752	Gita Halim	Individual	Gita Halim	1985-01-01	1900-01-01	445 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772217034329	Technology	Low	1	0
+CP0000753	Rani Putra	Individual	Rani Putra	1985-01-01	1900-01-01	439 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771735177589	Manufacturing	Low	1	0
+CP0000754	Andi Halim	Individual	Andi Halim	1985-01-01	1900-01-01	82 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773870810551	Technology	Low	1	0
+CP0000755	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	345 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777486515167	Construction	Low	1	0
+CP0000756	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	53 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777567121171	Logistics	Medium	1	0
+CP0000757	Indra Mahendra	Individual	Indra Mahendra	1985-01-01	1900-01-01	34 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770268264155	Retail	Low	1	0
+CP0000758	PT Siregar Synthetic	Company	Eka Siregar	1900-01-01	2018-01-01	543 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	779410121162	Construction	Medium	0	1
+CP0000759	PT Permana Synthetic	Company	Putri Permana	1900-01-01	2018-01-01	232 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	773375376082	Retail	Low	0	1
+CP0000760	PT Gunawan Synthetic	Company	Teguh Gunawan	1900-01-01	2018-01-01	241 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	779045199136	Retail	Low	0	1
+CP0000761	Putri Putra	Individual	Putri Putra	1985-01-01	1900-01-01	764 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	776687343824	Retail	Low	1	0
+CP0000762	Bima Gunawan	Individual	Bima Gunawan	1985-01-01	1900-01-01	187 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770837073502	Healthcare	Low	1	0
+CP0000763	PT Mahendra Synthetic	Company	Andi Mahendra	1900-01-01	2018-01-01	633 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	772766354601	Healthcare	Low	0	1
+CP0000764	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	596 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770684862799	Healthcare	Low	1	0
+CP0000765	Bima Yulianto	Individual	Bima Yulianto	1985-01-01	1900-01-01	338 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777060364384	Technology	Low	1	0
+CP0000766	PT Prakoso Synthetic	Company	Intan Prakoso	1900-01-01	2018-01-01	707 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776993502281	Construction	Medium	0	1
+CP0000767	Adit Halim	Individual	Adit Halim	1985-01-01	1900-01-01	102 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777988275885	Manufacturing	Medium	1	0
+CP0000768	PT Suryadi Synthetic	Company	Raka Suryadi	1900-01-01	2018-01-01	763 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771177379225	Logistics	Low	0	1
+CP0000769	Anisa Firmansyah	Individual	Anisa Firmansyah	1985-01-01	1900-01-01	578 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	774866739848	Retail	Medium	1	0
+CP0000770	PT Halim Synthetic	Company	Rizky Halim	1900-01-01	2018-01-01	863 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772852956153	Logistics	Low	0	1
+CP0000771	Arif Suryadi	Individual	Arif Suryadi	1985-01-01	1900-01-01	484 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777492363912	Manufacturing	Low	1	0
+CP0000772	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	429 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774412340752	Logistics	Medium	1	0
+CP0000773	Citra Prakoso	Individual	Citra Prakoso	1985-01-01	1900-01-01	581 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773617752652	Logistics	Low	1	0
+CP0000774	Naufal Nugraha	Individual	Naufal Nugraha	1985-01-01	1900-01-01	521 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776372230841	Healthcare	Low	1	0
+CP0000775	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	863 Synthetic Avenue	Medan	AE	AE	Asia Commerce Bank	771280196683	Manufacturing	Low	1	0
+CP0000776	PT Permana Synthetic	Company	Naufal Permana	1900-01-01	2018-01-01	312 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	770380346959	Construction	Low	0	1
+CP0000777	PT Prakoso Synthetic	Company	Rizky Prakoso	1900-01-01	2018-01-01	417 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	771960438371	Construction	High	0	1
+CP0000778	PT Kurniawan Synthetic	Company	Bima Kurniawan	1900-01-01	2018-01-01	724 Synthetic Avenue	Semarang	AE	AE	Asia Commerce Bank	774414007261	Construction	Medium	0	1
+CP0000779	Anisa Prakoso	Individual	Anisa Prakoso	1985-01-01	1900-01-01	302 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779087012922	Logistics	Low	1	0
+CP0000780	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	545 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	775552422857	Healthcare	Low	1	0
+CP0000781	Hana Santoso	Individual	Hana Santoso	1985-01-01	1900-01-01	236 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	770625359640	Construction	Medium	1	0
+CP0000782	PT Firmansyah Synthetic	Company	Hana Firmansyah	1900-01-01	2018-01-01	772 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773001693460	Logistics	Low	0	1
+CP0000783	Adit Siregar	Individual	Adit Siregar	1985-01-01	1900-01-01	259 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772603398595	Technology	Low	1	0
+CP0000784	Fajar Iskandar	Individual	Fajar Iskandar	1985-01-01	1900-01-01	426 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	779848538700	Logistics	Low	1	0
+CP0000785	Laras Santoso	Individual	Laras Santoso	1985-01-01	1900-01-01	729 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	773688124696	Healthcare	Low	1	0
+CP0000786	Joko Chandra	Individual	Joko Chandra	1985-01-01	1900-01-01	57 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778654829798	Healthcare	Low	1	0
+CP0000787	Rani Chandra	Individual	Rani Chandra	1985-01-01	1900-01-01	729 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	772207370813	Logistics	Low	1	0
+CP0000788	PT Kurniawan Synthetic	Company	Hana Kurniawan	1900-01-01	2018-01-01	458 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778524629212	Technology	Medium	0	1
+CP0000789	Gita Kurniawan	Individual	Gita Kurniawan	1985-01-01	1900-01-01	530 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	774422606409	Manufacturing	Medium	1	0
+CP0000790	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	629 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	779483030011	Technology	Low	1	0
+CP0000791	Dewi Gunawan	Individual	Dewi Gunawan	1985-01-01	1900-01-01	759 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773889676656	Healthcare	Low	1	0
+CP0000792	Teguh Darmawan	Individual	Teguh Darmawan	1985-01-01	1900-01-01	504 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771540419832	Technology	Low	1	0
+CP0000793	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	268 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772851164802	Manufacturing	Low	1	0
+CP0000794	Eka Gunawan	Individual	Eka Gunawan	1985-01-01	1900-01-01	622 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772970721520	Retail	Low	1	0
+CP0000795	PT Wijaya Synthetic	Company	Anisa Wijaya	1900-01-01	2018-01-01	218 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778047533092	Construction	Low	0	1
+CP0000796	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	137 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779613764920	Logistics	Low	1	0
+CP0000797	Intan Darmawan	Individual	Intan Darmawan	1985-01-01	1900-01-01	383 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779707089851	Technology	Low	1	0
+CP0000798	Naufal Budiman	Individual	Naufal Budiman	1985-01-01	1900-01-01	894 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	774155652511	Logistics	Medium	1	0
+CP0000799	Citra Firmansyah	Individual	Citra Firmansyah	1985-01-01	1900-01-01	542 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775454938806	Logistics	Medium	1	0
+CP0000800	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	499 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	776258283390	Technology	Low	1	0
+CP0000801	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	309 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775813694363	Manufacturing	Low	1	0
+CP0000802	Arif Kurniawan	Individual	Arif Kurniawan	1985-01-01	1900-01-01	24 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	778077090940	Technology	Medium	1	0
+CP0000803	Putri Prakoso	Individual	Putri Prakoso	1985-01-01	1900-01-01	320 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775236146103	Manufacturing	Low	1	0
+CP0000804	Teguh Rahardjo	Individual	Teguh Rahardjo	1985-01-01	1900-01-01	309 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	777212117559	Healthcare	High	1	0
+CP0000805	Anisa Kurniawan	Individual	Anisa Kurniawan	1985-01-01	1900-01-01	677 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	775849237021	Technology	Low	1	0
+CP0000806	PT Santoso Synthetic	Company	Joko Santoso	1900-01-01	2018-01-01	284 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	778308551004	Manufacturing	Low	0	1
+CP0000807	Anisa Permana	Individual	Anisa Permana	1985-01-01	1900-01-01	704 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	775051611818	Logistics	Low	1	0
+CP0000808	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	436 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772385419488	Manufacturing	Low	1	0
+CP0000809	Dimas Rahardjo	Individual	Dimas Rahardjo	1985-01-01	1900-01-01	571 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771740631315	Technology	Low	1	0
+CP0000810	PT Nugraha Synthetic	Company	Hana Nugraha	1900-01-01	2018-01-01	756 Synthetic Avenue	Semarang	AE	AE	Bank Nusantara	773499838119	Logistics	Low	0	1
+CP0000811	Fajar Nugraha	Individual	Fajar Nugraha	1985-01-01	1900-01-01	654 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	770133497054	Logistics	High	1	0
+CP0000812	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	682 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773928370668	Logistics	Medium	1	0
+CP0000813	Wulan Wibowo	Individual	Wulan Wibowo	1985-01-01	1900-01-01	163 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	772582696133	Manufacturing	Low	1	0
+CP0000814	Sari Wibowo	Individual	Sari Wibowo	1985-01-01	1900-01-01	842 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774207728430	Technology	Low	1	0
+CP0000815	PT Kurniawan Synthetic	Company	Putri Kurniawan	1900-01-01	2018-01-01	716 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	772808160881	Logistics	Low	0	1
+CP0000816	Rizky Iskandar	Individual	Rizky Iskandar	1985-01-01	1900-01-01	683 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	770652934999	Retail	Low	1	0
+CP0000817	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	625 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771183271111	Logistics	Medium	1	0
+CP0000818	PT Santoso Synthetic	Company	Maya Santoso	1900-01-01	2018-01-01	655 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770563998809	Manufacturing	Low	0	1
+CP0000819	Rizky Firmansyah	Individual	Rizky Firmansyah	1985-01-01	1900-01-01	652 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773989171970	Manufacturing	Medium	1	0
+CP0000820	Naufal Nugraha	Individual	Naufal Nugraha	1985-01-01	1900-01-01	131 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772409393629	Logistics	Low	1	0
+CP0000821	PT Wijaya Synthetic	Company	Gita Wijaya	1900-01-01	2018-01-01	749 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779150788489	Manufacturing	Low	0	1
+CP0000822	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	13 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779997817674	Construction	Low	1	0
+CP0000823	PT Kurniawan Synthetic	Company	Arif Kurniawan	1900-01-01	2018-01-01	484 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772262969611	Healthcare	High	0	1
+CP0000824	PT Nugraha Synthetic	Company	Citra Nugraha	1900-01-01	2018-01-01	771 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777189052461	Retail	Medium	0	1
+CP0000825	PT Darmawan Synthetic	Company	Dimas Darmawan	1900-01-01	2018-01-01	530 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	779893434030	Retail	Low	0	1
+CP0000826	Intan Suryadi	Individual	Intan Suryadi	1985-01-01	1900-01-01	896 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776652048836	Technology	Medium	1	0
+CP0000827	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	20 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773141200066	Construction	Low	1	0
+CP0000828	Dewi Rahardjo	Individual	Dewi Rahardjo	1985-01-01	1900-01-01	407 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775498613679	Retail	Low	1	0
+CP0000829	PT Chandra Synthetic	Company	Andi Chandra	1900-01-01	2018-01-01	836 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	775633852210	Manufacturing	Low	0	1
+CP0000830	Nadia Kurniawan	Individual	Nadia Kurniawan	1985-01-01	1900-01-01	205 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779640451515	Healthcare	Low	1	0
+CP0000831	PT Prakoso Synthetic	Company	Bima Prakoso	1900-01-01	2018-01-01	503 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774406457085	Healthcare	Low	0	1
+CP0000832	Wulan Prakoso	Individual	Wulan Prakoso	1985-01-01	1900-01-01	757 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778818199260	Retail	Medium	1	0
+CP0000833	PT Nugraha Synthetic	Company	Eka Nugraha	1900-01-01	2018-01-01	346 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779087885631	Logistics	Medium	0	1
+CP0000834	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	393 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774518403134	Retail	Low	1	0
+CP0000835	PT Darmawan Synthetic	Company	Joko Darmawan	1900-01-01	2018-01-01	377 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778833356844	Retail	Low	0	1
+CP0000836	Rani Lesmana	Individual	Rani Lesmana	1985-01-01	1900-01-01	399 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	774004040254	Manufacturing	Medium	1	0
+CP0000837	PT Suryadi Synthetic	Company	Adit Suryadi	1900-01-01	2018-01-01	463 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	778411635587	Retail	Medium	0	1
+CP0000838	PT Suryadi Synthetic	Company	Sari Suryadi	1900-01-01	2018-01-01	165 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	777386804470	Manufacturing	Low	0	1
+CP0000839	Citra Rahardjo	Individual	Citra Rahardjo	1985-01-01	1900-01-01	828 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771745608475	Healthcare	Low	1	0
+CP0000840	Intan Halim	Individual	Intan Halim	1985-01-01	1900-01-01	28 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774546434871	Manufacturing	Low	1	0
+CP0000841	Kevin Yulianto	Individual	Kevin Yulianto	1985-01-01	1900-01-01	804 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778416292429	Healthcare	Low	1	0
+CP0000842	Eka Prakoso	Individual	Eka Prakoso	1985-01-01	1900-01-01	774 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	777813968674	Construction	Low	1	0
+CP0000843	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	397 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775922759498	Logistics	Medium	1	0
+CP0000844	PT Prakoso Synthetic	Company	Kevin Prakoso	1900-01-01	2018-01-01	199 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772492225728	Manufacturing	Medium	0	1
+CP0000845	PT Wijaya Synthetic	Company	Naufal Wijaya	1900-01-01	2018-01-01	311 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779973842874	Logistics	Low	0	1
+CP0000846	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	725 Synthetic Avenue	Makassar	AE	AE	Bank Sentra	770122209861	Manufacturing	Low	1	0
+CP0000847	PT Iskandar Synthetic	Company	Andi Iskandar	1900-01-01	2018-01-01	796 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773953039148	Logistics	Medium	0	1
+CP0000848	Naufal Yulianto	Individual	Naufal Yulianto	1985-01-01	1900-01-01	455 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	779872345596	Technology	Low	1	0
+CP0000849	Indra Yulianto	Individual	Indra Yulianto	1985-01-01	1900-01-01	443 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778779139236	Manufacturing	Low	1	0
+CP0000850	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	205 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777118768243	Technology	Medium	1	0
+CP0000851	Bima Halim	Individual	Bima Halim	1985-01-01	1900-01-01	704 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	773352599823	Logistics	Low	1	0
+CP0000852	Maya Firmansyah	Individual	Maya Firmansyah	1985-01-01	1900-01-01	677 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772610783617	Construction	Low	1	0
+CP0000853	Laras Budiman	Individual	Laras Budiman	1985-01-01	1900-01-01	40 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773241998975	Logistics	Low	1	0
+CP0000854	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	191 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	770235064384	Logistics	Low	1	0
+CP0000855	Gita Suryadi	Individual	Gita Suryadi	1985-01-01	1900-01-01	315 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778069418095	Healthcare	High	1	0
+CP0000856	Hana Rahardjo	Individual	Hana Rahardjo	1985-01-01	1900-01-01	594 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778980257145	Technology	Low	1	0
+CP0000857	PT Rahardjo Synthetic	Company	Adit Rahardjo	1900-01-01	2018-01-01	686 Synthetic Avenue	Jakarta	AU	AU	Bank Sentra	770902460486	Healthcare	High	0	1
+CP0000858	Putri Suryadi	Individual	Putri Suryadi	1985-01-01	1900-01-01	890 Synthetic Avenue	Medan	AU	AU	Bank Sentra	771820140974	Construction	Low	1	0
+CP0000859	Adit Halim	Individual	Adit Halim	1985-01-01	1900-01-01	109 Synthetic Avenue	Denpasar	US	US	Asia Commerce Bank	771464582540	Logistics	Medium	1	0
+CP0000860	Fajar Hartono	Individual	Fajar Hartono	1985-01-01	1900-01-01	799 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771909921945	Technology	Medium	1	0
+CP0000861	PT Budiman Synthetic	Company	Dimas Budiman	1900-01-01	2018-01-01	283 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773308284268	Healthcare	Low	0	1
+CP0000862	Andi Permana	Individual	Andi Permana	1985-01-01	1900-01-01	217 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	774609226588	Retail	Low	1	0
+CP0000863	Fajar Hartono	Individual	Fajar Hartono	1985-01-01	1900-01-01	847 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770857906985	Manufacturing	Medium	1	0
+CP0000864	Sari Firmansyah	Individual	Sari Firmansyah	1985-01-01	1900-01-01	780 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770963161129	Logistics	Medium	1	0
+CP0000865	Intan Wibowo	Individual	Intan Wibowo	1985-01-01	1900-01-01	324 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777036029481	Healthcare	Low	1	0
+CP0000866	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	569 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	771294029249	Logistics	Medium	1	0
+CP0000867	Intan Putra	Individual	Intan Putra	1985-01-01	1900-01-01	212 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776420173978	Retail	Medium	1	0
+CP0000868	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	475 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772528367097	Manufacturing	Low	1	0
+CP0000869	Rizky Darmawan	Individual	Rizky Darmawan	1985-01-01	1900-01-01	1 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770350374173	Healthcare	Low	1	0
+CP0000870	PT Permana Synthetic	Company	Alya Permana	1900-01-01	2018-01-01	48 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773653387421	Technology	Medium	0	1
+CP0000871	PT Halim Synthetic	Company	Anisa Halim	1900-01-01	2018-01-01	668 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	776226905856	Manufacturing	Medium	0	1
+CP0000872	PT Wijaya Synthetic	Company	Intan Wijaya	1900-01-01	2018-01-01	321 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770602915068	Healthcare	Low	0	1
+CP0000873	PT Putra Synthetic	Company	Arif Putra	1900-01-01	2018-01-01	41 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779879809743	Healthcare	Low	0	1
+CP0000874	Indra Mahendra	Individual	Indra Mahendra	1985-01-01	1900-01-01	40 Synthetic Avenue	Jakarta	AU	AU	Bank Sentra	777872347186	Technology	Low	1	0
+CP0000875	Nadia Mahendra	Individual	Nadia Mahendra	1985-01-01	1900-01-01	558 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	776487778340	Logistics	Low	1	0
+CP0000876	PT Darmawan Synthetic	Company	Hana Darmawan	1900-01-01	2018-01-01	325 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775538016145	Retail	Medium	0	1
+CP0000877	Fajar Iskandar	Individual	Fajar Iskandar	1985-01-01	1900-01-01	435 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	772958803532	Retail	Medium	1	0
+CP0000878	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	67 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776730815657	Technology	Medium	1	0
+CP0000879	Putri Yulianto	Individual	Putri Yulianto	1985-01-01	1900-01-01	770 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773654308896	Technology	Low	1	0
+CP0000880	PT Iskandar Synthetic	Company	Kevin Iskandar	1900-01-01	2018-01-01	420 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	776252221104	Technology	Low	0	1
+CP0000881	Hana Hartono	Individual	Hana Hartono	1985-01-01	1900-01-01	128 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770155871289	Logistics	Medium	1	0
+CP0000882	Gita Putra	Individual	Gita Putra	1985-01-01	1900-01-01	69 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773173396561	Technology	High	1	0
+CP0000883	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	582 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778863595865	Construction	Low	1	0
+CP0000884	PT Adinata Synthetic	Company	Citra Adinata	1900-01-01	2018-01-01	476 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773225531495	Manufacturing	Low	0	1
+CP0000885	Joko Prakoso	Individual	Joko Prakoso	1985-01-01	1900-01-01	736 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776234293549	Construction	Medium	1	0
+CP0000886	Intan Lesmana	Individual	Intan Lesmana	1985-01-01	1900-01-01	565 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778058938326	Logistics	Medium	1	0
+CP0000887	PT Firmansyah Synthetic	Company	Bagus Firmansyah	1900-01-01	2018-01-01	470 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779816390716	Technology	Low	0	1
+CP0000888	Teguh Iskandar	Individual	Teguh Iskandar	1985-01-01	1900-01-01	440 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771391086947	Healthcare	Medium	1	0
+CP0000889	PT Lesmana Synthetic	Company	Teguh Lesmana	1900-01-01	2018-01-01	761 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	778510074287	Logistics	Low	0	1
+CP0000890	Dimas Hartono	Individual	Dimas Hartono	1985-01-01	1900-01-01	319 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771023091463	Construction	Medium	1	0
+CP0000891	Putri Permana	Individual	Putri Permana	1985-01-01	1900-01-01	157 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	779132413301	Construction	Low	1	0
+CP0000892	Bima Adinata	Individual	Bima Adinata	1985-01-01	1900-01-01	427 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777592217728	Logistics	Medium	1	0
+CP0000893	PT Permana Synthetic	Company	Fajar Permana	1900-01-01	2018-01-01	258 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776956940107	Manufacturing	Low	0	1
+CP0000894	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	179 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776756157018	Construction	Low	1	0
+CP0000895	PT Putra Synthetic	Company	Rani Putra	1900-01-01	2018-01-01	572 Synthetic Avenue	Surabaya	JP	JP	Asia Commerce Bank	779617690094	Manufacturing	Low	0	1
+CP0000896	Dewi Kurniawan	Individual	Dewi Kurniawan	1985-01-01	1900-01-01	37 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	770554295507	Construction	Low	1	0
+CP0000897	PT Siregar Synthetic	Company	Sari Siregar	1900-01-01	2018-01-01	660 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	771846501969	Healthcare	Low	0	1
+CP0000898	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	98 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	776771238811	Healthcare	High	1	0
+CP0000899	Joko Hartono	Individual	Joko Hartono	1985-01-01	1900-01-01	769 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773077067720	Manufacturing	Low	1	0
+CP0000900	Citra Wibowo	Individual	Citra Wibowo	1985-01-01	1900-01-01	128 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772063695927	Technology	Low	1	0
+CP0000901	PT Setiawan Synthetic	Company	Maya Setiawan	1900-01-01	2018-01-01	332 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	778575821122	Technology	Low	0	1
+CP0000902	Indra Putra	Individual	Indra Putra	1985-01-01	1900-01-01	13 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	777089879314	Logistics	Medium	1	0
+CP0000903	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	371 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	771751442284	Construction	Low	1	0
+CP0000904	Arif Putra	Individual	Arif Putra	1985-01-01	1900-01-01	346 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	775977605535	Technology	Medium	1	0
+CP0000905	Indra Darmawan	Individual	Indra Darmawan	1985-01-01	1900-01-01	109 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776647030124	Technology	Medium	1	0
+CP0000906	Anisa Permana	Individual	Anisa Permana	1985-01-01	1900-01-01	650 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775674043892	Retail	Low	1	0
+CP0000907	PT Permana Synthetic	Company	Eka Permana	1900-01-01	2018-01-01	87 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772263072652	Technology	Low	0	1
+CP0000908	PT Putra Synthetic	Company	Bima Putra	1900-01-01	2018-01-01	800 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779940474743	Manufacturing	Medium	0	1
+CP0000909	PT Rahardjo Synthetic	Company	Nadia Rahardjo	1900-01-01	2018-01-01	261 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775547632845	Healthcare	High	0	1
+CP0000910	PT Permana Synthetic	Company	Naufal Permana	1900-01-01	2018-01-01	166 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772677158260	Technology	Medium	0	1
+CP0000911	PT Nugraha Synthetic	Company	Sari Nugraha	1900-01-01	2018-01-01	851 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774296084166	Logistics	Low	0	1
+CP0000912	Rani Darmawan	Individual	Rani Darmawan	1985-01-01	1900-01-01	355 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777665581159	Logistics	Low	1	0
+CP0000913	Maya Siregar	Individual	Maya Siregar	1985-01-01	1900-01-01	282 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771936308893	Manufacturing	Low	1	0
+CP0000914	Gita Yulianto	Individual	Gita Yulianto	1985-01-01	1900-01-01	624 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775026429678	Manufacturing	Low	1	0
+CP0000915	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	618 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775659840344	Logistics	Medium	1	0
+CP0000916	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	425 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	774458343401	Construction	Low	1	0
+CP0000917	Naufal Adinata	Individual	Naufal Adinata	1985-01-01	1900-01-01	759 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	777663570675	Manufacturing	Medium	1	0
+CP0000918	Laras Nugraha	Individual	Laras Nugraha	1985-01-01	1900-01-01	256 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	775409889377	Healthcare	Low	1	0
+CP0000919	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	155 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779489695998	Manufacturing	Low	1	0
+CP0000920	PT Setiawan Synthetic	Company	Anisa Setiawan	1900-01-01	2018-01-01	521 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	772003265973	Healthcare	Medium	0	1
+CP0000921	Sari Lesmana	Individual	Sari Lesmana	1985-01-01	1900-01-01	196 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771500029135	Logistics	Low	1	0
+CP0000922	PT Mahendra Synthetic	Company	Laras Mahendra	1900-01-01	2018-01-01	289 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771178231250	Manufacturing	Low	0	1
+CP0000923	Fajar Wibowo	Individual	Fajar Wibowo	1985-01-01	1900-01-01	770 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771800304361	Manufacturing	Medium	1	0
+CP0000924	Farah Santoso	Individual	Farah Santoso	1985-01-01	1900-01-01	41 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	773550372285	Logistics	Low	1	0
+CP0000925	PT Suryadi Synthetic	Company	Rani Suryadi	1900-01-01	2018-01-01	727 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770886497192	Logistics	Low	0	1
+CP0000926	Nadia Halim	Individual	Nadia Halim	1985-01-01	1900-01-01	671 Synthetic Avenue	Makassar	US	US	Bank Sentra	774917527455	Logistics	Medium	1	0
+CP0000927	Alya Santoso	Individual	Alya Santoso	1985-01-01	1900-01-01	528 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	771132373589	Manufacturing	Medium	1	0
+CP0000928	Arif Iskandar	Individual	Arif Iskandar	1985-01-01	1900-01-01	356 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774584453234	Construction	Low	1	0
+CP0000929	Dimas Santoso	Individual	Dimas Santoso	1985-01-01	1900-01-01	832 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779027367787	Healthcare	Low	1	0
+CP0000930	Bagus Putra	Individual	Bagus Putra	1985-01-01	1900-01-01	883 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	772841100472	Healthcare	High	1	0
+CP0000931	Farah Santoso	Individual	Farah Santoso	1985-01-01	1900-01-01	676 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	779852072725	Technology	Medium	1	0
+CP0000932	PT Putra Synthetic	Company	Arif Putra	1900-01-01	2018-01-01	191 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	771526652738	Healthcare	Medium	0	1
+CP0000933	PT Setiawan Synthetic	Company	Dimas Setiawan	1900-01-01	2018-01-01	48 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775299649795	Construction	Low	0	1
+CP0000934	Laras Firmansyah	Individual	Laras Firmansyah	1985-01-01	1900-01-01	395 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	772138600591	Construction	Medium	1	0
+CP0000935	Sari Kurniawan	Individual	Sari Kurniawan	1985-01-01	1900-01-01	826 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772016485600	Manufacturing	Low	1	0
+CP0000936	Fajar Kurniawan	Individual	Fajar Kurniawan	1985-01-01	1900-01-01	746 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778914651566	Construction	Low	1	0
+CP0000937	Laras Lesmana	Individual	Laras Lesmana	1985-01-01	1900-01-01	748 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778210804159	Logistics	Low	1	0
+CP0000938	PT Iskandar Synthetic	Company	Dewi Iskandar	1900-01-01	2018-01-01	241 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773789092330	Healthcare	Low	0	1
+CP0000939	Sari Chandra	Individual	Sari Chandra	1985-01-01	1900-01-01	208 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772801279724	Healthcare	Low	1	0
+CP0000940	Sari Darmawan	Individual	Sari Darmawan	1985-01-01	1900-01-01	617 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	774167118008	Logistics	Medium	1	0
+CP0000941	Alya Suryadi	Individual	Alya Suryadi	1985-01-01	1900-01-01	191 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	776759292907	Logistics	Low	1	0
+CP0000942	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	689 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774206659293	Technology	Low	1	0
+CP0000943	Citra Hartono	Individual	Citra Hartono	1985-01-01	1900-01-01	225 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771720790087	Retail	Low	1	0
+CP0000944	PT Gunawan Synthetic	Company	Maya Gunawan	1900-01-01	2018-01-01	184 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771091230746	Healthcare	Low	0	1
+CP0000945	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	38 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777510551747	Manufacturing	Low	1	0
+CP0000946	Hana Darmawan	Individual	Hana Darmawan	1985-01-01	1900-01-01	558 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	779564120453	Manufacturing	Low	1	0
+CP0000947	Dimas Budiman	Individual	Dimas Budiman	1985-01-01	1900-01-01	443 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	775531629183	Technology	Medium	1	0
+CP0000948	PT Lesmana Synthetic	Company	Nadia Lesmana	1900-01-01	2018-01-01	781 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779393802346	Construction	Medium	0	1
+CP0000949	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	7 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779141397318	Technology	Medium	1	0
+CP0000950	PT Wijaya Synthetic	Company	Alya Wijaya	1900-01-01	2018-01-01	821 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777173181331	Retail	Medium	0	1
+CP0000951	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	272 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776016214724	Healthcare	Low	1	0
+CP0000952	PT Putra Synthetic	Company	Gita Putra	1900-01-01	2018-01-01	564 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778747111616	Logistics	High	0	1
+CP0000953	Teguh Siregar	Individual	Teguh Siregar	1985-01-01	1900-01-01	198 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774641532072	Technology	Low	1	0
+CP0000954	Eka Mahendra	Individual	Eka Mahendra	1985-01-01	1900-01-01	574 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	779651610222	Manufacturing	Low	1	0
+CP0000955	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	321 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775780017878	Logistics	Low	1	0
+CP0000956	PT Lesmana Synthetic	Company	Hana Lesmana	1900-01-01	2018-01-01	289 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770601998274	Technology	Low	0	1
+CP0000957	Andi Chandra	Individual	Andi Chandra	1985-01-01	1900-01-01	373 Synthetic Avenue	Semarang	JP	JP	Bank Sentra	773219617895	Healthcare	Medium	1	0
+CP0000958	Laras Hartono	Individual	Laras Hartono	1985-01-01	1900-01-01	719 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	779880355655	Manufacturing	Low	1	0
+CP0000959	PT Prakoso Synthetic	Company	Hana Prakoso	1900-01-01	2018-01-01	534 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772781658384	Construction	Low	0	1
+CP0000960	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	553 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771484944314	Retail	Low	1	0
+CP0000961	Maya Nugraha	Individual	Maya Nugraha	1985-01-01	1900-01-01	282 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	776307206985	Technology	Medium	1	0
+CP0000962	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	219 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778764575126	Retail	Medium	1	0
+CP0000963	PT Mahendra Synthetic	Company	Joko Mahendra	1900-01-01	2018-01-01	795 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	778687884331	Retail	Low	0	1
+CP0000964	Alya Wijaya	Individual	Alya Wijaya	1985-01-01	1900-01-01	56 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775339829776	Technology	Low	1	0
+CP0000965	Dimas Yulianto	Individual	Dimas Yulianto	1985-01-01	1900-01-01	215 Synthetic Avenue	Bandung	JP	JP	Bank Nusantara	773172592979	Healthcare	Low	1	0
+CP0000966	Dewi Putra	Individual	Dewi Putra	1985-01-01	1900-01-01	700 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770530394021	Retail	Medium	1	0
+CP0000967	Indra Putra	Individual	Indra Putra	1985-01-01	1900-01-01	800 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777356036996	Retail	Low	1	0
+CP0000968	Rizky Wibowo	Individual	Rizky Wibowo	1985-01-01	1900-01-01	249 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	779434591750	Manufacturing	Medium	1	0
+CP0000969	Hana Suryadi	Individual	Hana Suryadi	1985-01-01	1900-01-01	625 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	779504464166	Retail	Low	1	0
+CP0000970	Citra Adinata	Individual	Citra Adinata	1985-01-01	1900-01-01	822 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774554754550	Retail	Medium	1	0
+CP0000971	Intan Wibowo	Individual	Intan Wibowo	1985-01-01	1900-01-01	594 Synthetic Avenue	Makassar	AU	AU	Asia Commerce Bank	775814722997	Retail	Low	1	0
+CP0000972	Gita Mahendra	Individual	Gita Mahendra	1985-01-01	1900-01-01	99 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777131751983	Construction	Medium	1	0
+CP0000973	Maya Permana	Individual	Maya Permana	1985-01-01	1900-01-01	530 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779706255646	Construction	Medium	1	0
+CP0000974	PT Wijaya Synthetic	Company	Teguh Wijaya	1900-01-01	2018-01-01	237 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776140022863	Logistics	Medium	0	1
+CP0000975	Rani Gunawan	Individual	Rani Gunawan	1985-01-01	1900-01-01	47 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778830796410	Retail	Low	1	0
+CP0000976	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	662 Synthetic Avenue	Medan	SG	SG	Bank Sentra	777732807493	Construction	Low	1	0
+CP0000977	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	221 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772296546491	Logistics	Low	1	0
+CP0000978	Citra Firmansyah	Individual	Citra Firmansyah	1985-01-01	1900-01-01	205 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	775967146246	Construction	Medium	1	0
+CP0000979	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	683 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	776955281073	Manufacturing	Medium	1	0
+CP0000980	Intan Prakoso	Individual	Intan Prakoso	1985-01-01	1900-01-01	84 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772866136758	Technology	Low	1	0
+CP0000981	Dimas Adinata	Individual	Dimas Adinata	1985-01-01	1900-01-01	335 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774527100419	Construction	Low	1	0
+CP0000982	Sari Chandra	Individual	Sari Chandra	1985-01-01	1900-01-01	36 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774657856211	Manufacturing	Low	1	0
+CP0000983	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	898 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773317664702	Construction	Low	1	0
+CP0000984	PT Lesmana Synthetic	Company	Joko Lesmana	1900-01-01	2018-01-01	288 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	771070681149	Healthcare	Low	0	1
+CP0000985	PT Yulianto Synthetic	Company	Dewi Yulianto	1900-01-01	2018-01-01	565 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778975817641	Retail	Low	0	1
+CP0000986	Raka Kurniawan	Individual	Raka Kurniawan	1985-01-01	1900-01-01	823 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771103515248	Technology	Low	1	0
+CP0000987	Dimas Lesmana	Individual	Dimas Lesmana	1985-01-01	1900-01-01	720 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	774423006513	Healthcare	Low	1	0
+CP0000988	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	683 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777333979994	Manufacturing	Low	1	0
+CP0000989	Eka Wijaya	Individual	Eka Wijaya	1985-01-01	1900-01-01	437 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	770520846722	Healthcare	Low	1	0
+CP0000990	Raka Suryadi	Individual	Raka Suryadi	1985-01-01	1900-01-01	493 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778509935652	Healthcare	Medium	1	0
+CP0000991	Farah Halim	Individual	Farah Halim	1985-01-01	1900-01-01	56 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770639106284	Manufacturing	Low	1	0
+CP0000992	PT Firmansyah Synthetic	Company	Citra Firmansyah	1900-01-01	2018-01-01	14 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	771501685481	Retail	Low	0	1
+CP0000993	Dewi Budiman	Individual	Dewi Budiman	1985-01-01	1900-01-01	770 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777266033787	Logistics	Medium	1	0
+CP0000994	PT Kurniawan Synthetic	Company	Indra Kurniawan	1900-01-01	2018-01-01	607 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	770329296343	Retail	Medium	0	1
+CP0000995	PT Gunawan Synthetic	Company	Rizky Gunawan	1900-01-01	2018-01-01	43 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775133035374	Healthcare	High	0	1
+CP0000996	Eka Chandra	Individual	Eka Chandra	1985-01-01	1900-01-01	466 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	776616869724	Retail	Low	1	0
+CP0000997	PT Firmansyah Synthetic	Company	Dimas Firmansyah	1900-01-01	2018-01-01	5 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	771705698440	Logistics	Low	0	1
+CP0000998	Eka Mahendra	Individual	Eka Mahendra	1985-01-01	1900-01-01	403 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	774679563196	Technology	Low	1	0
+CP0000999	Putri Rahardjo	Individual	Putri Rahardjo	1985-01-01	1900-01-01	691 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774940199572	Technology	Low	1	0
+CP0001000	PT Suryadi Synthetic	Company	Eka Suryadi	1900-01-01	2018-01-01	484 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772465195764	Healthcare	Low	0	1
+CP0001001	Indra Gunawan	Individual	Indra Gunawan	1985-01-01	1900-01-01	526 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	775142479733	Logistics	Low	1	0
+CP0001002	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	217 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775947882355	Logistics	Low	1	0
+CP0001003	Hana Iskandar	Individual	Hana Iskandar	1985-01-01	1900-01-01	472 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	778070078971	Retail	Low	1	0
+CP0001004	Naufal Siregar	Individual	Naufal Siregar	1985-01-01	1900-01-01	593 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773439214915	Logistics	Low	1	0
+CP0001005	Joko Mahendra	Individual	Joko Mahendra	1985-01-01	1900-01-01	143 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778313567182	Retail	High	1	0
+CP0001006	Anisa Nugraha	Individual	Anisa Nugraha	1985-01-01	1900-01-01	561 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	771714069511	Logistics	Low	1	0
+CP0001007	Fajar Permana	Individual	Fajar Permana	1985-01-01	1900-01-01	803 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773215827597	Healthcare	Medium	1	0
+CP0001008	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	834 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778120559230	Manufacturing	Medium	1	0
+CP0001009	Bagus Permana	Individual	Bagus Permana	1985-01-01	1900-01-01	142 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	778496257079	Healthcare	Medium	1	0
+CP0001010	PT Hartono Synthetic	Company	Naufal Hartono	1900-01-01	2018-01-01	259 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779266906342	Retail	Low	0	1
+CP0001011	Hana Firmansyah	Individual	Hana Firmansyah	1985-01-01	1900-01-01	432 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777411034123	Technology	Low	1	0
+CP0001012	PT Wibowo Synthetic	Company	Wulan Wibowo	1900-01-01	2018-01-01	543 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777077575280	Logistics	High	0	1
+CP0001013	Eka Iskandar	Individual	Eka Iskandar	1985-01-01	1900-01-01	360 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	778057728606	Technology	Medium	1	0
+CP0001014	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	328 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	771481690383	Healthcare	Low	1	0
+CP0001015	PT Wibowo Synthetic	Company	Bagus Wibowo	1900-01-01	2018-01-01	106 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776758657371	Manufacturing	Low	0	1
+CP0001016	Citra Setiawan	Individual	Citra Setiawan	1985-01-01	1900-01-01	176 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	772617435641	Manufacturing	Medium	1	0
+CP0001017	PT Prakoso Synthetic	Company	Bima Prakoso	1900-01-01	2018-01-01	127 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778280219093	Technology	Low	0	1
+CP0001018	PT Yulianto Synthetic	Company	Wulan Yulianto	1900-01-01	2018-01-01	381 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	771164146636	Construction	Medium	0	1
+CP0001019	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	245 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	779834450852	Manufacturing	Medium	1	0
+CP0001020	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	820 Synthetic Avenue	Medan	AU	AU	Bank Nusantara	773721938690	Manufacturing	High	1	0
+CP0001021	PT Permana Synthetic	Company	Farah Permana	1900-01-01	2018-01-01	70 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	771509090910	Logistics	Medium	0	1
+CP0001022	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	341 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779711842450	Manufacturing	Low	1	0
+CP0001023	PT Wibowo Synthetic	Company	Intan Wibowo	1900-01-01	2018-01-01	190 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774450239226	Logistics	Low	0	1
+CP0001024	Anisa Prakoso	Individual	Anisa Prakoso	1985-01-01	1900-01-01	746 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	777325670008	Manufacturing	Low	1	0
+CP0001025	PT Halim Synthetic	Company	Wulan Halim	1900-01-01	2018-01-01	389 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776900038845	Logistics	Medium	0	1
+CP0001026	Adit Wibowo	Individual	Adit Wibowo	1985-01-01	1900-01-01	871 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	777374452766	Retail	Low	1	0
+CP0001027	Raka Lesmana	Individual	Raka Lesmana	1985-01-01	1900-01-01	217 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	772277216305	Technology	Medium	1	0
+CP0001028	PT Suryadi Synthetic	Company	Intan Suryadi	1900-01-01	2018-01-01	436 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	771787738876	Logistics	Medium	0	1
+CP0001029	Maya Nugraha	Individual	Maya Nugraha	1985-01-01	1900-01-01	305 Synthetic Avenue	Bandung	AU	AU	Bank Nusantara	770126363476	Construction	Medium	1	0
+CP0001030	PT Halim Synthetic	Company	Bagus Halim	1900-01-01	2018-01-01	658 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	779295851798	Logistics	Low	0	1
+CP0001031	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	132 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	773950932775	Construction	Medium	1	0
+CP0001032	PT Rahardjo Synthetic	Company	Anisa Rahardjo	1900-01-01	2018-01-01	93 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779261845928	Manufacturing	Low	0	1
+CP0001033	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	554 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772439657724	Healthcare	Low	1	0
+CP0001034	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	325 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777788284201	Manufacturing	Low	1	0
+CP0001035	Teguh Iskandar	Individual	Teguh Iskandar	1985-01-01	1900-01-01	416 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	770755496347	Technology	Low	1	0
+CP0001036	PT Iskandar Synthetic	Company	Intan Iskandar	1900-01-01	2018-01-01	631 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775299021025	Retail	Low	0	1
+CP0001037	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	767 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778820156733	Construction	Low	1	0
+CP0001038	Hana Adinata	Individual	Hana Adinata	1985-01-01	1900-01-01	660 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773657236257	Retail	Medium	1	0
+CP0001039	Putri Darmawan	Individual	Putri Darmawan	1985-01-01	1900-01-01	737 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	773719633432	Manufacturing	Medium	1	0
+CP0001040	Arif Budiman	Individual	Arif Budiman	1985-01-01	1900-01-01	259 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770370932737	Technology	Low	1	0
+CP0001041	Rizky Lesmana	Individual	Rizky Lesmana	1985-01-01	1900-01-01	879 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776708221483	Manufacturing	Low	1	0
+CP0001042	Joko Suryadi	Individual	Joko Suryadi	1985-01-01	1900-01-01	205 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779497292763	Retail	Medium	1	0
+CP0001043	Eka Darmawan	Individual	Eka Darmawan	1985-01-01	1900-01-01	869 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	772008549866	Construction	Low	1	0
+CP0001044	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	361 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773428071614	Construction	Medium	1	0
+CP0001045	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	588 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	772871684179	Healthcare	Low	1	0
+CP0001046	PT Putra Synthetic	Company	Eka Putra	1900-01-01	2018-01-01	79 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776709309343	Construction	Low	0	1
+CP0001047	Alya Firmansyah	Individual	Alya Firmansyah	1985-01-01	1900-01-01	225 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	779021041092	Healthcare	Low	1	0
+CP0001048	PT Mahendra Synthetic	Company	Bima Mahendra	1900-01-01	2018-01-01	180 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777456334660	Logistics	Low	0	1
+CP0001049	Eka Kurniawan	Individual	Eka Kurniawan	1985-01-01	1900-01-01	612 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775194844466	Retail	Low	1	0
+CP0001050	Maya Iskandar	Individual	Maya Iskandar	1985-01-01	1900-01-01	543 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770964337409	Manufacturing	Low	1	0
+CP0001051	PT Siregar Synthetic	Company	Alya Siregar	1900-01-01	2018-01-01	631 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774163689919	Healthcare	Low	0	1
+CP0001052	PT Prakoso Synthetic	Company	Rizky Prakoso	1900-01-01	2018-01-01	90 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773466541699	Manufacturing	Low	0	1
+CP0001053	Gita Yulianto	Individual	Gita Yulianto	1985-01-01	1900-01-01	799 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773744011136	Manufacturing	Low	1	0
+CP0001054	Hana Yulianto	Individual	Hana Yulianto	1985-01-01	1900-01-01	647 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772056265667	Healthcare	Low	1	0
+CP0001055	Laras Firmansyah	Individual	Laras Firmansyah	1985-01-01	1900-01-01	338 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	770082755337	Logistics	Low	1	0
+CP0001056	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	693 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770056059456	Construction	Medium	1	0
+CP0001057	Rizky Mahendra	Individual	Rizky Mahendra	1985-01-01	1900-01-01	312 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777463015513	Healthcare	Low	1	0
+CP0001058	Dimas Putra	Individual	Dimas Putra	1985-01-01	1900-01-01	243 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778252305378	Retail	Low	1	0
+CP0001059	Raka Mahendra	Individual	Raka Mahendra	1985-01-01	1900-01-01	474 Synthetic Avenue	Denpasar	AU	AU	Asia Commerce Bank	778070996948	Logistics	Medium	1	0
+CP0001060	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	821 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776367167355	Healthcare	Medium	1	0
+CP0001061	Sari Wibowo	Individual	Sari Wibowo	1985-01-01	1900-01-01	306 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772769973410	Construction	Medium	1	0
+CP0001062	Wulan Setiawan	Individual	Wulan Setiawan	1985-01-01	1900-01-01	739 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	774764602405	Manufacturing	Medium	1	0
+CP0001063	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	380 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772198619761	Manufacturing	Low	1	0
+CP0001064	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	189 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	772363481007	Technology	Medium	1	0
+CP0001065	Naufal Kurniawan	Individual	Naufal Kurniawan	1985-01-01	1900-01-01	12 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775264981828	Technology	Low	1	0
+CP0001066	Hana Darmawan	Individual	Hana Darmawan	1985-01-01	1900-01-01	91 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	779725943950	Logistics	Medium	1	0
+CP0001067	Naufal Kurniawan	Individual	Naufal Kurniawan	1985-01-01	1900-01-01	446 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776101936110	Retail	Low	1	0
+CP0001068	Naufal Lesmana	Individual	Naufal Lesmana	1985-01-01	1900-01-01	679 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772975789207	Logistics	Medium	1	0
+CP0001069	PT Halim Synthetic	Company	Adit Halim	1900-01-01	2018-01-01	806 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773917249091	Technology	Low	0	1
+CP0001070	Naufal Darmawan	Individual	Naufal Darmawan	1985-01-01	1900-01-01	105 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772529701732	Healthcare	Low	1	0
+CP0001071	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	302 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775851657661	Manufacturing	Low	1	0
+CP0001072	PT Suryadi Synthetic	Company	Alya Suryadi	1900-01-01	2018-01-01	653 Synthetic Avenue	Jakarta	AE	AE	Asia Commerce Bank	773434997000	Technology	Medium	0	1
+CP0001073	PT Darmawan Synthetic	Company	Eka Darmawan	1900-01-01	2018-01-01	374 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777023058947	Healthcare	Low	0	1
+CP0001074	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	441 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779961543992	Technology	Medium	1	0
+CP0001075	PT Iskandar Synthetic	Company	Raka Iskandar	1900-01-01	2018-01-01	434 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	778433021726	Logistics	Low	0	1
+CP0001076	Rani Firmansyah	Individual	Rani Firmansyah	1985-01-01	1900-01-01	798 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	779721615403	Retail	Medium	1	0
+CP0001077	Arif Rahardjo	Individual	Arif Rahardjo	1985-01-01	1900-01-01	150 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770780796101	Technology	Low	1	0
+CP0001078	PT Rahardjo Synthetic	Company	Arif Rahardjo	1900-01-01	2018-01-01	467 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	773576040342	Healthcare	Low	0	1
+CP0001079	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	581 Synthetic Avenue	Makassar	AE	AE	Bank Sentra	773005287185	Logistics	Low	1	0
+CP0001080	Laras Chandra	Individual	Laras Chandra	1985-01-01	1900-01-01	663 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778686450339	Manufacturing	Low	1	0
+CP0001081	Dimas Darmawan	Individual	Dimas Darmawan	1985-01-01	1900-01-01	32 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770753351167	Retail	Medium	1	0
+CP0001082	Adit Budiman	Individual	Adit Budiman	1985-01-01	1900-01-01	712 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775908548971	Healthcare	Low	1	0
+CP0001083	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	754 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779434827458	Construction	Low	1	0
+CP0001084	Bima Darmawan	Individual	Bima Darmawan	1985-01-01	1900-01-01	544 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775845185770	Technology	Low	1	0
+CP0001085	Kevin Halim	Individual	Kevin Halim	1985-01-01	1900-01-01	739 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778792199054	Healthcare	Low	1	0
+CP0001086	Alya Nugraha	Individual	Alya Nugraha	1985-01-01	1900-01-01	125 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	779259625798	Technology	Medium	1	0
+CP0001087	PT Darmawan Synthetic	Company	Indra Darmawan	1900-01-01	2018-01-01	748 Synthetic Avenue	Denpasar	AU	AU	Asia Commerce Bank	772970646683	Manufacturing	Medium	0	1
+CP0001088	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	301 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	779927489153	Technology	Low	1	0
+CP0001089	PT Putra Synthetic	Company	Laras Putra	1900-01-01	2018-01-01	830 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	773513587259	Retail	Low	0	1
+CP0001090	Citra Rahardjo	Individual	Citra Rahardjo	1985-01-01	1900-01-01	302 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776875960598	Retail	Medium	1	0
+CP0001091	Laras Iskandar	Individual	Laras Iskandar	1985-01-01	1900-01-01	131 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772904884656	Technology	Low	1	0
+CP0001092	Naufal Suryadi	Individual	Naufal Suryadi	1985-01-01	1900-01-01	432 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770612422824	Logistics	Low	1	0
+CP0001093	Laras Yulianto	Individual	Laras Yulianto	1985-01-01	1900-01-01	322 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	770235513408	Technology	Medium	1	0
+CP0001094	PT Firmansyah Synthetic	Company	Arif Firmansyah	1900-01-01	2018-01-01	312 Synthetic Avenue	Semarang	AE	AE	Bank Nusantara	770918353054	Technology	Low	0	1
+CP0001095	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	237 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771645653244	Healthcare	Low	1	0
+CP0001096	Kevin Iskandar	Individual	Kevin Iskandar	1985-01-01	1900-01-01	753 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770852991810	Logistics	Low	1	0
+CP0001097	Raka Adinata	Individual	Raka Adinata	1985-01-01	1900-01-01	579 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773220846255	Healthcare	Low	1	0
+CP0001098	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	278 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772728894676	Construction	Medium	1	0
+CP0001099	Eka Setiawan	Individual	Eka Setiawan	1985-01-01	1900-01-01	829 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778457318501	Logistics	Low	1	0
+CP0001100	PT Budiman Synthetic	Company	Raka Budiman	1900-01-01	2018-01-01	411 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774573624365	Manufacturing	Low	0	1
+CP0001101	Adit Halim	Individual	Adit Halim	1985-01-01	1900-01-01	849 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	777395434204	Construction	Low	1	0
+CP0001102	Joko Rahardjo	Individual	Joko Rahardjo	1985-01-01	1900-01-01	522 Synthetic Avenue	Surabaya	US	US	Bank Sentra	772912157598	Manufacturing	Low	1	0
+CP0001103	Raka Darmawan	Individual	Raka Darmawan	1985-01-01	1900-01-01	374 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	779006553976	Healthcare	Low	1	0
+CP0001104	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	528 Synthetic Avenue	Surabaya	AE	AE	Bank Sentra	777192491546	Retail	Low	1	0
+CP0001105	Raka Chandra	Individual	Raka Chandra	1985-01-01	1900-01-01	462 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776236788253	Logistics	Low	1	0
+CP0001106	Rizky Firmansyah	Individual	Rizky Firmansyah	1985-01-01	1900-01-01	181 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	779318456470	Retail	Low	1	0
+CP0001107	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	409 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778628406034	Technology	Low	1	0
+CP0001108	PT Darmawan Synthetic	Company	Raka Darmawan	1900-01-01	2018-01-01	144 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	775350712872	Technology	Low	0	1
+CP0001109	PT Setiawan Synthetic	Company	Naufal Setiawan	1900-01-01	2018-01-01	464 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773168841217	Technology	Low	0	1
+CP0001110	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	796 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770069108420	Logistics	Low	1	0
+CP0001111	Arif Iskandar	Individual	Arif Iskandar	1985-01-01	1900-01-01	140 Synthetic Avenue	Denpasar	AU	AU	Asia Commerce Bank	777899543340	Healthcare	Low	1	0
+CP0001112	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	775 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776856015280	Construction	Low	1	0
+CP0001113	PT Halim Synthetic	Company	Dimas Halim	1900-01-01	2018-01-01	115 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	776660117770	Manufacturing	Medium	0	1
+CP0001114	Bima Halim	Individual	Bima Halim	1985-01-01	1900-01-01	807 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776291479522	Construction	Medium	1	0
+CP0001115	PT Firmansyah Synthetic	Company	Fajar Firmansyah	1900-01-01	2018-01-01	481 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	778243352662	Construction	Low	0	1
+CP0001116	Bagus Mahendra	Individual	Bagus Mahendra	1985-01-01	1900-01-01	477 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770717404790	Manufacturing	Low	1	0
+CP0001117	Wulan Halim	Individual	Wulan Halim	1985-01-01	1900-01-01	497 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777963818521	Retail	Low	1	0
+CP0001118	Bima Gunawan	Individual	Bima Gunawan	1985-01-01	1900-01-01	280 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772231035999	Logistics	Low	1	0
+CP0001119	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	9 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	773681826824	Logistics	Low	1	0
+CP0001120	PT Chandra Synthetic	Company	Naufal Chandra	1900-01-01	2018-01-01	550 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774138324381	Healthcare	Medium	0	1
+CP0001121	Hana Darmawan	Individual	Hana Darmawan	1985-01-01	1900-01-01	387 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770466337310	Manufacturing	Low	1	0
+CP0001122	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	802 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774634228596	Technology	Low	1	0
+CP0001123	Putri Permana	Individual	Putri Permana	1985-01-01	1900-01-01	374 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773559458222	Technology	Low	1	0
+CP0001124	Dewi Rahardjo	Individual	Dewi Rahardjo	1985-01-01	1900-01-01	872 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773150606365	Retail	Low	1	0
+CP0001125	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	646 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772933090225	Technology	Low	1	0
+CP0001126	PT Halim Synthetic	Company	Farah Halim	1900-01-01	2018-01-01	714 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	772863344139	Construction	Low	0	1
+CP0001127	PT Chandra Synthetic	Company	Fajar Chandra	1900-01-01	2018-01-01	889 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775107041126	Construction	High	0	1
+CP0001128	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	10 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772052712543	Logistics	Medium	1	0
+CP0001129	Gita Suryadi	Individual	Gita Suryadi	1985-01-01	1900-01-01	539 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770464057607	Logistics	Medium	1	0
+CP0001130	PT Kurniawan Synthetic	Company	Dewi Kurniawan	1900-01-01	2018-01-01	75 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	772791659116	Manufacturing	Medium	0	1
+CP0001131	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	764 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778021486106	Manufacturing	Low	1	0
+CP0001132	PT Nugraha Synthetic	Company	Rani Nugraha	1900-01-01	2018-01-01	81 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778821556140	Healthcare	Medium	0	1
+CP0001133	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	736 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773107630879	Retail	Low	1	0
+CP0001134	Anisa Santoso	Individual	Anisa Santoso	1985-01-01	1900-01-01	621 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779538186443	Logistics	Low	1	0
+CP0001135	Laras Suryadi	Individual	Laras Suryadi	1985-01-01	1900-01-01	216 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778968539316	Technology	Low	1	0
+CP0001136	PT Firmansyah Synthetic	Company	Andi Firmansyah	1900-01-01	2018-01-01	803 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773568988838	Technology	Low	0	1
+CP0001137	Joko Santoso	Individual	Joko Santoso	1985-01-01	1900-01-01	131 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779774097468	Logistics	Low	1	0
+CP0001138	PT Putra Synthetic	Company	Andi Putra	1900-01-01	2018-01-01	409 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770871876323	Retail	Low	0	1
+CP0001139	PT Chandra Synthetic	Company	Wulan Chandra	1900-01-01	2018-01-01	290 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	771425139515	Healthcare	Low	0	1
+CP0001140	Nadia Nugraha	Individual	Nadia Nugraha	1985-01-01	1900-01-01	270 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770810068537	Technology	Medium	1	0
+CP0001141	PT Gunawan Synthetic	Company	Rizky Gunawan	1900-01-01	2018-01-01	170 Synthetic Avenue	Denpasar	JP	JP	Bank Sentra	775730357435	Construction	Low	0	1
+CP0001142	PT Wibowo Synthetic	Company	Sari Wibowo	1900-01-01	2018-01-01	494 Synthetic Avenue	Jakarta	GB	GB	Asia Commerce Bank	775759235584	Healthcare	Medium	0	1
+CP0001143	PT Wijaya Synthetic	Company	Anisa Wijaya	1900-01-01	2018-01-01	533 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773432057499	Construction	Medium	0	1
+CP0001144	Teguh Lesmana	Individual	Teguh Lesmana	1985-01-01	1900-01-01	204 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773762363425	Construction	Low	1	0
+CP0001145	Anisa Iskandar	Individual	Anisa Iskandar	1985-01-01	1900-01-01	882 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	773808286840	Construction	Low	1	0
+CP0001146	Gita Kurniawan	Individual	Gita Kurniawan	1985-01-01	1900-01-01	672 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777186450082	Manufacturing	Medium	1	0
+CP0001147	Nadia Mahendra	Individual	Nadia Mahendra	1985-01-01	1900-01-01	592 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771502404420	Construction	Low	1	0
+CP0001148	Raka Chandra	Individual	Raka Chandra	1985-01-01	1900-01-01	388 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	776903941080	Technology	High	1	0
+CP0001149	Andi Chandra	Individual	Andi Chandra	1985-01-01	1900-01-01	612 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772839098223	Retail	Low	1	0
+CP0001150	Arif Siregar	Individual	Arif Siregar	1985-01-01	1900-01-01	822 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	775385080190	Logistics	Medium	1	0
+CP0001151	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	400 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772666742796	Healthcare	Low	1	0
+CP0001152	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	372 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779971698400	Manufacturing	Low	1	0
+CP0001153	PT Santoso Synthetic	Company	Bagus Santoso	1900-01-01	2018-01-01	882 Synthetic Avenue	Medan	US	US	Bank Nusantara	771146214883	Logistics	Low	0	1
+CP0001154	Dewi Iskandar	Individual	Dewi Iskandar	1985-01-01	1900-01-01	363 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779903439984	Construction	Low	1	0
+CP0001155	PT Wibowo Synthetic	Company	Naufal Wibowo	1900-01-01	2018-01-01	37 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772048113467	Construction	Medium	0	1
+CP0001156	PT Darmawan Synthetic	Company	Hana Darmawan	1900-01-01	2018-01-01	529 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	770295640095	Logistics	Low	0	1
+CP0001157	Rani Santoso	Individual	Rani Santoso	1985-01-01	1900-01-01	165 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773505301219	Healthcare	Low	1	0
+CP0001158	Farah Halim	Individual	Farah Halim	1985-01-01	1900-01-01	425 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	777987424888	Retail	Low	1	0
+CP0001159	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	271 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	775828219689	Retail	Low	1	0
+CP0001160	Rizky Hartono	Individual	Rizky Hartono	1985-01-01	1900-01-01	673 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	774131882537	Healthcare	Low	1	0
+CP0001161	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	173 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776473703368	Retail	Low	1	0
+CP0001162	Kevin Nugraha	Individual	Kevin Nugraha	1985-01-01	1900-01-01	427 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	776418809849	Manufacturing	High	1	0
+CP0001163	PT Prakoso Synthetic	Company	Laras Prakoso	1900-01-01	2018-01-01	156 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770394973391	Construction	Low	0	1
+CP0001164	Alya Adinata	Individual	Alya Adinata	1985-01-01	1900-01-01	836 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773058794273	Manufacturing	Medium	1	0
+CP0001165	PT Permana Synthetic	Company	Nadia Permana	1900-01-01	2018-01-01	845 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776467022678	Retail	Medium	0	1
+CP0001166	Bagus Gunawan	Individual	Bagus Gunawan	1985-01-01	1900-01-01	790 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778875116031	Healthcare	Low	1	0
+CP0001167	Wulan Gunawan	Individual	Wulan Gunawan	1985-01-01	1900-01-01	60 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778358888576	Manufacturing	Low	1	0
+CP0001168	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	754 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776871554163	Construction	Low	1	0
+CP0001169	Naufal Halim	Individual	Naufal Halim	1985-01-01	1900-01-01	451 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	770144498111	Technology	Low	1	0
+CP0001170	Teguh Firmansyah	Individual	Teguh Firmansyah	1985-01-01	1900-01-01	273 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776395377972	Healthcare	Medium	1	0
+CP0001171	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	419 Synthetic Avenue	Bandung	GB	GB	Asia Commerce Bank	773894552113	Technology	Low	1	0
+CP0001172	PT Setiawan Synthetic	Company	Dimas Setiawan	1900-01-01	2018-01-01	502 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773416165141	Technology	Low	0	1
+CP0001173	PT Hartono Synthetic	Company	Sari Hartono	1900-01-01	2018-01-01	803 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778696528278	Manufacturing	Low	0	1
+CP0001174	PT Chandra Synthetic	Company	Nadia Chandra	1900-01-01	2018-01-01	180 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771125491862	Healthcare	Low	0	1
+CP0001175	Indra Nugraha	Individual	Indra Nugraha	1985-01-01	1900-01-01	642 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	777017310065	Technology	Low	1	0
+CP0001176	Dimas Prakoso	Individual	Dimas Prakoso	1985-01-01	1900-01-01	702 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	779806201576	Manufacturing	Low	1	0
+CP0001177	Eka Mahendra	Individual	Eka Mahendra	1985-01-01	1900-01-01	431 Synthetic Avenue	Medan	AE	AE	Bank Nusantara	779441656623	Logistics	Low	1	0
+CP0001178	Laras Lesmana	Individual	Laras Lesmana	1985-01-01	1900-01-01	502 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	779646360546	Technology	Low	1	0
+CP0001179	PT Rahardjo Synthetic	Company	Raka Rahardjo	1900-01-01	2018-01-01	334 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771637376806	Manufacturing	Low	0	1
+CP0001180	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	883 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775735155136	Healthcare	Medium	1	0
+CP0001181	PT Halim Synthetic	Company	Raka Halim	1900-01-01	2018-01-01	744 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	775383482158	Retail	Low	0	1
+CP0001182	Eka Iskandar	Individual	Eka Iskandar	1985-01-01	1900-01-01	384 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777020901703	Technology	High	1	0
+CP0001183	Arif Suryadi	Individual	Arif Suryadi	1985-01-01	1900-01-01	413 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773761190782	Retail	Low	1	0
+CP0001184	PT Lesmana Synthetic	Company	Alya Lesmana	1900-01-01	2018-01-01	46 Synthetic Avenue	Jakarta	GB	GB	Asia Commerce Bank	772041977889	Manufacturing	High	0	1
+CP0001185	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	809 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	777751507198	Retail	Low	1	0
+CP0001186	Eka Rahardjo	Individual	Eka Rahardjo	1985-01-01	1900-01-01	778 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	772919804764	Construction	Low	1	0
+CP0001187	PT Setiawan Synthetic	Company	Adit Setiawan	1900-01-01	2018-01-01	195 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774956718869	Retail	Low	0	1
+CP0001188	Gita Rahardjo	Individual	Gita Rahardjo	1985-01-01	1900-01-01	444 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778753758526	Healthcare	Low	1	0
+CP0001189	Eka Nugraha	Individual	Eka Nugraha	1985-01-01	1900-01-01	741 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772973800901	Retail	Medium	1	0
+CP0001190	PT Kurniawan Synthetic	Company	Arif Kurniawan	1900-01-01	2018-01-01	757 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773044868560	Manufacturing	Medium	0	1
+CP0001191	PT Hartono Synthetic	Company	Andi Hartono	1900-01-01	2018-01-01	362 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776998855042	Retail	Medium	0	1
+CP0001192	Indra Chandra	Individual	Indra Chandra	1985-01-01	1900-01-01	852 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778442242674	Retail	Medium	1	0
+CP0001193	Bima Santoso	Individual	Bima Santoso	1985-01-01	1900-01-01	778 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777500711970	Healthcare	Low	1	0
+CP0001194	PT Santoso Synthetic	Company	Nadia Santoso	1900-01-01	2018-01-01	529 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	774574498851	Manufacturing	Low	0	1
+CP0001195	PT Halim Synthetic	Company	Bima Halim	1900-01-01	2018-01-01	877 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775532233726	Logistics	Low	0	1
+CP0001196	Nadia Santoso	Individual	Nadia Santoso	1985-01-01	1900-01-01	591 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778979005901	Technology	Low	1	0
+CP0001197	Hana Iskandar	Individual	Hana Iskandar	1985-01-01	1900-01-01	706 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770787948056	Retail	Low	1	0
+CP0001198	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	881 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	770645486334	Logistics	Low	1	0
+CP0001199	PT Hartono Synthetic	Company	Gita Hartono	1900-01-01	2018-01-01	206 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	778607049133	Logistics	Low	0	1
+CP0001200	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	617 Synthetic Avenue	Bandung	GB	GB	Asia Commerce Bank	774371728735	Retail	Low	1	0
+CP0001201	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	385 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775841883669	Retail	Medium	1	0
+CP0001202	Kevin Nugraha	Individual	Kevin Nugraha	1985-01-01	1900-01-01	381 Synthetic Avenue	Medan	GB	GB	Bank Sentra	773706131665	Logistics	Low	1	0
+CP0001203	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	621 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778429060630	Manufacturing	Medium	1	0
+CP0001204	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	525 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779757508297	Logistics	Low	1	0
+CP0001205	Alya Budiman	Individual	Alya Budiman	1985-01-01	1900-01-01	351 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776797685604	Technology	Low	1	0
+CP0001206	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	419 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770666738670	Manufacturing	Medium	1	0
+CP0001207	PT Putra Synthetic	Company	Andi Putra	1900-01-01	2018-01-01	104 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774180445029	Manufacturing	Medium	0	1
+CP0001208	Citra Setiawan	Individual	Citra Setiawan	1985-01-01	1900-01-01	3 Synthetic Avenue	Medan	AU	AU	Bank Nusantara	772921253342	Retail	Low	1	0
+CP0001209	Maya Wibowo	Individual	Maya Wibowo	1985-01-01	1900-01-01	329 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770194707633	Retail	Low	1	0
+CP0001210	Nadia Santoso	Individual	Nadia Santoso	1985-01-01	1900-01-01	747 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779033363638	Logistics	Low	1	0
+CP0001211	Fajar Wijaya	Individual	Fajar Wijaya	1985-01-01	1900-01-01	392 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	774296558741	Manufacturing	Low	1	0
+CP0001212	Dewi Halim	Individual	Dewi Halim	1985-01-01	1900-01-01	672 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773761834436	Retail	Medium	1	0
+CP0001213	Maya Wibowo	Individual	Maya Wibowo	1985-01-01	1900-01-01	277 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	771863469411	Technology	Low	1	0
+CP0001214	Arif Yulianto	Individual	Arif Yulianto	1985-01-01	1900-01-01	337 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	776243444300	Technology	Low	1	0
+CP0001215	Indra Kurniawan	Individual	Indra Kurniawan	1985-01-01	1900-01-01	473 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770585819437	Manufacturing	Low	1	0
+CP0001216	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	556 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772068278589	Logistics	Medium	1	0
+CP0001217	PT Wijaya Synthetic	Company	Anisa Wijaya	1900-01-01	2018-01-01	285 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776338210285	Manufacturing	Low	0	1
+CP0001218	Rani Wijaya	Individual	Rani Wijaya	1985-01-01	1900-01-01	622 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	771237861739	Logistics	Low	1	0
+CP0001219	PT Yulianto Synthetic	Company	Putri Yulianto	1900-01-01	2018-01-01	460 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774403350877	Construction	Medium	0	1
+CP0001220	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	378 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	773612475453	Technology	Low	1	0
+CP0001221	Hana Hartono	Individual	Hana Hartono	1985-01-01	1900-01-01	606 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772962108962	Technology	Medium	1	0
+CP0001222	Joko Setiawan	Individual	Joko Setiawan	1985-01-01	1900-01-01	347 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772052680993	Logistics	Medium	1	0
+CP0001223	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	261 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770566762033	Healthcare	Medium	1	0
+CP0001224	PT Lesmana Synthetic	Company	Fajar Lesmana	1900-01-01	2018-01-01	3 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779260797890	Technology	Low	0	1
+CP0001225	Eka Permana	Individual	Eka Permana	1985-01-01	1900-01-01	239 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775079292865	Technology	Low	1	0
+CP0001226	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	847 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779742076069	Technology	Low	1	0
+CP0001227	PT Siregar Synthetic	Company	Sari Siregar	1900-01-01	2018-01-01	674 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774406369268	Construction	Low	0	1
+CP0001228	Fajar Permana	Individual	Fajar Permana	1985-01-01	1900-01-01	522 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	777520247519	Technology	Low	1	0
+CP0001229	PT Hartono Synthetic	Company	Laras Hartono	1900-01-01	2018-01-01	830 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773966811353	Construction	Medium	0	1
+CP0001230	Alya Yulianto	Individual	Alya Yulianto	1985-01-01	1900-01-01	342 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776971031465	Technology	Low	1	0
+CP0001231	Alya Firmansyah	Individual	Alya Firmansyah	1985-01-01	1900-01-01	230 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779948061979	Construction	Medium	1	0
+CP0001232	PT Mahendra Synthetic	Company	Anisa Mahendra	1900-01-01	2018-01-01	59 Synthetic Avenue	Surabaya	JP	JP	Asia Commerce Bank	775175086590	Healthcare	Low	0	1
+CP0001233	PT Siregar Synthetic	Company	Teguh Siregar	1900-01-01	2018-01-01	696 Synthetic Avenue	Makassar	AE	AE	Asia Commerce Bank	775149498997	Technology	Low	0	1
+CP0001234	Alya Budiman	Individual	Alya Budiman	1985-01-01	1900-01-01	561 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779810970721	Logistics	Medium	1	0
+CP0001235	Teguh Santoso	Individual	Teguh Santoso	1985-01-01	1900-01-01	308 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778297395631	Healthcare	Low	1	0
+CP0001236	Alya Gunawan	Individual	Alya Gunawan	1985-01-01	1900-01-01	847 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773814626599	Construction	Low	1	0
+CP0001237	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	191 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770964197704	Retail	Low	1	0
+CP0001238	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	132 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770015056095	Logistics	Low	1	0
+CP0001239	PT Nugraha Synthetic	Company	Bagus Nugraha	1900-01-01	2018-01-01	214 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775537890398	Retail	High	0	1
+CP0001240	Rani Wijaya	Individual	Rani Wijaya	1985-01-01	1900-01-01	817 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772691966766	Manufacturing	Low	1	0
+CP0001241	Citra Darmawan	Individual	Citra Darmawan	1985-01-01	1900-01-01	891 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773762349032	Manufacturing	Low	1	0
+CP0001242	Alya Firmansyah	Individual	Alya Firmansyah	1985-01-01	1900-01-01	831 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776386373448	Construction	Low	1	0
+CP0001243	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	351 Synthetic Avenue	Semarang	AU	AU	Bank Sentra	771697978337	Construction	Low	1	0
+CP0001244	Kevin Suryadi	Individual	Kevin Suryadi	1985-01-01	1900-01-01	287 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	775694693849	Manufacturing	Low	1	0
+CP0001245	PT Prakoso Synthetic	Company	Indra Prakoso	1900-01-01	2018-01-01	380 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776737043263	Logistics	Low	0	1
+CP0001246	Dimas Putra	Individual	Dimas Putra	1985-01-01	1900-01-01	238 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	775107230578	Logistics	Low	1	0
+CP0001247	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	144 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770794447487	Technology	Low	1	0
+CP0001248	Arif Putra	Individual	Arif Putra	1985-01-01	1900-01-01	108 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778986110515	Logistics	Medium	1	0
+CP0001249	Fajar Siregar	Individual	Fajar Siregar	1985-01-01	1900-01-01	784 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775104442912	Logistics	Medium	1	0
+CP0001250	Alya Nugraha	Individual	Alya Nugraha	1985-01-01	1900-01-01	293 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773184891154	Logistics	Low	1	0
+CP0001251	Alya Kurniawan	Individual	Alya Kurniawan	1985-01-01	1900-01-01	410 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775510272783	Technology	Low	1	0
+CP0001252	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	206 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775521260095	Healthcare	Low	1	0
+CP0001253	Eka Permana	Individual	Eka Permana	1985-01-01	1900-01-01	529 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	773285145020	Construction	Low	1	0
+CP0001254	PT Gunawan Synthetic	Company	Joko Gunawan	1900-01-01	2018-01-01	250 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	776755293912	Retail	Medium	0	1
+CP0001255	PT Adinata Synthetic	Company	Intan Adinata	1900-01-01	2018-01-01	453 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771132205045	Technology	Low	0	1
+CP0001256	PT Iskandar Synthetic	Company	Laras Iskandar	1900-01-01	2018-01-01	227 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771411197064	Technology	Low	0	1
+CP0001257	PT Setiawan Synthetic	Company	Bagus Setiawan	1900-01-01	2018-01-01	569 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774388783395	Healthcare	Medium	0	1
+CP0001258	Sari Kurniawan	Individual	Sari Kurniawan	1985-01-01	1900-01-01	648 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	770769591689	Logistics	Low	1	0
+CP0001259	Alya Kurniawan	Individual	Alya Kurniawan	1985-01-01	1900-01-01	357 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779824188306	Manufacturing	Medium	1	0
+CP0001260	PT Setiawan Synthetic	Company	Maya Setiawan	1900-01-01	2018-01-01	316 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775737136619	Manufacturing	Medium	0	1
+CP0001261	Rani Permana	Individual	Rani Permana	1985-01-01	1900-01-01	802 Synthetic Avenue	Medan	US	US	Bank Sentra	771392462777	Manufacturing	Medium	1	0
+CP0001262	PT Adinata Synthetic	Company	Maya Adinata	1900-01-01	2018-01-01	718 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	779799565696	Manufacturing	Low	0	1
+CP0001263	PT Gunawan Synthetic	Company	Rizky Gunawan	1900-01-01	2018-01-01	699 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	772427619447	Healthcare	Low	0	1
+CP0001264	PT Rahardjo Synthetic	Company	Joko Rahardjo	1900-01-01	2018-01-01	707 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778196208956	Retail	Low	0	1
+CP0001265	Joko Lesmana	Individual	Joko Lesmana	1985-01-01	1900-01-01	793 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771319058922	Logistics	Low	1	0
+CP0001266	Laras Permana	Individual	Laras Permana	1985-01-01	1900-01-01	261 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	778641527407	Healthcare	Low	1	0
+CP0001267	PT Siregar Synthetic	Company	Citra Siregar	1900-01-01	2018-01-01	608 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770765561813	Construction	Low	0	1
+CP0001268	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	615 Synthetic Avenue	Semarang	GB	GB	Asia Commerce Bank	770749037655	Healthcare	Low	1	0
+CP0001269	PT Siregar Synthetic	Company	Intan Siregar	1900-01-01	2018-01-01	517 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770054816014	Manufacturing	Medium	0	1
+CP0001270	Maya Setiawan	Individual	Maya Setiawan	1985-01-01	1900-01-01	42 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772515753753	Healthcare	Medium	1	0
+CP0001271	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	555 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	779100558312	Construction	Low	1	0
+CP0001272	Rani Halim	Individual	Rani Halim	1985-01-01	1900-01-01	477 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	772271698624	Healthcare	High	1	0
+CP0001273	PT Nugraha Synthetic	Company	Citra Nugraha	1900-01-01	2018-01-01	768 Synthetic Avenue	Makassar	US	US	Bank Nusantara	773716409236	Retail	Medium	0	1
+CP0001274	PT Suryadi Synthetic	Company	Maya Suryadi	1900-01-01	2018-01-01	544 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	774841878879	Manufacturing	Medium	0	1
+CP0001275	Farah Santoso	Individual	Farah Santoso	1985-01-01	1900-01-01	409 Synthetic Avenue	Medan	JP	JP	Bank Sentra	772990581264	Healthcare	Medium	1	0
+CP0001276	PT Gunawan Synthetic	Company	Hana Gunawan	1900-01-01	2018-01-01	161 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	771461429668	Construction	Medium	0	1
+CP0001277	Fajar Suryadi	Individual	Fajar Suryadi	1985-01-01	1900-01-01	165 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778118719009	Healthcare	Low	1	0
+CP0001278	Putri Wibowo	Individual	Putri Wibowo	1985-01-01	1900-01-01	602 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779072256806	Technology	Medium	1	0
+CP0001279	Farah Santoso	Individual	Farah Santoso	1985-01-01	1900-01-01	336 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774099730734	Manufacturing	Medium	1	0
+CP0001280	PT Darmawan Synthetic	Company	Sari Darmawan	1900-01-01	2018-01-01	896 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774619904950	Technology	Medium	0	1
+CP0001281	Joko Iskandar	Individual	Joko Iskandar	1985-01-01	1900-01-01	721 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	779843906184	Retail	Medium	1	0
+CP0001282	PT Lesmana Synthetic	Company	Rani Lesmana	1900-01-01	2018-01-01	819 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777345340622	Manufacturing	Medium	0	1
+CP0001283	Kevin Darmawan	Individual	Kevin Darmawan	1985-01-01	1900-01-01	507 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778210635336	Technology	Medium	1	0
+CP0001284	PT Permana Synthetic	Company	Indra Permana	1900-01-01	2018-01-01	509 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770026845758	Technology	Low	0	1
+CP0001285	PT Permana Synthetic	Company	Adit Permana	1900-01-01	2018-01-01	739 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770160637811	Technology	Medium	0	1
+CP0001286	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	601 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775690296261	Manufacturing	Low	1	0
+CP0001287	PT Firmansyah Synthetic	Company	Dimas Firmansyah	1900-01-01	2018-01-01	64 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	775384815959	Technology	Low	0	1
+CP0001288	Maya Putra	Individual	Maya Putra	1985-01-01	1900-01-01	720 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771784108040	Technology	Low	1	0
+CP0001289	PT Wijaya Synthetic	Company	Dimas Wijaya	1900-01-01	2018-01-01	374 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779839626167	Technology	High	0	1
+CP0001290	Sari Wijaya	Individual	Sari Wijaya	1985-01-01	1900-01-01	62 Synthetic Avenue	Bandung	JP	JP	Bank Sentra	777970134474	Logistics	Medium	1	0
+CP0001291	PT Nugraha Synthetic	Company	Hana Nugraha	1900-01-01	2018-01-01	868 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772632473497	Healthcare	Medium	0	1
+CP0001292	PT Adinata Synthetic	Company	Bima Adinata	1900-01-01	2018-01-01	856 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	770225505927	Healthcare	Low	0	1
+CP0001293	Rani Yulianto	Individual	Rani Yulianto	1985-01-01	1900-01-01	798 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	770305986133	Healthcare	High	1	0
+CP0001294	Kevin Wibowo	Individual	Kevin Wibowo	1985-01-01	1900-01-01	183 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779917043052	Manufacturing	Low	1	0
+CP0001295	PT Lesmana Synthetic	Company	Rizky Lesmana	1900-01-01	2018-01-01	261 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	778160257860	Manufacturing	Low	0	1
+CP0001296	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	82 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773422016614	Construction	Medium	1	0
+CP0001297	Raka Budiman	Individual	Raka Budiman	1985-01-01	1900-01-01	168 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776456680740	Logistics	Low	1	0
+CP0001298	Teguh Gunawan	Individual	Teguh Gunawan	1985-01-01	1900-01-01	804 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778012988914	Retail	Low	1	0
+CP0001299	Teguh Lesmana	Individual	Teguh Lesmana	1985-01-01	1900-01-01	95 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776631037222	Logistics	Low	1	0
+CP0001300	Maya Rahardjo	Individual	Maya Rahardjo	1985-01-01	1900-01-01	516 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	772781941077	Manufacturing	Medium	1	0
+CP0001301	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	191 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	776023724531	Healthcare	Low	1	0
+CP0001302	Rizky Permana	Individual	Rizky Permana	1985-01-01	1900-01-01	55 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	770020387271	Healthcare	Low	1	0
+CP0001303	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	464 Synthetic Avenue	Makassar	US	US	Bank Sentra	772835151526	Construction	High	1	0
+CP0001304	PT Chandra Synthetic	Company	Eka Chandra	1900-01-01	2018-01-01	614 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774059537194	Construction	Medium	0	1
+CP0001305	PT Firmansyah Synthetic	Company	Andi Firmansyah	1900-01-01	2018-01-01	111 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777434646820	Construction	Low	0	1
+CP0001306	Eka Putra	Individual	Eka Putra	1985-01-01	1900-01-01	238 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778776468941	Manufacturing	Medium	1	0
+CP0001307	Andi Nugraha	Individual	Andi Nugraha	1985-01-01	1900-01-01	327 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776459842965	Technology	Low	1	0
+CP0001308	PT Santoso Synthetic	Company	Kevin Santoso	1900-01-01	2018-01-01	725 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772170957227	Retail	Low	0	1
+CP0001309	Andi Lesmana	Individual	Andi Lesmana	1985-01-01	1900-01-01	158 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779364452544	Healthcare	Low	1	0
+CP0001310	PT Wijaya Synthetic	Company	Alya Wijaya	1900-01-01	2018-01-01	743 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775041195629	Technology	Low	0	1
+CP0001311	PT Hartono Synthetic	Company	Wulan Hartono	1900-01-01	2018-01-01	248 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772712953824	Construction	Low	0	1
+CP0001312	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	240 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771573616302	Technology	Medium	1	0
+CP0001313	Dewi Budiman	Individual	Dewi Budiman	1985-01-01	1900-01-01	386 Synthetic Avenue	Yogyakarta	AE	AE	Bank Nusantara	771166150278	Logistics	Low	1	0
+CP0001314	Rizky Putra	Individual	Rizky Putra	1985-01-01	1900-01-01	743 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776321447884	Manufacturing	Low	1	0
+CP0001315	Hana Chandra	Individual	Hana Chandra	1985-01-01	1900-01-01	836 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777542349008	Manufacturing	Low	1	0
+CP0001316	Nadia Nugraha	Individual	Nadia Nugraha	1985-01-01	1900-01-01	877 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779129383580	Manufacturing	Low	1	0
+CP0001317	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	210 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774529047390	Construction	Medium	1	0
+CP0001318	Dewi Hartono	Individual	Dewi Hartono	1985-01-01	1900-01-01	296 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772093293277	Manufacturing	Low	1	0
+CP0001319	Dewi Prakoso	Individual	Dewi Prakoso	1985-01-01	1900-01-01	204 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	771401481923	Healthcare	Medium	1	0
+CP0001320	Joko Suryadi	Individual	Joko Suryadi	1985-01-01	1900-01-01	678 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775582145334	Construction	Medium	1	0
+CP0001321	Hana Yulianto	Individual	Hana Yulianto	1985-01-01	1900-01-01	717 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774552489370	Technology	Low	1	0
+CP0001322	Arif Prakoso	Individual	Arif Prakoso	1985-01-01	1900-01-01	793 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770849194546	Healthcare	Low	1	0
+CP0001323	PT Budiman Synthetic	Company	Wulan Budiman	1900-01-01	2018-01-01	811 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775913674517	Construction	Low	0	1
+CP0001324	Laras Prakoso	Individual	Laras Prakoso	1985-01-01	1900-01-01	544 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	771696046115	Retail	Low	1	0
+CP0001325	PT Prakoso Synthetic	Company	Indra Prakoso	1900-01-01	2018-01-01	32 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771908495177	Construction	High	0	1
+CP0001326	PT Darmawan Synthetic	Company	Putri Darmawan	1900-01-01	2018-01-01	817 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776802113610	Manufacturing	Low	0	1
+CP0001327	PT Kurniawan Synthetic	Company	Indra Kurniawan	1900-01-01	2018-01-01	667 Synthetic Avenue	Medan	MY	MY	Bank Sentra	771925075858	Technology	High	0	1
+CP0001328	Putri Permana	Individual	Putri Permana	1985-01-01	1900-01-01	48 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	773135627057	Construction	Medium	1	0
+CP0001329	Gita Budiman	Individual	Gita Budiman	1985-01-01	1900-01-01	446 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771334412365	Technology	Medium	1	0
+CP0001330	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	274 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776770022589	Manufacturing	Low	1	0
+CP0001331	PT Iskandar Synthetic	Company	Naufal Iskandar	1900-01-01	2018-01-01	412 Synthetic Avenue	Semarang	US	US	Bank Nusantara	772969049674	Healthcare	Low	0	1
+CP0001332	PT Wijaya Synthetic	Company	Eka Wijaya	1900-01-01	2018-01-01	325 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771852957633	Logistics	Low	0	1
+CP0001333	PT Rahardjo Synthetic	Company	Farah Rahardjo	1900-01-01	2018-01-01	472 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772015104407	Technology	Low	0	1
+CP0001334	Kevin Permana	Individual	Kevin Permana	1985-01-01	1900-01-01	708 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775840285342	Retail	Low	1	0
+CP0001335	PT Yulianto Synthetic	Company	Eka Yulianto	1900-01-01	2018-01-01	841 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	772371840457	Healthcare	Low	0	1
+CP0001336	Maya Budiman	Individual	Maya Budiman	1985-01-01	1900-01-01	614 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774774991389	Manufacturing	Low	1	0
+CP0001337	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	593 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774665809598	Construction	Low	1	0
+CP0001338	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	218 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777753649865	Retail	Low	1	0
+CP0001339	PT Lesmana Synthetic	Company	Fajar Lesmana	1900-01-01	2018-01-01	296 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771648099808	Retail	Medium	0	1
+CP0001340	PT Nugraha Synthetic	Company	Anisa Nugraha	1900-01-01	2018-01-01	882 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776566105265	Healthcare	Low	0	1
+CP0001341	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	86 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	774400614367	Logistics	Low	1	0
+CP0001342	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	643 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779474474511	Construction	Low	1	0
+CP0001343	Laras Darmawan	Individual	Laras Darmawan	1985-01-01	1900-01-01	26 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	779765781478	Construction	Medium	1	0
+CP0001344	Putri Prakoso	Individual	Putri Prakoso	1985-01-01	1900-01-01	102 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	776075292896	Manufacturing	Medium	1	0
+CP0001345	Hana Gunawan	Individual	Hana Gunawan	1985-01-01	1900-01-01	498 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	771606599165	Manufacturing	Low	1	0
+CP0001346	Rizky Kurniawan	Individual	Rizky Kurniawan	1985-01-01	1900-01-01	20 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	776915543153	Logistics	High	1	0
+CP0001347	Teguh Putra	Individual	Teguh Putra	1985-01-01	1900-01-01	639 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	770829706080	Technology	Low	1	0
+CP0001348	Rani Iskandar	Individual	Rani Iskandar	1985-01-01	1900-01-01	627 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	779120257088	Logistics	Medium	1	0
+CP0001349	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	170 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773532845821	Technology	Low	1	0
+CP0001350	Farah Kurniawan	Individual	Farah Kurniawan	1985-01-01	1900-01-01	224 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777431481165	Healthcare	Medium	1	0
+CP0001351	PT Firmansyah Synthetic	Company	Intan Firmansyah	1900-01-01	2018-01-01	864 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	775454659815	Technology	Low	0	1
+CP0001352	Adit Wijaya	Individual	Adit Wijaya	1985-01-01	1900-01-01	808 Synthetic Avenue	Makassar	US	US	Bank Sentra	777941207762	Healthcare	Medium	1	0
+CP0001353	Citra Santoso	Individual	Citra Santoso	1985-01-01	1900-01-01	190 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773305183251	Healthcare	Medium	1	0
+CP0001354	Bima Hartono	Individual	Bima Hartono	1985-01-01	1900-01-01	897 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	778669597023	Construction	Low	1	0
+CP0001355	PT Budiman Synthetic	Company	Eka Budiman	1900-01-01	2018-01-01	452 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770315785940	Technology	Low	0	1
+CP0001356	PT Adinata Synthetic	Company	Joko Adinata	1900-01-01	2018-01-01	281 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775515039438	Manufacturing	High	0	1
+CP0001357	Adit Hartono	Individual	Adit Hartono	1985-01-01	1900-01-01	313 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770251610192	Construction	Low	1	0
+CP0001358	PT Wibowo Synthetic	Company	Gita Wibowo	1900-01-01	2018-01-01	677 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	777572765416	Logistics	Low	0	1
+CP0001359	PT Permana Synthetic	Company	Gita Permana	1900-01-01	2018-01-01	762 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774016186155	Manufacturing	Low	0	1
+CP0001360	Indra Gunawan	Individual	Indra Gunawan	1985-01-01	1900-01-01	886 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773632390680	Construction	Low	1	0
+CP0001361	Eka Lesmana	Individual	Eka Lesmana	1985-01-01	1900-01-01	613 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	773108006093	Retail	Low	1	0
+CP0001362	PT Budiman Synthetic	Company	Naufal Budiman	1900-01-01	2018-01-01	240 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	773256082712	Retail	Medium	0	1
+CP0001363	PT Santoso Synthetic	Company	Nadia Santoso	1900-01-01	2018-01-01	516 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779595617335	Technology	Medium	0	1
+CP0001364	PT Setiawan Synthetic	Company	Maya Setiawan	1900-01-01	2018-01-01	19 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	770789352539	Retail	Low	0	1
+CP0001365	PT Nugraha Synthetic	Company	Arif Nugraha	1900-01-01	2018-01-01	778 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778395892666	Technology	High	0	1
+CP0001366	Anisa Putra	Individual	Anisa Putra	1985-01-01	1900-01-01	23 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	779314557565	Manufacturing	Low	1	0
+CP0001367	Bagus Santoso	Individual	Bagus Santoso	1985-01-01	1900-01-01	354 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	771702085004	Technology	Low	1	0
+CP0001368	Intan Budiman	Individual	Intan Budiman	1985-01-01	1900-01-01	404 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777896532853	Healthcare	Medium	1	0
+CP0001369	PT Setiawan Synthetic	Company	Bima Setiawan	1900-01-01	2018-01-01	605 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777398535625	Construction	Medium	0	1
+CP0001370	Dewi Darmawan	Individual	Dewi Darmawan	1985-01-01	1900-01-01	108 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777104986258	Healthcare	Low	1	0
+CP0001371	PT Rahardjo Synthetic	Company	Rizky Rahardjo	1900-01-01	2018-01-01	405 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	777710355971	Retail	Low	0	1
+CP0001372	Rizky Setiawan	Individual	Rizky Setiawan	1985-01-01	1900-01-01	98 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774150275420	Retail	Low	1	0
+CP0001373	Raka Suryadi	Individual	Raka Suryadi	1985-01-01	1900-01-01	759 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773364824850	Healthcare	Low	1	0
+CP0001374	Dewi Suryadi	Individual	Dewi Suryadi	1985-01-01	1900-01-01	497 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	777070447409	Healthcare	Low	1	0
+CP0001375	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	453 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	770394892592	Retail	Low	1	0
+CP0001376	Hana Budiman	Individual	Hana Budiman	1985-01-01	1900-01-01	94 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777027448290	Retail	Low	1	0
+CP0001377	Citra Nugraha	Individual	Citra Nugraha	1985-01-01	1900-01-01	760 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772019053263	Technology	Medium	1	0
+CP0001378	PT Prakoso Synthetic	Company	Anisa Prakoso	1900-01-01	2018-01-01	864 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773791785281	Construction	Medium	0	1
+CP0001379	Putri Darmawan	Individual	Putri Darmawan	1985-01-01	1900-01-01	11 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774388325024	Healthcare	Medium	1	0
+CP0001380	Indra Iskandar	Individual	Indra Iskandar	1985-01-01	1900-01-01	329 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772792021324	Construction	Low	1	0
+CP0001381	PT Chandra Synthetic	Company	Intan Chandra	1900-01-01	2018-01-01	387 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778246248521	Healthcare	Low	0	1
+CP0001382	Andi Adinata	Individual	Andi Adinata	1985-01-01	1900-01-01	814 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772814463015	Logistics	Low	1	0
+CP0001383	Sari Nugraha	Individual	Sari Nugraha	1985-01-01	1900-01-01	331 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777021907820	Technology	Medium	1	0
+CP0001384	Naufal Rahardjo	Individual	Naufal Rahardjo	1985-01-01	1900-01-01	333 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	771138930091	Manufacturing	Low	1	0
+CP0001385	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	129 Synthetic Avenue	Denpasar	AE	AE	Asia Commerce Bank	773510784782	Healthcare	Low	1	0
+CP0001386	Rani Halim	Individual	Rani Halim	1985-01-01	1900-01-01	254 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772738694675	Technology	Low	1	0
+CP0001387	Anisa Iskandar	Individual	Anisa Iskandar	1985-01-01	1900-01-01	643 Synthetic Avenue	Bandung	JP	JP	Bank Sentra	773704653308	Healthcare	Low	1	0
+CP0001388	Putri Firmansyah	Individual	Putri Firmansyah	1985-01-01	1900-01-01	730 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772077880435	Manufacturing	Low	1	0
+CP0001389	PT Yulianto Synthetic	Company	Nadia Yulianto	1900-01-01	2018-01-01	794 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772168981411	Logistics	High	0	1
+CP0001390	Maya Suryadi	Individual	Maya Suryadi	1985-01-01	1900-01-01	39 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777638135337	Construction	Medium	1	0
+CP0001391	PT Setiawan Synthetic	Company	Eka Setiawan	1900-01-01	2018-01-01	34 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	774369602156	Construction	Medium	0	1
+CP0001392	Wulan Prakoso	Individual	Wulan Prakoso	1985-01-01	1900-01-01	13 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774131872296	Retail	Low	1	0
+CP0001393	PT Permana Synthetic	Company	Dimas Permana	1900-01-01	2018-01-01	145 Synthetic Avenue	Semarang	AE	AE	Bank Sentra	779872894276	Construction	Low	0	1
+CP0001394	Arif Hartono	Individual	Arif Hartono	1985-01-01	1900-01-01	691 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779608138987	Healthcare	Low	1	0
+CP0001395	Kevin Suryadi	Individual	Kevin Suryadi	1985-01-01	1900-01-01	245 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770953312424	Healthcare	Medium	1	0
+CP0001396	Joko Mahendra	Individual	Joko Mahendra	1985-01-01	1900-01-01	232 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	774427965690	Technology	Medium	1	0
+CP0001397	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	538 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773199502639	Manufacturing	Medium	1	0
+CP0001398	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	17 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	774732970166	Retail	Medium	1	0
+CP0001399	PT Adinata Synthetic	Company	Intan Adinata	1900-01-01	2018-01-01	186 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	777399493598	Healthcare	Low	0	1
+CP0001400	Laras Putra	Individual	Laras Putra	1985-01-01	1900-01-01	166 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779882155104	Technology	Low	1	0
+CP0001401	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	157 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	779197679385	Construction	Medium	1	0
+CP0001402	Putri Firmansyah	Individual	Putri Firmansyah	1985-01-01	1900-01-01	542 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	777074240591	Technology	Medium	1	0
+CP0001403	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	601 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770327012287	Retail	Low	1	0
+CP0001404	Maya Halim	Individual	Maya Halim	1985-01-01	1900-01-01	593 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770821420070	Manufacturing	Low	1	0
+CP0001405	Indra Wibowo	Individual	Indra Wibowo	1985-01-01	1900-01-01	854 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779224530668	Construction	Low	1	0
+CP0001406	Putri Santoso	Individual	Putri Santoso	1985-01-01	1900-01-01	219 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774860228222	Logistics	Low	1	0
+CP0001407	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	712 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778580995689	Construction	Low	1	0
+CP0001408	Fajar Siregar	Individual	Fajar Siregar	1985-01-01	1900-01-01	39 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773525152787	Logistics	Medium	1	0
+CP0001409	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	541 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778529829630	Healthcare	Low	1	0
+CP0001410	Rizky Darmawan	Individual	Rizky Darmawan	1985-01-01	1900-01-01	254 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778676954546	Technology	Medium	1	0
+CP0001411	Gita Iskandar	Individual	Gita Iskandar	1985-01-01	1900-01-01	466 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774204582802	Logistics	Low	1	0
+CP0001412	PT Wijaya Synthetic	Company	Wulan Wijaya	1900-01-01	2018-01-01	844 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770823007700	Healthcare	Low	0	1
+CP0001413	PT Yulianto Synthetic	Company	Andi Yulianto	1900-01-01	2018-01-01	754 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772275676897	Construction	Low	0	1
+CP0001414	Joko Darmawan	Individual	Joko Darmawan	1985-01-01	1900-01-01	818 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770770769654	Manufacturing	Medium	1	0
+CP0001415	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	137 Synthetic Avenue	Makassar	US	US	Bank Sentra	775355847017	Technology	Medium	1	0
+CP0001416	Anisa Permana	Individual	Anisa Permana	1985-01-01	1900-01-01	680 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	773640915315	Logistics	Medium	1	0
+CP0001417	Adit Putra	Individual	Adit Putra	1985-01-01	1900-01-01	888 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775079299930	Construction	Low	1	0
+CP0001418	Laras Adinata	Individual	Laras Adinata	1985-01-01	1900-01-01	171 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	777535821898	Healthcare	Low	1	0
+CP0001419	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	519 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770634293815	Manufacturing	Medium	1	0
+CP0001420	Anisa Hartono	Individual	Anisa Hartono	1985-01-01	1900-01-01	773 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	775996809783	Logistics	Medium	1	0
+CP0001421	Fajar Yulianto	Individual	Fajar Yulianto	1985-01-01	1900-01-01	347 Synthetic Avenue	Semarang	AE	AE	Asia Commerce Bank	770249870871	Retail	Low	1	0
+CP0001422	Anisa Kurniawan	Individual	Anisa Kurniawan	1985-01-01	1900-01-01	330 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	771010531061	Logistics	Low	1	0
+CP0001423	Alya Kurniawan	Individual	Alya Kurniawan	1985-01-01	1900-01-01	86 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	775949185876	Technology	Low	1	0
+CP0001424	Rizky Chandra	Individual	Rizky Chandra	1985-01-01	1900-01-01	869 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	777354395416	Technology	Low	1	0
+CP0001425	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	818 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	770966240002	Healthcare	Medium	1	0
+CP0001426	Dewi Hartono	Individual	Dewi Hartono	1985-01-01	1900-01-01	198 Synthetic Avenue	Surabaya	JP	JP	Bank Sentra	777315011643	Logistics	Low	1	0
+CP0001427	Citra Hartono	Individual	Citra Hartono	1985-01-01	1900-01-01	734 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770576691368	Manufacturing	High	1	0
+CP0001428	Farah Adinata	Individual	Farah Adinata	1985-01-01	1900-01-01	223 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777280754863	Construction	Low	1	0
+CP0001429	Joko Santoso	Individual	Joko Santoso	1985-01-01	1900-01-01	169 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	774508216024	Construction	High	1	0
+CP0001430	Fajar Mahendra	Individual	Fajar Mahendra	1985-01-01	1900-01-01	389 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771657951120	Manufacturing	High	1	0
+CP0001431	Eka Permana	Individual	Eka Permana	1985-01-01	1900-01-01	514 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772013350151	Manufacturing	Low	1	0
+CP0001432	PT Budiman Synthetic	Company	Gita Budiman	1900-01-01	2018-01-01	483 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771074106080	Construction	Low	0	1
+CP0001433	PT Darmawan Synthetic	Company	Gita Darmawan	1900-01-01	2018-01-01	810 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777368942959	Logistics	Medium	0	1
+CP0001434	Putri Adinata	Individual	Putri Adinata	1985-01-01	1900-01-01	890 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777811814551	Construction	Low	1	0
+CP0001435	Alya Budiman	Individual	Alya Budiman	1985-01-01	1900-01-01	769 Synthetic Avenue	Makassar	AE	AE	Bank Sentra	772943448434	Construction	Medium	1	0
+CP0001436	PT Setiawan Synthetic	Company	Dewi Setiawan	1900-01-01	2018-01-01	39 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	771014314180	Logistics	Low	0	1
+CP0001437	Naufal Rahardjo	Individual	Naufal Rahardjo	1985-01-01	1900-01-01	584 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776142188675	Manufacturing	Low	1	0
+CP0001438	Intan Setiawan	Individual	Intan Setiawan	1985-01-01	1900-01-01	626 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	770597324739	Construction	Medium	1	0
+CP0001439	Indra Yulianto	Individual	Indra Yulianto	1985-01-01	1900-01-01	525 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	777387966915	Healthcare	Low	1	0
+CP0001440	Citra Lesmana	Individual	Citra Lesmana	1985-01-01	1900-01-01	634 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779833227253	Construction	Low	1	0
+CP0001441	Bima Lesmana	Individual	Bima Lesmana	1985-01-01	1900-01-01	468 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	779419772789	Construction	High	1	0
+CP0001442	Rizky Halim	Individual	Rizky Halim	1985-01-01	1900-01-01	171 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	770398889457	Construction	Low	1	0
+CP0001443	PT Adinata Synthetic	Company	Hana Adinata	1900-01-01	2018-01-01	359 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773005282316	Manufacturing	Low	0	1
+CP0001444	Farah Rahardjo	Individual	Farah Rahardjo	1985-01-01	1900-01-01	415 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777540045831	Retail	Medium	1	0
+CP0001445	PT Iskandar Synthetic	Company	Anisa Iskandar	1900-01-01	2018-01-01	728 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779522877545	Manufacturing	High	0	1
+CP0001446	Raka Halim	Individual	Raka Halim	1985-01-01	1900-01-01	251 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775369690474	Healthcare	Low	1	0
+CP0001447	Hana Mahendra	Individual	Hana Mahendra	1985-01-01	1900-01-01	78 Synthetic Avenue	Jakarta	AU	AU	Bank Nusantara	771609886635	Healthcare	Low	1	0
+CP0001448	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	393 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	773613381421	Technology	Low	1	0
+CP0001449	PT Budiman Synthetic	Company	Bima Budiman	1900-01-01	2018-01-01	539 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779407743807	Logistics	Medium	0	1
+CP0001450	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	661 Synthetic Avenue	Makassar	GB	GB	Asia Commerce Bank	773846540538	Retail	Low	1	0
+CP0001451	Rizky Permana	Individual	Rizky Permana	1985-01-01	1900-01-01	773 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774521168462	Manufacturing	Low	1	0
+CP0001452	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	667 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	778575878889	Healthcare	Low	1	0
+CP0001453	Citra Santoso	Individual	Citra Santoso	1985-01-01	1900-01-01	711 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770311923098	Construction	Low	1	0
+CP0001454	PT Wibowo Synthetic	Company	Citra Wibowo	1900-01-01	2018-01-01	223 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774220991193	Technology	Low	0	1
+CP0001455	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	307 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	779093784212	Construction	Low	1	0
+CP0001456	Bagus Hartono	Individual	Bagus Hartono	1985-01-01	1900-01-01	445 Synthetic Avenue	Bandung	JP	JP	Bank Nusantara	771181388423	Technology	Low	1	0
+CP0001457	Adit Nugraha	Individual	Adit Nugraha	1985-01-01	1900-01-01	99 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773220559831	Logistics	Medium	1	0
+CP0001458	Putri Wijaya	Individual	Putri Wijaya	1985-01-01	1900-01-01	795 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776853880684	Healthcare	Medium	1	0
+CP0001459	Adit Lesmana	Individual	Adit Lesmana	1985-01-01	1900-01-01	534 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771506566532	Manufacturing	Low	1	0
+CP0001460	Eka Suryadi	Individual	Eka Suryadi	1985-01-01	1900-01-01	157 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	771238070497	Logistics	Low	1	0
+CP0001461	Putri Lesmana	Individual	Putri Lesmana	1985-01-01	1900-01-01	377 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	777758245382	Logistics	Medium	1	0
+CP0001462	Maya Kurniawan	Individual	Maya Kurniawan	1985-01-01	1900-01-01	483 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772204746773	Retail	Medium	1	0
+CP0001463	PT Suryadi Synthetic	Company	Andi Suryadi	1900-01-01	2018-01-01	516 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778209197477	Manufacturing	Medium	0	1
+CP0001464	Raka Nugraha	Individual	Raka Nugraha	1985-01-01	1900-01-01	597 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	779916915455	Retail	Medium	1	0
+CP0001465	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	731 Synthetic Avenue	Surabaya	AE	AE	Bank Nusantara	778908668528	Logistics	Medium	1	0
+CP0001466	Bima Darmawan	Individual	Bima Darmawan	1985-01-01	1900-01-01	42 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	776063900130	Retail	Low	1	0
+CP0001467	Adit Yulianto	Individual	Adit Yulianto	1985-01-01	1900-01-01	575 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	776682963954	Healthcare	Low	1	0
+CP0001468	Nadia Yulianto	Individual	Nadia Yulianto	1985-01-01	1900-01-01	696 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778158066494	Logistics	Medium	1	0
+CP0001469	PT Iskandar Synthetic	Company	Citra Iskandar	1900-01-01	2018-01-01	250 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	779504284654	Logistics	Medium	0	1
+CP0001470	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	486 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773671544664	Manufacturing	Medium	1	0
+CP0001471	Bima Darmawan	Individual	Bima Darmawan	1985-01-01	1900-01-01	322 Synthetic Avenue	Surabaya	AE	AE	Bank Nusantara	774157141815	Construction	Low	1	0
+CP0001472	PT Hartono Synthetic	Company	Maya Hartono	1900-01-01	2018-01-01	191 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778285729059	Manufacturing	Low	0	1
+CP0001473	PT Hartono Synthetic	Company	Teguh Hartono	1900-01-01	2018-01-01	177 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	777417350258	Healthcare	Low	0	1
+CP0001474	PT Setiawan Synthetic	Company	Laras Setiawan	1900-01-01	2018-01-01	198 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775188083921	Healthcare	Low	0	1
+CP0001475	PT Chandra Synthetic	Company	Naufal Chandra	1900-01-01	2018-01-01	830 Synthetic Avenue	Medan	AE	AE	Bank Sentra	779636411322	Technology	Low	0	1
+CP0001476	Joko Wijaya	Individual	Joko Wijaya	1985-01-01	1900-01-01	854 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771130438152	Logistics	Medium	1	0
+CP0001477	PT Setiawan Synthetic	Company	Joko Setiawan	1900-01-01	2018-01-01	733 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779161623824	Logistics	Low	0	1
+CP0001478	PT Adinata Synthetic	Company	Laras Adinata	1900-01-01	2018-01-01	76 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778497797817	Logistics	Low	0	1
+CP0001479	Bagus Halim	Individual	Bagus Halim	1985-01-01	1900-01-01	449 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776762223661	Technology	Low	1	0
+CP0001480	Nadia Hartono	Individual	Nadia Hartono	1985-01-01	1900-01-01	630 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	771070356938	Retail	Low	1	0
+CP0001481	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	697 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778172215074	Healthcare	Medium	1	0
+CP0001482	Bagus Siregar	Individual	Bagus Siregar	1985-01-01	1900-01-01	401 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771763727317	Logistics	Low	1	0
+CP0001483	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	724 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775757402162	Retail	Medium	1	0
+CP0001484	Sari Lesmana	Individual	Sari Lesmana	1985-01-01	1900-01-01	256 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771622931883	Construction	Low	1	0
+CP0001485	Andi Halim	Individual	Andi Halim	1985-01-01	1900-01-01	279 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775298626923	Retail	Low	1	0
+CP0001486	Kevin Lesmana	Individual	Kevin Lesmana	1985-01-01	1900-01-01	790 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	777217677125	Healthcare	Low	1	0
+CP0001487	PT Gunawan Synthetic	Company	Bima Gunawan	1900-01-01	2018-01-01	453 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773161745414	Construction	Medium	0	1
+CP0001488	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	161 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772383760651	Healthcare	Low	1	0
+CP0001489	Rizky Wibowo	Individual	Rizky Wibowo	1985-01-01	1900-01-01	186 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	779070284633	Manufacturing	Low	1	0
+CP0001490	PT Santoso Synthetic	Company	Laras Santoso	1900-01-01	2018-01-01	378 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775885298750	Logistics	Medium	0	1
+CP0001491	Dewi Permana	Individual	Dewi Permana	1985-01-01	1900-01-01	250 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	779341389620	Manufacturing	Low	1	0
+CP0001492	Naufal Darmawan	Individual	Naufal Darmawan	1985-01-01	1900-01-01	423 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773109130576	Retail	Low	1	0
+CP0001493	Sari Putra	Individual	Sari Putra	1985-01-01	1900-01-01	507 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	770337454433	Logistics	Low	1	0
+CP0001494	Rizky Prakoso	Individual	Rizky Prakoso	1985-01-01	1900-01-01	636 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771481677758	Technology	Low	1	0
+CP0001495	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	641 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	773917151511	Manufacturing	Low	1	0
+CP0001496	Sari Gunawan	Individual	Sari Gunawan	1985-01-01	1900-01-01	258 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	779577632287	Retail	Low	1	0
+CP0001497	Teguh Darmawan	Individual	Teguh Darmawan	1985-01-01	1900-01-01	176 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773467546201	Construction	Low	1	0
+CP0001498	Intan Nugraha	Individual	Intan Nugraha	1985-01-01	1900-01-01	731 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778463782129	Retail	High	1	0
+CP0001499	PT Nugraha Synthetic	Company	Gita Nugraha	1900-01-01	2018-01-01	525 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	770038760914	Manufacturing	High	0	1
+CP0001500	Anisa Mahendra	Individual	Anisa Mahendra	1985-01-01	1900-01-01	865 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	777215202602	Manufacturing	Low	1	0
+CP0001501	PT Chandra Synthetic	Company	Indra Chandra	1900-01-01	2018-01-01	630 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	777033343107	Retail	Low	0	1
+CP0001502	Arif Kurniawan	Individual	Arif Kurniawan	1985-01-01	1900-01-01	664 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	774644494964	Manufacturing	Low	1	0
+CP0001503	Wulan Gunawan	Individual	Wulan Gunawan	1985-01-01	1900-01-01	8 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771156098984	Healthcare	Low	1	0
+CP0001504	Fajar Kurniawan	Individual	Fajar Kurniawan	1985-01-01	1900-01-01	483 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774144942977	Manufacturing	Low	1	0
+CP0001505	Rizky Prakoso	Individual	Rizky Prakoso	1985-01-01	1900-01-01	710 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774119808961	Construction	Low	1	0
+CP0001506	Arif Halim	Individual	Arif Halim	1985-01-01	1900-01-01	51 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777667643445	Retail	Low	1	0
+CP0001507	Indra Iskandar	Individual	Indra Iskandar	1985-01-01	1900-01-01	243 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773029728094	Technology	Medium	1	0
+CP0001508	Raka Putra	Individual	Raka Putra	1985-01-01	1900-01-01	543 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773735507422	Manufacturing	Low	1	0
+CP0001509	PT Setiawan Synthetic	Company	Gita Setiawan	1900-01-01	2018-01-01	747 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775065755350	Manufacturing	Low	0	1
+CP0001510	PT Prakoso Synthetic	Company	Adit Prakoso	1900-01-01	2018-01-01	244 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771225944961	Healthcare	Medium	0	1
+CP0001511	PT Lesmana Synthetic	Company	Alya Lesmana	1900-01-01	2018-01-01	593 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774132172832	Logistics	Medium	0	1
+CP0001512	PT Permana Synthetic	Company	Intan Permana	1900-01-01	2018-01-01	45 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	771889747993	Technology	Low	0	1
+CP0001513	Fajar Wijaya	Individual	Fajar Wijaya	1985-01-01	1900-01-01	15 Synthetic Avenue	Bandung	US	US	Bank Nusantara	777951627987	Technology	Low	1	0
+CP0001514	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	770 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774631734303	Technology	Low	1	0
+CP0001515	Andi Suryadi	Individual	Andi Suryadi	1985-01-01	1900-01-01	129 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	770974155433	Retail	Medium	1	0
+CP0001516	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	470 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771891448534	Healthcare	Medium	1	0
+CP0001517	PT Prakoso Synthetic	Company	Kevin Prakoso	1900-01-01	2018-01-01	495 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772293983685	Technology	Low	0	1
+CP0001518	Putri Siregar	Individual	Putri Siregar	1985-01-01	1900-01-01	609 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778275903895	Logistics	Medium	1	0
+CP0001519	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	850 Synthetic Avenue	Surabaya	AE	AE	Bank Nusantara	779732726085	Technology	Low	1	0
+CP0001520	PT Kurniawan Synthetic	Company	Teguh Kurniawan	1900-01-01	2018-01-01	554 Synthetic Avenue	Semarang	US	US	Bank Sentra	774815132462	Manufacturing	Low	0	1
+CP0001521	Arif Nugraha	Individual	Arif Nugraha	1985-01-01	1900-01-01	502 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775621418547	Retail	Medium	1	0
+CP0001522	Intan Adinata	Individual	Intan Adinata	1985-01-01	1900-01-01	139 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774331291841	Retail	Low	1	0
+CP0001523	Kevin Adinata	Individual	Kevin Adinata	1985-01-01	1900-01-01	761 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	773224909886	Logistics	Low	1	0
+CP0001524	Arif Wibowo	Individual	Arif Wibowo	1985-01-01	1900-01-01	423 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	773499959712	Manufacturing	Medium	1	0
+CP0001525	PT Suryadi Synthetic	Company	Eka Suryadi	1900-01-01	2018-01-01	2 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770314888192	Retail	Low	0	1
+CP0001526	Laras Rahardjo	Individual	Laras Rahardjo	1985-01-01	1900-01-01	36 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773643709876	Logistics	Low	1	0
+CP0001527	PT Nugraha Synthetic	Company	Joko Nugraha	1900-01-01	2018-01-01	135 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770606603535	Construction	Medium	0	1
+CP0001528	PT Suryadi Synthetic	Company	Andi Suryadi	1900-01-01	2018-01-01	96 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770845436476	Healthcare	Low	0	1
+CP0001529	Putri Wijaya	Individual	Putri Wijaya	1985-01-01	1900-01-01	293 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772177207101	Healthcare	Low	1	0
+CP0001530	Andi Santoso	Individual	Andi Santoso	1985-01-01	1900-01-01	677 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775011026589	Retail	Low	1	0
+CP0001531	Rizky Putra	Individual	Rizky Putra	1985-01-01	1900-01-01	297 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777960721982	Logistics	Low	1	0
+CP0001532	Joko Santoso	Individual	Joko Santoso	1985-01-01	1900-01-01	753 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770287667512	Logistics	High	1	0
+CP0001533	PT Mahendra Synthetic	Company	Teguh Mahendra	1900-01-01	2018-01-01	753 Synthetic Avenue	Yogyakarta	JP	JP	Bank Sentra	771421608909	Logistics	Low	0	1
+CP0001534	Farah Rahardjo	Individual	Farah Rahardjo	1985-01-01	1900-01-01	260 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775154641949	Construction	Low	1	0
+CP0001535	Arif Yulianto	Individual	Arif Yulianto	1985-01-01	1900-01-01	152 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778375567276	Manufacturing	Low	1	0
+CP0001536	PT Permana Synthetic	Company	Hana Permana	1900-01-01	2018-01-01	385 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	772654960972	Manufacturing	Low	0	1
+CP0001537	Putri Prakoso	Individual	Putri Prakoso	1985-01-01	1900-01-01	533 Synthetic Avenue	Jakarta	US	US	Bank Sentra	775266000781	Manufacturing	High	1	0
+CP0001538	Kevin Wijaya	Individual	Kevin Wijaya	1985-01-01	1900-01-01	885 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772150174426	Healthcare	Medium	1	0
+CP0001539	Sari Suryadi	Individual	Sari Suryadi	1985-01-01	1900-01-01	777 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771362104253	Retail	Low	1	0
+CP0001540	Raka Kurniawan	Individual	Raka Kurniawan	1985-01-01	1900-01-01	616 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	779642080104	Manufacturing	Low	1	0
+CP0001541	PT Permana Synthetic	Company	Indra Permana	1900-01-01	2018-01-01	178 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776655220446	Retail	Low	0	1
+CP0001542	Rani Nugraha	Individual	Rani Nugraha	1985-01-01	1900-01-01	766 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777965251602	Technology	Low	1	0
+CP0001543	Andi Rahardjo	Individual	Andi Rahardjo	1985-01-01	1900-01-01	158 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775770743868	Manufacturing	Low	1	0
+CP0001544	Rani Suryadi	Individual	Rani Suryadi	1985-01-01	1900-01-01	237 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778161762772	Manufacturing	Low	1	0
+CP0001545	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	587 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775191554802	Retail	Low	1	0
+CP0001546	Anisa Iskandar	Individual	Anisa Iskandar	1985-01-01	1900-01-01	592 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770462575628	Retail	Low	1	0
+CP0001547	PT Chandra Synthetic	Company	Bima Chandra	1900-01-01	2018-01-01	431 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	775219264211	Healthcare	Medium	0	1
+CP0001548	PT Prakoso Synthetic	Company	Hana Prakoso	1900-01-01	2018-01-01	152 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770360257999	Retail	Low	0	1
+CP0001549	Dewi Putra	Individual	Dewi Putra	1985-01-01	1900-01-01	374 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	771579863851	Retail	Medium	1	0
+CP0001550	Citra Prakoso	Individual	Citra Prakoso	1985-01-01	1900-01-01	805 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773660835937	Retail	Low	1	0
+CP0001551	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	477 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771179673278	Healthcare	Low	1	0
+CP0001552	Eka Budiman	Individual	Eka Budiman	1985-01-01	1900-01-01	308 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776967967363	Manufacturing	Low	1	0
+CP0001553	Maya Darmawan	Individual	Maya Darmawan	1985-01-01	1900-01-01	179 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	779632602744	Manufacturing	Low	1	0
+CP0001554	Bima Siregar	Individual	Bima Siregar	1985-01-01	1900-01-01	40 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	774338456099	Construction	Low	1	0
+CP0001555	Wulan Lesmana	Individual	Wulan Lesmana	1985-01-01	1900-01-01	688 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777171516327	Retail	Low	1	0
+CP0001556	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	18 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776849777364	Healthcare	High	1	0
+CP0001557	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	651 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	773692954742	Technology	Low	1	0
+CP0001558	Bima Hartono	Individual	Bima Hartono	1985-01-01	1900-01-01	483 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	773044169461	Technology	Low	1	0
+CP0001559	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	697 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775285639112	Logistics	Low	1	0
+CP0001560	Putri Wijaya	Individual	Putri Wijaya	1985-01-01	1900-01-01	646 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	772124582415	Manufacturing	Low	1	0
+CP0001561	PT Nugraha Synthetic	Company	Nadia Nugraha	1900-01-01	2018-01-01	680 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	775573903561	Manufacturing	Low	0	1
+CP0001562	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	55 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	776461049583	Healthcare	Low	1	0
+CP0001563	Bagus Siregar	Individual	Bagus Siregar	1985-01-01	1900-01-01	484 Synthetic Avenue	Makassar	JP	JP	Bank Nusantara	779906808634	Healthcare	Low	1	0
+CP0001564	Nadia Iskandar	Individual	Nadia Iskandar	1985-01-01	1900-01-01	35 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771701562029	Logistics	Medium	1	0
+CP0001565	Andi Nugraha	Individual	Andi Nugraha	1985-01-01	1900-01-01	569 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773576929067	Healthcare	Low	1	0
+CP0001566	Alya Nugraha	Individual	Alya Nugraha	1985-01-01	1900-01-01	243 Synthetic Avenue	Makassar	AE	AE	Asia Commerce Bank	772224511632	Logistics	Low	1	0
+CP0001567	Sari Permana	Individual	Sari Permana	1985-01-01	1900-01-01	156 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772370868876	Healthcare	Low	1	0
+CP0001568	Arif Budiman	Individual	Arif Budiman	1985-01-01	1900-01-01	638 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	778017143644	Retail	Medium	1	0
+CP0001569	PT Santoso Synthetic	Company	Anisa Santoso	1900-01-01	2018-01-01	596 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	772448673375	Retail	Medium	0	1
+CP0001570	Andi Permana	Individual	Andi Permana	1985-01-01	1900-01-01	357 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	776831668946	Construction	Low	1	0
+CP0001571	PT Siregar Synthetic	Company	Laras Siregar	1900-01-01	2018-01-01	786 Synthetic Avenue	Makassar	GB	GB	Asia Commerce Bank	777688215979	Retail	Medium	0	1
+CP0001572	Bagus Wijaya	Individual	Bagus Wijaya	1985-01-01	1900-01-01	854 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774548530183	Construction	Low	1	0
+CP0001573	PT Siregar Synthetic	Company	Indra Siregar	1900-01-01	2018-01-01	356 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777118982972	Construction	Low	0	1
+CP0001574	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	383 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	770695342668	Technology	Low	1	0
+CP0001575	PT Firmansyah Synthetic	Company	Intan Firmansyah	1900-01-01	2018-01-01	671 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778154044520	Construction	Low	0	1
+CP0001576	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	311 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771683610993	Healthcare	Low	1	0
+CP0001577	PT Santoso Synthetic	Company	Citra Santoso	1900-01-01	2018-01-01	730 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776500243880	Technology	Medium	0	1
+CP0001578	Teguh Setiawan	Individual	Teguh Setiawan	1985-01-01	1900-01-01	103 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776377088811	Retail	Low	1	0
+CP0001579	Andi Hartono	Individual	Andi Hartono	1985-01-01	1900-01-01	527 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	779689166660	Retail	Medium	1	0
+CP0001580	Bima Yulianto	Individual	Bima Yulianto	1985-01-01	1900-01-01	669 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775953943072	Technology	High	1	0
+CP0001581	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	391 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	775582846179	Retail	Low	1	0
+CP0001582	PT Prakoso Synthetic	Company	Farah Prakoso	1900-01-01	2018-01-01	98 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777561546054	Healthcare	Low	0	1
+CP0001583	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	450 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773778960542	Healthcare	Low	1	0
+CP0001584	Fajar Gunawan	Individual	Fajar Gunawan	1985-01-01	1900-01-01	381 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	777985681547	Technology	Low	1	0
+CP0001585	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	573 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	775197927048	Manufacturing	Low	1	0
+CP0001586	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	809 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778529381227	Technology	Medium	1	0
+CP0001587	Alya Gunawan	Individual	Alya Gunawan	1985-01-01	1900-01-01	230 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773149943005	Logistics	Low	1	0
+CP0001588	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	158 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770261790565	Manufacturing	Low	1	0
+CP0001589	Bima Adinata	Individual	Bima Adinata	1985-01-01	1900-01-01	26 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777606620740	Retail	Low	1	0
+CP0001590	Raka Setiawan	Individual	Raka Setiawan	1985-01-01	1900-01-01	834 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776233053797	Logistics	Low	1	0
+CP0001591	PT Wijaya Synthetic	Company	Intan Wijaya	1900-01-01	2018-01-01	26 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777018683815	Logistics	Low	0	1
+CP0001592	Intan Gunawan	Individual	Intan Gunawan	1985-01-01	1900-01-01	880 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	777056766943	Technology	Low	1	0
+CP0001593	Farah Budiman	Individual	Farah Budiman	1985-01-01	1900-01-01	596 Synthetic Avenue	Medan	AE	AE	Bank Nusantara	771778108845	Manufacturing	Low	1	0
+CP0001594	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	24 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771877426490	Technology	Low	1	0
+CP0001595	Rizky Prakoso	Individual	Rizky Prakoso	1985-01-01	1900-01-01	100 Synthetic Avenue	Bandung	GB	GB	Bank Sentra	778070409911	Construction	Low	1	0
+CP0001596	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	235 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775312861811	Technology	Low	1	0
+CP0001597	PT Hartono Synthetic	Company	Dimas Hartono	1900-01-01	2018-01-01	438 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778571285464	Retail	Medium	0	1
+CP0001598	PT Wibowo Synthetic	Company	Raka Wibowo	1900-01-01	2018-01-01	440 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776474530505	Healthcare	Low	0	1
+CP0001599	Rani Nugraha	Individual	Rani Nugraha	1985-01-01	1900-01-01	284 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779324597424	Technology	Medium	1	0
+CP0001600	PT Permana Synthetic	Company	Sari Permana	1900-01-01	2018-01-01	242 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773957673054	Technology	Low	0	1
+CP0001601	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	827 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770136689346	Technology	Low	1	0
+CP0001602	PT Yulianto Synthetic	Company	Fajar Yulianto	1900-01-01	2018-01-01	558 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773846500566	Logistics	Low	0	1
+CP0001603	Maya Permana	Individual	Maya Permana	1985-01-01	1900-01-01	713 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774724987131	Technology	Medium	1	0
+CP0001604	Intan Yulianto	Individual	Intan Yulianto	1985-01-01	1900-01-01	507 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776547520468	Healthcare	Medium	1	0
+CP0001605	PT Nugraha Synthetic	Company	Andi Nugraha	1900-01-01	2018-01-01	843 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775866129004	Construction	Medium	0	1
+CP0001606	Eka Wijaya	Individual	Eka Wijaya	1985-01-01	1900-01-01	867 Synthetic Avenue	Semarang	AU	AU	Bank Sentra	776851915567	Manufacturing	Low	1	0
+CP0001607	PT Wibowo Synthetic	Company	Naufal Wibowo	1900-01-01	2018-01-01	821 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773551002829	Healthcare	Low	0	1
+CP0001608	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	391 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772460960985	Healthcare	Low	1	0
+CP0001609	Arif Putra	Individual	Arif Putra	1985-01-01	1900-01-01	93 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770042632465	Healthcare	Medium	1	0
+CP0001610	Rizky Darmawan	Individual	Rizky Darmawan	1985-01-01	1900-01-01	460 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	778515744989	Logistics	Medium	1	0
+CP0001611	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	623 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775383196807	Retail	Low	1	0
+CP0001612	PT Suryadi Synthetic	Company	Bima Suryadi	1900-01-01	2018-01-01	225 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775998675731	Construction	Low	0	1
+CP0001613	Rizky Wibowo	Individual	Rizky Wibowo	1985-01-01	1900-01-01	488 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775590908422	Manufacturing	Medium	1	0
+CP0001614	Maya Mahendra	Individual	Maya Mahendra	1985-01-01	1900-01-01	371 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	770720217253	Retail	Low	1	0
+CP0001615	Eka Budiman	Individual	Eka Budiman	1985-01-01	1900-01-01	533 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771825840234	Manufacturing	Medium	1	0
+CP0001616	PT Iskandar Synthetic	Company	Teguh Iskandar	1900-01-01	2018-01-01	492 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	771423380778	Logistics	Medium	0	1
+CP0001617	PT Wibowo Synthetic	Company	Teguh Wibowo	1900-01-01	2018-01-01	434 Synthetic Avenue	Medan	SG	SG	Bank Sentra	776638411616	Logistics	Low	0	1
+CP0001618	PT Nugraha Synthetic	Company	Bagus Nugraha	1900-01-01	2018-01-01	747 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773363748652	Construction	Low	0	1
+CP0001619	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	359 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773922164417	Technology	Low	1	0
+CP0001620	Joko Hartono	Individual	Joko Hartono	1985-01-01	1900-01-01	375 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773804941300	Construction	Low	1	0
+CP0001621	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	141 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777246236089	Manufacturing	Medium	1	0
+CP0001622	PT Firmansyah Synthetic	Company	Alya Firmansyah	1900-01-01	2018-01-01	345 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773970973214	Logistics	Low	0	1
+CP0001623	PT Yulianto Synthetic	Company	Adit Yulianto	1900-01-01	2018-01-01	520 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	772023787107	Construction	Low	0	1
+CP0001624	Rani Permana	Individual	Rani Permana	1985-01-01	1900-01-01	344 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777141263360	Construction	Low	1	0
+CP0001625	Rani Suryadi	Individual	Rani Suryadi	1985-01-01	1900-01-01	35 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771857089208	Logistics	High	1	0
+CP0001626	Naufal Gunawan	Individual	Naufal Gunawan	1985-01-01	1900-01-01	52 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777310507912	Technology	Low	1	0
+CP0001627	Laras Firmansyah	Individual	Laras Firmansyah	1985-01-01	1900-01-01	896 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779481312039	Technology	Low	1	0
+CP0001628	Indra Wijaya	Individual	Indra Wijaya	1985-01-01	1900-01-01	332 Synthetic Avenue	Surabaya	JP	JP	Asia Commerce Bank	772771716494	Construction	High	1	0
+CP0001629	Laras Darmawan	Individual	Laras Darmawan	1985-01-01	1900-01-01	657 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771186844519	Retail	Low	1	0
+CP0001630	PT Permana Synthetic	Company	Dewi Permana	1900-01-01	2018-01-01	304 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	773440132376	Logistics	High	0	1
+CP0001631	Bima Iskandar	Individual	Bima Iskandar	1985-01-01	1900-01-01	146 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776563331646	Manufacturing	Low	1	0
+CP0001632	PT Santoso Synthetic	Company	Dimas Santoso	1900-01-01	2018-01-01	886 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776719664114	Healthcare	Low	0	1
+CP0001633	Rani Wibowo	Individual	Rani Wibowo	1985-01-01	1900-01-01	350 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772701836554	Technology	Low	1	0
+CP0001634	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	687 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	773856244270	Manufacturing	Medium	1	0
+CP0001635	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	123 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	779427384537	Logistics	Medium	1	0
+CP0001636	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	608 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779164522943	Construction	High	1	0
+CP0001637	PT Suryadi Synthetic	Company	Bagus Suryadi	1900-01-01	2018-01-01	786 Synthetic Avenue	Semarang	AE	AE	Bank Nusantara	774947702941	Logistics	Low	0	1
+CP0001638	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	49 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	773848114107	Manufacturing	Low	1	0
+CP0001639	Maya Wijaya	Individual	Maya Wijaya	1985-01-01	1900-01-01	111 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778746078467	Technology	Medium	1	0
+CP0001640	Laras Darmawan	Individual	Laras Darmawan	1985-01-01	1900-01-01	407 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778154613617	Logistics	Low	1	0
+CP0001641	Putri Yulianto	Individual	Putri Yulianto	1985-01-01	1900-01-01	129 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	774628858171	Construction	Medium	1	0
+CP0001642	PT Siregar Synthetic	Company	Putri Siregar	1900-01-01	2018-01-01	434 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772808652301	Logistics	Low	0	1
+CP0001643	Sari Suryadi	Individual	Sari Suryadi	1985-01-01	1900-01-01	166 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775486063409	Logistics	Low	1	0
+CP0001644	Raka Halim	Individual	Raka Halim	1985-01-01	1900-01-01	224 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	776380180689	Technology	Medium	1	0
+CP0001645	Naufal Adinata	Individual	Naufal Adinata	1985-01-01	1900-01-01	390 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770853482121	Healthcare	Medium	1	0
+CP0001646	Kevin Yulianto	Individual	Kevin Yulianto	1985-01-01	1900-01-01	866 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774756500173	Manufacturing	Low	1	0
+CP0001647	Intan Santoso	Individual	Intan Santoso	1985-01-01	1900-01-01	65 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	775706447669	Retail	Low	1	0
+CP0001648	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	763 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775057462671	Manufacturing	Low	1	0
+CP0001649	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	601 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	773248742453	Manufacturing	Low	1	0
+CP0001650	Putri Rahardjo	Individual	Putri Rahardjo	1985-01-01	1900-01-01	470 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777724488952	Construction	Medium	1	0
+CP0001651	Rani Siregar	Individual	Rani Siregar	1985-01-01	1900-01-01	500 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	775576415827	Healthcare	Low	1	0
+CP0001652	PT Santoso Synthetic	Company	Indra Santoso	1900-01-01	2018-01-01	609 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774740606686	Manufacturing	Low	0	1
+CP0001653	Intan Hartono	Individual	Intan Hartono	1985-01-01	1900-01-01	688 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772956435309	Technology	Medium	1	0
+CP0001654	PT Hartono Synthetic	Company	Putri Hartono	1900-01-01	2018-01-01	205 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773477969844	Retail	Medium	0	1
+CP0001655	PT Lesmana Synthetic	Company	Arif Lesmana	1900-01-01	2018-01-01	618 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775734542243	Healthcare	Low	0	1
+CP0001656	Putri Santoso	Individual	Putri Santoso	1985-01-01	1900-01-01	854 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778662498546	Construction	High	1	0
+CP0001657	Rizky Darmawan	Individual	Rizky Darmawan	1985-01-01	1900-01-01	561 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773830071651	Manufacturing	High	1	0
+CP0001658	PT Kurniawan Synthetic	Company	Citra Kurniawan	1900-01-01	2018-01-01	869 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774207090176	Manufacturing	Medium	0	1
+CP0001659	Wulan Lesmana	Individual	Wulan Lesmana	1985-01-01	1900-01-01	897 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771845063676	Healthcare	Low	1	0
+CP0001660	PT Nugraha Synthetic	Company	Rani Nugraha	1900-01-01	2018-01-01	672 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775059939620	Retail	Low	0	1
+CP0001661	PT Halim Synthetic	Company	Joko Halim	1900-01-01	2018-01-01	578 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774912797983	Logistics	High	0	1
+CP0001662	Bima Gunawan	Individual	Bima Gunawan	1985-01-01	1900-01-01	141 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774052523313	Logistics	Low	1	0
+CP0001663	Intan Halim	Individual	Intan Halim	1985-01-01	1900-01-01	416 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	773092629253	Construction	Low	1	0
+CP0001664	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	446 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	776575600360	Construction	Low	1	0
+CP0001665	Arif Setiawan	Individual	Arif Setiawan	1985-01-01	1900-01-01	153 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	771702412487	Retail	Medium	1	0
+CP0001666	Bagus Suryadi	Individual	Bagus Suryadi	1985-01-01	1900-01-01	53 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774375973262	Healthcare	Low	1	0
+CP0001667	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	786 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776931151135	Construction	Medium	1	0
+CP0001668	PT Hartono Synthetic	Company	Nadia Hartono	1900-01-01	2018-01-01	341 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770335246451	Construction	Low	0	1
+CP0001669	Anisa Mahendra	Individual	Anisa Mahendra	1985-01-01	1900-01-01	554 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776056026683	Manufacturing	Low	1	0
+CP0001670	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	349 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770182475897	Healthcare	Medium	1	0
+CP0001671	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	813 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774489969206	Retail	Low	1	0
+CP0001672	PT Chandra Synthetic	Company	Eka Chandra	1900-01-01	2018-01-01	722 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	771813995179	Technology	Low	0	1
+CP0001673	Kevin Lesmana	Individual	Kevin Lesmana	1985-01-01	1900-01-01	658 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770961970529	Retail	Medium	1	0
+CP0001674	Rizky Suryadi	Individual	Rizky Suryadi	1985-01-01	1900-01-01	854 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770501349792	Healthcare	Medium	1	0
+CP0001675	Rani Mahendra	Individual	Rani Mahendra	1985-01-01	1900-01-01	234 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771335208862	Retail	Medium	1	0
+CP0001676	Naufal Putra	Individual	Naufal Putra	1985-01-01	1900-01-01	783 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	771891670441	Construction	Low	1	0
+CP0001677	PT Yulianto Synthetic	Company	Dewi Yulianto	1900-01-01	2018-01-01	241 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	772097778823	Construction	Medium	0	1
+CP0001678	Farah Darmawan	Individual	Farah Darmawan	1985-01-01	1900-01-01	716 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778538436433	Logistics	Low	1	0
+CP0001761	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	679 Synthetic Avenue	Surabaya	US	US	Bank Sentra	777336847816	Retail	Low	1	0
+CP0001679	Bima Wijaya	Individual	Bima Wijaya	1985-01-01	1900-01-01	822 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774960431633	Construction	Medium	1	0
+CP0001680	Raka Santoso	Individual	Raka Santoso	1985-01-01	1900-01-01	601 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	772557146897	Construction	Medium	1	0
+CP0001681	PT Mahendra Synthetic	Company	Alya Mahendra	1900-01-01	2018-01-01	28 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773946973185	Healthcare	Medium	0	1
+CP0001682	PT Gunawan Synthetic	Company	Laras Gunawan	1900-01-01	2018-01-01	202 Synthetic Avenue	Surabaya	GB	GB	Bank Nusantara	774985303744	Manufacturing	Low	0	1
+CP0001683	PT Putra Synthetic	Company	Raka Putra	1900-01-01	2018-01-01	371 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772576951461	Retail	Low	0	1
+CP0001684	Farah Setiawan	Individual	Farah Setiawan	1985-01-01	1900-01-01	710 Synthetic Avenue	Denpasar	JP	JP	Bank Sentra	776013023026	Technology	Low	1	0
+CP0001685	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	361 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776086036946	Healthcare	Low	1	0
+CP0001686	PT Halim Synthetic	Company	Nadia Halim	1900-01-01	2018-01-01	525 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	771743869962	Manufacturing	Low	0	1
+CP0001687	PT Putra Synthetic	Company	Raka Putra	1900-01-01	2018-01-01	167 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777588641068	Retail	Low	0	1
+CP0001688	PT Permana Synthetic	Company	Rani Permana	1900-01-01	2018-01-01	441 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	773789994852	Retail	High	0	1
+CP0001689	Sari Halim	Individual	Sari Halim	1985-01-01	1900-01-01	522 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776069416883	Construction	High	1	0
+CP0001690	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	421 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	773256123938	Technology	Low	1	0
+CP0001691	Nadia Budiman	Individual	Nadia Budiman	1985-01-01	1900-01-01	258 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	770710348817	Construction	Low	1	0
+CP0001692	Intan Firmansyah	Individual	Intan Firmansyah	1985-01-01	1900-01-01	592 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777299812826	Retail	Low	1	0
+CP0001693	Putri Permana	Individual	Putri Permana	1985-01-01	1900-01-01	457 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	770270980662	Construction	Low	1	0
+CP0001694	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	136 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	775462479615	Healthcare	Low	1	0
+CP0001695	PT Hartono Synthetic	Company	Joko Hartono	1900-01-01	2018-01-01	560 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770638542106	Manufacturing	Low	0	1
+CP0001696	Eka Nugraha	Individual	Eka Nugraha	1985-01-01	1900-01-01	23 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773194607786	Retail	Low	1	0
+CP0001697	Arif Yulianto	Individual	Arif Yulianto	1985-01-01	1900-01-01	301 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779461134482	Construction	Medium	1	0
+CP0001698	Anisa Darmawan	Individual	Anisa Darmawan	1985-01-01	1900-01-01	389 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779662639645	Healthcare	Low	1	0
+CP0001699	PT Siregar Synthetic	Company	Bima Siregar	1900-01-01	2018-01-01	542 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776798838072	Manufacturing	Low	0	1
+CP0001700	PT Yulianto Synthetic	Company	Rani Yulianto	1900-01-01	2018-01-01	700 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	772642429667	Technology	Low	0	1
+CP0001701	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	659 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773972861499	Retail	High	1	0
+CP0001702	Dimas Wijaya	Individual	Dimas Wijaya	1985-01-01	1900-01-01	813 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	779982700148	Technology	Low	1	0
+CP0001703	PT Siregar Synthetic	Company	Raka Siregar	1900-01-01	2018-01-01	699 Synthetic Avenue	Makassar	AU	AU	Asia Commerce Bank	777401675625	Healthcare	Medium	0	1
+CP0001704	PT Firmansyah Synthetic	Company	Naufal Firmansyah	1900-01-01	2018-01-01	371 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777810452254	Healthcare	Medium	0	1
+CP0001705	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	31 Synthetic Avenue	Medan	GB	GB	Bank Sentra	770865849861	Retail	Low	1	0
+CP0001706	PT Nugraha Synthetic	Company	Adit Nugraha	1900-01-01	2018-01-01	634 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774329725115	Construction	High	0	1
+CP0001707	Indra Santoso	Individual	Indra Santoso	1985-01-01	1900-01-01	785 Synthetic Avenue	Makassar	US	US	Bank Sentra	775986443792	Healthcare	Low	1	0
+CP0001708	PT Putra Synthetic	Company	Bima Putra	1900-01-01	2018-01-01	259 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	772195317623	Manufacturing	Medium	0	1
+CP0001709	PT Iskandar Synthetic	Company	Adit Iskandar	1900-01-01	2018-01-01	542 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778804800577	Manufacturing	Low	0	1
+CP0001710	PT Budiman Synthetic	Company	Gita Budiman	1900-01-01	2018-01-01	891 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779455077291	Retail	Low	0	1
+CP0001711	PT Wijaya Synthetic	Company	Gita Wijaya	1900-01-01	2018-01-01	851 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776458301271	Logistics	Medium	0	1
+CP0001712	Bagus Chandra	Individual	Bagus Chandra	1985-01-01	1900-01-01	420 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	771039751918	Manufacturing	Low	1	0
+CP0001713	PT Hartono Synthetic	Company	Indra Hartono	1900-01-01	2018-01-01	424 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774879146769	Construction	Low	0	1
+CP0001714	Maya Suryadi	Individual	Maya Suryadi	1985-01-01	1900-01-01	768 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	777870715343	Retail	Medium	1	0
+CP0001715	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	505 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771605269558	Construction	High	1	0
+CP0001716	Bagus Prakoso	Individual	Bagus Prakoso	1985-01-01	1900-01-01	642 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777847447425	Technology	Medium	1	0
+CP0001717	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	779 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778025702142	Logistics	Medium	1	0
+CP0001718	Adit Rahardjo	Individual	Adit Rahardjo	1985-01-01	1900-01-01	580 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770883129389	Retail	Low	1	0
+CP0001719	Wulan Mahendra	Individual	Wulan Mahendra	1985-01-01	1900-01-01	536 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777665818504	Healthcare	Low	1	0
+CP0001720	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	597 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	771307515238	Manufacturing	Low	1	0
+CP0001721	Eka Kurniawan	Individual	Eka Kurniawan	1985-01-01	1900-01-01	417 Synthetic Avenue	Makassar	JP	JP	Bank Sentra	778715498567	Retail	Medium	1	0
+CP0001722	Andi Wibowo	Individual	Andi Wibowo	1985-01-01	1900-01-01	399 Synthetic Avenue	Medan	AE	AE	Bank Sentra	778858141223	Healthcare	Low	1	0
+CP0001723	Fajar Chandra	Individual	Fajar Chandra	1985-01-01	1900-01-01	140 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	773065829259	Manufacturing	High	1	0
+CP0001724	Andi Halim	Individual	Andi Halim	1985-01-01	1900-01-01	773 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	779681485429	Retail	Medium	1	0
+CP0001725	Farah Firmansyah	Individual	Farah Firmansyah	1985-01-01	1900-01-01	480 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772251464071	Manufacturing	Medium	1	0
+CP0001726	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	77 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773405451566	Construction	Medium	1	0
+CP0001727	Bima Firmansyah	Individual	Bima Firmansyah	1985-01-01	1900-01-01	550 Synthetic Avenue	Medan	US	US	Bank Nusantara	772950778468	Construction	Low	1	0
+CP0001728	PT Kurniawan Synthetic	Company	Putri Kurniawan	1900-01-01	2018-01-01	642 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770566221202	Healthcare	Low	0	1
+CP0001729	PT Adinata Synthetic	Company	Farah Adinata	1900-01-01	2018-01-01	508 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776589465308	Manufacturing	Low	0	1
+CP0001730	PT Halim Synthetic	Company	Naufal Halim	1900-01-01	2018-01-01	830 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770616545426	Technology	Medium	0	1
+CP0001731	PT Wibowo Synthetic	Company	Dimas Wibowo	1900-01-01	2018-01-01	41 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	773862403394	Manufacturing	Medium	0	1
+CP0001732	PT Suryadi Synthetic	Company	Teguh Suryadi	1900-01-01	2018-01-01	233 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775294293534	Manufacturing	Medium	0	1
+CP0001733	PT Adinata Synthetic	Company	Putri Adinata	1900-01-01	2018-01-01	707 Synthetic Avenue	Medan	AE	AE	Bank Sentra	773934002930	Manufacturing	Low	0	1
+CP0001734	PT Putra Synthetic	Company	Hana Putra	1900-01-01	2018-01-01	365 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772933232803	Logistics	Medium	0	1
+CP0001735	Anisa Hartono	Individual	Anisa Hartono	1985-01-01	1900-01-01	85 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	772230659722	Manufacturing	Medium	1	0
+CP0001736	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	704 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775106778104	Technology	Low	1	0
+CP0001737	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	160 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779076690257	Manufacturing	Low	1	0
+CP0001738	Anisa Adinata	Individual	Anisa Adinata	1985-01-01	1900-01-01	236 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776293650608	Manufacturing	High	1	0
+CP0001739	Joko Kurniawan	Individual	Joko Kurniawan	1985-01-01	1900-01-01	34 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778626825117	Technology	Low	1	0
+CP0001740	Laras Kurniawan	Individual	Laras Kurniawan	1985-01-01	1900-01-01	17 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777380217363	Retail	Medium	1	0
+CP0001741	Bima Adinata	Individual	Bima Adinata	1985-01-01	1900-01-01	352 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770129717246	Manufacturing	Low	1	0
+CP0001742	PT Iskandar Synthetic	Company	Naufal Iskandar	1900-01-01	2018-01-01	830 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772470611023	Logistics	Low	0	1
+CP0001743	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	556 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777746301719	Construction	Medium	1	0
+CP0001744	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	776 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776265481188	Healthcare	Low	1	0
+CP0001745	Joko Putra	Individual	Joko Putra	1985-01-01	1900-01-01	595 Synthetic Avenue	Yogyakarta	JP	JP	Bank Sentra	770020926135	Healthcare	Low	1	0
+CP0001746	PT Adinata Synthetic	Company	Joko Adinata	1900-01-01	2018-01-01	876 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	777504741074	Retail	Low	0	1
+CP0001747	PT Prakoso Synthetic	Company	Citra Prakoso	1900-01-01	2018-01-01	493 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777940456219	Healthcare	Low	0	1
+CP0001748	Naufal Firmansyah	Individual	Naufal Firmansyah	1985-01-01	1900-01-01	533 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	776568485713	Construction	Low	1	0
+CP0001749	Andi Firmansyah	Individual	Andi Firmansyah	1985-01-01	1900-01-01	219 Synthetic Avenue	Medan	GB	GB	Bank Nusantara	776595111384	Manufacturing	Low	1	0
+CP0001750	Adit Kurniawan	Individual	Adit Kurniawan	1985-01-01	1900-01-01	582 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775173322086	Technology	Low	1	0
+CP0001751	Laras Hartono	Individual	Laras Hartono	1985-01-01	1900-01-01	315 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	779163005630	Construction	Medium	1	0
+CP0001752	PT Iskandar Synthetic	Company	Andi Iskandar	1900-01-01	2018-01-01	392 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779569456644	Technology	Low	0	1
+CP0001753	PT Setiawan Synthetic	Company	Indra Setiawan	1900-01-01	2018-01-01	366 Synthetic Avenue	Makassar	JP	JP	Bank Nusantara	773513203668	Healthcare	Low	0	1
+CP0001754	PT Hartono Synthetic	Company	Laras Hartono	1900-01-01	2018-01-01	202 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771656821171	Construction	Low	0	1
+CP0001755	Intan Permana	Individual	Intan Permana	1985-01-01	1900-01-01	502 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771805406542	Technology	Low	1	0
+CP0001756	PT Kurniawan Synthetic	Company	Citra Kurniawan	1900-01-01	2018-01-01	138 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779800890564	Retail	Low	0	1
+CP0001757	Sari Wijaya	Individual	Sari Wijaya	1985-01-01	1900-01-01	514 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	778007512153	Manufacturing	Medium	1	0
+CP0001758	Gita Putra	Individual	Gita Putra	1985-01-01	1900-01-01	122 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774787371727	Manufacturing	Medium	1	0
+CP0001759	Alya Lesmana	Individual	Alya Lesmana	1985-01-01	1900-01-01	47 Synthetic Avenue	Medan	SG	SG	Bank Sentra	772742652913	Manufacturing	Medium	1	0
+CP0001760	Rani Lesmana	Individual	Rani Lesmana	1985-01-01	1900-01-01	505 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775435510435	Retail	Low	1	0
+CP0001762	Arif Rahardjo	Individual	Arif Rahardjo	1985-01-01	1900-01-01	541 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774934891856	Technology	Medium	1	0
+CP0001763	PT Budiman Synthetic	Company	Arif Budiman	1900-01-01	2018-01-01	413 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	772522803974	Logistics	Low	0	1
+CP0001764	Laras Nugraha	Individual	Laras Nugraha	1985-01-01	1900-01-01	766 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	778004531180	Manufacturing	Low	1	0
+CP0001765	Sari Halim	Individual	Sari Halim	1985-01-01	1900-01-01	349 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777935961149	Retail	Low	1	0
+CP0001766	PT Wijaya Synthetic	Company	Alya Wijaya	1900-01-01	2018-01-01	240 Synthetic Avenue	Surabaya	GB	GB	Bank Nusantara	772946923566	Manufacturing	High	0	1
+CP0001767	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	650 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771157564442	Manufacturing	High	1	0
+CP0001768	Putri Kurniawan	Individual	Putri Kurniawan	1985-01-01	1900-01-01	623 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775634775483	Logistics	Low	1	0
+CP0001769	Naufal Gunawan	Individual	Naufal Gunawan	1985-01-01	1900-01-01	4 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777801916476	Retail	Low	1	0
+CP0001770	Bima Halim	Individual	Bima Halim	1985-01-01	1900-01-01	463 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	777524533484	Retail	Low	1	0
+CP0001771	Indra Darmawan	Individual	Indra Darmawan	1985-01-01	1900-01-01	730 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	777713440171	Manufacturing	Low	1	0
+CP0001772	Putri Adinata	Individual	Putri Adinata	1985-01-01	1900-01-01	492 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	779891802276	Manufacturing	Low	1	0
+CP0001773	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	77 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772675152722	Retail	Low	1	0
+CP0001774	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	593 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770922512683	Retail	High	1	0
+CP0001775	Bagus Rahardjo	Individual	Bagus Rahardjo	1985-01-01	1900-01-01	340 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776930915377	Logistics	High	1	0
+CP0001776	PT Wijaya Synthetic	Company	Dimas Wijaya	1900-01-01	2018-01-01	897 Synthetic Avenue	Bandung	US	US	Bank Nusantara	778968699168	Manufacturing	Medium	0	1
+CP0001777	PT Yulianto Synthetic	Company	Indra Yulianto	1900-01-01	2018-01-01	798 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	778489501184	Manufacturing	Low	0	1
+CP0001778	PT Siregar Synthetic	Company	Dewi Siregar	1900-01-01	2018-01-01	113 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	772299546508	Manufacturing	Medium	0	1
+CP0001779	Wulan Wibowo	Individual	Wulan Wibowo	1985-01-01	1900-01-01	608 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	772956614217	Healthcare	Low	1	0
+CP0001780	Maya Santoso	Individual	Maya Santoso	1985-01-01	1900-01-01	299 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778414032297	Healthcare	Low	1	0
+CP0001781	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	740 Synthetic Avenue	Denpasar	GB	GB	Asia Commerce Bank	770701774629	Construction	Medium	1	0
+CP0001782	PT Darmawan Synthetic	Company	Arif Darmawan	1900-01-01	2018-01-01	35 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	772873782355	Construction	Low	0	1
+CP0001783	Rizky Suryadi	Individual	Rizky Suryadi	1985-01-01	1900-01-01	288 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771850509330	Healthcare	Low	1	0
+CP0001784	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	750 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777092552488	Technology	Medium	1	0
+CP0001785	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	499 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775652112917	Construction	Low	1	0
+CP0001786	Putri Firmansyah	Individual	Putri Firmansyah	1985-01-01	1900-01-01	887 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	779123765762	Construction	Medium	1	0
+CP0001787	Anisa Firmansyah	Individual	Anisa Firmansyah	1985-01-01	1900-01-01	276 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	771826025398	Healthcare	Low	1	0
+CP0001788	Hana Mahendra	Individual	Hana Mahendra	1985-01-01	1900-01-01	132 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774072514425	Retail	Low	1	0
+CP0001789	PT Rahardjo Synthetic	Company	Gita Rahardjo	1900-01-01	2018-01-01	473 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774524534064	Retail	Low	0	1
+CP0001790	Naufal Setiawan	Individual	Naufal Setiawan	1985-01-01	1900-01-01	235 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776681295689	Logistics	Medium	1	0
+CP0001791	PT Nugraha Synthetic	Company	Naufal Nugraha	1900-01-01	2018-01-01	796 Synthetic Avenue	Yogyakarta	JP	JP	Bank Sentra	779047430523	Healthcare	Low	0	1
+CP0001792	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	897 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	779613992631	Retail	Low	1	0
+CP0001793	PT Siregar Synthetic	Company	Dimas Siregar	1900-01-01	2018-01-01	584 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	770581126121	Retail	Medium	0	1
+CP0001794	Teguh Setiawan	Individual	Teguh Setiawan	1985-01-01	1900-01-01	731 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771467099010	Technology	Medium	1	0
+CP0001795	Kevin Suryadi	Individual	Kevin Suryadi	1985-01-01	1900-01-01	606 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770046053422	Retail	Low	1	0
+CP0001796	Rizky Iskandar	Individual	Rizky Iskandar	1985-01-01	1900-01-01	275 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772676961147	Healthcare	Medium	1	0
+CP0001797	Anisa Halim	Individual	Anisa Halim	1985-01-01	1900-01-01	527 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776879210504	Retail	Low	1	0
+CP0001798	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	257 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770863982336	Healthcare	Low	1	0
+CP0001799	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	761 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	778202464440	Retail	Low	1	0
+CP0001800	PT Santoso Synthetic	Company	Teguh Santoso	1900-01-01	2018-01-01	535 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774570815483	Healthcare	Low	0	1
+CP0001801	Indra Rahardjo	Individual	Indra Rahardjo	1985-01-01	1900-01-01	135 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778075434202	Technology	Low	1	0
+CP0001802	Alya Darmawan	Individual	Alya Darmawan	1985-01-01	1900-01-01	496 Synthetic Avenue	Bandung	AU	AU	Bank Nusantara	776714313820	Manufacturing	Low	1	0
+CP0001803	Intan Halim	Individual	Intan Halim	1985-01-01	1900-01-01	620 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775471755773	Manufacturing	Medium	1	0
+CP0001804	Anisa Hartono	Individual	Anisa Hartono	1985-01-01	1900-01-01	550 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772327219382	Healthcare	Low	1	0
+CP0001805	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	843 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	775753793354	Healthcare	Low	1	0
+CP0001806	PT Darmawan Synthetic	Company	Raka Darmawan	1900-01-01	2018-01-01	740 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770304554726	Retail	Low	0	1
+CP0001807	Indra Lesmana	Individual	Indra Lesmana	1985-01-01	1900-01-01	582 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	770170825071	Logistics	Low	1	0
+CP0001808	PT Firmansyah Synthetic	Company	Rani Firmansyah	1900-01-01	2018-01-01	811 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774225133298	Construction	Medium	0	1
+CP0001809	Andi Lesmana	Individual	Andi Lesmana	1985-01-01	1900-01-01	443 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	775772471170	Healthcare	Low	1	0
+CP0001810	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	262 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	773922710646	Manufacturing	High	1	0
+CP0001811	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	265 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771666084110	Construction	Low	1	0
+CP0001812	Adit Yulianto	Individual	Adit Yulianto	1985-01-01	1900-01-01	310 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	777471251816	Technology	Low	1	0
+CP0001813	Kevin Suryadi	Individual	Kevin Suryadi	1985-01-01	1900-01-01	612 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770730509513	Retail	Low	1	0
+CP0001814	Intan Suryadi	Individual	Intan Suryadi	1985-01-01	1900-01-01	487 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772794554177	Retail	Low	1	0
+CP0001815	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	300 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779735114469	Retail	Low	1	0
+CP0001816	Gita Wijaya	Individual	Gita Wijaya	1985-01-01	1900-01-01	758 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	772003256292	Retail	Low	1	0
+CP0001817	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	63 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	774550279159	Healthcare	Medium	1	0
+CP0001818	Arif Budiman	Individual	Arif Budiman	1985-01-01	1900-01-01	619 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	775551958200	Construction	High	1	0
+CP0001819	Bagus Suryadi	Individual	Bagus Suryadi	1985-01-01	1900-01-01	51 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779694441188	Retail	Low	1	0
+CP0001820	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	755 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774326834159	Technology	Low	1	0
+CP0001821	PT Suryadi Synthetic	Company	Laras Suryadi	1900-01-01	2018-01-01	264 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778425776678	Technology	Low	0	1
+CP0001822	PT Darmawan Synthetic	Company	Anisa Darmawan	1900-01-01	2018-01-01	381 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	779306542823	Logistics	Low	0	1
+CP0001823	Naufal Iskandar	Individual	Naufal Iskandar	1985-01-01	1900-01-01	412 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775321510309	Logistics	Low	1	0
+CP0001824	PT Hartono Synthetic	Company	Maya Hartono	1900-01-01	2018-01-01	81 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773940913098	Construction	Low	0	1
+CP0001825	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	112 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776377670438	Healthcare	Medium	1	0
+CP0001826	Hana Hartono	Individual	Hana Hartono	1985-01-01	1900-01-01	74 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779936681321	Manufacturing	Medium	1	0
+CP0001827	Sari Suryadi	Individual	Sari Suryadi	1985-01-01	1900-01-01	147 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	772098802609	Manufacturing	High	1	0
+CP0001828	Laras Hartono	Individual	Laras Hartono	1985-01-01	1900-01-01	286 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771901803166	Logistics	High	1	0
+CP0001829	Nadia Yulianto	Individual	Nadia Yulianto	1985-01-01	1900-01-01	687 Synthetic Avenue	Surabaya	JP	JP	Bank Sentra	774023254599	Healthcare	Medium	1	0
+CP0001830	Hana Halim	Individual	Hana Halim	1985-01-01	1900-01-01	177 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	772897555181	Construction	Low	1	0
+CP0001831	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	582 Synthetic Avenue	Bandung	GB	GB	Asia Commerce Bank	770175133063	Logistics	Medium	1	0
+CP0001832	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	199 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775225073280	Logistics	Low	1	0
+CP0001833	PT Wibowo Synthetic	Company	Bagus Wibowo	1900-01-01	2018-01-01	489 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779471447198	Manufacturing	Low	0	1
+CP0001834	PT Lesmana Synthetic	Company	Wulan Lesmana	1900-01-01	2018-01-01	811 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777044001854	Healthcare	Medium	0	1
+CP0001835	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	338 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773447687826	Technology	Low	1	0
+CP0001836	Sari Mahendra	Individual	Sari Mahendra	1985-01-01	1900-01-01	886 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775965401699	Manufacturing	High	1	0
+CP0001837	PT Putra Synthetic	Company	Eka Putra	1900-01-01	2018-01-01	41 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777923392019	Construction	Low	0	1
+CP0001838	Kevin Hartono	Individual	Kevin Hartono	1985-01-01	1900-01-01	505 Synthetic Avenue	Jakarta	GB	GB	Asia Commerce Bank	775803032079	Construction	Low	1	0
+CP0001839	Citra Santoso	Individual	Citra Santoso	1985-01-01	1900-01-01	593 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770323442081	Manufacturing	Low	1	0
+CP0001840	PT Firmansyah Synthetic	Company	Bagus Firmansyah	1900-01-01	2018-01-01	181 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771423582015	Logistics	Medium	0	1
+CP0001841	Gita Adinata	Individual	Gita Adinata	1985-01-01	1900-01-01	659 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775060170226	Manufacturing	Medium	1	0
+CP0001842	PT Budiman Synthetic	Company	Intan Budiman	1900-01-01	2018-01-01	871 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776658136656	Technology	Low	0	1
+CP0001843	Rani Wibowo	Individual	Rani Wibowo	1985-01-01	1900-01-01	430 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	778315657318	Technology	Low	1	0
+CP0001844	Adit Lesmana	Individual	Adit Lesmana	1985-01-01	1900-01-01	97 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773043407694	Healthcare	Low	1	0
+CP0001845	PT Santoso Synthetic	Company	Naufal Santoso	1900-01-01	2018-01-01	428 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	778174136562	Healthcare	Low	0	1
+CP0001846	PT Wijaya Synthetic	Company	Bima Wijaya	1900-01-01	2018-01-01	408 Synthetic Avenue	Makassar	GB	GB	Asia Commerce Bank	772413195182	Technology	Low	0	1
+CP0001847	Arif Budiman	Individual	Arif Budiman	1985-01-01	1900-01-01	813 Synthetic Avenue	Denpasar	GB	GB	Asia Commerce Bank	778633050943	Healthcare	Low	1	0
+CP0001848	Kevin Lesmana	Individual	Kevin Lesmana	1985-01-01	1900-01-01	683 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	770835930312	Manufacturing	High	1	0
+CP0001849	Wulan Prakoso	Individual	Wulan Prakoso	1985-01-01	1900-01-01	694 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	770887205721	Technology	Low	1	0
+CP0001850	PT Iskandar Synthetic	Company	Dimas Iskandar	1900-01-01	2018-01-01	204 Synthetic Avenue	Denpasar	GB	GB	Asia Commerce Bank	772477953411	Technology	Medium	0	1
+CP0001851	Eka Rahardjo	Individual	Eka Rahardjo	1985-01-01	1900-01-01	157 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774295595779	Manufacturing	Low	1	0
+CP0001852	Naufal Lesmana	Individual	Naufal Lesmana	1985-01-01	1900-01-01	91 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779118742897	Manufacturing	Low	1	0
+CP0001853	PT Adinata Synthetic	Company	Dimas Adinata	1900-01-01	2018-01-01	569 Synthetic Avenue	Jakarta	GB	GB	Asia Commerce Bank	773909045960	Technology	Medium	0	1
+CP0001854	Rizky Halim	Individual	Rizky Halim	1985-01-01	1900-01-01	347 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774338704202	Construction	Low	1	0
+CP0001855	PT Prakoso Synthetic	Company	Andi Prakoso	1900-01-01	2018-01-01	879 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	772614338285	Retail	Low	0	1
+CP0001856	PT Kurniawan Synthetic	Company	Alya Kurniawan	1900-01-01	2018-01-01	892 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772515101807	Construction	High	0	1
+CP0001857	Teguh Chandra	Individual	Teguh Chandra	1985-01-01	1900-01-01	846 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771509757134	Retail	Low	1	0
+CP0001858	Gita Wijaya	Individual	Gita Wijaya	1985-01-01	1900-01-01	158 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777533374670	Healthcare	Low	1	0
+CP0001859	PT Permana Synthetic	Company	Raka Permana	1900-01-01	2018-01-01	623 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777625679935	Retail	Low	0	1
+CP0001860	PT Chandra Synthetic	Company	Joko Chandra	1900-01-01	2018-01-01	765 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	770034131716	Logistics	Medium	0	1
+CP0001861	PT Yulianto Synthetic	Company	Farah Yulianto	1900-01-01	2018-01-01	535 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775159708425	Logistics	Low	0	1
+CP0001862	Anisa Chandra	Individual	Anisa Chandra	1985-01-01	1900-01-01	853 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	778626025169	Logistics	Medium	1	0
+CP0001863	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	725 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775916539755	Technology	Low	1	0
+CP0001864	Kevin Adinata	Individual	Kevin Adinata	1985-01-01	1900-01-01	424 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	772076643237	Logistics	Medium	1	0
+CP0001865	Wulan Gunawan	Individual	Wulan Gunawan	1985-01-01	1900-01-01	423 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774468043243	Healthcare	High	1	0
+CP0001866	Putri Darmawan	Individual	Putri Darmawan	1985-01-01	1900-01-01	701 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774024964360	Construction	Low	1	0
+CP0001867	PT Siregar Synthetic	Company	Maya Siregar	1900-01-01	2018-01-01	195 Synthetic Avenue	Medan	MY	MY	Bank Sentra	779031088327	Retail	Low	0	1
+CP0001868	PT Wibowo Synthetic	Company	Hana Wibowo	1900-01-01	2018-01-01	790 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	772508144854	Logistics	Low	0	1
+CP0001869	Dewi Putra	Individual	Dewi Putra	1985-01-01	1900-01-01	278 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	771239197628	Manufacturing	Low	1	0
+CP0001870	Maya Firmansyah	Individual	Maya Firmansyah	1985-01-01	1900-01-01	341 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773990338219	Manufacturing	Low	1	0
+CP0001871	PT Adinata Synthetic	Company	Anisa Adinata	1900-01-01	2018-01-01	746 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778147266410	Construction	Low	0	1
+CP0001872	Kevin Darmawan	Individual	Kevin Darmawan	1985-01-01	1900-01-01	893 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778822252901	Technology	High	1	0
+CP0001873	Putri Putra	Individual	Putri Putra	1985-01-01	1900-01-01	213 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	778177821421	Retail	Low	1	0
+CP0001874	Fajar Santoso	Individual	Fajar Santoso	1985-01-01	1900-01-01	873 Synthetic Avenue	Bandung	US	US	Bank Nusantara	776978073818	Construction	Low	1	0
+CP0001875	Anisa Kurniawan	Individual	Anisa Kurniawan	1985-01-01	1900-01-01	214 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	774570333911	Technology	Low	1	0
+CP0001876	Gita Iskandar	Individual	Gita Iskandar	1985-01-01	1900-01-01	620 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775682098378	Retail	Low	1	0
+CP0001877	PT Iskandar Synthetic	Company	Hana Iskandar	1900-01-01	2018-01-01	896 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776009330468	Logistics	Low	0	1
+CP0001878	Naufal Prakoso	Individual	Naufal Prakoso	1985-01-01	1900-01-01	9 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	778223244830	Technology	Low	1	0
+CP0001879	Teguh Gunawan	Individual	Teguh Gunawan	1985-01-01	1900-01-01	880 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770054352431	Retail	Low	1	0
+CP0001880	Andi Permana	Individual	Andi Permana	1985-01-01	1900-01-01	441 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779415463521	Manufacturing	Low	1	0
+CP0001881	Sari Nugraha	Individual	Sari Nugraha	1985-01-01	1900-01-01	389 Synthetic Avenue	Denpasar	US	US	Asia Commerce Bank	775569770504	Manufacturing	Medium	1	0
+CP0001882	Rizky Wibowo	Individual	Rizky Wibowo	1985-01-01	1900-01-01	641 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779050730164	Logistics	Low	1	0
+CP0001883	Farah Siregar	Individual	Farah Siregar	1985-01-01	1900-01-01	671 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775623318936	Retail	Medium	1	0
+CP0001924	Naufal Siregar	Individual	Naufal Siregar	1985-01-01	1900-01-01	452 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	779486247093	Retail	Low	1	0
+CP0001884	Teguh Prakoso	Individual	Teguh Prakoso	1985-01-01	1900-01-01	783 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	775458074690	Healthcare	Medium	1	0
+CP0001885	Naufal Lesmana	Individual	Naufal Lesmana	1985-01-01	1900-01-01	150 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	776375740925	Construction	Low	1	0
+CP0001886	PT Wijaya Synthetic	Company	Bima Wijaya	1900-01-01	2018-01-01	517 Synthetic Avenue	Denpasar	JP	JP	Bank Sentra	773645607640	Retail	Low	0	1
+CP0001887	Rizky Gunawan	Individual	Rizky Gunawan	1985-01-01	1900-01-01	40 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774011415597	Manufacturing	Low	1	0
+CP0001888	Adit Permana	Individual	Adit Permana	1985-01-01	1900-01-01	894 Synthetic Avenue	Medan	US	US	Bank Sentra	771054046836	Logistics	Low	1	0
+CP0001889	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	337 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	779329253962	Manufacturing	Medium	1	0
+CP0001890	Dimas Kurniawan	Individual	Dimas Kurniawan	1985-01-01	1900-01-01	6 Synthetic Avenue	Surabaya	JP	JP	Asia Commerce Bank	775066421191	Construction	Medium	1	0
+CP0001891	PT Chandra Synthetic	Company	Nadia Chandra	1900-01-01	2018-01-01	830 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771977245701	Logistics	Low	0	1
+CP0001892	Bima Putra	Individual	Bima Putra	1985-01-01	1900-01-01	170 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772196353172	Retail	Medium	1	0
+CP0001893	PT Hartono Synthetic	Company	Adit Hartono	1900-01-01	2018-01-01	220 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776406733753	Construction	Medium	0	1
+CP0001894	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	20 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770468551566	Healthcare	Low	1	0
+CP0001895	Rizky Chandra	Individual	Rizky Chandra	1985-01-01	1900-01-01	406 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773911080642	Retail	Medium	1	0
+CP0001896	PT Kurniawan Synthetic	Company	Nadia Kurniawan	1900-01-01	2018-01-01	752 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770755927775	Retail	Low	0	1
+CP0001897	Dewi Darmawan	Individual	Dewi Darmawan	1985-01-01	1900-01-01	254 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772785173289	Retail	Low	1	0
+CP0001898	Citra Santoso	Individual	Citra Santoso	1985-01-01	1900-01-01	332 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779202742590	Construction	High	1	0
+CP0001899	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	75 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	773049550996	Logistics	Medium	1	0
+CP0001900	Intan Setiawan	Individual	Intan Setiawan	1985-01-01	1900-01-01	699 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770908470960	Construction	High	1	0
+CP0001901	PT Budiman Synthetic	Company	Wulan Budiman	1900-01-01	2018-01-01	54 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	775630592432	Logistics	Low	0	1
+CP0001902	PT Siregar Synthetic	Company	Maya Siregar	1900-01-01	2018-01-01	144 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779973987658	Retail	Medium	0	1
+CP0001903	PT Mahendra Synthetic	Company	Rizky Mahendra	1900-01-01	2018-01-01	71 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771523471064	Healthcare	Medium	0	1
+CP0001904	PT Nugraha Synthetic	Company	Gita Nugraha	1900-01-01	2018-01-01	450 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772866370508	Manufacturing	Medium	0	1
+CP0001905	Eka Lesmana	Individual	Eka Lesmana	1985-01-01	1900-01-01	258 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773611268621	Manufacturing	Low	1	0
+CP0001906	Anisa Santoso	Individual	Anisa Santoso	1985-01-01	1900-01-01	224 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778342614859	Manufacturing	Medium	1	0
+CP0001907	Andi Chandra	Individual	Andi Chandra	1985-01-01	1900-01-01	163 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	777378806614	Healthcare	Low	1	0
+CP0001908	Fajar Gunawan	Individual	Fajar Gunawan	1985-01-01	1900-01-01	797 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774562430670	Manufacturing	Medium	1	0
+CP0001909	PT Firmansyah Synthetic	Company	Fajar Firmansyah	1900-01-01	2018-01-01	357 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771123999354	Retail	Low	0	1
+CP0001910	PT Mahendra Synthetic	Company	Naufal Mahendra	1900-01-01	2018-01-01	368 Synthetic Avenue	Jakarta	AU	AU	Bank Nusantara	772080663000	Manufacturing	Medium	0	1
+CP0001911	Rani Mahendra	Individual	Rani Mahendra	1985-01-01	1900-01-01	468 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775820383765	Manufacturing	Low	1	0
+CP0001912	PT Suryadi Synthetic	Company	Sari Suryadi	1900-01-01	2018-01-01	862 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774175709261	Retail	Low	0	1
+CP0001913	PT Wijaya Synthetic	Company	Eka Wijaya	1900-01-01	2018-01-01	139 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773929846699	Healthcare	Medium	0	1
+CP0001914	Eka Siregar	Individual	Eka Siregar	1985-01-01	1900-01-01	505 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	771920368247	Retail	Low	1	0
+CP0001915	PT Gunawan Synthetic	Company	Bagus Gunawan	1900-01-01	2018-01-01	481 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770274255076	Retail	Low	0	1
+CP0001916	PT Santoso Synthetic	Company	Arif Santoso	1900-01-01	2018-01-01	452 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770738901375	Retail	Low	0	1
+CP0001917	Eka Chandra	Individual	Eka Chandra	1985-01-01	1900-01-01	732 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777340521198	Technology	Medium	1	0
+CP0001918	Bima Lesmana	Individual	Bima Lesmana	1985-01-01	1900-01-01	899 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	770163229530	Construction	Low	1	0
+CP0001919	PT Adinata Synthetic	Company	Andi Adinata	1900-01-01	2018-01-01	824 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778642042158	Construction	Low	0	1
+CP0001920	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	320 Synthetic Avenue	Semarang	JP	JP	Asia Commerce Bank	772362770353	Healthcare	Low	1	0
+CP0001921	PT Adinata Synthetic	Company	Bagus Adinata	1900-01-01	2018-01-01	665 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	773643399978	Manufacturing	Low	0	1
+CP0001922	PT Halim Synthetic	Company	Citra Halim	1900-01-01	2018-01-01	339 Synthetic Avenue	Medan	MY	MY	Bank Sentra	778364063168	Manufacturing	Medium	0	1
+CP0001923	Dimas Siregar	Individual	Dimas Siregar	1985-01-01	1900-01-01	54 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778199228695	Logistics	Medium	1	0
+CP0001925	PT Santoso Synthetic	Company	Hana Santoso	1900-01-01	2018-01-01	27 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	778834619041	Healthcare	Low	0	1
+CP0001926	Bima Lesmana	Individual	Bima Lesmana	1985-01-01	1900-01-01	320 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778872842346	Retail	Low	1	0
+CP0001927	Alya Permana	Individual	Alya Permana	1985-01-01	1900-01-01	315 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	774652018511	Construction	Low	1	0
+CP0001928	PT Chandra Synthetic	Company	Dewi Chandra	1900-01-01	2018-01-01	442 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774423851942	Construction	Medium	0	1
+CP0001929	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	760 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771246901728	Technology	Low	1	0
+CP0001930	Gita Nugraha	Individual	Gita Nugraha	1985-01-01	1900-01-01	714 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773329401071	Construction	Medium	1	0
+CP0001931	PT Darmawan Synthetic	Company	Naufal Darmawan	1900-01-01	2018-01-01	522 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777817490023	Retail	Medium	0	1
+CP0001932	Rizky Suryadi	Individual	Rizky Suryadi	1985-01-01	1900-01-01	246 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778156361431	Healthcare	High	1	0
+CP0001933	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	683 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777036654902	Healthcare	Low	1	0
+CP0001934	Intan Halim	Individual	Intan Halim	1985-01-01	1900-01-01	660 Synthetic Avenue	Makassar	US	US	Bank Sentra	770843373357	Manufacturing	Low	1	0
+CP0001935	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	555 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775066620958	Healthcare	Medium	1	0
+CP0001936	Alya Chandra	Individual	Alya Chandra	1985-01-01	1900-01-01	506 Synthetic Avenue	Semarang	AE	AE	Bank Sentra	773179347888	Retail	Medium	1	0
+CP0001937	PT Hartono Synthetic	Company	Eka Hartono	1900-01-01	2018-01-01	217 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	775664732355	Logistics	Medium	0	1
+CP0001938	Bagus Kurniawan	Individual	Bagus Kurniawan	1985-01-01	1900-01-01	421 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776189046375	Technology	Medium	1	0
+CP0001939	Raka Mahendra	Individual	Raka Mahendra	1985-01-01	1900-01-01	586 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770297177113	Logistics	Low	1	0
+CP0001940	Maya Setiawan	Individual	Maya Setiawan	1985-01-01	1900-01-01	312 Synthetic Avenue	Bandung	GB	GB	Bank Sentra	775954849414	Logistics	Low	1	0
+CP0001941	Gita Nugraha	Individual	Gita Nugraha	1985-01-01	1900-01-01	270 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776600274697	Manufacturing	Low	1	0
+CP0001942	Rizky Gunawan	Individual	Rizky Gunawan	1985-01-01	1900-01-01	246 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773992894621	Retail	Medium	1	0
+CP0001943	Putri Nugraha	Individual	Putri Nugraha	1985-01-01	1900-01-01	389 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	771367857486	Healthcare	Low	1	0
+CP0001944	Bagus Setiawan	Individual	Bagus Setiawan	1985-01-01	1900-01-01	6 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	778687786967	Healthcare	Low	1	0
+CP0001945	Raka Darmawan	Individual	Raka Darmawan	1985-01-01	1900-01-01	782 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774277302042	Manufacturing	Medium	1	0
+CP0001946	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	627 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773969023699	Logistics	Low	1	0
+CP0001947	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	14 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776713034471	Logistics	Low	1	0
+CP0001948	PT Halim Synthetic	Company	Rizky Halim	1900-01-01	2018-01-01	665 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779622037147	Retail	Low	0	1
+CP0001949	Bagus Siregar	Individual	Bagus Siregar	1985-01-01	1900-01-01	810 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	777961223570	Construction	Medium	1	0
+CP0001950	PT Santoso Synthetic	Company	Maya Santoso	1900-01-01	2018-01-01	360 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	774922817032	Healthcare	Low	0	1
+CP0001951	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	505 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777878533335	Manufacturing	High	1	0
+CP0001952	Arif Yulianto	Individual	Arif Yulianto	1985-01-01	1900-01-01	273 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779198692835	Retail	Medium	1	0
+CP0001953	Andi Nugraha	Individual	Andi Nugraha	1985-01-01	1900-01-01	523 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779538873455	Construction	Low	1	0
+CP0001954	Rani Lesmana	Individual	Rani Lesmana	1985-01-01	1900-01-01	663 Synthetic Avenue	Bandung	US	US	Bank Sentra	770166589513	Technology	Low	1	0
+CP0001955	Wulan Darmawan	Individual	Wulan Darmawan	1985-01-01	1900-01-01	408 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771009807877	Technology	Medium	1	0
+CP0001956	PT Rahardjo Synthetic	Company	Joko Rahardjo	1900-01-01	2018-01-01	573 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	771231917608	Technology	Low	0	1
+CP0001957	PT Setiawan Synthetic	Company	Joko Setiawan	1900-01-01	2018-01-01	235 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	774847402138	Healthcare	Medium	0	1
+CP0001958	PT Hartono Synthetic	Company	Dewi Hartono	1900-01-01	2018-01-01	401 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776841957536	Retail	Low	0	1
+CP0001959	Naufal Suryadi	Individual	Naufal Suryadi	1985-01-01	1900-01-01	240 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	777304656983	Healthcare	Medium	1	0
+CP0001960	Dimas Setiawan	Individual	Dimas Setiawan	1985-01-01	1900-01-01	213 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771787199289	Technology	Medium	1	0
+CP0001961	PT Prakoso Synthetic	Company	Raka Prakoso	1900-01-01	2018-01-01	557 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	770166362652	Manufacturing	Low	0	1
+CP0001962	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	575 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774590311198	Manufacturing	Low	1	0
+CP0001963	PT Yulianto Synthetic	Company	Nadia Yulianto	1900-01-01	2018-01-01	82 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770009185685	Retail	Medium	0	1
+CP0001964	PT Nugraha Synthetic	Company	Gita Nugraha	1900-01-01	2018-01-01	92 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	775700690839	Logistics	High	0	1
+CP0001965	Dimas Setiawan	Individual	Dimas Setiawan	1985-01-01	1900-01-01	365 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773231558389	Technology	Low	1	0
+CP0001966	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	841 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	774319252471	Logistics	Medium	1	0
+CP0001967	Citra Wibowo	Individual	Citra Wibowo	1985-01-01	1900-01-01	189 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779058186955	Construction	Medium	1	0
+CP0001968	Bagus Adinata	Individual	Bagus Adinata	1985-01-01	1900-01-01	96 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	779996252971	Healthcare	Low	1	0
+CP0001969	PT Suryadi Synthetic	Company	Kevin Suryadi	1900-01-01	2018-01-01	301 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	770534699067	Construction	Medium	0	1
+CP0001970	PT Suryadi Synthetic	Company	Andi Suryadi	1900-01-01	2018-01-01	386 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773983135085	Logistics	Low	0	1
+CP0001971	Andi Lesmana	Individual	Andi Lesmana	1985-01-01	1900-01-01	343 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778587650092	Construction	Low	1	0
+CP0001972	Dewi Putra	Individual	Dewi Putra	1985-01-01	1900-01-01	787 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	778434330123	Technology	Medium	1	0
+CP0001973	Anisa Halim	Individual	Anisa Halim	1985-01-01	1900-01-01	11 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770147330473	Logistics	Low	1	0
+CP0001974	Nadia Iskandar	Individual	Nadia Iskandar	1985-01-01	1900-01-01	85 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	777220874334	Retail	Low	1	0
+CP0001975	Fajar Permana	Individual	Fajar Permana	1985-01-01	1900-01-01	869 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778069464944	Retail	Low	1	0
+CP0001976	PT Rahardjo Synthetic	Company	Farah Rahardjo	1900-01-01	2018-01-01	260 Synthetic Avenue	Semarang	US	US	Bank Sentra	774778765260	Technology	Low	0	1
+CP0001977	Alya Mahendra	Individual	Alya Mahendra	1985-01-01	1900-01-01	219 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776943293834	Manufacturing	Low	1	0
+CP0001978	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	300 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774148000876	Technology	Low	1	0
+CP0001979	Kevin Firmansyah	Individual	Kevin Firmansyah	1985-01-01	1900-01-01	731 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	776345477936	Logistics	Low	1	0
+CP0001980	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	460 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774910465472	Construction	Low	1	0
+CP0001981	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	558 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773352318486	Logistics	Low	1	0
+CP0001982	Bagus Setiawan	Individual	Bagus Setiawan	1985-01-01	1900-01-01	184 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774438845537	Manufacturing	Low	1	0
+CP0001983	PT Chandra Synthetic	Company	Laras Chandra	1900-01-01	2018-01-01	636 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775906377685	Logistics	Low	0	1
+CP0001984	Rani Suryadi	Individual	Rani Suryadi	1985-01-01	1900-01-01	725 Synthetic Avenue	Bandung	JP	JP	Bank Sentra	775630339679	Technology	Low	1	0
+CP0001985	PT Setiawan Synthetic	Company	Gita Setiawan	1900-01-01	2018-01-01	410 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774307536306	Logistics	Low	0	1
+CP0001986	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	774 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	777262978284	Retail	High	1	0
+CP0001987	Bagus Iskandar	Individual	Bagus Iskandar	1985-01-01	1900-01-01	361 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774706642562	Technology	Low	1	0
+CP0001988	PT Kurniawan Synthetic	Company	Citra Kurniawan	1900-01-01	2018-01-01	352 Synthetic Avenue	Makassar	GB	GB	Asia Commerce Bank	775029754324	Construction	Low	0	1
+CP0001989	PT Rahardjo Synthetic	Company	Indra Rahardjo	1900-01-01	2018-01-01	699 Synthetic Avenue	Bandung	AU	AU	Bank Nusantara	779838710778	Logistics	Medium	0	1
+CP0001990	Adit Kurniawan	Individual	Adit Kurniawan	1985-01-01	1900-01-01	223 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773631743026	Construction	Low	1	0
+CP0001991	Rizky Prakoso	Individual	Rizky Prakoso	1985-01-01	1900-01-01	882 Synthetic Avenue	Medan	US	US	Bank Sentra	775179228939	Technology	Low	1	0
+CP0001992	Rani Mahendra	Individual	Rani Mahendra	1985-01-01	1900-01-01	374 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773708807802	Construction	Low	1	0
+CP0001993	Joko Santoso	Individual	Joko Santoso	1985-01-01	1900-01-01	800 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	771270136239	Logistics	Low	1	0
+CP0001994	Alya Permana	Individual	Alya Permana	1985-01-01	1900-01-01	494 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774549735846	Manufacturing	Low	1	0
+CP0001995	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	39 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	770213139196	Retail	Low	1	0
+CP0001996	Dewi Yulianto	Individual	Dewi Yulianto	1985-01-01	1900-01-01	64 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772706610000	Manufacturing	Low	1	0
+CP0001997	Dewi Halim	Individual	Dewi Halim	1985-01-01	1900-01-01	61 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	777560204512	Healthcare	High	1	0
+CP0001998	Andi Budiman	Individual	Andi Budiman	1985-01-01	1900-01-01	864 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772412602752	Construction	Medium	1	0
+CP0001999	Andi Rahardjo	Individual	Andi Rahardjo	1985-01-01	1900-01-01	150 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770181235210	Healthcare	Low	1	0
+CP0002000	Rani Putra	Individual	Rani Putra	1985-01-01	1900-01-01	423 Synthetic Avenue	Bandung	US	US	Bank Nusantara	777299468914	Technology	Low	1	0
+CP0002001	Sari Santoso	Individual	Sari Santoso	1985-01-01	1900-01-01	769 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770176208079	Construction	Low	1	0
+CP0002002	PT Santoso Synthetic	Company	Kevin Santoso	1900-01-01	2018-01-01	95 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776306256831	Technology	Low	0	1
+CP0002003	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	642 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777665411041	Construction	Medium	1	0
+CP0002004	PT Gunawan Synthetic	Company	Hana Gunawan	1900-01-01	2018-01-01	386 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774891977633	Logistics	Low	0	1
+CP0002005	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	327 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771085835112	Logistics	Low	1	0
+CP0002006	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	265 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	773167204108	Retail	Medium	1	0
+CP0002007	Wulan Putra	Individual	Wulan Putra	1985-01-01	1900-01-01	654 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778197026748	Manufacturing	Low	1	0
+CP0002008	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	624 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	778043839656	Logistics	Low	1	0
+CP0002009	Kevin Suryadi	Individual	Kevin Suryadi	1985-01-01	1900-01-01	760 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	776079136058	Retail	Low	1	0
+CP0002010	Wulan Prakoso	Individual	Wulan Prakoso	1985-01-01	1900-01-01	630 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	774040550267	Logistics	Low	1	0
+CP0002011	PT Wijaya Synthetic	Company	Bima Wijaya	1900-01-01	2018-01-01	64 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772042959870	Technology	Low	0	1
+CP0002012	Teguh Suryadi	Individual	Teguh Suryadi	1985-01-01	1900-01-01	851 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774565558905	Retail	Low	1	0
+CP0002013	PT Wijaya Synthetic	Company	Gita Wijaya	1900-01-01	2018-01-01	568 Synthetic Avenue	Jakarta	AE	AE	Bank Nusantara	772779966448	Retail	Medium	0	1
+CP0002014	Nadia Setiawan	Individual	Nadia Setiawan	1985-01-01	1900-01-01	385 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775224656935	Manufacturing	Medium	1	0
+CP0002015	Eka Budiman	Individual	Eka Budiman	1985-01-01	1900-01-01	636 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770459004855	Technology	Low	1	0
+CP0002016	Anisa Adinata	Individual	Anisa Adinata	1985-01-01	1900-01-01	896 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779550228065	Logistics	Low	1	0
+CP0002017	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	751 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776045595243	Retail	Medium	1	0
+CP0002018	PT Nugraha Synthetic	Company	Laras Nugraha	1900-01-01	2018-01-01	390 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	778621948148	Retail	Medium	0	1
+CP0002019	Eka Kurniawan	Individual	Eka Kurniawan	1985-01-01	1900-01-01	720 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777971451398	Construction	Medium	1	0
+CP0002020	Kevin Setiawan	Individual	Kevin Setiawan	1985-01-01	1900-01-01	689 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778804401745	Manufacturing	Low	1	0
+CP0002021	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	792 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777831546943	Manufacturing	Low	1	0
+CP0002022	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	284 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779887953733	Retail	Low	1	0
+CP0002023	PT Nugraha Synthetic	Company	Fajar Nugraha	1900-01-01	2018-01-01	259 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778895424930	Healthcare	Low	0	1
+CP0002024	Raka Santoso	Individual	Raka Santoso	1985-01-01	1900-01-01	603 Synthetic Avenue	Medan	GB	GB	Asia Commerce Bank	772017304910	Healthcare	Low	1	0
+CP0002025	Alya Lesmana	Individual	Alya Lesmana	1985-01-01	1900-01-01	643 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	777300664793	Retail	Low	1	0
+CP0002026	Hana Prakoso	Individual	Hana Prakoso	1985-01-01	1900-01-01	205 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	773622020727	Construction	Low	1	0
+CP0002027	Putri Lesmana	Individual	Putri Lesmana	1985-01-01	1900-01-01	117 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770613879830	Logistics	Medium	1	0
+CP0002028	Rizky Gunawan	Individual	Rizky Gunawan	1985-01-01	1900-01-01	500 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775805532282	Manufacturing	Low	1	0
+CP0002029	Gita Rahardjo	Individual	Gita Rahardjo	1985-01-01	1900-01-01	528 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775194799097	Logistics	Medium	1	0
+CP0002030	Anisa Wijaya	Individual	Anisa Wijaya	1985-01-01	1900-01-01	854 Synthetic Avenue	Semarang	GB	GB	Asia Commerce Bank	771070814740	Technology	High	1	0
+CP0002031	PT Santoso Synthetic	Company	Putri Santoso	1900-01-01	2018-01-01	434 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778246485690	Logistics	Low	0	1
+CP0002032	Dimas Gunawan	Individual	Dimas Gunawan	1985-01-01	1900-01-01	56 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	775694818457	Retail	Low	1	0
+CP0002033	Rani Firmansyah	Individual	Rani Firmansyah	1985-01-01	1900-01-01	63 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	779446851199	Manufacturing	Low	1	0
+CP0002034	Indra Putra	Individual	Indra Putra	1985-01-01	1900-01-01	274 Synthetic Avenue	Jakarta	US	US	Asia Commerce Bank	776172304703	Logistics	Low	1	0
+CP0002035	Joko Nugraha	Individual	Joko Nugraha	1985-01-01	1900-01-01	378 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770098190701	Retail	Medium	1	0
+CP0002036	PT Kurniawan Synthetic	Company	Teguh Kurniawan	1900-01-01	2018-01-01	807 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779499778671	Retail	Medium	0	1
+CP0002037	Alya Budiman	Individual	Alya Budiman	1985-01-01	1900-01-01	23 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775864114303	Healthcare	Low	1	0
+CP0002038	Bima Yulianto	Individual	Bima Yulianto	1985-01-01	1900-01-01	818 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778468984096	Healthcare	Medium	1	0
+CP0002039	Adit Kurniawan	Individual	Adit Kurniawan	1985-01-01	1900-01-01	378 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	770139084759	Healthcare	Low	1	0
+CP0002040	Kevin Santoso	Individual	Kevin Santoso	1985-01-01	1900-01-01	149 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	772258597816	Healthcare	Low	1	0
+CP0002041	PT Budiman Synthetic	Company	Adit Budiman	1900-01-01	2018-01-01	18 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775267586750	Healthcare	Low	0	1
+CP0002042	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	393 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773203389851	Construction	Low	1	0
+CP0002043	PT Nugraha Synthetic	Company	Fajar Nugraha	1900-01-01	2018-01-01	584 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775845589271	Logistics	Medium	0	1
+CP0002044	Anisa Wijaya	Individual	Anisa Wijaya	1985-01-01	1900-01-01	294 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	770052595566	Retail	Low	1	0
+CP0002045	Rani Putra	Individual	Rani Putra	1985-01-01	1900-01-01	136 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771260363646	Manufacturing	Low	1	0
+CP0002046	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	29 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771930914559	Retail	Low	1	0
+CP0002047	Raka Wibowo	Individual	Raka Wibowo	1985-01-01	1900-01-01	711 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770424428610	Construction	Low	1	0
+CP0002048	PT Suryadi Synthetic	Company	Laras Suryadi	1900-01-01	2018-01-01	147 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773121809681	Healthcare	Low	0	1
+CP0002049	Dimas Gunawan	Individual	Dimas Gunawan	1985-01-01	1900-01-01	309 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775008561144	Construction	Low	1	0
+CP0002050	Intan Suryadi	Individual	Intan Suryadi	1985-01-01	1900-01-01	374 Synthetic Avenue	Surabaya	US	US	Bank Nusantara	770123665434	Logistics	Low	1	0
+CP0002051	PT Suryadi Synthetic	Company	Kevin Suryadi	1900-01-01	2018-01-01	643 Synthetic Avenue	Yogyakarta	AE	AE	Asia Commerce Bank	770874435763	Technology	Low	0	1
+CP0002052	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	744 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777249953166	Manufacturing	Low	1	0
+CP0002053	Sari Santoso	Individual	Sari Santoso	1985-01-01	1900-01-01	749 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	773084761817	Logistics	Medium	1	0
+CP0002054	PT Setiawan Synthetic	Company	Bagus Setiawan	1900-01-01	2018-01-01	256 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	779599861825	Logistics	Low	0	1
+CP0002055	Andi Gunawan	Individual	Andi Gunawan	1985-01-01	1900-01-01	882 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778086837770	Logistics	Low	1	0
+CP0002056	Bagus Halim	Individual	Bagus Halim	1985-01-01	1900-01-01	577 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	779292964014	Technology	High	1	0
+CP0002057	Fajar Firmansyah	Individual	Fajar Firmansyah	1985-01-01	1900-01-01	536 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777854855408	Healthcare	High	1	0
+CP0002058	Laras Suryadi	Individual	Laras Suryadi	1985-01-01	1900-01-01	510 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	770649864932	Healthcare	Medium	1	0
+CP0002059	PT Permana Synthetic	Company	Rani Permana	1900-01-01	2018-01-01	340 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777345883323	Technology	Low	0	1
+CP0002060	PT Gunawan Synthetic	Company	Alya Gunawan	1900-01-01	2018-01-01	593 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776892690768	Technology	Medium	0	1
+CP0002061	Maya Chandra	Individual	Maya Chandra	1985-01-01	1900-01-01	807 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778792473983	Manufacturing	Low	1	0
+CP0002062	Andi Siregar	Individual	Andi Siregar	1985-01-01	1900-01-01	195 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775280601995	Manufacturing	Medium	1	0
+CP0002063	PT Mahendra Synthetic	Company	Alya Mahendra	1900-01-01	2018-01-01	408 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	773591986908	Healthcare	High	0	1
+CP0002064	PT Setiawan Synthetic	Company	Teguh Setiawan	1900-01-01	2018-01-01	346 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776200853366	Logistics	Medium	0	1
+CP0002065	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	343 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776690687729	Logistics	Low	1	0
+CP0002066	PT Mahendra Synthetic	Company	Farah Mahendra	1900-01-01	2018-01-01	415 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770186071078	Technology	Medium	0	1
+CP0002067	PT Firmansyah Synthetic	Company	Hana Firmansyah	1900-01-01	2018-01-01	801 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779634280077	Healthcare	Medium	0	1
+CP0002068	Arif Rahardjo	Individual	Arif Rahardjo	1985-01-01	1900-01-01	705 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	775194844057	Manufacturing	Low	1	0
+CP0002069	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	685 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	772580078178	Technology	Low	1	0
+CP0002070	Fajar Adinata	Individual	Fajar Adinata	1985-01-01	1900-01-01	812 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773468148341	Retail	High	1	0
+CP0002071	Gita Adinata	Individual	Gita Adinata	1985-01-01	1900-01-01	130 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	775833876925	Logistics	Low	1	0
+CP0002072	PT Gunawan Synthetic	Company	Eka Gunawan	1900-01-01	2018-01-01	465 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774039744604	Healthcare	Medium	0	1
+CP0002073	PT Iskandar Synthetic	Company	Wulan Iskandar	1900-01-01	2018-01-01	555 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773972874950	Manufacturing	Low	0	1
+CP0002074	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	770 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776527018395	Healthcare	Low	1	0
+CP0002075	PT Nugraha Synthetic	Company	Arif Nugraha	1900-01-01	2018-01-01	440 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774747514893	Construction	High	0	1
+CP0002076	Laras Budiman	Individual	Laras Budiman	1985-01-01	1900-01-01	20 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777417636115	Construction	Low	1	0
+CP0002077	Maya Wijaya	Individual	Maya Wijaya	1985-01-01	1900-01-01	180 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	772928079992	Healthcare	Low	1	0
+CP0002078	Fajar Putra	Individual	Fajar Putra	1985-01-01	1900-01-01	523 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770720710380	Logistics	Low	1	0
+CP0002079	Fajar Kurniawan	Individual	Fajar Kurniawan	1985-01-01	1900-01-01	516 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778149259085	Technology	Low	1	0
+CP0002080	Rani Santoso	Individual	Rani Santoso	1985-01-01	1900-01-01	427 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771781436441	Technology	Low	1	0
+CP0002081	Fajar Firmansyah	Individual	Fajar Firmansyah	1985-01-01	1900-01-01	269 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776720255568	Healthcare	Low	1	0
+CP0002082	Indra Mahendra	Individual	Indra Mahendra	1985-01-01	1900-01-01	575 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779788766365	Healthcare	Low	1	0
+CP0002083	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	410 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	777334556406	Technology	Low	1	0
+CP0002084	Rizky Santoso	Individual	Rizky Santoso	1985-01-01	1900-01-01	410 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779440452210	Technology	Medium	1	0
+CP0002085	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	336 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771970446254	Logistics	Low	1	0
+CP0002086	PT Kurniawan Synthetic	Company	Raka Kurniawan	1900-01-01	2018-01-01	200 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777417020102	Healthcare	Low	0	1
+CP0002087	Farah Gunawan	Individual	Farah Gunawan	1985-01-01	1900-01-01	260 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	777866491491	Manufacturing	Low	1	0
+CP0002088	PT Budiman Synthetic	Company	Nadia Budiman	1900-01-01	2018-01-01	73 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779117177245	Manufacturing	Low	0	1
+CP0002089	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	136 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776932659747	Manufacturing	Low	1	0
+CP0002090	Bagus Suryadi	Individual	Bagus Suryadi	1985-01-01	1900-01-01	203 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779580427239	Healthcare	Medium	1	0
+CP0002091	Fajar Gunawan	Individual	Fajar Gunawan	1985-01-01	1900-01-01	407 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	778054461676	Manufacturing	Low	1	0
+CP0002092	PT Yulianto Synthetic	Company	Wulan Yulianto	1900-01-01	2018-01-01	841 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777400989627	Retail	Medium	0	1
+CP0002093	Hana Wijaya	Individual	Hana Wijaya	1985-01-01	1900-01-01	775 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778062941005	Logistics	Low	1	0
+CP0002094	PT Kurniawan Synthetic	Company	Teguh Kurniawan	1900-01-01	2018-01-01	520 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771615846854	Construction	Low	0	1
+CP0002095	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	145 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770563986937	Manufacturing	Medium	1	0
+CP0002096	PT Siregar Synthetic	Company	Rizky Siregar	1900-01-01	2018-01-01	48 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	774799783471	Construction	Medium	0	1
+CP0002097	Raka Adinata	Individual	Raka Adinata	1985-01-01	1900-01-01	37 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779491117097	Manufacturing	High	1	0
+CP0002098	Sari Permana	Individual	Sari Permana	1985-01-01	1900-01-01	671 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779801422756	Logistics	Low	1	0
+CP0002099	PT Halim Synthetic	Company	Bagus Halim	1900-01-01	2018-01-01	1 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772129354648	Technology	Low	0	1
+CP0002100	Wulan Suryadi	Individual	Wulan Suryadi	1985-01-01	1900-01-01	675 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	775217095243	Logistics	Low	1	0
+CP0002101	PT Prakoso Synthetic	Company	Raka Prakoso	1900-01-01	2018-01-01	70 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770032226348	Manufacturing	Medium	0	1
+CP0002102	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	595 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773987796186	Retail	Low	1	0
+CP0002103	Sari Budiman	Individual	Sari Budiman	1985-01-01	1900-01-01	573 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	775393007163	Construction	High	1	0
+CP0002104	PT Gunawan Synthetic	Company	Intan Gunawan	1900-01-01	2018-01-01	161 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778133770467	Construction	Low	0	1
+CP0002105	PT Hartono Synthetic	Company	Citra Hartono	1900-01-01	2018-01-01	748 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776124846548	Construction	High	0	1
+CP0002106	Dewi Adinata	Individual	Dewi Adinata	1985-01-01	1900-01-01	582 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778752477137	Technology	Low	1	0
+CP0002107	Maya Wibowo	Individual	Maya Wibowo	1985-01-01	1900-01-01	200 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	779829984434	Construction	Low	1	0
+CP0002108	Maya Prakoso	Individual	Maya Prakoso	1985-01-01	1900-01-01	573 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772595743126	Construction	Medium	1	0
+CP0002109	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	615 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776472521092	Healthcare	Low	1	0
+CP0002110	Citra Budiman	Individual	Citra Budiman	1985-01-01	1900-01-01	51 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	778531177772	Logistics	Medium	1	0
+CP0002111	Bima Mahendra	Individual	Bima Mahendra	1985-01-01	1900-01-01	331 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	773405702865	Technology	High	1	0
+CP0002112	PT Nugraha Synthetic	Company	Joko Nugraha	1900-01-01	2018-01-01	619 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779894264008	Retail	Medium	0	1
+CP0002113	Bagus Santoso	Individual	Bagus Santoso	1985-01-01	1900-01-01	393 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	776636934536	Healthcare	Low	1	0
+CP0002114	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	330 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772543257091	Technology	Low	1	0
+CP0002115	Anisa Iskandar	Individual	Anisa Iskandar	1985-01-01	1900-01-01	799 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776622051071	Technology	Low	1	0
+CP0002116	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	873 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770082990379	Retail	Low	1	0
+CP0002117	Putri Santoso	Individual	Putri Santoso	1985-01-01	1900-01-01	670 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774279331912	Technology	Low	1	0
+CP0002118	PT Prakoso Synthetic	Company	Raka Prakoso	1900-01-01	2018-01-01	276 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772820216490	Healthcare	Medium	0	1
+CP0002119	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	397 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777679413857	Healthcare	Low	1	0
+CP0002120	Dewi Wibowo	Individual	Dewi Wibowo	1985-01-01	1900-01-01	558 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	770320205668	Construction	Low	1	0
+CP0002121	Fajar Kurniawan	Individual	Fajar Kurniawan	1985-01-01	1900-01-01	70 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777965000979	Retail	Low	1	0
+CP0002122	Wulan Lesmana	Individual	Wulan Lesmana	1985-01-01	1900-01-01	405 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771709490711	Technology	Low	1	0
+CP0002123	Wulan Setiawan	Individual	Wulan Setiawan	1985-01-01	1900-01-01	780 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772590126415	Healthcare	Medium	1	0
+CP0002124	Rizky Gunawan	Individual	Rizky Gunawan	1985-01-01	1900-01-01	387 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774318696879	Construction	Low	1	0
+CP0002125	Dewi Kurniawan	Individual	Dewi Kurniawan	1985-01-01	1900-01-01	328 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774075349614	Retail	High	1	0
+CP0002126	PT Permana Synthetic	Company	Raka Permana	1900-01-01	2018-01-01	864 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	771049424602	Retail	High	0	1
+CP0002127	PT Gunawan Synthetic	Company	Wulan Gunawan	1900-01-01	2018-01-01	652 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777713171809	Logistics	Medium	0	1
+CP0002128	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	341 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772962758713	Technology	Low	1	0
+CP0002129	PT Halim Synthetic	Company	Dimas Halim	1900-01-01	2018-01-01	433 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777852451430	Logistics	Low	0	1
+CP0002130	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	410 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	771207971528	Healthcare	Medium	1	0
+CP0002131	Rizky Wibowo	Individual	Rizky Wibowo	1985-01-01	1900-01-01	237 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778043583957	Manufacturing	Low	1	0
+CP0002132	Putri Putra	Individual	Putri Putra	1985-01-01	1900-01-01	123 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779152626769	Manufacturing	Medium	1	0
+CP0002133	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	863 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	771371490257	Manufacturing	Low	1	0
+CP0002134	Gita Yulianto	Individual	Gita Yulianto	1985-01-01	1900-01-01	644 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	773358716479	Retail	High	1	0
+CP0002135	Adit Rahardjo	Individual	Adit Rahardjo	1985-01-01	1900-01-01	466 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774454817169	Technology	Low	1	0
+CP0002136	Nadia Permana	Individual	Nadia Permana	1985-01-01	1900-01-01	823 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771378070051	Retail	Low	1	0
+CP0002137	Nadia Permana	Individual	Nadia Permana	1985-01-01	1900-01-01	556 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770631357011	Manufacturing	Low	1	0
+CP0002138	Farah Mahendra	Individual	Farah Mahendra	1985-01-01	1900-01-01	460 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	772128629947	Manufacturing	Low	1	0
+CP0002139	Gita Lesmana	Individual	Gita Lesmana	1985-01-01	1900-01-01	262 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778469061367	Retail	Low	1	0
+CP0002140	PT Suryadi Synthetic	Company	Adit Suryadi	1900-01-01	2018-01-01	200 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772084083538	Retail	Low	0	1
+CP0002141	PT Chandra Synthetic	Company	Bima Chandra	1900-01-01	2018-01-01	577 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772219913573	Construction	Low	0	1
+CP0002142	Citra Putra	Individual	Citra Putra	1985-01-01	1900-01-01	106 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771710551193	Logistics	Low	1	0
+CP0002143	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	254 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	770793925098	Logistics	Low	1	0
+CP0002144	PT Gunawan Synthetic	Company	Kevin Gunawan	1900-01-01	2018-01-01	30 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770381123536	Technology	Low	0	1
+CP0002145	Maya Wijaya	Individual	Maya Wijaya	1985-01-01	1900-01-01	704 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	771783934653	Logistics	Low	1	0
+CP0002146	Gita Kurniawan	Individual	Gita Kurniawan	1985-01-01	1900-01-01	31 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772682137293	Technology	Medium	1	0
+CP0002147	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	308 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773341336201	Technology	Low	1	0
+CP0002148	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	237 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776086941273	Construction	Low	1	0
+CP0002149	PT Putra Synthetic	Company	Rani Putra	1900-01-01	2018-01-01	283 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	770934094288	Retail	Medium	0	1
+CP0002150	Bima Nugraha	Individual	Bima Nugraha	1985-01-01	1900-01-01	31 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775731753004	Technology	Medium	1	0
+CP0002151	Joko Lesmana	Individual	Joko Lesmana	1985-01-01	1900-01-01	455 Synthetic Avenue	Jakarta	US	US	Asia Commerce Bank	778726167893	Healthcare	Medium	1	0
+CP0002152	Laras Prakoso	Individual	Laras Prakoso	1985-01-01	1900-01-01	470 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	773806291625	Construction	Low	1	0
+CP0002153	PT Budiman Synthetic	Company	Naufal Budiman	1900-01-01	2018-01-01	830 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	776303810396	Construction	Low	0	1
+CP0002154	PT Prakoso Synthetic	Company	Laras Prakoso	1900-01-01	2018-01-01	95 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770465647712	Retail	Low	0	1
+CP0002155	Joko Setiawan	Individual	Joko Setiawan	1985-01-01	1900-01-01	871 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774828355634	Logistics	Low	1	0
+CP0002156	Dewi Hartono	Individual	Dewi Hartono	1985-01-01	1900-01-01	744 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	778380995411	Technology	Low	1	0
+CP0002157	Rani Prakoso	Individual	Rani Prakoso	1985-01-01	1900-01-01	470 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775556569017	Manufacturing	Low	1	0
+CP0002158	PT Putra Synthetic	Company	Gita Putra	1900-01-01	2018-01-01	666 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774307537689	Technology	Low	0	1
+CP0002159	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	456 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776264679542	Technology	Low	1	0
+CP0002160	Joko Iskandar	Individual	Joko Iskandar	1985-01-01	1900-01-01	485 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772130028373	Manufacturing	Medium	1	0
+CP0002161	PT Suryadi Synthetic	Company	Eka Suryadi	1900-01-01	2018-01-01	655 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779038159828	Healthcare	Medium	0	1
+CP0002162	Hana Prakoso	Individual	Hana Prakoso	1985-01-01	1900-01-01	850 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778495580794	Healthcare	Low	1	0
+CP0002163	Andi Yulianto	Individual	Andi Yulianto	1985-01-01	1900-01-01	419 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	775837668057	Technology	Medium	1	0
+CP0002164	Farah Mahendra	Individual	Farah Mahendra	1985-01-01	1900-01-01	603 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773991216236	Construction	Low	1	0
+CP0002165	PT Setiawan Synthetic	Company	Gita Setiawan	1900-01-01	2018-01-01	177 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770334960516	Retail	Low	0	1
+CP0002166	Rizky Firmansyah	Individual	Rizky Firmansyah	1985-01-01	1900-01-01	347 Synthetic Avenue	Jakarta	AE	AE	Bank Nusantara	777659237960	Manufacturing	High	1	0
+CP0002167	Bagus Santoso	Individual	Bagus Santoso	1985-01-01	1900-01-01	128 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775039786552	Retail	Low	1	0
+CP0002168	Anisa Putra	Individual	Anisa Putra	1985-01-01	1900-01-01	177 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777109927461	Retail	Low	1	0
+CP0002169	PT Firmansyah Synthetic	Company	Dimas Firmansyah	1900-01-01	2018-01-01	640 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	772154207910	Healthcare	Low	0	1
+CP0002170	PT Budiman Synthetic	Company	Intan Budiman	1900-01-01	2018-01-01	106 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	778465319094	Manufacturing	Medium	0	1
+CP0002171	PT Wibowo Synthetic	Company	Alya Wibowo	1900-01-01	2018-01-01	136 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779764951819	Healthcare	Medium	0	1
+CP0002172	PT Nugraha Synthetic	Company	Anisa Nugraha	1900-01-01	2018-01-01	147 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770271951298	Technology	Low	0	1
+CP0002173	Dewi Nugraha	Individual	Dewi Nugraha	1985-01-01	1900-01-01	290 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	773125096482	Healthcare	Low	1	0
+CP0002174	Anisa Halim	Individual	Anisa Halim	1985-01-01	1900-01-01	100 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775009483015	Logistics	Medium	1	0
+CP0002175	Teguh Mahendra	Individual	Teguh Mahendra	1985-01-01	1900-01-01	305 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775794543384	Logistics	Low	1	0
+CP0002176	Dimas Darmawan	Individual	Dimas Darmawan	1985-01-01	1900-01-01	753 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777726460765	Logistics	Low	1	0
+CP0002177	Raka Permana	Individual	Raka Permana	1985-01-01	1900-01-01	171 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772561519159	Logistics	Low	1	0
+CP0002178	Bima Firmansyah	Individual	Bima Firmansyah	1985-01-01	1900-01-01	331 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776340288241	Manufacturing	Low	1	0
+CP0002179	PT Yulianto Synthetic	Company	Teguh Yulianto	1900-01-01	2018-01-01	650 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	778935954018	Logistics	Low	0	1
+CP0002180	Eka Setiawan	Individual	Eka Setiawan	1985-01-01	1900-01-01	355 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	771082513327	Manufacturing	Medium	1	0
+CP0002181	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	594 Synthetic Avenue	Denpasar	AU	AU	Asia Commerce Bank	777292931765	Manufacturing	Low	1	0
+CP0002182	Maya Wijaya	Individual	Maya Wijaya	1985-01-01	1900-01-01	27 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775306319621	Construction	Low	1	0
+CP0002183	PT Siregar Synthetic	Company	Laras Siregar	1900-01-01	2018-01-01	159 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	777084574453	Manufacturing	Low	0	1
+CP0002184	Citra Halim	Individual	Citra Halim	1985-01-01	1900-01-01	334 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	779309812940	Healthcare	Low	1	0
+CP0002185	Citra Wibowo	Individual	Citra Wibowo	1985-01-01	1900-01-01	285 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	774436177991	Healthcare	Low	1	0
+CP0002186	PT Budiman Synthetic	Company	Putri Budiman	1900-01-01	2018-01-01	409 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778145508947	Healthcare	Low	0	1
+CP0002187	PT Rahardjo Synthetic	Company	Sari Rahardjo	1900-01-01	2018-01-01	317 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770760188228	Construction	Medium	0	1
+CP0002188	PT Permana Synthetic	Company	Raka Permana	1900-01-01	2018-01-01	374 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	773851408415	Retail	Medium	0	1
+CP0002189	PT Adinata Synthetic	Company	Eka Adinata	1900-01-01	2018-01-01	511 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	770238172353	Healthcare	Low	0	1
+CP0002190	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	897 Synthetic Avenue	Jakarta	GB	GB	Asia Commerce Bank	774713216286	Construction	Low	1	0
+CP0002191	Dimas Yulianto	Individual	Dimas Yulianto	1985-01-01	1900-01-01	725 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	771977091538	Technology	Low	1	0
+CP0002192	Teguh Gunawan	Individual	Teguh Gunawan	1985-01-01	1900-01-01	515 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	773153656143	Technology	Medium	1	0
+CP0002193	Putri Putra	Individual	Putri Putra	1985-01-01	1900-01-01	13 Synthetic Avenue	Medan	AU	AU	Bank Nusantara	774582417652	Retail	Low	1	0
+CP0002194	Raka Halim	Individual	Raka Halim	1985-01-01	1900-01-01	355 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777445600165	Retail	Low	1	0
+CP0002195	PT Budiman Synthetic	Company	Arif Budiman	1900-01-01	2018-01-01	490 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773203094666	Logistics	Low	0	1
+CP0002196	Dimas Mahendra	Individual	Dimas Mahendra	1985-01-01	1900-01-01	645 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	778196168312	Technology	Medium	1	0
+CP0002197	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	440 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	775212565701	Retail	Low	1	0
+CP0002198	Dimas Kurniawan	Individual	Dimas Kurniawan	1985-01-01	1900-01-01	154 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779607763029	Healthcare	Low	1	0
+CP0002199	PT Suryadi Synthetic	Company	Alya Suryadi	1900-01-01	2018-01-01	797 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773380759309	Construction	Low	0	1
+CP0002200	Intan Wibowo	Individual	Intan Wibowo	1985-01-01	1900-01-01	94 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775851851037	Healthcare	Medium	1	0
+CP0002201	PT Putra Synthetic	Company	Putri Putra	1900-01-01	2018-01-01	552 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	778128016254	Retail	Low	0	1
+CP0002202	PT Siregar Synthetic	Company	Teguh Siregar	1900-01-01	2018-01-01	288 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	775391610620	Construction	Low	0	1
+CP0002203	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	368 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774020567534	Logistics	Low	1	0
+CP0002204	Raka Hartono	Individual	Raka Hartono	1985-01-01	1900-01-01	562 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779445424534	Technology	Low	1	0
+CP0002205	PT Permana Synthetic	Company	Raka Permana	1900-01-01	2018-01-01	659 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779380298305	Construction	Low	0	1
+CP0002206	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	846 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	775505358912	Manufacturing	Low	1	0
+CP0002207	PT Siregar Synthetic	Company	Bagus Siregar	1900-01-01	2018-01-01	52 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772854762824	Logistics	Low	0	1
+CP0002208	PT Darmawan Synthetic	Company	Rani Darmawan	1900-01-01	2018-01-01	421 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771318114423	Logistics	Medium	0	1
+CP0002209	Wulan Hartono	Individual	Wulan Hartono	1985-01-01	1900-01-01	501 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777164289363	Construction	Low	1	0
+CP0002210	PT Putra Synthetic	Company	Teguh Putra	1900-01-01	2018-01-01	279 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776317294720	Retail	Medium	0	1
+CP0002211	Indra Permana	Individual	Indra Permana	1985-01-01	1900-01-01	179 Synthetic Avenue	Jakarta	GB	GB	Bank Sentra	778060905667	Construction	Medium	1	0
+CP0002212	Alya Putra	Individual	Alya Putra	1985-01-01	1900-01-01	217 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773742754937	Healthcare	Low	1	0
+CP0002213	Raka Nugraha	Individual	Raka Nugraha	1985-01-01	1900-01-01	570 Synthetic Avenue	Surabaya	AU	AU	Asia Commerce Bank	773211074537	Logistics	Low	1	0
+CP0002214	PT Prakoso Synthetic	Company	Adit Prakoso	1900-01-01	2018-01-01	510 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	779151491594	Construction	Low	0	1
+CP0002215	Maya Halim	Individual	Maya Halim	1985-01-01	1900-01-01	526 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775753076027	Manufacturing	High	1	0
+CP0002216	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	784 Synthetic Avenue	Bandung	AU	AU	Asia Commerce Bank	772164884643	Logistics	Low	1	0
+CP0002217	Teguh Suryadi	Individual	Teguh Suryadi	1985-01-01	1900-01-01	277 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772674827693	Construction	Low	1	0
+CP0002218	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	615 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776073022427	Retail	High	1	0
+CP0002219	Sari Permana	Individual	Sari Permana	1985-01-01	1900-01-01	421 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775626001878	Technology	Low	1	0
+CP0002220	Kevin Budiman	Individual	Kevin Budiman	1985-01-01	1900-01-01	529 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773578101168	Logistics	Medium	1	0
+CP0002221	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	24 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	774178846248	Retail	High	1	0
+CP0002222	Maya Putra	Individual	Maya Putra	1985-01-01	1900-01-01	148 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	777019801682	Technology	Low	1	0
+CP0002223	Fajar Iskandar	Individual	Fajar Iskandar	1985-01-01	1900-01-01	484 Synthetic Avenue	Semarang	US	US	Bank Nusantara	777691722201	Construction	Low	1	0
+CP0002224	Putri Kurniawan	Individual	Putri Kurniawan	1985-01-01	1900-01-01	110 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770402579345	Construction	High	1	0
+CP0002225	Andi Suryadi	Individual	Andi Suryadi	1985-01-01	1900-01-01	421 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773866070042	Retail	Low	1	0
+CP0002226	Wulan Wibowo	Individual	Wulan Wibowo	1985-01-01	1900-01-01	863 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774718963197	Manufacturing	Low	1	0
+CP0002227	PT Kurniawan Synthetic	Company	Adit Kurniawan	1900-01-01	2018-01-01	774 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773970223697	Technology	Low	0	1
+CP0002228	PT Darmawan Synthetic	Company	Nadia Darmawan	1900-01-01	2018-01-01	602 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771723465160	Healthcare	Low	0	1
+CP0002229	Andi Firmansyah	Individual	Andi Firmansyah	1985-01-01	1900-01-01	721 Synthetic Avenue	Makassar	US	US	Bank Sentra	779299410213	Healthcare	Medium	1	0
+CP0002230	Fajar Iskandar	Individual	Fajar Iskandar	1985-01-01	1900-01-01	304 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773822332760	Construction	Medium	1	0
+CP0002231	PT Chandra Synthetic	Company	Laras Chandra	1900-01-01	2018-01-01	500 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	771770345712	Technology	Low	0	1
+CP0002232	PT Santoso Synthetic	Company	Dimas Santoso	1900-01-01	2018-01-01	643 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777374887825	Logistics	High	0	1
+CP0002233	PT Mahendra Synthetic	Company	Hana Mahendra	1900-01-01	2018-01-01	733 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772794648511	Construction	Medium	0	1
+CP0002234	PT Kurniawan Synthetic	Company	Gita Kurniawan	1900-01-01	2018-01-01	370 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772077400164	Manufacturing	Medium	0	1
+CP0002235	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	241 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778234575741	Healthcare	Low	1	0
+CP0002236	PT Permana Synthetic	Company	Gita Permana	1900-01-01	2018-01-01	329 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776764989374	Construction	Low	0	1
+CP0002237	Maya Setiawan	Individual	Maya Setiawan	1985-01-01	1900-01-01	343 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777102082776	Logistics	Low	1	0
+CP0002238	Dimas Kurniawan	Individual	Dimas Kurniawan	1985-01-01	1900-01-01	511 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772596380823	Healthcare	Medium	1	0
+CP0002239	Naufal Hartono	Individual	Naufal Hartono	1985-01-01	1900-01-01	557 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779230268682	Retail	Low	1	0
+CP0002240	PT Mahendra Synthetic	Company	Intan Mahendra	1900-01-01	2018-01-01	35 Synthetic Avenue	Denpasar	GB	GB	Bank Sentra	770505253142	Technology	Medium	0	1
+CP0002241	Dewi Adinata	Individual	Dewi Adinata	1985-01-01	1900-01-01	845 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776230805358	Construction	Medium	1	0
+CP0002242	Adit Chandra	Individual	Adit Chandra	1985-01-01	1900-01-01	871 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771517013249	Logistics	Low	1	0
+CP0002243	Andi Siregar	Individual	Andi Siregar	1985-01-01	1900-01-01	327 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	776107065616	Technology	Low	1	0
+CP0002244	PT Iskandar Synthetic	Company	Hana Iskandar	1900-01-01	2018-01-01	645 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779133963632	Construction	Medium	0	1
+CP0002245	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	341 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776602440547	Retail	High	1	0
+CP0002246	PT Budiman Synthetic	Company	Alya Budiman	1900-01-01	2018-01-01	445 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	773143831807	Logistics	Low	0	1
+CP0002247	PT Setiawan Synthetic	Company	Maya Setiawan	1900-01-01	2018-01-01	712 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	775328522254	Manufacturing	Low	0	1
+CP0002248	Citra Wibowo	Individual	Citra Wibowo	1985-01-01	1900-01-01	515 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771916293702	Manufacturing	Low	1	0
+CP0002249	PT Permana Synthetic	Company	Naufal Permana	1900-01-01	2018-01-01	156 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775776528450	Construction	Low	0	1
+CP0002250	Hana Prakoso	Individual	Hana Prakoso	1985-01-01	1900-01-01	680 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773587672929	Healthcare	Low	1	0
+CP0002251	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	3 Synthetic Avenue	Surabaya	US	US	Bank Sentra	777381267948	Logistics	Medium	1	0
+CP0002252	PT Wijaya Synthetic	Company	Fajar Wijaya	1900-01-01	2018-01-01	534 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	772640750115	Logistics	Medium	0	1
+CP0002253	PT Lesmana Synthetic	Company	Alya Lesmana	1900-01-01	2018-01-01	181 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773280372065	Manufacturing	High	0	1
+CP0002254	PT Suryadi Synthetic	Company	Adit Suryadi	1900-01-01	2018-01-01	468 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771330582722	Construction	Low	0	1
+CP0002255	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	240 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	775563598755	Manufacturing	High	1	0
+CP0002256	PT Setiawan Synthetic	Company	Andi Setiawan	1900-01-01	2018-01-01	188 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773610484979	Technology	Low	0	1
+CP0002257	PT Yulianto Synthetic	Company	Citra Yulianto	1900-01-01	2018-01-01	355 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	771527209133	Retail	Medium	0	1
+CP0002258	Dewi Prakoso	Individual	Dewi Prakoso	1985-01-01	1900-01-01	393 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779357773086	Construction	High	1	0
+CP0002259	Laras Adinata	Individual	Laras Adinata	1985-01-01	1900-01-01	532 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775923901847	Technology	Low	1	0
+CP0002260	PT Yulianto Synthetic	Company	Arif Yulianto	1900-01-01	2018-01-01	623 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	771703893317	Construction	Low	0	1
+CP0002261	Bagus Putra	Individual	Bagus Putra	1985-01-01	1900-01-01	286 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775349813181	Retail	High	1	0
+CP0002262	PT Wijaya Synthetic	Company	Rizky Wijaya	1900-01-01	2018-01-01	481 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	773748028894	Construction	Low	0	1
+CP0002263	Rani Nugraha	Individual	Rani Nugraha	1985-01-01	1900-01-01	377 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771552167090	Construction	Low	1	0
+CP0002264	PT Prakoso Synthetic	Company	Andi Prakoso	1900-01-01	2018-01-01	285 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	778231742093	Healthcare	High	0	1
+CP0002265	Fajar Iskandar	Individual	Fajar Iskandar	1985-01-01	1900-01-01	539 Synthetic Avenue	Makassar	JP	JP	Bank Sentra	771129359213	Retail	Low	1	0
+CP0002266	Eka Lesmana	Individual	Eka Lesmana	1985-01-01	1900-01-01	783 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779393291121	Manufacturing	Low	1	0
+CP0002267	Anisa Wijaya	Individual	Anisa Wijaya	1985-01-01	1900-01-01	709 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	772717102174	Manufacturing	Low	1	0
+CP0002268	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	122 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	775935126520	Retail	Low	1	0
+CP0002269	PT Adinata Synthetic	Company	Citra Adinata	1900-01-01	2018-01-01	702 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777617823699	Logistics	Low	0	1
+CP0002270	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	814 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771067874545	Technology	Medium	1	0
+CP0002271	Dimas Kurniawan	Individual	Dimas Kurniawan	1985-01-01	1900-01-01	575 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777407995968	Retail	Low	1	0
+CP0002272	Sari Gunawan	Individual	Sari Gunawan	1985-01-01	1900-01-01	250 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771513443186	Healthcare	High	1	0
+CP0002273	Bima Wibowo	Individual	Bima Wibowo	1985-01-01	1900-01-01	862 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	776981304064	Technology	Low	1	0
+CP0002274	Fajar Setiawan	Individual	Fajar Setiawan	1985-01-01	1900-01-01	367 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775503515599	Construction	Low	1	0
+CP0002275	PT Chandra Synthetic	Company	Wulan Chandra	1900-01-01	2018-01-01	789 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770654276594	Logistics	Low	0	1
+CP0002276	Arif Putra	Individual	Arif Putra	1985-01-01	1900-01-01	567 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777024133002	Technology	Low	1	0
+CP0002277	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	159 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770188383547	Retail	Low	1	0
+CP0002278	PT Yulianto Synthetic	Company	Fajar Yulianto	1900-01-01	2018-01-01	197 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770202816324	Technology	Low	0	1
+CP0002279	Sari Darmawan	Individual	Sari Darmawan	1985-01-01	1900-01-01	732 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779293865841	Manufacturing	Low	1	0
+CP0002280	PT Halim Synthetic	Company	Putri Halim	1900-01-01	2018-01-01	590 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772765701308	Healthcare	Medium	0	1
+CP0002281	Putri Siregar	Individual	Putri Siregar	1985-01-01	1900-01-01	474 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778050637135	Retail	Medium	1	0
+CP0002282	PT Wijaya Synthetic	Company	Bima Wijaya	1900-01-01	2018-01-01	641 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774084259356	Manufacturing	Medium	0	1
+CP0002283	Alya Setiawan	Individual	Alya Setiawan	1985-01-01	1900-01-01	362 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777534569382	Construction	Low	1	0
+CP0002284	Andi Setiawan	Individual	Andi Setiawan	1985-01-01	1900-01-01	173 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772299454751	Healthcare	Medium	1	0
+CP0002285	PT Lesmana Synthetic	Company	Indra Lesmana	1900-01-01	2018-01-01	24 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778293745969	Construction	High	0	1
+CP0002286	Dewi Adinata	Individual	Dewi Adinata	1985-01-01	1900-01-01	96 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776404236268	Healthcare	Low	1	0
+CP0002287	PT Iskandar Synthetic	Company	Anisa Iskandar	1900-01-01	2018-01-01	503 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773775089872	Technology	Medium	0	1
+CP0002288	Wulan Siregar	Individual	Wulan Siregar	1985-01-01	1900-01-01	233 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770212861138	Retail	Medium	1	0
+CP0002289	Alya Yulianto	Individual	Alya Yulianto	1985-01-01	1900-01-01	574 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	778352800258	Logistics	Low	1	0
+CP0002290	Gita Rahardjo	Individual	Gita Rahardjo	1985-01-01	1900-01-01	885 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776331228394	Healthcare	Low	1	0
+CP0002291	Wulan Wibowo	Individual	Wulan Wibowo	1985-01-01	1900-01-01	500 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775009889954	Manufacturing	Low	1	0
+CP0002292	Rizky Kurniawan	Individual	Rizky Kurniawan	1985-01-01	1900-01-01	844 Synthetic Avenue	Surabaya	AE	AE	Bank Sentra	771562741025	Technology	Low	1	0
+CP0002293	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	727 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	770207400826	Manufacturing	Medium	1	0
+CP0002294	PT Mahendra Synthetic	Company	Fajar Mahendra	1900-01-01	2018-01-01	504 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773326833329	Technology	Low	0	1
+CP0002295	Gita Santoso	Individual	Gita Santoso	1985-01-01	1900-01-01	653 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	778849347670	Logistics	Medium	1	0
+CP0002296	PT Setiawan Synthetic	Company	Gita Setiawan	1900-01-01	2018-01-01	686 Synthetic Avenue	Jakarta	AE	AE	Bank Nusantara	770585865258	Logistics	Medium	0	1
+CP0002297	Hana Rahardjo	Individual	Hana Rahardjo	1985-01-01	1900-01-01	539 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773947862749	Manufacturing	Medium	1	0
+CP0002298	Hana Kurniawan	Individual	Hana Kurniawan	1985-01-01	1900-01-01	556 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773849885716	Retail	Low	1	0
+CP0002299	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	873 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778899867193	Technology	Low	1	0
+CP0002300	Bima Nugraha	Individual	Bima Nugraha	1985-01-01	1900-01-01	887 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773876394674	Technology	Low	1	0
+CP0002301	Maya Prakoso	Individual	Maya Prakoso	1985-01-01	1900-01-01	745 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776802852292	Technology	Low	1	0
+CP0002302	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	639 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771189661531	Logistics	Low	1	0
+CP0002303	Andi Santoso	Individual	Andi Santoso	1985-01-01	1900-01-01	195 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	779224265462	Retail	Low	1	0
+CP0002304	PT Firmansyah Synthetic	Company	Putri Firmansyah	1900-01-01	2018-01-01	171 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777569421373	Retail	Medium	0	1
+CP0002305	PT Kurniawan Synthetic	Company	Raka Kurniawan	1900-01-01	2018-01-01	213 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	778460602192	Logistics	Low	0	1
+CP0002306	Hana Gunawan	Individual	Hana Gunawan	1985-01-01	1900-01-01	151 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772064504859	Technology	Medium	1	0
+CP0002307	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	645 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	775918328411	Retail	Low	1	0
+CP0002308	Nadia Wibowo	Individual	Nadia Wibowo	1985-01-01	1900-01-01	242 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	777745103247	Retail	Low	1	0
+CP0002309	Eka Santoso	Individual	Eka Santoso	1985-01-01	1900-01-01	723 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776481820331	Construction	Low	1	0
+CP0002310	Teguh Halim	Individual	Teguh Halim	1985-01-01	1900-01-01	363 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	772534680912	Logistics	Low	1	0
+CP0002311	PT Santoso Synthetic	Company	Fajar Santoso	1900-01-01	2018-01-01	868 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	773379010214	Technology	Medium	0	1
+CP0002312	PT Lesmana Synthetic	Company	Putri Lesmana	1900-01-01	2018-01-01	144 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776027215594	Retail	Medium	0	1
+CP0002313	Dewi Mahendra	Individual	Dewi Mahendra	1985-01-01	1900-01-01	216 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	775078622724	Logistics	Medium	1	0
+CP0002314	Gita Darmawan	Individual	Gita Darmawan	1985-01-01	1900-01-01	835 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	778763239804	Construction	Low	1	0
+CP0002315	Bagus Wibowo	Individual	Bagus Wibowo	1985-01-01	1900-01-01	541 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	779608922680	Retail	Low	1	0
+CP0002316	PT Chandra Synthetic	Company	Kevin Chandra	1900-01-01	2018-01-01	578 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777932060737	Construction	Medium	0	1
+CP0002317	Dewi Gunawan	Individual	Dewi Gunawan	1985-01-01	1900-01-01	274 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775960350612	Retail	Low	1	0
+CP0002318	Alya Rahardjo	Individual	Alya Rahardjo	1985-01-01	1900-01-01	430 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778951604172	Retail	Low	1	0
+CP0002319	PT Chandra Synthetic	Company	Alya Chandra	1900-01-01	2018-01-01	207 Synthetic Avenue	Surabaya	AU	AU	Asia Commerce Bank	773816452221	Technology	Low	0	1
+CP0002320	Rizky Firmansyah	Individual	Rizky Firmansyah	1985-01-01	1900-01-01	451 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770964715707	Logistics	Low	1	0
+CP0002321	Maya Suryadi	Individual	Maya Suryadi	1985-01-01	1900-01-01	47 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	778360270436	Manufacturing	Low	1	0
+CP0002322	Indra Wijaya	Individual	Indra Wijaya	1985-01-01	1900-01-01	690 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771146190214	Retail	Medium	1	0
+CP0002323	Teguh Kurniawan	Individual	Teguh Kurniawan	1985-01-01	1900-01-01	187 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	778941776270	Manufacturing	Low	1	0
+CP0002324	PT Wibowo Synthetic	Company	Adit Wibowo	1900-01-01	2018-01-01	803 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778946374307	Construction	Low	0	1
+CP0002325	Eka Nugraha	Individual	Eka Nugraha	1985-01-01	1900-01-01	322 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771198085416	Manufacturing	Medium	1	0
+CP0002326	PT Permana Synthetic	Company	Rizky Permana	1900-01-01	2018-01-01	117 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	777357631352	Construction	Low	0	1
+CP0002327	PT Mahendra Synthetic	Company	Wulan Mahendra	1900-01-01	2018-01-01	120 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	776021681770	Healthcare	Low	0	1
+CP0002328	PT Iskandar Synthetic	Company	Intan Iskandar	1900-01-01	2018-01-01	746 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773217277487	Technology	Low	0	1
+CP0002329	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	322 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	771621858010	Logistics	Low	1	0
+CP0002330	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	887 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776519640570	Technology	Low	1	0
+CP0002331	PT Suryadi Synthetic	Company	Kevin Suryadi	1900-01-01	2018-01-01	179 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770828006151	Technology	Medium	0	1
+CP0002332	Citra Hartono	Individual	Citra Hartono	1985-01-01	1900-01-01	826 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	773450115286	Manufacturing	Low	1	0
+CP0002333	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	574 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	774904556914	Logistics	Low	1	0
+CP0002334	Wulan Kurniawan	Individual	Wulan Kurniawan	1985-01-01	1900-01-01	58 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	778444226961	Construction	Low	1	0
+CP0002335	PT Halim Synthetic	Company	Gita Halim	1900-01-01	2018-01-01	290 Synthetic Avenue	Makassar	JP	JP	Asia Commerce Bank	772551981816	Retail	Low	0	1
+CP0002336	Sari Santoso	Individual	Sari Santoso	1985-01-01	1900-01-01	534 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771908625293	Healthcare	Low	1	0
+CP0002337	Kevin Setiawan	Individual	Kevin Setiawan	1985-01-01	1900-01-01	807 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	770719987365	Manufacturing	High	1	0
+CP0002338	Arif Kurniawan	Individual	Arif Kurniawan	1985-01-01	1900-01-01	735 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777893058955	Logistics	Medium	1	0
+CP0002339	Bagus Lesmana	Individual	Bagus Lesmana	1985-01-01	1900-01-01	595 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777186516554	Manufacturing	Medium	1	0
+CP0002340	Naufal Yulianto	Individual	Naufal Yulianto	1985-01-01	1900-01-01	309 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	771723083483	Healthcare	Low	1	0
+CP0002341	Fajar Permana	Individual	Fajar Permana	1985-01-01	1900-01-01	500 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779524935550	Technology	Medium	1	0
+CP0002342	Wulan Hartono	Individual	Wulan Hartono	1985-01-01	1900-01-01	758 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772973060998	Manufacturing	Low	1	0
+CP0002343	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	794 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	777947395471	Construction	Medium	1	0
+CP0002344	PT Rahardjo Synthetic	Company	Putri Rahardjo	1900-01-01	2018-01-01	370 Synthetic Avenue	Medan	US	US	Asia Commerce Bank	772825822870	Logistics	Medium	0	1
+CP0002345	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	727 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775729006048	Manufacturing	Low	1	0
+CP0002346	PT Putra Synthetic	Company	Fajar Putra	1900-01-01	2018-01-01	431 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779335651648	Technology	Low	0	1
+CP0002347	PT Halim Synthetic	Company	Raka Halim	1900-01-01	2018-01-01	282 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773088861580	Logistics	Low	0	1
+CP0002348	Laras Chandra	Individual	Laras Chandra	1985-01-01	1900-01-01	394 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772092499000	Logistics	Low	1	0
+CP0002349	PT Lesmana Synthetic	Company	Bagus Lesmana	1900-01-01	2018-01-01	773 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771904264257	Healthcare	Low	0	1
+CP0002350	Farah Setiawan	Individual	Farah Setiawan	1985-01-01	1900-01-01	7 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	778479167494	Healthcare	Medium	1	0
+CP0002351	Teguh Nugraha	Individual	Teguh Nugraha	1985-01-01	1900-01-01	256 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	772226475253	Manufacturing	Low	1	0
+CP0002352	PT Chandra Synthetic	Company	Rizky Chandra	1900-01-01	2018-01-01	758 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	778070913412	Logistics	Low	0	1
+CP0002353	Laras Permana	Individual	Laras Permana	1985-01-01	1900-01-01	374 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775263946935	Construction	Low	1	0
+CP0002354	Alya Darmawan	Individual	Alya Darmawan	1985-01-01	1900-01-01	404 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773329429253	Technology	Medium	1	0
+CP0002355	Kevin Adinata	Individual	Kevin Adinata	1985-01-01	1900-01-01	382 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777788280499	Retail	Low	1	0
+CP0002356	PT Gunawan Synthetic	Company	Teguh Gunawan	1900-01-01	2018-01-01	791 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770933285998	Healthcare	Low	0	1
+CP0002357	Farah Siregar	Individual	Farah Siregar	1985-01-01	1900-01-01	174 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775352255689	Manufacturing	Medium	1	0
+CP0002358	Wulan Firmansyah	Individual	Wulan Firmansyah	1985-01-01	1900-01-01	31 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	777048023673	Manufacturing	Low	1	0
+CP0002359	Eka Yulianto	Individual	Eka Yulianto	1985-01-01	1900-01-01	345 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770084049897	Technology	Low	1	0
+CP0002360	Rizky Santoso	Individual	Rizky Santoso	1985-01-01	1900-01-01	575 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774744475181	Retail	Low	1	0
+CP0002361	Andi Wijaya	Individual	Andi Wijaya	1985-01-01	1900-01-01	130 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	773122588342	Construction	High	1	0
+CP0002362	PT Wijaya Synthetic	Company	Naufal Wijaya	1900-01-01	2018-01-01	857 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770727198370	Manufacturing	Low	0	1
+CP0002363	Kevin Budiman	Individual	Kevin Budiman	1985-01-01	1900-01-01	538 Synthetic Avenue	Medan	AE	AE	Bank Sentra	779692690737	Technology	Low	1	0
+CP0002364	PT Kurniawan Synthetic	Company	Putri Kurniawan	1900-01-01	2018-01-01	661 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770640863108	Healthcare	Low	0	1
+CP0002365	PT Yulianto Synthetic	Company	Joko Yulianto	1900-01-01	2018-01-01	895 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777932095112	Retail	Medium	0	1
+CP0002366	Adit Yulianto	Individual	Adit Yulianto	1985-01-01	1900-01-01	207 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779387929386	Logistics	Medium	1	0
+CP0002367	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	280 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	771932008901	Retail	Low	1	0
+CP0002368	Nadia Kurniawan	Individual	Nadia Kurniawan	1985-01-01	1900-01-01	160 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771133349734	Healthcare	Low	1	0
+CP0002369	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	611 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776756749775	Retail	Low	1	0
+CP0002370	PT Adinata Synthetic	Company	Nadia Adinata	1900-01-01	2018-01-01	266 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775209464889	Logistics	Low	0	1
+CP0002371	PT Yulianto Synthetic	Company	Fajar Yulianto	1900-01-01	2018-01-01	612 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	773920432368	Logistics	Medium	0	1
+CP0002372	PT Hartono Synthetic	Company	Kevin Hartono	1900-01-01	2018-01-01	238 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773905545087	Construction	Low	0	1
+CP0002373	Andi Nugraha	Individual	Andi Nugraha	1985-01-01	1900-01-01	785 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771035813936	Technology	Low	1	0
+CP0002374	Adit Chandra	Individual	Adit Chandra	1985-01-01	1900-01-01	455 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775197684148	Manufacturing	Medium	1	0
+CP0002375	PT Permana Synthetic	Company	Bima Permana	1900-01-01	2018-01-01	328 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770879772545	Retail	Low	0	1
+CP0002376	PT Santoso Synthetic	Company	Hana Santoso	1900-01-01	2018-01-01	550 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778440178327	Healthcare	Low	0	1
+CP0002377	PT Chandra Synthetic	Company	Laras Chandra	1900-01-01	2018-01-01	760 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	775041666862	Logistics	Low	0	1
+CP0002378	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	760 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778989626235	Logistics	Low	1	0
+CP0002379	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	481 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773308787030	Logistics	Low	1	0
+CP0002380	Dimas Adinata	Individual	Dimas Adinata	1985-01-01	1900-01-01	189 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778768745074	Retail	Low	1	0
+CP0002381	Citra Siregar	Individual	Citra Siregar	1985-01-01	1900-01-01	459 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	770596848462	Manufacturing	Low	1	0
+CP0002382	Gita Yulianto	Individual	Gita Yulianto	1985-01-01	1900-01-01	592 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771177775369	Retail	Low	1	0
+CP0002383	Laras Kurniawan	Individual	Laras Kurniawan	1985-01-01	1900-01-01	309 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779679722668	Manufacturing	Low	1	0
+CP0002384	Adit Darmawan	Individual	Adit Darmawan	1985-01-01	1900-01-01	8 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779447538486	Healthcare	Low	1	0
+CP0002385	PT Darmawan Synthetic	Company	Hana Darmawan	1900-01-01	2018-01-01	11 Synthetic Avenue	Bandung	JP	JP	Bank Nusantara	776516527696	Healthcare	Medium	0	1
+CP0002386	Citra Yulianto	Individual	Citra Yulianto	1985-01-01	1900-01-01	637 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	774747205031	Technology	Low	1	0
+CP0002387	Raka Prakoso	Individual	Raka Prakoso	1985-01-01	1900-01-01	818 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776889838808	Technology	High	1	0
+CP0002388	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	114 Synthetic Avenue	Medan	AU	AU	Bank Nusantara	776869561798	Technology	Low	1	0
+CP0002389	PT Darmawan Synthetic	Company	Laras Darmawan	1900-01-01	2018-01-01	218 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770643800155	Logistics	Medium	0	1
+CP0002390	PT Firmansyah Synthetic	Company	Raka Firmansyah	1900-01-01	2018-01-01	214 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771217371029	Retail	Medium	0	1
+CP0002391	Wulan Siregar	Individual	Wulan Siregar	1985-01-01	1900-01-01	180 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	775649333598	Healthcare	Low	1	0
+CP0002392	PT Iskandar Synthetic	Company	Alya Iskandar	1900-01-01	2018-01-01	877 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	773766168840	Technology	Low	0	1
+CP0002393	Naufal Nugraha	Individual	Naufal Nugraha	1985-01-01	1900-01-01	305 Synthetic Avenue	Bandung	JP	JP	Bank Sentra	779207942254	Technology	Low	1	0
+CP0002394	PT Rahardjo Synthetic	Company	Raka Rahardjo	1900-01-01	2018-01-01	53 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	778385143075	Retail	Medium	0	1
+CP0002395	Bima Yulianto	Individual	Bima Yulianto	1985-01-01	1900-01-01	555 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777301664132	Healthcare	High	1	0
+CP0002396	PT Halim Synthetic	Company	Maya Halim	1900-01-01	2018-01-01	81 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	770575832909	Technology	Low	0	1
+CP0002397	PT Santoso Synthetic	Company	Dimas Santoso	1900-01-01	2018-01-01	536 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	776933586604	Construction	Medium	0	1
+CP0002398	Wulan Siregar	Individual	Wulan Siregar	1985-01-01	1900-01-01	333 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775628280603	Technology	Low	1	0
+CP0002399	PT Firmansyah Synthetic	Company	Alya Firmansyah	1900-01-01	2018-01-01	821 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	773311591864	Healthcare	Medium	0	1
+CP0002400	Fajar Siregar	Individual	Fajar Siregar	1985-01-01	1900-01-01	321 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	772655935305	Technology	Low	1	0
+CP0002401	Adit Permana	Individual	Adit Permana	1985-01-01	1900-01-01	355 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778571238548	Technology	Low	1	0
+CP0002402	Maya Santoso	Individual	Maya Santoso	1985-01-01	1900-01-01	551 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	778681590382	Technology	Low	1	0
+CP0002403	Bagus Suryadi	Individual	Bagus Suryadi	1985-01-01	1900-01-01	613 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773937027680	Construction	Medium	1	0
+CP0002404	PT Nugraha Synthetic	Company	Farah Nugraha	1900-01-01	2018-01-01	207 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778965827468	Logistics	Low	0	1
+CP0002405	Teguh Santoso	Individual	Teguh Santoso	1985-01-01	1900-01-01	743 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775654326523	Construction	Low	1	0
+CP0002406	Adit Yulianto	Individual	Adit Yulianto	1985-01-01	1900-01-01	77 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	774897281032	Healthcare	Low	1	0
+CP0002407	Joko Darmawan	Individual	Joko Darmawan	1985-01-01	1900-01-01	856 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775463340187	Manufacturing	Medium	1	0
+CP0002408	PT Hartono Synthetic	Company	Bima Hartono	1900-01-01	2018-01-01	652 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777725602412	Healthcare	Low	0	1
+CP0002409	PT Halim Synthetic	Company	Naufal Halim	1900-01-01	2018-01-01	111 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770021997100	Construction	Low	0	1
+CP0002410	PT Gunawan Synthetic	Company	Raka Gunawan	1900-01-01	2018-01-01	119 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772213202947	Retail	Medium	0	1
+CP0002411	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	266 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	774853171630	Technology	Low	1	0
+CP0002412	PT Prakoso Synthetic	Company	Alya Prakoso	1900-01-01	2018-01-01	227 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	777589951949	Logistics	Low	0	1
+CP0002413	Dimas Setiawan	Individual	Dimas Setiawan	1985-01-01	1900-01-01	238 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	772088241837	Technology	Medium	1	0
+CP0002414	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	882 Synthetic Avenue	Semarang	JP	JP	Bank Sentra	776632441490	Construction	High	1	0
+CP0002415	PT Budiman Synthetic	Company	Putri Budiman	1900-01-01	2018-01-01	37 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776719163552	Healthcare	Low	0	1
+CP0002416	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	286 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773465939328	Construction	Low	1	0
+CP0002417	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	855 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774022042089	Retail	Low	1	0
+CP0002418	PT Wijaya Synthetic	Company	Citra Wijaya	1900-01-01	2018-01-01	47 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774552368494	Logistics	Low	0	1
+CP0002419	PT Adinata Synthetic	Company	Andi Adinata	1900-01-01	2018-01-01	324 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773161804879	Healthcare	Low	0	1
+CP0002420	Sari Gunawan	Individual	Sari Gunawan	1985-01-01	1900-01-01	72 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777046391002	Construction	Low	1	0
+CP0002421	Indra Chandra	Individual	Indra Chandra	1985-01-01	1900-01-01	603 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778422534598	Retail	Low	1	0
+CP0002422	PT Rahardjo Synthetic	Company	Rani Rahardjo	1900-01-01	2018-01-01	280 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771849493868	Healthcare	Low	0	1
+CP0002423	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	69 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770413464268	Logistics	Medium	1	0
+CP0002424	PT Firmansyah Synthetic	Company	Sari Firmansyah	1900-01-01	2018-01-01	335 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778470944236	Retail	Medium	0	1
+CP0002425	Andi Wibowo	Individual	Andi Wibowo	1985-01-01	1900-01-01	492 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774427041895	Retail	Medium	1	0
+CP0002426	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	648 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776966725566	Healthcare	Low	1	0
+CP0002427	PT Permana Synthetic	Company	Wulan Permana	1900-01-01	2018-01-01	388 Synthetic Avenue	Bandung	AE	AE	Bank Nusantara	776752910031	Retail	Medium	0	1
+CP0002428	Fajar Santoso	Individual	Fajar Santoso	1985-01-01	1900-01-01	439 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778159545283	Logistics	Low	1	0
+CP0002429	Dimas Chandra	Individual	Dimas Chandra	1985-01-01	1900-01-01	537 Synthetic Avenue	Makassar	US	US	Bank Nusantara	775796405767	Manufacturing	Low	1	0
+CP0002430	Indra Iskandar	Individual	Indra Iskandar	1985-01-01	1900-01-01	113 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779175962949	Manufacturing	Low	1	0
+CP0002431	Sari Rahardjo	Individual	Sari Rahardjo	1985-01-01	1900-01-01	37 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772944806070	Technology	Low	1	0
+CP0002432	PT Lesmana Synthetic	Company	Arif Lesmana	1900-01-01	2018-01-01	705 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774482367611	Technology	Medium	0	1
+CP0002433	Putri Chandra	Individual	Putri Chandra	1985-01-01	1900-01-01	574 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772763089130	Logistics	Low	1	0
+CP0002434	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	672 Synthetic Avenue	Makassar	AE	AE	Asia Commerce Bank	773570163291	Manufacturing	Low	1	0
+CP0002435	PT Rahardjo Synthetic	Company	Gita Rahardjo	1900-01-01	2018-01-01	100 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773246611393	Retail	Medium	0	1
+CP0002436	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	756 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775631164259	Logistics	Low	1	0
+CP0002437	Hana Santoso	Individual	Hana Santoso	1985-01-01	1900-01-01	33 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778850626581	Technology	Low	1	0
+CP0002438	PT Mahendra Synthetic	Company	Arif Mahendra	1900-01-01	2018-01-01	443 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	772414274312	Manufacturing	Low	0	1
+CP0002439	PT Permana Synthetic	Company	Farah Permana	1900-01-01	2018-01-01	797 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	774110797680	Logistics	Low	0	1
+CP0002440	Rani Wibowo	Individual	Rani Wibowo	1985-01-01	1900-01-01	316 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779622408641	Technology	Medium	1	0
+CP0002441	PT Adinata Synthetic	Company	Raka Adinata	1900-01-01	2018-01-01	37 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779742341946	Healthcare	Low	0	1
+CP0002442	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	644 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778739931867	Construction	Medium	1	0
+CP0002443	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	328 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	779219156626	Logistics	Low	0	1
+CP0002444	PT Chandra Synthetic	Company	Teguh Chandra	1900-01-01	2018-01-01	631 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776567460979	Construction	Low	0	1
+CP0002445	PT Chandra Synthetic	Company	Anisa Chandra	1900-01-01	2018-01-01	836 Synthetic Avenue	Jakarta	GB	GB	Bank Sentra	777021201580	Construction	Low	0	1
+CP0002446	PT Chandra Synthetic	Company	Rani Chandra	1900-01-01	2018-01-01	256 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	772155979557	Manufacturing	Low	0	1
+CP0002447	Maya Firmansyah	Individual	Maya Firmansyah	1985-01-01	1900-01-01	401 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776018575008	Healthcare	Low	1	0
+CP0002448	PT Gunawan Synthetic	Company	Indra Gunawan	1900-01-01	2018-01-01	56 Synthetic Avenue	Surabaya	AE	AE	Bank Sentra	779779737967	Construction	Low	0	1
+CP0002449	Sari Wijaya	Individual	Sari Wijaya	1985-01-01	1900-01-01	36 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774692075710	Healthcare	Low	1	0
+CP0002450	Farah Yulianto	Individual	Farah Yulianto	1985-01-01	1900-01-01	863 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777144066180	Retail	Low	1	0
+CP0002451	Laras Prakoso	Individual	Laras Prakoso	1985-01-01	1900-01-01	311 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771428372831	Construction	Low	1	0
+CP0002452	Indra Gunawan	Individual	Indra Gunawan	1985-01-01	1900-01-01	484 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778805082260	Retail	Low	1	0
+CP0002453	PT Iskandar Synthetic	Company	Sari Iskandar	1900-01-01	2018-01-01	851 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	774887717930	Manufacturing	Low	0	1
+CP0002454	Putri Chandra	Individual	Putri Chandra	1985-01-01	1900-01-01	672 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778343738205	Manufacturing	Low	1	0
+CP0002455	Adit Prakoso	Individual	Adit Prakoso	1985-01-01	1900-01-01	90 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	772008928048	Healthcare	Medium	1	0
+CP0002456	Andi Yulianto	Individual	Andi Yulianto	1985-01-01	1900-01-01	810 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	771428218384	Technology	Low	1	0
+CP0002457	Andi Darmawan	Individual	Andi Darmawan	1985-01-01	1900-01-01	429 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	775502323473	Construction	Medium	1	0
+CP0002458	PT Nugraha Synthetic	Company	Putri Nugraha	1900-01-01	2018-01-01	114 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778410782121	Retail	Medium	0	1
+CP0002459	Teguh Permana	Individual	Teguh Permana	1985-01-01	1900-01-01	339 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	775961772903	Logistics	Medium	1	0
+CP0002460	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	148 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	777193964001	Healthcare	Low	1	0
+CP0002461	Citra Santoso	Individual	Citra Santoso	1985-01-01	1900-01-01	761 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774831972513	Logistics	Medium	1	0
+CP0002462	PT Kurniawan Synthetic	Company	Anisa Kurniawan	1900-01-01	2018-01-01	434 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	775763240303	Construction	Medium	0	1
+CP0002463	PT Setiawan Synthetic	Company	Farah Setiawan	1900-01-01	2018-01-01	439 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771738375372	Technology	Low	0	1
+CP0002464	Fajar Prakoso	Individual	Fajar Prakoso	1985-01-01	1900-01-01	480 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	770203817770	Logistics	Low	1	0
+CP0002465	Citra Putra	Individual	Citra Putra	1985-01-01	1900-01-01	432 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776199668277	Construction	Low	1	0
+CP0002466	PT Darmawan Synthetic	Company	Dimas Darmawan	1900-01-01	2018-01-01	117 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774323800195	Retail	Low	0	1
+CP0002467	PT Iskandar Synthetic	Company	Sari Iskandar	1900-01-01	2018-01-01	223 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773814788884	Healthcare	Medium	0	1
+CP0002468	Anisa Wijaya	Individual	Anisa Wijaya	1985-01-01	1900-01-01	34 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771121701401	Logistics	High	1	0
+CP0002469	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	264 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772628829954	Technology	Medium	1	0
+CP0002470	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	261 Synthetic Avenue	Denpasar	US	US	Bank Sentra	776774092217	Logistics	Low	1	0
+CP0002471	Dimas Darmawan	Individual	Dimas Darmawan	1985-01-01	1900-01-01	796 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	772561118145	Technology	Medium	1	0
+CP0002472	PT Hartono Synthetic	Company	Andi Hartono	1900-01-01	2018-01-01	531 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777655948314	Retail	Low	0	1
+CP0002473	PT Yulianto Synthetic	Company	Arif Yulianto	1900-01-01	2018-01-01	125 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	771317393814	Healthcare	Medium	0	1
+CP0002474	Raka Rahardjo	Individual	Raka Rahardjo	1985-01-01	1900-01-01	433 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	776429265283	Healthcare	Medium	1	0
+CP0002475	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	562 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773664166912	Manufacturing	High	1	0
+CP0002476	Joko Halim	Individual	Joko Halim	1985-01-01	1900-01-01	524 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	776439114584	Technology	Low	1	0
+CP0002477	PT Nugraha Synthetic	Company	Nadia Nugraha	1900-01-01	2018-01-01	701 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779122511359	Logistics	Low	0	1
+CP0002478	Kevin Chandra	Individual	Kevin Chandra	1985-01-01	1900-01-01	868 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	777324967303	Logistics	Medium	1	0
+CP0002479	Kevin Kurniawan	Individual	Kevin Kurniawan	1985-01-01	1900-01-01	373 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779870947414	Healthcare	Low	1	0
+CP0002480	Indra Permana	Individual	Indra Permana	1985-01-01	1900-01-01	128 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775952587294	Retail	High	1	0
+CP0002481	PT Rahardjo Synthetic	Company	Kevin Rahardjo	1900-01-01	2018-01-01	563 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776553165093	Healthcare	High	0	1
+CP0002482	PT Firmansyah Synthetic	Company	Hana Firmansyah	1900-01-01	2018-01-01	282 Synthetic Avenue	Makassar	JP	JP	Bank Sentra	774402989625	Retail	Medium	0	1
+CP0002483	PT Santoso Synthetic	Company	Kevin Santoso	1900-01-01	2018-01-01	472 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776522216271	Retail	High	0	1
+CP0002484	PT Setiawan Synthetic	Company	Rani Setiawan	1900-01-01	2018-01-01	85 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776158467095	Technology	Medium	0	1
+CP0002485	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	613 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772233519726	Technology	Low	1	0
+CP0002486	Laras Darmawan	Individual	Laras Darmawan	1985-01-01	1900-01-01	206 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	775063436981	Manufacturing	Low	1	0
+CP0002487	PT Setiawan Synthetic	Company	Indra Setiawan	1900-01-01	2018-01-01	871 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	779476815835	Construction	Low	0	1
+CP0002488	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	715 Synthetic Avenue	Medan	GB	GB	Bank Sentra	776209254825	Logistics	Low	1	0
+CP0002489	PT Wibowo Synthetic	Company	Indra Wibowo	1900-01-01	2018-01-01	253 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772825651605	Manufacturing	Low	0	1
+CP0002490	Teguh Siregar	Individual	Teguh Siregar	1985-01-01	1900-01-01	867 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775505077553	Technology	Low	1	0
+CP0002491	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	844 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770486507753	Construction	Medium	1	0
+CP0002492	Hana Firmansyah	Individual	Hana Firmansyah	1985-01-01	1900-01-01	832 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	772820698488	Construction	Low	1	0
+CP0002493	Naufal Budiman	Individual	Naufal Budiman	1985-01-01	1900-01-01	304 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	772069542311	Logistics	Low	1	0
+CP0002494	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	656 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778920197267	Logistics	High	1	0
+CP0002495	Sari Wijaya	Individual	Sari Wijaya	1985-01-01	1900-01-01	185 Synthetic Avenue	Semarang	GB	GB	Asia Commerce Bank	778013819105	Retail	Medium	1	0
+CP0002496	PT Rahardjo Synthetic	Company	Farah Rahardjo	1900-01-01	2018-01-01	85 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770149407085	Technology	Low	0	1
+CP0002497	Sari Santoso	Individual	Sari Santoso	1985-01-01	1900-01-01	228 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771527687330	Manufacturing	High	1	0
+CP0002498	Adit Putra	Individual	Adit Putra	1985-01-01	1900-01-01	288 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	775483871477	Construction	High	1	0
+CP0002499	Intan Firmansyah	Individual	Intan Firmansyah	1985-01-01	1900-01-01	428 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774953439134	Technology	Medium	1	0
+CP0002500	Arif Budiman	Individual	Arif Budiman	1985-01-01	1900-01-01	811 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774233904197	Construction	Low	1	0
+CP0002501	PT Mahendra Synthetic	Company	Fajar Mahendra	1900-01-01	2018-01-01	743 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779156989696	Logistics	Low	0	1
+CP0002502	PT Budiman Synthetic	Company	Kevin Budiman	1900-01-01	2018-01-01	517 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771046369604	Healthcare	Medium	0	1
+CP0002503	PT Permana Synthetic	Company	Putri Permana	1900-01-01	2018-01-01	468 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	772079048738	Retail	Medium	0	1
+CP0002504	Alya Yulianto	Individual	Alya Yulianto	1985-01-01	1900-01-01	321 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771324508131	Retail	Low	1	0
+CP0002505	Joko Darmawan	Individual	Joko Darmawan	1985-01-01	1900-01-01	333 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770610783235	Retail	Low	1	0
+CP0002506	PT Prakoso Synthetic	Company	Anisa Prakoso	1900-01-01	2018-01-01	288 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773326613121	Manufacturing	Low	0	1
+CP0002507	Joko Siregar	Individual	Joko Siregar	1985-01-01	1900-01-01	407 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771528434188	Retail	Low	1	0
+CP0002508	Hana Putra	Individual	Hana Putra	1985-01-01	1900-01-01	836 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	776378789164	Logistics	Low	1	0
+CP0002509	Wulan Santoso	Individual	Wulan Santoso	1985-01-01	1900-01-01	278 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779890010203	Logistics	Low	1	0
+CP0002510	Dimas Wijaya	Individual	Dimas Wijaya	1985-01-01	1900-01-01	459 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777474765052	Healthcare	Low	1	0
+CP0002511	Rizky Rahardjo	Individual	Rizky Rahardjo	1985-01-01	1900-01-01	101 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	777344525461	Healthcare	Low	1	0
+CP0002512	PT Wibowo Synthetic	Company	Eka Wibowo	1900-01-01	2018-01-01	52 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	772298827755	Logistics	Low	0	1
+CP0002513	PT Mahendra Synthetic	Company	Farah Mahendra	1900-01-01	2018-01-01	483 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776484720256	Construction	Low	0	1
+CP0002514	PT Chandra Synthetic	Company	Intan Chandra	1900-01-01	2018-01-01	164 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772776518578	Retail	Medium	0	1
+CP0002515	Intan Hartono	Individual	Intan Hartono	1985-01-01	1900-01-01	378 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776657506782	Retail	Low	1	0
+CP0002516	Putri Nugraha	Individual	Putri Nugraha	1985-01-01	1900-01-01	65 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775910593747	Healthcare	Low	1	0
+CP0002517	Naufal Rahardjo	Individual	Naufal Rahardjo	1985-01-01	1900-01-01	841 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773670373212	Construction	Low	1	0
+CP0002518	Rani Setiawan	Individual	Rani Setiawan	1985-01-01	1900-01-01	695 Synthetic Avenue	Medan	MY	MY	Bank Sentra	776222234922	Construction	Medium	1	0
+CP0002519	PT Mahendra Synthetic	Company	Fajar Mahendra	1900-01-01	2018-01-01	86 Synthetic Avenue	Denpasar	US	US	Asia Commerce Bank	773104999320	Logistics	Medium	0	1
+CP0002520	Hana Setiawan	Individual	Hana Setiawan	1985-01-01	1900-01-01	185 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775417002452	Logistics	Low	1	0
+CP0002521	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	524 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	775485820305	Construction	Medium	1	0
+CP0002522	Raka Mahendra	Individual	Raka Mahendra	1985-01-01	1900-01-01	441 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777756813450	Healthcare	Low	1	0
+CP0002523	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	367 Synthetic Avenue	Semarang	AU	AU	Bank Sentra	770509138684	Technology	Low	1	0
+CP0002524	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	457 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777979363110	Healthcare	Low	1	0
+CP0002525	Eka Suryadi	Individual	Eka Suryadi	1985-01-01	1900-01-01	639 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772978717950	Construction	Low	1	0
+CP0002526	PT Budiman Synthetic	Company	Farah Budiman	1900-01-01	2018-01-01	420 Synthetic Avenue	Medan	GB	GB	Bank Nusantara	777524931741	Healthcare	Low	0	1
+CP0002527	PT Mahendra Synthetic	Company	Alya Mahendra	1900-01-01	2018-01-01	655 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	779750068791	Manufacturing	High	0	1
+CP0002528	PT Chandra Synthetic	Company	Sari Chandra	1900-01-01	2018-01-01	705 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775140910780	Construction	Low	0	1
+CP0002529	Naufal Hartono	Individual	Naufal Hartono	1985-01-01	1900-01-01	163 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	773525433773	Healthcare	Medium	1	0
+CP0002530	Hana Putra	Individual	Hana Putra	1985-01-01	1900-01-01	527 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	778352916721	Technology	Low	1	0
+CP0002531	Dewi Firmansyah	Individual	Dewi Firmansyah	1985-01-01	1900-01-01	855 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	775393894112	Healthcare	Low	1	0
+CP0002532	Raka Hartono	Individual	Raka Hartono	1985-01-01	1900-01-01	348 Synthetic Avenue	Bandung	US	US	Bank Nusantara	777726495041	Construction	High	1	0
+CP0002533	Hana Rahardjo	Individual	Hana Rahardjo	1985-01-01	1900-01-01	96 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775968650719	Construction	Medium	1	0
+CP0002534	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	723 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	779239976627	Healthcare	Low	1	0
+CP0002535	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	453 Synthetic Avenue	Medan	GB	GB	Bank Sentra	771871201850	Healthcare	Low	1	0
+CP0002536	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	527 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772537486054	Retail	High	1	0
+CP0002537	Raka Nugraha	Individual	Raka Nugraha	1985-01-01	1900-01-01	489 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772367648740	Technology	Medium	1	0
+CP0002538	Anisa Budiman	Individual	Anisa Budiman	1985-01-01	1900-01-01	255 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	779890102702	Healthcare	Low	1	0
+CP0002539	PT Permana Synthetic	Company	Bagus Permana	1900-01-01	2018-01-01	751 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	779563404094	Technology	Low	0	1
+CP0002540	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	240 Synthetic Avenue	Bandung	US	US	Bank Nusantara	775227230413	Healthcare	Low	1	0
+CP0002541	Indra Firmansyah	Individual	Indra Firmansyah	1985-01-01	1900-01-01	35 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775785358446	Healthcare	Low	1	0
+CP0002542	Joko Suryadi	Individual	Joko Suryadi	1985-01-01	1900-01-01	630 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777410349606	Logistics	Medium	1	0
+CP0002543	Farah Kurniawan	Individual	Farah Kurniawan	1985-01-01	1900-01-01	85 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776006141262	Construction	Low	1	0
+CP0002544	Sari Wibowo	Individual	Sari Wibowo	1985-01-01	1900-01-01	505 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	773744189290	Manufacturing	Medium	1	0
+CP0002545	PT Adinata Synthetic	Company	Farah Adinata	1900-01-01	2018-01-01	849 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773239432478	Construction	Low	0	1
+CP0002546	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	419 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	776655615436	Manufacturing	Medium	1	0
+CP0002547	PT Gunawan Synthetic	Company	Bima Gunawan	1900-01-01	2018-01-01	268 Synthetic Avenue	Bandung	JP	JP	Bank Sentra	777411170501	Manufacturing	Medium	0	1
+CP0002548	PT Wibowo Synthetic	Company	Kevin Wibowo	1900-01-01	2018-01-01	350 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	777375503740	Logistics	Low	0	1
+CP0002549	Naufal Putra	Individual	Naufal Putra	1985-01-01	1900-01-01	214 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	778607844531	Logistics	Low	1	0
+CP0002550	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	895 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777031640807	Construction	Low	1	0
+CP0002551	PT Firmansyah Synthetic	Company	Andi Firmansyah	1900-01-01	2018-01-01	535 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777621101653	Retail	High	0	1
+CP0002552	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	460 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779730723385	Manufacturing	Low	1	0
+CP0002553	PT Darmawan Synthetic	Company	Joko Darmawan	1900-01-01	2018-01-01	400 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	778263505844	Construction	Low	0	1
+CP0002554	Eka Mahendra	Individual	Eka Mahendra	1985-01-01	1900-01-01	336 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777363869308	Logistics	High	1	0
+CP0002555	Indra Nugraha	Individual	Indra Nugraha	1985-01-01	1900-01-01	886 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775098229453	Logistics	Low	1	0
+CP0002556	Arif Suryadi	Individual	Arif Suryadi	1985-01-01	1900-01-01	152 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778064953678	Technology	Medium	1	0
+CP0002557	Bagus Budiman	Individual	Bagus Budiman	1985-01-01	1900-01-01	382 Synthetic Avenue	Medan	JP	JP	Asia Commerce Bank	776219491035	Technology	Low	1	0
+CP0002558	Fajar Prakoso	Individual	Fajar Prakoso	1985-01-01	1900-01-01	297 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	775247732640	Logistics	Low	1	0
+CP0002559	Alya Putra	Individual	Alya Putra	1985-01-01	1900-01-01	363 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	779039493938	Retail	Low	1	0
+CP0002560	Nadia Yulianto	Individual	Nadia Yulianto	1985-01-01	1900-01-01	213 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	772408328467	Construction	Low	1	0
+CP0002561	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	726 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772460458703	Technology	Low	1	0
+CP0002562	PT Chandra Synthetic	Company	Intan Chandra	1900-01-01	2018-01-01	642 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	771974932711	Construction	High	0	1
+CP0002563	Rani Hartono	Individual	Rani Hartono	1985-01-01	1900-01-01	663 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772687916039	Construction	Medium	1	0
+CP0002564	Sari Setiawan	Individual	Sari Setiawan	1985-01-01	1900-01-01	684 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779067288463	Construction	Low	1	0
+CP0002565	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	436 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779801922236	Manufacturing	Low	1	0
+CP0002566	PT Setiawan Synthetic	Company	Teguh Setiawan	1900-01-01	2018-01-01	273 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773525674260	Technology	Low	0	1
+CP0002567	Rizky Wibowo	Individual	Rizky Wibowo	1985-01-01	1900-01-01	545 Synthetic Avenue	Medan	AE	AE	Bank Sentra	778584307227	Construction	Medium	1	0
+CP0002568	Bima Hartono	Individual	Bima Hartono	1985-01-01	1900-01-01	548 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774031491919	Logistics	Medium	1	0
+CP0002569	PT Hartono Synthetic	Company	Dimas Hartono	1900-01-01	2018-01-01	715 Synthetic Avenue	Denpasar	GB	GB	Bank Sentra	772913044293	Logistics	Low	0	1
+CP0002570	PT Kurniawan Synthetic	Company	Dimas Kurniawan	1900-01-01	2018-01-01	232 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	774193133515	Healthcare	Low	0	1
+CP0002571	Kevin Iskandar	Individual	Kevin Iskandar	1985-01-01	1900-01-01	128 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773770718929	Healthcare	Low	1	0
+CP0002572	PT Suryadi Synthetic	Company	Citra Suryadi	1900-01-01	2018-01-01	102 Synthetic Avenue	Makassar	JP	JP	Bank Nusantara	779109898846	Logistics	Medium	0	1
+CP0002573	Bima Wijaya	Individual	Bima Wijaya	1985-01-01	1900-01-01	115 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778862697233	Technology	Low	1	0
+CP0002574	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	657 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	770407266034	Retail	Low	1	0
+CP0002575	PT Setiawan Synthetic	Company	Arif Setiawan	1900-01-01	2018-01-01	116 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	772119827274	Logistics	Medium	0	1
+CP0002576	Anisa Putra	Individual	Anisa Putra	1985-01-01	1900-01-01	97 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	771890791604	Healthcare	Low	1	0
+CP0002577	Rani Prakoso	Individual	Rani Prakoso	1985-01-01	1900-01-01	698 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	777325214332	Construction	Low	1	0
+CP0002578	Citra Adinata	Individual	Citra Adinata	1985-01-01	1900-01-01	318 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777656606995	Construction	Low	1	0
+CP0002579	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	3 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	779580018957	Healthcare	Medium	1	0
+CP0002580	Gita Setiawan	Individual	Gita Setiawan	1985-01-01	1900-01-01	559 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	775732622176	Manufacturing	Medium	1	0
+CP0002581	PT Siregar Synthetic	Company	Hana Siregar	1900-01-01	2018-01-01	775 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	776115659511	Healthcare	Low	0	1
+CP0002582	Dewi Prakoso	Individual	Dewi Prakoso	1985-01-01	1900-01-01	418 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	774420543124	Construction	Low	1	0
+CP0002583	Bima Firmansyah	Individual	Bima Firmansyah	1985-01-01	1900-01-01	582 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774121678374	Construction	Low	1	0
+CP0002584	Joko Prakoso	Individual	Joko Prakoso	1985-01-01	1900-01-01	181 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771689981924	Healthcare	Low	1	0
+CP0002585	Andi Prakoso	Individual	Andi Prakoso	1985-01-01	1900-01-01	171 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	772264768201	Retail	Low	1	0
+CP0002586	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	863 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770811430623	Logistics	Medium	1	0
+CP0002587	PT Iskandar Synthetic	Company	Teguh Iskandar	1900-01-01	2018-01-01	397 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	775541240033	Logistics	Low	0	1
+CP0002588	Raka Suryadi	Individual	Raka Suryadi	1985-01-01	1900-01-01	578 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771702829674	Construction	Low	1	0
+CP0002589	PT Setiawan Synthetic	Company	Dewi Setiawan	1900-01-01	2018-01-01	488 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	773444890011	Logistics	Low	0	1
+CP0002590	Intan Permana	Individual	Intan Permana	1985-01-01	1900-01-01	720 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779621243323	Healthcare	Medium	1	0
+CP0002591	Kevin Budiman	Individual	Kevin Budiman	1985-01-01	1900-01-01	384 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779885383236	Healthcare	Low	1	0
+CP0002592	Rani Wibowo	Individual	Rani Wibowo	1985-01-01	1900-01-01	30 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777694632510	Logistics	High	1	0
+CP0002593	Raka Mahendra	Individual	Raka Mahendra	1985-01-01	1900-01-01	543 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	771026859765	Manufacturing	Low	1	0
+CP0002594	PT Prakoso Synthetic	Company	Citra Prakoso	1900-01-01	2018-01-01	487 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770663100345	Construction	Low	0	1
+CP0002595	PT Gunawan Synthetic	Company	Adit Gunawan	1900-01-01	2018-01-01	399 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771024303997	Technology	Low	0	1
+CP0002596	Putri Adinata	Individual	Putri Adinata	1985-01-01	1900-01-01	850 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773048095809	Logistics	Low	1	0
+CP0002597	Hana Adinata	Individual	Hana Adinata	1985-01-01	1900-01-01	807 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776588384106	Healthcare	Low	1	0
+CP0002598	Sari Yulianto	Individual	Sari Yulianto	1985-01-01	1900-01-01	246 Synthetic Avenue	Bandung	US	US	Bank Nusantara	772167215439	Technology	Medium	1	0
+CP0002599	PT Suryadi Synthetic	Company	Andi Suryadi	1900-01-01	2018-01-01	814 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777557742155	Construction	Low	0	1
+CP0002600	Dewi Permana	Individual	Dewi Permana	1985-01-01	1900-01-01	67 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772571934910	Construction	Low	1	0
+CP0002601	PT Rahardjo Synthetic	Company	Adit Rahardjo	1900-01-01	2018-01-01	549 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	771485487995	Construction	Low	0	1
+CP0002602	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	171 Synthetic Avenue	Yogyakarta	AE	AE	Asia Commerce Bank	771980438994	Logistics	Low	1	0
+CP0002603	Eka Lesmana	Individual	Eka Lesmana	1985-01-01	1900-01-01	132 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777037319685	Healthcare	Low	1	0
+CP0002604	Dimas Yulianto	Individual	Dimas Yulianto	1985-01-01	1900-01-01	289 Synthetic Avenue	Medan	GB	GB	Bank Sentra	778171852180	Technology	Low	1	0
+CP0002605	PT Setiawan Synthetic	Company	Rizky Setiawan	1900-01-01	2018-01-01	261 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774965085963	Healthcare	Low	0	1
+CP0002606	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	307 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770446384780	Construction	Low	1	0
+CP0002607	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	219 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	770683755687	Logistics	Low	1	0
+CP0002608	PT Prakoso Synthetic	Company	Sari Prakoso	1900-01-01	2018-01-01	146 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	774136300317	Healthcare	Medium	0	1
+CP0002609	PT Chandra Synthetic	Company	Naufal Chandra	1900-01-01	2018-01-01	196 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770774575511	Construction	Low	0	1
+CP0002610	Intan Lesmana	Individual	Intan Lesmana	1985-01-01	1900-01-01	363 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775575043373	Healthcare	Medium	1	0
+CP0002611	PT Gunawan Synthetic	Company	Kevin Gunawan	1900-01-01	2018-01-01	392 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779719567422	Construction	Medium	0	1
+CP0002612	Nadia Putra	Individual	Nadia Putra	1985-01-01	1900-01-01	650 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770212287610	Technology	Low	1	0
+CP0002613	Wulan Wijaya	Individual	Wulan Wijaya	1985-01-01	1900-01-01	851 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775161040020	Technology	Low	1	0
+CP0002614	PT Rahardjo Synthetic	Company	Rizky Rahardjo	1900-01-01	2018-01-01	661 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	774252204979	Technology	Low	0	1
+CP0002615	Indra Firmansyah	Individual	Indra Firmansyah	1985-01-01	1900-01-01	59 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771080174377	Logistics	Low	1	0
+CP0002616	Bagus Yulianto	Individual	Bagus Yulianto	1985-01-01	1900-01-01	756 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772636116662	Retail	Low	1	0
+CP0002617	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	600 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770874535144	Logistics	Low	1	0
+CP0002618	PT Prakoso Synthetic	Company	Fajar Prakoso	1900-01-01	2018-01-01	117 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774538576013	Logistics	Low	0	1
+CP0002619	Kevin Halim	Individual	Kevin Halim	1985-01-01	1900-01-01	857 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775847552291	Manufacturing	Low	1	0
+CP0002620	Farah Putra	Individual	Farah Putra	1985-01-01	1900-01-01	329 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	775206980561	Manufacturing	Low	1	0
+CP0002621	Arif Permana	Individual	Arif Permana	1985-01-01	1900-01-01	249 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770748348887	Healthcare	Low	1	0
+CP0002622	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	215 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	774033290325	Retail	Low	1	0
+CP0002623	Rani Chandra	Individual	Rani Chandra	1985-01-01	1900-01-01	872 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771891060036	Logistics	Medium	1	0
+CP0002624	Joko Lesmana	Individual	Joko Lesmana	1985-01-01	1900-01-01	211 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776109248871	Healthcare	Medium	1	0
+CP0002625	Nadia Putra	Individual	Nadia Putra	1985-01-01	1900-01-01	753 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	773760617170	Retail	Low	1	0
+CP0002626	Bima Putra	Individual	Bima Putra	1985-01-01	1900-01-01	568 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	772505411967	Construction	Low	1	0
+CP0002627	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	830 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	775037993227	Technology	Low	1	0
+CP0002628	Gita Setiawan	Individual	Gita Setiawan	1985-01-01	1900-01-01	524 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779839482071	Logistics	Medium	1	0
+CP0002629	Hana Wibowo	Individual	Hana Wibowo	1985-01-01	1900-01-01	880 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777937710808	Technology	Medium	1	0
+CP0002630	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	285 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776253418997	Healthcare	Low	1	0
+CP0002631	Hana Adinata	Individual	Hana Adinata	1985-01-01	1900-01-01	422 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778079387070	Construction	Medium	1	0
+CP0002632	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	255 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776115388032	Construction	Medium	1	0
+CP0002633	PT Chandra Synthetic	Company	Naufal Chandra	1900-01-01	2018-01-01	37 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779770965428	Healthcare	Low	0	1
+CP0002634	Raka Wibowo	Individual	Raka Wibowo	1985-01-01	1900-01-01	327 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	770540673847	Manufacturing	Low	1	0
+CP0002635	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	84 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770486124760	Logistics	Low	1	0
+CP0002636	PT Mahendra Synthetic	Company	Putri Mahendra	1900-01-01	2018-01-01	641 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777857888823	Technology	Medium	0	1
+CP0002637	PT Hartono Synthetic	Company	Farah Hartono	1900-01-01	2018-01-01	726 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	771584220363	Construction	Low	0	1
+CP0002638	PT Putra Synthetic	Company	Laras Putra	1900-01-01	2018-01-01	665 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	770629976060	Manufacturing	Low	0	1
+CP0002639	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	725 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776471789482	Logistics	High	1	0
+CP0002640	Raka Siregar	Individual	Raka Siregar	1985-01-01	1900-01-01	899 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	770645409999	Retail	Low	1	0
+CP0002641	Raka Lesmana	Individual	Raka Lesmana	1985-01-01	1900-01-01	828 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772750189931	Manufacturing	Medium	1	0
+CP0002642	PT Suryadi Synthetic	Company	Maya Suryadi	1900-01-01	2018-01-01	167 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	771261897031	Healthcare	Low	0	1
+CP0002643	Eka Prakoso	Individual	Eka Prakoso	1985-01-01	1900-01-01	828 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	779773024837	Retail	Low	1	0
+CP0002644	Nadia Adinata	Individual	Nadia Adinata	1985-01-01	1900-01-01	27 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779219210647	Technology	Medium	1	0
+CP0002645	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	657 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	778821555197	Technology	Low	1	0
+CP0002646	Hana Wibowo	Individual	Hana Wibowo	1985-01-01	1900-01-01	243 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778625087593	Retail	Low	1	0
+CP0002647	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	87 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770936877893	Construction	Low	1	0
+CP0002648	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	613 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776645781324	Technology	Low	1	0
+CP0002649	Kevin Darmawan	Individual	Kevin Darmawan	1985-01-01	1900-01-01	629 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	779113318788	Healthcare	Low	1	0
+CP0002650	Dimas Chandra	Individual	Dimas Chandra	1985-01-01	1900-01-01	386 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776276820799	Construction	Medium	1	0
+CP0002651	Fajar Wibowo	Individual	Fajar Wibowo	1985-01-01	1900-01-01	177 Synthetic Avenue	Denpasar	US	US	Bank Sentra	775049549616	Technology	High	1	0
+CP0002652	Eka Budiman	Individual	Eka Budiman	1985-01-01	1900-01-01	718 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773985578018	Construction	Low	1	0
+CP0002653	Putri Budiman	Individual	Putri Budiman	1985-01-01	1900-01-01	743 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	773612796515	Healthcare	Low	1	0
+CP0002654	PT Yulianto Synthetic	Company	Andi Yulianto	1900-01-01	2018-01-01	42 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773447622297	Technology	Low	0	1
+CP0002655	Wulan Putra	Individual	Wulan Putra	1985-01-01	1900-01-01	801 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770727546114	Healthcare	Medium	1	0
+CP0002656	Indra Hartono	Individual	Indra Hartono	1985-01-01	1900-01-01	608 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779533737758	Construction	Low	1	0
+CP0002657	PT Iskandar Synthetic	Company	Rizky Iskandar	1900-01-01	2018-01-01	184 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772964315832	Logistics	Low	0	1
+CP0002658	Laras Permana	Individual	Laras Permana	1985-01-01	1900-01-01	669 Synthetic Avenue	Semarang	JP	JP	Asia Commerce Bank	772904850286	Retail	Low	1	0
+CP0002659	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	897 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	773606252143	Healthcare	Low	1	0
+CP0002660	Farah Rahardjo	Individual	Farah Rahardjo	1985-01-01	1900-01-01	307 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777525448777	Retail	Low	1	0
+CP0002661	Dewi Wibowo	Individual	Dewi Wibowo	1985-01-01	1900-01-01	127 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772024402136	Logistics	High	1	0
+CP0002662	Maya Adinata	Individual	Maya Adinata	1985-01-01	1900-01-01	649 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777549881572	Technology	Low	1	0
+CP0002663	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	676 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779917259240	Manufacturing	High	1	0
+CP0002664	PT Adinata Synthetic	Company	Hana Adinata	1900-01-01	2018-01-01	573 Synthetic Avenue	Bandung	US	US	Bank Nusantara	770732961831	Manufacturing	Low	0	1
+CP0002665	Andi Wijaya	Individual	Andi Wijaya	1985-01-01	1900-01-01	586 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778093600193	Healthcare	Low	1	0
+CP0002666	Raka Adinata	Individual	Raka Adinata	1985-01-01	1900-01-01	313 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776155391199	Healthcare	Low	1	0
+CP0002667	Dimas Darmawan	Individual	Dimas Darmawan	1985-01-01	1900-01-01	429 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776903932122	Healthcare	Medium	1	0
+CP0002668	Nadia Wijaya	Individual	Nadia Wijaya	1985-01-01	1900-01-01	756 Synthetic Avenue	Bandung	AE	AE	Bank Nusantara	773354975030	Manufacturing	Medium	1	0
+CP0002669	Putri Suryadi	Individual	Putri Suryadi	1985-01-01	1900-01-01	824 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	772777772637	Logistics	Low	1	0
+CP0002670	PT Putra Synthetic	Company	Fajar Putra	1900-01-01	2018-01-01	608 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771446242253	Manufacturing	Low	0	1
+CP0002671	Dimas Lesmana	Individual	Dimas Lesmana	1985-01-01	1900-01-01	493 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774237056143	Manufacturing	Low	1	0
+CP0002672	Teguh Siregar	Individual	Teguh Siregar	1985-01-01	1900-01-01	410 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	778484265185	Manufacturing	Low	1	0
+CP0002673	Bima Rahardjo	Individual	Bima Rahardjo	1985-01-01	1900-01-01	593 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770407288330	Healthcare	Low	1	0
+CP0002674	Hana Budiman	Individual	Hana Budiman	1985-01-01	1900-01-01	283 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	773184596121	Manufacturing	Medium	1	0
+CP0002675	PT Permana Synthetic	Company	Maya Permana	1900-01-01	2018-01-01	889 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	778423588854	Retail	Low	0	1
+CP0002676	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	298 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779670219236	Construction	Low	1	0
+CP0002677	Wulan Firmansyah	Individual	Wulan Firmansyah	1985-01-01	1900-01-01	698 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773752610443	Logistics	Medium	1	0
+CP0002678	Rani Chandra	Individual	Rani Chandra	1985-01-01	1900-01-01	388 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	772066973051	Construction	Medium	1	0
+CP0002679	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	473 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	775769127964	Retail	Medium	1	0
+CP0002680	PT Nugraha Synthetic	Company	Intan Nugraha	1900-01-01	2018-01-01	225 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779377547187	Technology	Low	0	1
+CP0002681	PT Kurniawan Synthetic	Company	Rizky Kurniawan	1900-01-01	2018-01-01	237 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775261945072	Technology	Medium	0	1
+CP0002682	PT Suryadi Synthetic	Company	Citra Suryadi	1900-01-01	2018-01-01	233 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775395697275	Construction	Low	0	1
+CP0002683	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	551 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775983185483	Construction	Low	1	0
+CP0002684	PT Darmawan Synthetic	Company	Dimas Darmawan	1900-01-01	2018-01-01	495 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	779762077283	Healthcare	Medium	0	1
+CP0002685	Indra Permana	Individual	Indra Permana	1985-01-01	1900-01-01	168 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772015077967	Healthcare	Medium	1	0
+CP0002686	Farah Gunawan	Individual	Farah Gunawan	1985-01-01	1900-01-01	98 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	771797338028	Technology	Low	1	0
+CP0002687	Maya Chandra	Individual	Maya Chandra	1985-01-01	1900-01-01	169 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	771673478052	Manufacturing	Low	1	0
+CP0002688	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	109 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775231607765	Technology	Medium	1	0
+CP0002689	PT Gunawan Synthetic	Company	Rani Gunawan	1900-01-01	2018-01-01	389 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778875321844	Logistics	Low	0	1
+CP0002690	PT Permana Synthetic	Company	Eka Permana	1900-01-01	2018-01-01	593 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774522113298	Technology	Low	0	1
+CP0002691	Bima Firmansyah	Individual	Bima Firmansyah	1985-01-01	1900-01-01	893 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777568037716	Logistics	Low	1	0
+CP0002692	Gita Yulianto	Individual	Gita Yulianto	1985-01-01	1900-01-01	208 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774315163421	Construction	Low	1	0
+CP0002693	Eka Siregar	Individual	Eka Siregar	1985-01-01	1900-01-01	798 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776430684643	Technology	Low	1	0
+CP0002694	Hana Budiman	Individual	Hana Budiman	1985-01-01	1900-01-01	380 Synthetic Avenue	Denpasar	GB	GB	Asia Commerce Bank	775973112110	Technology	Low	1	0
+CP0002695	PT Santoso Synthetic	Company	Intan Santoso	1900-01-01	2018-01-01	561 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	776195996265	Healthcare	Low	0	1
+CP0002696	Bagus Chandra	Individual	Bagus Chandra	1985-01-01	1900-01-01	128 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771816518717	Manufacturing	Low	1	0
+CP0002697	Naufal Putra	Individual	Naufal Putra	1985-01-01	1900-01-01	348 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772540447325	Logistics	Low	1	0
+CP0002698	PT Hartono Synthetic	Company	Eka Hartono	1900-01-01	2018-01-01	807 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777762297910	Retail	Low	0	1
+CP0002699	PT Lesmana Synthetic	Company	Farah Lesmana	1900-01-01	2018-01-01	86 Synthetic Avenue	Denpasar	US	US	Asia Commerce Bank	774518438443	Manufacturing	Medium	0	1
+CP0002700	Eka Nugraha	Individual	Eka Nugraha	1985-01-01	1900-01-01	581 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774399476315	Retail	Low	1	0
+CP0002701	PT Yulianto Synthetic	Company	Rani Yulianto	1900-01-01	2018-01-01	776 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	779729596918	Manufacturing	Low	0	1
+CP0002702	PT Santoso Synthetic	Company	Alya Santoso	1900-01-01	2018-01-01	419 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770968581316	Healthcare	Medium	0	1
+CP0002703	PT Adinata Synthetic	Company	Wulan Adinata	1900-01-01	2018-01-01	122 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779726547365	Manufacturing	Medium	0	1
+CP0002704	Eka Halim	Individual	Eka Halim	1985-01-01	1900-01-01	870 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773335771705	Technology	High	1	0
+CP0002705	PT Kurniawan Synthetic	Company	Wulan Kurniawan	1900-01-01	2018-01-01	814 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	775992226979	Technology	Low	0	1
+CP0002706	Adit Setiawan	Individual	Adit Setiawan	1985-01-01	1900-01-01	725 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	779092002028	Technology	Medium	1	0
+CP0002707	Dewi Gunawan	Individual	Dewi Gunawan	1985-01-01	1900-01-01	286 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774042389512	Logistics	High	1	0
+CP0002708	PT Setiawan Synthetic	Company	Wulan Setiawan	1900-01-01	2018-01-01	673 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777760386665	Technology	Low	0	1
+CP0002709	Laras Suryadi	Individual	Laras Suryadi	1985-01-01	1900-01-01	605 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	770021257853	Manufacturing	Medium	1	0
+CP0002710	PT Hartono Synthetic	Company	Arif Hartono	1900-01-01	2018-01-01	36 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	775030339671	Manufacturing	Low	0	1
+CP0002711	Kevin Nugraha	Individual	Kevin Nugraha	1985-01-01	1900-01-01	28 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779752839848	Technology	Low	1	0
+CP0002712	PT Adinata Synthetic	Company	Eka Adinata	1900-01-01	2018-01-01	445 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777730913899	Construction	Low	0	1
+CP0002713	Joko Wijaya	Individual	Joko Wijaya	1985-01-01	1900-01-01	382 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779547281905	Technology	Low	1	0
+CP0002714	Naufal Hartono	Individual	Naufal Hartono	1985-01-01	1900-01-01	242 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775333208445	Retail	Low	1	0
+CP0002715	Farah Chandra	Individual	Farah Chandra	1985-01-01	1900-01-01	253 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	774003377046	Technology	High	1	0
+CP0002716	Alya Putra	Individual	Alya Putra	1985-01-01	1900-01-01	765 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	779799419791	Retail	High	1	0
+CP0002717	Kevin Gunawan	Individual	Kevin Gunawan	1985-01-01	1900-01-01	157 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	772059805982	Retail	Medium	1	0
+CP0002718	Dimas Setiawan	Individual	Dimas Setiawan	1985-01-01	1900-01-01	786 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774872755718	Technology	Low	1	0
+CP0002719	Kevin Chandra	Individual	Kevin Chandra	1985-01-01	1900-01-01	454 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	772378446433	Manufacturing	Medium	1	0
+CP0002720	PT Setiawan Synthetic	Company	Rizky Setiawan	1900-01-01	2018-01-01	854 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772128300200	Manufacturing	Medium	0	1
+CP0002721	Dewi Suryadi	Individual	Dewi Suryadi	1985-01-01	1900-01-01	374 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	778404685904	Logistics	Low	1	0
+CP0002722	Adit Suryadi	Individual	Adit Suryadi	1985-01-01	1900-01-01	717 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	774469408238	Retail	High	1	0
+CP0002723	Sari Mahendra	Individual	Sari Mahendra	1985-01-01	1900-01-01	235 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773626183877	Technology	Low	1	0
+CP0002724	PT Hartono Synthetic	Company	Alya Hartono	1900-01-01	2018-01-01	33 Synthetic Avenue	Medan	SG	SG	Bank Sentra	778602932652	Logistics	High	0	1
+CP0002725	Kevin Iskandar	Individual	Kevin Iskandar	1985-01-01	1900-01-01	784 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772222298935	Logistics	Low	1	0
+CP0002726	PT Firmansyah Synthetic	Company	Maya Firmansyah	1900-01-01	2018-01-01	630 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770910677504	Technology	Low	0	1
+CP0002727	PT Firmansyah Synthetic	Company	Dimas Firmansyah	1900-01-01	2018-01-01	617 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771301486838	Technology	Medium	0	1
+CP0002728	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	401 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770482239068	Technology	Low	1	0
+CP0002729	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	697 Synthetic Avenue	Medan	GB	GB	Bank Nusantara	778346137214	Healthcare	Medium	1	0
+CP0002730	Sari Yulianto	Individual	Sari Yulianto	1985-01-01	1900-01-01	604 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776986119745	Healthcare	Medium	1	0
+CP0002731	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	846 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775141996769	Manufacturing	Low	1	0
+CP0002732	Hana Darmawan	Individual	Hana Darmawan	1985-01-01	1900-01-01	776 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775930973639	Healthcare	Medium	1	0
+CP0002733	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	770 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776974777212	Technology	High	1	0
+CP0002734	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	751 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779048084347	Construction	Medium	1	0
+CP0002735	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	838 Synthetic Avenue	Medan	MY	MY	Bank Sentra	773778276644	Manufacturing	Low	1	0
+CP0002736	Dimas Hartono	Individual	Dimas Hartono	1985-01-01	1900-01-01	552 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774336838459	Logistics	Low	1	0
+CP0002737	Naufal Kurniawan	Individual	Naufal Kurniawan	1985-01-01	1900-01-01	805 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775303385073	Retail	High	1	0
+CP0002738	Fajar Hartono	Individual	Fajar Hartono	1985-01-01	1900-01-01	420 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775729368064	Retail	Medium	1	0
+CP0002739	PT Firmansyah Synthetic	Company	Farah Firmansyah	1900-01-01	2018-01-01	885 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770413682400	Logistics	Low	0	1
+CP0002740	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	342 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	778519435547	Healthcare	Medium	1	0
+CP0002741	PT Kurniawan Synthetic	Company	Indra Kurniawan	1900-01-01	2018-01-01	250 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	777921626861	Technology	Low	0	1
+CP0002742	Teguh Darmawan	Individual	Teguh Darmawan	1985-01-01	1900-01-01	426 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778654996788	Logistics	Low	1	0
+CP0002743	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	591 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773511608816	Logistics	Medium	1	0
+CP0002744	Citra Nugraha	Individual	Citra Nugraha	1985-01-01	1900-01-01	599 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772603852856	Technology	Low	1	0
+CP0002745	PT Mahendra Synthetic	Company	Adit Mahendra	1900-01-01	2018-01-01	483 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774900035562	Construction	Medium	0	1
+CP0002746	PT Yulianto Synthetic	Company	Eka Yulianto	1900-01-01	2018-01-01	207 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775777695632	Manufacturing	Low	0	1
+CP0002747	PT Gunawan Synthetic	Company	Dimas Gunawan	1900-01-01	2018-01-01	863 Synthetic Avenue	Jakarta	US	US	Asia Commerce Bank	771415356606	Retail	Low	0	1
+CP0002748	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	16 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772737711957	Retail	Medium	1	0
+CP0002749	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	812 Synthetic Avenue	Makassar	JP	JP	Asia Commerce Bank	772169611242	Construction	Low	1	0
+CP0002750	Rani Firmansyah	Individual	Rani Firmansyah	1985-01-01	1900-01-01	850 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	775906616563	Technology	Low	1	0
+CP0002751	PT Rahardjo Synthetic	Company	Laras Rahardjo	1900-01-01	2018-01-01	430 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770097574660	Construction	Medium	0	1
+CP0002752	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	190 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	775309148268	Logistics	High	1	0
+CP0002753	Farah Kurniawan	Individual	Farah Kurniawan	1985-01-01	1900-01-01	220 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772999213630	Technology	Low	1	0
+CP0002754	PT Darmawan Synthetic	Company	Eka Darmawan	1900-01-01	2018-01-01	591 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	775493229141	Retail	Low	0	1
+CP0002755	Laras Nugraha	Individual	Laras Nugraha	1985-01-01	1900-01-01	404 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779156056821	Logistics	Low	1	0
+CP0002756	PT Rahardjo Synthetic	Company	Fajar Rahardjo	1900-01-01	2018-01-01	704 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775952292385	Retail	Medium	0	1
+CP0002757	Teguh Lesmana	Individual	Teguh Lesmana	1985-01-01	1900-01-01	40 Synthetic Avenue	Surabaya	GB	GB	Bank Sentra	775702721130	Technology	Low	1	0
+CP0002758	Farah Santoso	Individual	Farah Santoso	1985-01-01	1900-01-01	486 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777007832205	Healthcare	Low	1	0
+CP0002759	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	30 Synthetic Avenue	Denpasar	US	US	Bank Sentra	779580293981	Construction	Low	1	0
+CP0002760	PT Setiawan Synthetic	Company	Kevin Setiawan	1900-01-01	2018-01-01	59 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771408388445	Retail	Low	0	1
+CP0002761	Dimas Lesmana	Individual	Dimas Lesmana	1985-01-01	1900-01-01	460 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776058036306	Construction	Medium	1	0
+CP0002762	Adit Yulianto	Individual	Adit Yulianto	1985-01-01	1900-01-01	179 Synthetic Avenue	Makassar	US	US	Bank Sentra	773064559421	Healthcare	High	1	0
+CP0002763	Laras Permana	Individual	Laras Permana	1985-01-01	1900-01-01	47 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774827728634	Logistics	Low	1	0
+CP0002764	Bima Rahardjo	Individual	Bima Rahardjo	1985-01-01	1900-01-01	526 Synthetic Avenue	Medan	AE	AE	Bank Sentra	777620716926	Manufacturing	Low	1	0
+CP0002765	PT Chandra Synthetic	Company	Andi Chandra	1900-01-01	2018-01-01	536 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	778161188058	Retail	High	0	1
+CP0002766	Teguh Kurniawan	Individual	Teguh Kurniawan	1985-01-01	1900-01-01	539 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773702455277	Technology	Low	1	0
+CP0002767	Eka Siregar	Individual	Eka Siregar	1985-01-01	1900-01-01	844 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773774445454	Technology	Low	1	0
+CP0002768	PT Yulianto Synthetic	Company	Kevin Yulianto	1900-01-01	2018-01-01	433 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777147643645	Manufacturing	Low	0	1
+CP0002769	Adit Firmansyah	Individual	Adit Firmansyah	1985-01-01	1900-01-01	283 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777833908575	Technology	Low	1	0
+CP0002770	Teguh Putra	Individual	Teguh Putra	1985-01-01	1900-01-01	744 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775437939728	Technology	Medium	1	0
+CP0002771	PT Hartono Synthetic	Company	Alya Hartono	1900-01-01	2018-01-01	617 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775285168863	Retail	Medium	0	1
+CP0002772	Citra Darmawan	Individual	Citra Darmawan	1985-01-01	1900-01-01	565 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	773916106712	Construction	Low	1	0
+CP0002773	PT Nugraha Synthetic	Company	Putri Nugraha	1900-01-01	2018-01-01	408 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	773072540028	Technology	High	0	1
+CP0002774	PT Yulianto Synthetic	Company	Intan Yulianto	1900-01-01	2018-01-01	226 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777665375689	Logistics	Low	0	1
+CP0002775	Bagus Rahardjo	Individual	Bagus Rahardjo	1985-01-01	1900-01-01	672 Synthetic Avenue	Bandung	US	US	Bank Sentra	771233658992	Retail	Medium	1	0
+CP0002776	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	502 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778224457312	Technology	Low	1	0
+CP0002777	PT Firmansyah Synthetic	Company	Rani Firmansyah	1900-01-01	2018-01-01	706 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772009985382	Manufacturing	Medium	0	1
+CP0002778	PT Wijaya Synthetic	Company	Raka Wijaya	1900-01-01	2018-01-01	375 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774808905687	Retail	Medium	0	1
+CP0002779	Bima Chandra	Individual	Bima Chandra	1985-01-01	1900-01-01	414 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771804309774	Manufacturing	Medium	1	0
+CP0002780	PT Firmansyah Synthetic	Company	Intan Firmansyah	1900-01-01	2018-01-01	450 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	776840056470	Retail	Low	0	1
+CP0002781	PT Permana Synthetic	Company	Indra Permana	1900-01-01	2018-01-01	420 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773899739415	Retail	Medium	0	1
+CP0002782	Naufal Suryadi	Individual	Naufal Suryadi	1985-01-01	1900-01-01	695 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	779681124377	Healthcare	Low	1	0
+CP0002783	PT Budiman Synthetic	Company	Anisa Budiman	1900-01-01	2018-01-01	765 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775492684034	Retail	Low	0	1
+CP0002784	Wulan Firmansyah	Individual	Wulan Firmansyah	1985-01-01	1900-01-01	24 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775224763797	Logistics	Low	1	0
+CP0002785	Anisa Hartono	Individual	Anisa Hartono	1985-01-01	1900-01-01	884 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774831062434	Healthcare	Medium	1	0
+CP0002786	Citra Prakoso	Individual	Citra Prakoso	1985-01-01	1900-01-01	633 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	770246801706	Logistics	Low	1	0
+CP0002787	Alya Setiawan	Individual	Alya Setiawan	1985-01-01	1900-01-01	403 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770073520982	Retail	Low	1	0
+CP0002788	Teguh Putra	Individual	Teguh Putra	1985-01-01	1900-01-01	64 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	773702583976	Construction	Medium	1	0
+CP0002789	Sari Wijaya	Individual	Sari Wijaya	1985-01-01	1900-01-01	248 Synthetic Avenue	Denpasar	GB	GB	Bank Sentra	775580884201	Construction	Low	1	0
+CP0002790	Farah Nugraha	Individual	Farah Nugraha	1985-01-01	1900-01-01	101 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778892677936	Healthcare	Low	1	0
+CP0002791	Adit Firmansyah	Individual	Adit Firmansyah	1985-01-01	1900-01-01	696 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	777707103995	Retail	High	1	0
+CP0002792	PT Santoso Synthetic	Company	Dimas Santoso	1900-01-01	2018-01-01	351 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777999596258	Logistics	Low	0	1
+CP0002793	PT Kurniawan Synthetic	Company	Farah Kurniawan	1900-01-01	2018-01-01	861 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778552372864	Retail	High	0	1
+CP0002794	Naufal Lesmana	Individual	Naufal Lesmana	1985-01-01	1900-01-01	831 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772095676120	Retail	Low	1	0
+CP0002795	Andi Siregar	Individual	Andi Siregar	1985-01-01	1900-01-01	184 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778041366350	Healthcare	Low	1	0
+CP0002796	Bagus Rahardjo	Individual	Bagus Rahardjo	1985-01-01	1900-01-01	845 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770324676903	Logistics	Medium	1	0
+CP0002797	Adit Halim	Individual	Adit Halim	1985-01-01	1900-01-01	578 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777137668604	Logistics	Low	1	0
+CP0002798	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	496 Synthetic Avenue	Yogyakarta	AE	AE	Bank Sentra	775026971561	Construction	High	1	0
+CP0002799	Hana Gunawan	Individual	Hana Gunawan	1985-01-01	1900-01-01	359 Synthetic Avenue	Bandung	GB	GB	Bank Sentra	776660867810	Construction	Low	1	0
+CP0002800	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	685 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771001266975	Logistics	Medium	1	0
+CP0002801	Bagus Kurniawan	Individual	Bagus Kurniawan	1985-01-01	1900-01-01	387 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770512731832	Logistics	Medium	1	0
+CP0002802	PT Nugraha Synthetic	Company	Hana Nugraha	1900-01-01	2018-01-01	777 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777636344743	Technology	Low	0	1
+CP0002803	PT Setiawan Synthetic	Company	Intan Setiawan	1900-01-01	2018-01-01	390 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778909071520	Manufacturing	Low	0	1
+CP0002804	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	176 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770844642729	Retail	High	1	0
+CP0002805	PT Wijaya Synthetic	Company	Citra Wijaya	1900-01-01	2018-01-01	229 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772071767636	Manufacturing	Low	0	1
+CP0002806	Sari Nugraha	Individual	Sari Nugraha	1985-01-01	1900-01-01	781 Synthetic Avenue	Bandung	AU	AU	Asia Commerce Bank	777946447779	Construction	Low	1	0
+CP0002807	Sari Halim	Individual	Sari Halim	1985-01-01	1900-01-01	789 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770652702412	Healthcare	Medium	1	0
+CP0002808	Eka Halim	Individual	Eka Halim	1985-01-01	1900-01-01	37 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	770305626719	Logistics	Medium	1	0
+CP0002809	Anisa Setiawan	Individual	Anisa Setiawan	1985-01-01	1900-01-01	392 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779991366750	Logistics	Medium	1	0
+CP0002810	PT Firmansyah Synthetic	Company	Dimas Firmansyah	1900-01-01	2018-01-01	485 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	779215253321	Manufacturing	Low	0	1
+CP0002811	PT Yulianto Synthetic	Company	Citra Yulianto	1900-01-01	2018-01-01	305 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771083188763	Retail	Low	0	1
+CP0002812	Sari Wibowo	Individual	Sari Wibowo	1985-01-01	1900-01-01	525 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771438365535	Manufacturing	Low	1	0
+CP0002813	Dewi Suryadi	Individual	Dewi Suryadi	1985-01-01	1900-01-01	656 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776847254062	Logistics	Medium	1	0
+CP0002814	Gita Suryadi	Individual	Gita Suryadi	1985-01-01	1900-01-01	71 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	771396613766	Retail	Low	1	0
+CP0002815	PT Permana Synthetic	Company	Wulan Permana	1900-01-01	2018-01-01	588 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775679859575	Manufacturing	Medium	0	1
+CP0002816	Intan Wibowo	Individual	Intan Wibowo	1985-01-01	1900-01-01	107 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775966073874	Technology	Low	1	0
+CP0002817	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	604 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778826535927	Retail	Low	1	0
+CP0002818	PT Permana Synthetic	Company	Teguh Permana	1900-01-01	2018-01-01	11 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779431528723	Logistics	Low	0	1
+CP0002819	Rizky Iskandar	Individual	Rizky Iskandar	1985-01-01	1900-01-01	553 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771239802830	Manufacturing	Low	1	0
+CP0002820	PT Nugraha Synthetic	Company	Farah Nugraha	1900-01-01	2018-01-01	763 Synthetic Avenue	Semarang	US	US	Bank Sentra	778991004400	Construction	Low	0	1
+CP0002821	PT Iskandar Synthetic	Company	Citra Iskandar	1900-01-01	2018-01-01	366 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779080497576	Retail	Low	0	1
+CP0002822	PT Wibowo Synthetic	Company	Dewi Wibowo	1900-01-01	2018-01-01	809 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770317642868	Healthcare	Medium	0	1
+CP0002823	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	277 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771624316146	Construction	Low	1	0
+CP0002824	Rani Wibowo	Individual	Rani Wibowo	1985-01-01	1900-01-01	882 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777185217275	Healthcare	Low	1	0
+CP0002825	Kevin Setiawan	Individual	Kevin Setiawan	1985-01-01	1900-01-01	890 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777025201847	Manufacturing	Low	1	0
+CP0002826	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	728 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	774294734046	Healthcare	Low	1	0
+CP0002827	Wulan Budiman	Individual	Wulan Budiman	1985-01-01	1900-01-01	750 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	775714022980	Healthcare	Low	1	0
+CP0002828	PT Lesmana Synthetic	Company	Hana Lesmana	1900-01-01	2018-01-01	655 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779937989012	Healthcare	Medium	0	1
+CP0002829	Kevin Nugraha	Individual	Kevin Nugraha	1985-01-01	1900-01-01	795 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	774341461703	Manufacturing	Low	1	0
+CP0002830	Rizky Nugraha	Individual	Rizky Nugraha	1985-01-01	1900-01-01	577 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775684766121	Manufacturing	Low	1	0
+CP0002831	Raka Halim	Individual	Raka Halim	1985-01-01	1900-01-01	475 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770005681037	Retail	Low	1	0
+CP0002832	Adit Wijaya	Individual	Adit Wijaya	1985-01-01	1900-01-01	412 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774590568477	Manufacturing	Low	1	0
+CP0002833	PT Nugraha Synthetic	Company	Gita Nugraha	1900-01-01	2018-01-01	98 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770953808897	Construction	High	0	1
+CP0002834	Joko Putra	Individual	Joko Putra	1985-01-01	1900-01-01	498 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	770781419022	Construction	Medium	1	0
+CP0002835	Citra Permana	Individual	Citra Permana	1985-01-01	1900-01-01	777 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773432636789	Healthcare	Low	1	0
+CP0002836	PT Lesmana Synthetic	Company	Dewi Lesmana	1900-01-01	2018-01-01	856 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777423243976	Logistics	Low	0	1
+CP0002837	Kevin Mahendra	Individual	Kevin Mahendra	1985-01-01	1900-01-01	630 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772515980927	Manufacturing	Low	1	0
+CP0002838	PT Chandra Synthetic	Company	Adit Chandra	1900-01-01	2018-01-01	357 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777288942711	Technology	Medium	0	1
+CP0002839	Laras Putra	Individual	Laras Putra	1985-01-01	1900-01-01	78 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775628704291	Construction	Medium	1	0
+CP0002840	PT Nugraha Synthetic	Company	Andi Nugraha	1900-01-01	2018-01-01	238 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770912055988	Retail	Low	0	1
+CP0002841	Wulan Santoso	Individual	Wulan Santoso	1985-01-01	1900-01-01	170 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	776538465620	Manufacturing	Low	1	0
+CP0002842	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	238 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773235135950	Technology	Low	1	0
+CP0002843	Joko Siregar	Individual	Joko Siregar	1985-01-01	1900-01-01	251 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772643929154	Construction	Medium	1	0
+CP0002844	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	331 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775830649867	Healthcare	Low	1	0
+CP0002845	Maya Firmansyah	Individual	Maya Firmansyah	1985-01-01	1900-01-01	273 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	772881282143	Logistics	High	1	0
+CP0002846	PT Rahardjo Synthetic	Company	Bima Rahardjo	1900-01-01	2018-01-01	877 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	773906072815	Construction	Low	0	1
+CP0002847	Nadia Kurniawan	Individual	Nadia Kurniawan	1985-01-01	1900-01-01	793 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771910404603	Retail	Medium	1	0
+CP0002848	Arif Prakoso	Individual	Arif Prakoso	1985-01-01	1900-01-01	646 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777167963755	Manufacturing	Low	1	0
+CP0002849	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	415 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775928016421	Construction	Low	1	0
+CP0002850	PT Darmawan Synthetic	Company	Alya Darmawan	1900-01-01	2018-01-01	404 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770637478528	Logistics	Low	0	1
+CP0002851	Naufal Darmawan	Individual	Naufal Darmawan	1985-01-01	1900-01-01	779 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	777139655344	Healthcare	Low	1	0
+CP0002852	Alya Nugraha	Individual	Alya Nugraha	1985-01-01	1900-01-01	523 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	776924979056	Manufacturing	Low	1	0
+CP0002853	PT Adinata Synthetic	Company	Maya Adinata	1900-01-01	2018-01-01	202 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778002569939	Manufacturing	High	0	1
+CP0002854	Gita Suryadi	Individual	Gita Suryadi	1985-01-01	1900-01-01	499 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	778338923564	Technology	Low	1	0
+CP0002855	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	814 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777822041208	Technology	Medium	1	0
+CP0002856	Teguh Setiawan	Individual	Teguh Setiawan	1985-01-01	1900-01-01	625 Synthetic Avenue	Jakarta	US	US	Asia Commerce Bank	774219209006	Construction	Low	1	0
+CP0002857	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	61 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777355863881	Retail	Low	1	0
+CP0002858	Joko Mahendra	Individual	Joko Mahendra	1985-01-01	1900-01-01	490 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773587413323	Construction	Low	1	0
+CP0002859	Alya Yulianto	Individual	Alya Yulianto	1985-01-01	1900-01-01	828 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778157918355	Technology	Low	1	0
+CP0002860	Citra Lesmana	Individual	Citra Lesmana	1985-01-01	1900-01-01	226 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772282114541	Retail	Low	1	0
+CP0002861	Indra Chandra	Individual	Indra Chandra	1985-01-01	1900-01-01	10 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	770186928938	Technology	Medium	1	0
+CP0002862	Hana Iskandar	Individual	Hana Iskandar	1985-01-01	1900-01-01	714 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776503586785	Technology	Medium	1	0
+CP0002863	Putri Budiman	Individual	Putri Budiman	1985-01-01	1900-01-01	32 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775112470354	Healthcare	Low	1	0
+CP0002864	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	684 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776332377668	Technology	Low	1	0
+CP0002865	Raka Siregar	Individual	Raka Siregar	1985-01-01	1900-01-01	514 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770520273535	Healthcare	Low	1	0
+CP0002866	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	448 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779635286948	Retail	Medium	1	0
+CP0002867	PT Santoso Synthetic	Company	Teguh Santoso	1900-01-01	2018-01-01	731 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777673495134	Logistics	Medium	0	1
+CP0002868	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	887 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772454503760	Construction	Low	1	0
+CP0002869	Arif Lesmana	Individual	Arif Lesmana	1985-01-01	1900-01-01	23 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	770179288264	Healthcare	Low	1	0
+CP0002870	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	828 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771497917489	Technology	Low	1	0
+CP0002871	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	356 Synthetic Avenue	Medan	GB	GB	Bank Sentra	779712656920	Manufacturing	Low	1	0
+CP0002872	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	486 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	776759792808	Retail	Low	1	0
+CP0002873	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	527 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775333358713	Technology	Low	1	0
+CP0002874	Citra Lesmana	Individual	Citra Lesmana	1985-01-01	1900-01-01	479 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	772408154185	Healthcare	Low	1	0
+CP0002875	PT Hartono Synthetic	Company	Kevin Hartono	1900-01-01	2018-01-01	24 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770952752339	Retail	Low	0	1
+CP0002876	Wulan Firmansyah	Individual	Wulan Firmansyah	1985-01-01	1900-01-01	806 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779801823195	Healthcare	Low	1	0
+CP0002877	Rizky Gunawan	Individual	Rizky Gunawan	1985-01-01	1900-01-01	234 Synthetic Avenue	Medan	AE	AE	Asia Commerce Bank	770670499727	Technology	Low	1	0
+CP0002878	Citra Rahardjo	Individual	Citra Rahardjo	1985-01-01	1900-01-01	694 Synthetic Avenue	Bandung	US	US	Bank Nusantara	778381718006	Manufacturing	High	1	0
+CP0002879	Intan Rahardjo	Individual	Intan Rahardjo	1985-01-01	1900-01-01	874 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	773168816493	Healthcare	Medium	1	0
+CP0002880	Bagus Prakoso	Individual	Bagus Prakoso	1985-01-01	1900-01-01	849 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772168710069	Healthcare	Low	1	0
+CP0002881	PT Permana Synthetic	Company	Hana Permana	1900-01-01	2018-01-01	36 Synthetic Avenue	Medan	MY	MY	Bank Sentra	771544862751	Construction	Low	0	1
+CP0002882	Bima Rahardjo	Individual	Bima Rahardjo	1985-01-01	1900-01-01	217 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	778691185486	Manufacturing	Low	1	0
+CP0002883	Joko Putra	Individual	Joko Putra	1985-01-01	1900-01-01	478 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	772895783606	Technology	Low	1	0
+CP0002884	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	689 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771799581817	Healthcare	Low	1	0
+CP0002885	Bima Iskandar	Individual	Bima Iskandar	1985-01-01	1900-01-01	790 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775803564261	Technology	Low	1	0
+CP0002886	PT Kurniawan Synthetic	Company	Farah Kurniawan	1900-01-01	2018-01-01	118 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775988943758	Retail	Low	0	1
+CP0002887	Wulan Kurniawan	Individual	Wulan Kurniawan	1985-01-01	1900-01-01	284 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773576557863	Retail	Medium	1	0
+CP0002888	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	740 Synthetic Avenue	Medan	AU	AU	Bank Sentra	774639381571	Manufacturing	Medium	1	0
+CP0002889	PT Hartono Synthetic	Company	Sari Hartono	1900-01-01	2018-01-01	511 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	773189813325	Construction	Medium	0	1
+CP0002890	Maya Iskandar	Individual	Maya Iskandar	1985-01-01	1900-01-01	42 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	778640870956	Healthcare	Medium	1	0
+CP0002891	Wulan Permana	Individual	Wulan Permana	1985-01-01	1900-01-01	51 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775980499593	Technology	Low	1	0
+CP0002892	Maya Iskandar	Individual	Maya Iskandar	1985-01-01	1900-01-01	863 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776803011708	Construction	Low	1	0
+CP0002893	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	766 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775968341828	Retail	Low	1	0
+CP0002894	PT Gunawan Synthetic	Company	Eka Gunawan	1900-01-01	2018-01-01	222 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777708662075	Technology	Medium	0	1
+CP0002895	Fajar Hartono	Individual	Fajar Hartono	1985-01-01	1900-01-01	513 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777469558501	Retail	High	1	0
+CP0002896	PT Putra Synthetic	Company	Dimas Putra	1900-01-01	2018-01-01	841 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777524692618	Healthcare	Medium	0	1
+CP0002897	Arif Iskandar	Individual	Arif Iskandar	1985-01-01	1900-01-01	197 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777219822918	Retail	Low	1	0
+CP0002898	PT Iskandar Synthetic	Company	Raka Iskandar	1900-01-01	2018-01-01	53 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	779840818063	Healthcare	High	0	1
+CP0002899	Bima Santoso	Individual	Bima Santoso	1985-01-01	1900-01-01	289 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777703542958	Retail	High	1	0
+CP0002900	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	290 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779696575151	Logistics	Low	1	0
+CP0002901	Laras Darmawan	Individual	Laras Darmawan	1985-01-01	1900-01-01	259 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	778677728029	Technology	Low	1	0
+CP0002902	PT Darmawan Synthetic	Company	Kevin Darmawan	1900-01-01	2018-01-01	448 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	777873988280	Manufacturing	Low	0	1
+CP0002903	Laras Wibowo	Individual	Laras Wibowo	1985-01-01	1900-01-01	753 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776492300871	Technology	Medium	1	0
+CP0002904	PT Lesmana Synthetic	Company	Joko Lesmana	1900-01-01	2018-01-01	739 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772186957746	Retail	Low	0	1
+CP0002905	Nadia Chandra	Individual	Nadia Chandra	1985-01-01	1900-01-01	563 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774098613814	Healthcare	Low	1	0
+CP0002906	Hana Suryadi	Individual	Hana Suryadi	1985-01-01	1900-01-01	716 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	778166276474	Logistics	Low	1	0
+CP0002907	Nadia Putra	Individual	Nadia Putra	1985-01-01	1900-01-01	477 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777187672434	Healthcare	Medium	1	0
+CP0002908	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	502 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	770463502433	Retail	Medium	1	0
+CP0002909	Gita Firmansyah	Individual	Gita Firmansyah	1985-01-01	1900-01-01	513 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779807296193	Technology	Medium	1	0
+CP0002910	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	134 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773394380243	Construction	Low	1	0
+CP0002911	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	439 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778535151463	Construction	Low	1	0
+CP0002912	Citra Mahendra	Individual	Citra Mahendra	1985-01-01	1900-01-01	194 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778826794221	Construction	High	1	0
+CP0002913	Putri Firmansyah	Individual	Putri Firmansyah	1985-01-01	1900-01-01	509 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770881193139	Logistics	Medium	1	0
+CP0002914	PT Adinata Synthetic	Company	Raka Adinata	1900-01-01	2018-01-01	503 Synthetic Avenue	Jakarta	GB	GB	Asia Commerce Bank	779663133231	Technology	Low	0	1
+CP0002915	PT Nugraha Synthetic	Company	Gita Nugraha	1900-01-01	2018-01-01	183 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	773335343554	Manufacturing	Medium	0	1
+CP0002916	Nadia Prakoso	Individual	Nadia Prakoso	1985-01-01	1900-01-01	130 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775863798160	Logistics	Low	1	0
+CP0002917	Hana Prakoso	Individual	Hana Prakoso	1985-01-01	1900-01-01	817 Synthetic Avenue	Medan	MY	MY	Bank Sentra	778413915969	Logistics	Low	1	0
+CP0002918	PT Siregar Synthetic	Company	Wulan Siregar	1900-01-01	2018-01-01	407 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778309717984	Retail	Low	0	1
+CP0002919	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	640 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778011176896	Technology	Low	1	0
+CP0002920	Rizky Darmawan	Individual	Rizky Darmawan	1985-01-01	1900-01-01	735 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775378335042	Logistics	Low	1	0
+CP0002921	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	636 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	778942673894	Logistics	Low	1	0
+CP0002922	Bima Siregar	Individual	Bima Siregar	1985-01-01	1900-01-01	871 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771455077435	Retail	Low	1	0
+CP0002923	PT Siregar Synthetic	Company	Andi Siregar	1900-01-01	2018-01-01	854 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772841627535	Manufacturing	Medium	0	1
+CP0002924	PT Prakoso Synthetic	Company	Fajar Prakoso	1900-01-01	2018-01-01	554 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779372992517	Manufacturing	Low	0	1
+CP0002925	Citra Firmansyah	Individual	Citra Firmansyah	1985-01-01	1900-01-01	464 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778609470744	Healthcare	Low	1	0
+CP0002926	PT Nugraha Synthetic	Company	Dimas Nugraha	1900-01-01	2018-01-01	404 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772138274859	Manufacturing	Low	0	1
+CP0002927	Putri Wijaya	Individual	Putri Wijaya	1985-01-01	1900-01-01	314 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	772866944272	Manufacturing	Medium	1	0
+CP0002928	PT Santoso Synthetic	Company	Nadia Santoso	1900-01-01	2018-01-01	110 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771030258641	Logistics	Low	0	1
+CP0002929	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	337 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773392279124	Manufacturing	Low	1	0
+CP0002930	Sari Wijaya	Individual	Sari Wijaya	1985-01-01	1900-01-01	405 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778149106298	Construction	Low	1	0
+CP0002931	Bagus Rahardjo	Individual	Bagus Rahardjo	1985-01-01	1900-01-01	892 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	778183518951	Construction	Low	1	0
+CP0002932	Eka Rahardjo	Individual	Eka Rahardjo	1985-01-01	1900-01-01	508 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776481121070	Retail	Low	1	0
+CP0002933	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	29 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	773827600030	Manufacturing	Low	1	0
+CP0002934	Farah Permana	Individual	Farah Permana	1985-01-01	1900-01-01	231 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775476099750	Construction	Low	1	0
+CP0002935	PT Lesmana Synthetic	Company	Maya Lesmana	1900-01-01	2018-01-01	822 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	777569921892	Retail	Medium	0	1
+CP0002936	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	686 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	775895502066	Construction	Low	1	0
+CP0002937	Farah Gunawan	Individual	Farah Gunawan	1985-01-01	1900-01-01	694 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775097191234	Healthcare	Medium	1	0
+CP0002938	PT Budiman Synthetic	Company	Laras Budiman	1900-01-01	2018-01-01	298 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771124569611	Manufacturing	Low	0	1
+CP0002939	Intan Prakoso	Individual	Intan Prakoso	1985-01-01	1900-01-01	663 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771748473435	Manufacturing	Low	1	0
+CP0002940	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	719 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775309958563	Manufacturing	Low	1	0
+CP0002941	Joko Wijaya	Individual	Joko Wijaya	1985-01-01	1900-01-01	727 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776107720897	Manufacturing	Low	1	0
+CP0002942	Rani Darmawan	Individual	Rani Darmawan	1985-01-01	1900-01-01	314 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775512306927	Technology	Medium	1	0
+CP0002943	Kevin Permana	Individual	Kevin Permana	1985-01-01	1900-01-01	780 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	774401020427	Logistics	Medium	1	0
+CP0002944	Hana Prakoso	Individual	Hana Prakoso	1985-01-01	1900-01-01	712 Synthetic Avenue	Medan	SG	SG	Bank Sentra	772450146126	Logistics	Low	1	0
+CP0002945	Bagus Permana	Individual	Bagus Permana	1985-01-01	1900-01-01	864 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	777320431515	Construction	Low	1	0
+CP0002946	PT Wibowo Synthetic	Company	Maya Wibowo	1900-01-01	2018-01-01	341 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	772832096842	Construction	Low	0	1
+CP0002947	Anisa Halim	Individual	Anisa Halim	1985-01-01	1900-01-01	521 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778384722755	Logistics	Low	1	0
+CP0002948	Andi Firmansyah	Individual	Andi Firmansyah	1985-01-01	1900-01-01	10 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	772819071489	Technology	Medium	1	0
+CP0002949	Farah Budiman	Individual	Farah Budiman	1985-01-01	1900-01-01	755 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776740031032	Technology	Low	1	0
+CP0002950	PT Hartono Synthetic	Company	Wulan Hartono	1900-01-01	2018-01-01	377 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	771862857744	Construction	Low	0	1
+CP0002951	Hana Suryadi	Individual	Hana Suryadi	1985-01-01	1900-01-01	280 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774984517974	Logistics	Low	1	0
+CP0002952	Alya Santoso	Individual	Alya Santoso	1985-01-01	1900-01-01	506 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	776357968581	Manufacturing	Medium	1	0
+CP0002953	PT Yulianto Synthetic	Company	Rani Yulianto	1900-01-01	2018-01-01	480 Synthetic Avenue	Medan	AU	AU	Bank Nusantara	776050892128	Construction	Low	0	1
+CP0002954	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	677 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777653468357	Construction	Medium	1	0
+CP0002955	Maya Rahardjo	Individual	Maya Rahardjo	1985-01-01	1900-01-01	183 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	776362084301	Healthcare	Medium	1	0
+CP0002956	Eka Rahardjo	Individual	Eka Rahardjo	1985-01-01	1900-01-01	320 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	779065085930	Technology	Low	1	0
+CP0002957	Indra Yulianto	Individual	Indra Yulianto	1985-01-01	1900-01-01	444 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773232086615	Construction	Low	1	0
+CP0002958	PT Rahardjo Synthetic	Company	Dewi Rahardjo	1900-01-01	2018-01-01	434 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778709716863	Construction	Low	0	1
+CP0002959	Dewi Hartono	Individual	Dewi Hartono	1985-01-01	1900-01-01	34 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775257126279	Construction	Low	1	0
+CP0002960	PT Hartono Synthetic	Company	Putri Hartono	1900-01-01	2018-01-01	472 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777577389780	Logistics	Low	0	1
+CP0002961	Adit Permana	Individual	Adit Permana	1985-01-01	1900-01-01	430 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775819345250	Retail	Medium	1	0
+CP0002962	PT Rahardjo Synthetic	Company	Arif Rahardjo	1900-01-01	2018-01-01	46 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776373697977	Healthcare	Low	0	1
+CP0002963	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	266 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	778986823081	Retail	Medium	1	0
+CP0002964	Farah Yulianto	Individual	Farah Yulianto	1985-01-01	1900-01-01	1 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776620895761	Manufacturing	Low	1	0
+CP0002965	PT Wibowo Synthetic	Company	Intan Wibowo	1900-01-01	2018-01-01	413 Synthetic Avenue	Denpasar	GB	GB	Bank Sentra	770232774450	Construction	Medium	0	1
+CP0002966	PT Hartono Synthetic	Company	Bagus Hartono	1900-01-01	2018-01-01	796 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	778112958442	Manufacturing	Low	0	1
+CP0002967	Wulan Wijaya	Individual	Wulan Wijaya	1985-01-01	1900-01-01	692 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775620998989	Technology	High	1	0
+CP0002968	Fajar Nugraha	Individual	Fajar Nugraha	1985-01-01	1900-01-01	401 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779004129184	Healthcare	Low	1	0
+CP0002969	PT Yulianto Synthetic	Company	Bima Yulianto	1900-01-01	2018-01-01	356 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770417710583	Construction	High	0	1
+CP0002970	PT Hartono Synthetic	Company	Hana Hartono	1900-01-01	2018-01-01	675 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774682152085	Healthcare	High	0	1
+CP0002971	Alya Gunawan	Individual	Alya Gunawan	1985-01-01	1900-01-01	488 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773034859938	Logistics	Low	1	0
+CP0002972	Wulan Prakoso	Individual	Wulan Prakoso	1985-01-01	1900-01-01	110 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770804742565	Construction	Low	1	0
+CP0002973	Eka Wijaya	Individual	Eka Wijaya	1985-01-01	1900-01-01	4 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	778341212389	Healthcare	Low	1	0
+CP0002974	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	533 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	779269172617	Construction	Medium	1	0
+CP0002975	Raka Yulianto	Individual	Raka Yulianto	1985-01-01	1900-01-01	423 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777669798208	Retail	Low	1	0
+CP0002976	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	834 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777828280579	Construction	Low	1	0
+CP0002977	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	812 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776670273669	Logistics	Low	1	0
+CP0002978	PT Siregar Synthetic	Company	Nadia Siregar	1900-01-01	2018-01-01	414 Synthetic Avenue	Medan	AE	AE	Bank Sentra	772748628710	Construction	Low	0	1
+CP0002979	Kevin Iskandar	Individual	Kevin Iskandar	1985-01-01	1900-01-01	779 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775711152493	Healthcare	Medium	1	0
+CP0002980	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	440 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	778554117129	Technology	Low	1	0
+CP0002981	Bima Rahardjo	Individual	Bima Rahardjo	1985-01-01	1900-01-01	521 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	775058674831	Healthcare	Medium	1	0
+CP0002982	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	37 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775552586186	Manufacturing	Low	1	0
+CP0002983	Rani Wijaya	Individual	Rani Wijaya	1985-01-01	1900-01-01	178 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771847676776	Construction	Low	1	0
+CP0002984	PT Lesmana Synthetic	Company	Citra Lesmana	1900-01-01	2018-01-01	80 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771049591131	Retail	Low	0	1
+CP0002985	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	351 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771164609867	Construction	Low	1	0
+CP0002986	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	702 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	777188040660	Retail	Low	1	0
+CP0002987	Bagus Budiman	Individual	Bagus Budiman	1985-01-01	1900-01-01	561 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770598963190	Healthcare	Low	1	0
+CP0002988	Fajar Nugraha	Individual	Fajar Nugraha	1985-01-01	1900-01-01	204 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775583189664	Logistics	Low	1	0
+CP0002989	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	96 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777257848743	Manufacturing	Low	1	0
+CP0002990	Anisa Firmansyah	Individual	Anisa Firmansyah	1985-01-01	1900-01-01	1 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	778802335805	Healthcare	Low	1	0
+CP0002991	PT Putra Synthetic	Company	Bagus Putra	1900-01-01	2018-01-01	802 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773340813721	Healthcare	Medium	0	1
+CP0002992	PT Budiman Synthetic	Company	Arif Budiman	1900-01-01	2018-01-01	626 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775947545176	Technology	Low	0	1
+CP0002993	PT Budiman Synthetic	Company	Andi Budiman	1900-01-01	2018-01-01	144 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778338561546	Retail	Low	0	1
+CP0002994	PT Putra Synthetic	Company	Eka Putra	1900-01-01	2018-01-01	332 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775682177678	Manufacturing	Low	0	1
+CP0002995	Kevin Wibowo	Individual	Kevin Wibowo	1985-01-01	1900-01-01	204 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770399031261	Retail	High	1	0
+CP0002996	Anisa Putra	Individual	Anisa Putra	1985-01-01	1900-01-01	50 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779276861980	Logistics	Medium	1	0
+CP0002997	Kevin Permana	Individual	Kevin Permana	1985-01-01	1900-01-01	797 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773251298432	Retail	Low	1	0
+CP0002998	PT Yulianto Synthetic	Company	Gita Yulianto	1900-01-01	2018-01-01	665 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	772347549813	Healthcare	Low	0	1
+CP0002999	Indra Firmansyah	Individual	Indra Firmansyah	1985-01-01	1900-01-01	888 Synthetic Avenue	Medan	US	US	Asia Commerce Bank	777146447515	Retail	Low	1	0
+CP0003000	PT Wibowo Synthetic	Company	Rani Wibowo	1900-01-01	2018-01-01	747 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773049776788	Technology	Low	0	1
+CP0003001	Arif Putra	Individual	Arif Putra	1985-01-01	1900-01-01	187 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770618941130	Healthcare	Low	1	0
+CP0003002	PT Firmansyah Synthetic	Company	Maya Firmansyah	1900-01-01	2018-01-01	596 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771307440451	Construction	Medium	0	1
+CP0003003	Indra Firmansyah	Individual	Indra Firmansyah	1985-01-01	1900-01-01	223 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775099440921	Healthcare	Low	1	0
+CP0003004	PT Yulianto Synthetic	Company	Teguh Yulianto	1900-01-01	2018-01-01	369 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777949305708	Construction	Low	0	1
+CP0003005	PT Gunawan Synthetic	Company	Eka Gunawan	1900-01-01	2018-01-01	802 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775762594052	Logistics	Medium	0	1
+CP0003006	Putri Mahendra	Individual	Putri Mahendra	1985-01-01	1900-01-01	108 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771046335731	Retail	High	1	0
+CP0003007	Alya Firmansyah	Individual	Alya Firmansyah	1985-01-01	1900-01-01	98 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776800303192	Retail	Low	1	0
+CP0003008	Citra Darmawan	Individual	Citra Darmawan	1985-01-01	1900-01-01	693 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773167878413	Construction	Medium	1	0
+CP0003009	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	120 Synthetic Avenue	Surabaya	US	US	Bank Sentra	775434535737	Retail	Medium	1	0
+CP0003010	PT Siregar Synthetic	Company	Eka Siregar	1900-01-01	2018-01-01	68 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778622868952	Construction	High	0	1
+CP0003011	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	262 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	778550190637	Retail	Medium	1	0
+CP0003012	Bagus Chandra	Individual	Bagus Chandra	1985-01-01	1900-01-01	122 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770992389413	Construction	Low	1	0
+CP0003013	Nadia Kurniawan	Individual	Nadia Kurniawan	1985-01-01	1900-01-01	421 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771007593765	Technology	Medium	1	0
+CP0003014	PT Kurniawan Synthetic	Company	Andi Kurniawan	1900-01-01	2018-01-01	383 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772398452383	Retail	Low	0	1
+CP0003015	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	282 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	773537250371	Retail	Low	0	1
+CP0003016	Nadia Halim	Individual	Nadia Halim	1985-01-01	1900-01-01	9 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770964499258	Manufacturing	Low	1	0
+CP0003017	Nadia Prakoso	Individual	Nadia Prakoso	1985-01-01	1900-01-01	833 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778826681618	Healthcare	Low	1	0
+CP0003018	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	295 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	777207306172	Manufacturing	Low	1	0
+CP0003019	PT Darmawan Synthetic	Company	Joko Darmawan	1900-01-01	2018-01-01	43 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778642138424	Healthcare	Medium	0	1
+CP0003020	Fajar Firmansyah	Individual	Fajar Firmansyah	1985-01-01	1900-01-01	140 Synthetic Avenue	Medan	GB	GB	Asia Commerce Bank	777635634470	Construction	Medium	1	0
+CP0003021	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	525 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778461544065	Logistics	Medium	1	0
+CP0003022	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	281 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777078610361	Technology	Medium	1	0
+CP0003023	Laras Kurniawan	Individual	Laras Kurniawan	1985-01-01	1900-01-01	119 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777969272326	Retail	Medium	1	0
+CP0003024	Andi Darmawan	Individual	Andi Darmawan	1985-01-01	1900-01-01	541 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775510060857	Logistics	Low	1	0
+CP0003025	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	373 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777086717363	Logistics	Low	1	0
+CP0003026	Intan Darmawan	Individual	Intan Darmawan	1985-01-01	1900-01-01	705 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772406737692	Construction	Medium	1	0
+CP0003027	PT Rahardjo Synthetic	Company	Rizky Rahardjo	1900-01-01	2018-01-01	96 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772955622230	Technology	Low	0	1
+CP0003028	Teguh Putra	Individual	Teguh Putra	1985-01-01	1900-01-01	19 Synthetic Avenue	Surabaya	GB	GB	Bank Sentra	771531938418	Manufacturing	Medium	1	0
+CP0003029	Fajar Kurniawan	Individual	Fajar Kurniawan	1985-01-01	1900-01-01	400 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779557868415	Manufacturing	Medium	1	0
+CP0003030	PT Budiman Synthetic	Company	Andi Budiman	1900-01-01	2018-01-01	607 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778498286239	Construction	Low	0	1
+CP0003031	Eka Rahardjo	Individual	Eka Rahardjo	1985-01-01	1900-01-01	208 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	770979016638	Healthcare	Low	1	0
+CP0003032	PT Firmansyah Synthetic	Company	Intan Firmansyah	1900-01-01	2018-01-01	731 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	774391899910	Retail	Medium	0	1
+CP0003033	Adit Setiawan	Individual	Adit Setiawan	1985-01-01	1900-01-01	310 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772931761025	Retail	Medium	1	0
+CP0003034	Raka Budiman	Individual	Raka Budiman	1985-01-01	1900-01-01	334 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	776937184184	Manufacturing	Low	1	0
+CP0003035	PT Hartono Synthetic	Company	Raka Hartono	1900-01-01	2018-01-01	265 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	772634161738	Logistics	Low	0	1
+CP0003036	PT Lesmana Synthetic	Company	Rani Lesmana	1900-01-01	2018-01-01	364 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	772591018134	Logistics	Low	0	1
+CP0003037	PT Firmansyah Synthetic	Company	Citra Firmansyah	1900-01-01	2018-01-01	649 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777184474634	Healthcare	Low	0	1
+CP0003038	Bima Firmansyah	Individual	Bima Firmansyah	1985-01-01	1900-01-01	17 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771191841042	Construction	Medium	1	0
+CP0003039	PT Darmawan Synthetic	Company	Citra Darmawan	1900-01-01	2018-01-01	355 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775909253941	Healthcare	Low	0	1
+CP0003040	Sari Setiawan	Individual	Sari Setiawan	1985-01-01	1900-01-01	188 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774037773084	Logistics	Medium	1	0
+CP0003041	Joko Budiman	Individual	Joko Budiman	1985-01-01	1900-01-01	575 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777996887021	Healthcare	Medium	1	0
+CP0003042	PT Lesmana Synthetic	Company	Laras Lesmana	1900-01-01	2018-01-01	648 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	771113193938	Logistics	Low	0	1
+CP0003043	PT Yulianto Synthetic	Company	Maya Yulianto	1900-01-01	2018-01-01	620 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775376994081	Logistics	High	0	1
+CP0003044	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	44 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776110128585	Retail	Low	1	0
+CP0003045	Dewi Suryadi	Individual	Dewi Suryadi	1985-01-01	1900-01-01	774 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772276247478	Technology	Medium	1	0
+CP0003046	Wulan Iskandar	Individual	Wulan Iskandar	1985-01-01	1900-01-01	113 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773909130815	Manufacturing	Medium	1	0
+CP0003047	Adit Firmansyah	Individual	Adit Firmansyah	1985-01-01	1900-01-01	337 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779642688937	Technology	Low	1	0
+CP0003048	Indra Kurniawan	Individual	Indra Kurniawan	1985-01-01	1900-01-01	709 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	775300026142	Manufacturing	Low	1	0
+CP0003049	Bagus Kurniawan	Individual	Bagus Kurniawan	1985-01-01	1900-01-01	476 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774355910838	Manufacturing	Low	1	0
+CP0003050	Arif Halim	Individual	Arif Halim	1985-01-01	1900-01-01	895 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772765425524	Healthcare	Low	1	0
+CP0003051	Dewi Mahendra	Individual	Dewi Mahendra	1985-01-01	1900-01-01	601 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772298785673	Logistics	Low	1	0
+CP0003052	Bima Wibowo	Individual	Bima Wibowo	1985-01-01	1900-01-01	401 Synthetic Avenue	Medan	US	US	Bank Sentra	770289785543	Healthcare	Medium	1	0
+CP0003053	Joko Hartono	Individual	Joko Hartono	1985-01-01	1900-01-01	850 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	779376513338	Logistics	Low	1	0
+CP0003054	PT Putra Synthetic	Company	Anisa Putra	1900-01-01	2018-01-01	62 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773548681463	Retail	High	0	1
+CP0003055	Gita Putra	Individual	Gita Putra	1985-01-01	1900-01-01	237 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772408004198	Construction	Low	1	0
+CP0003056	PT Wibowo Synthetic	Company	Arif Wibowo	1900-01-01	2018-01-01	438 Synthetic Avenue	Surabaya	US	US	Bank Sentra	779788053765	Retail	Low	0	1
+CP0003057	Nadia Darmawan	Individual	Nadia Darmawan	1985-01-01	1900-01-01	266 Synthetic Avenue	Semarang	GB	GB	Asia Commerce Bank	777034389659	Manufacturing	Low	1	0
+CP0003058	Anisa Lesmana	Individual	Anisa Lesmana	1985-01-01	1900-01-01	522 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773905129446	Construction	Medium	1	0
+CP0003059	PT Gunawan Synthetic	Company	Anisa Gunawan	1900-01-01	2018-01-01	485 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773673099940	Manufacturing	Medium	0	1
+CP0003060	PT Wijaya Synthetic	Company	Intan Wijaya	1900-01-01	2018-01-01	287 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773270429908	Manufacturing	Medium	0	1
+CP0003061	Naufal Adinata	Individual	Naufal Adinata	1985-01-01	1900-01-01	406 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771023700091	Healthcare	Medium	1	0
+CP0003062	Raka Nugraha	Individual	Raka Nugraha	1985-01-01	1900-01-01	811 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	775139382932	Manufacturing	Low	1	0
+CP0003063	PT Hartono Synthetic	Company	Rizky Hartono	1900-01-01	2018-01-01	204 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	778038670849	Manufacturing	Low	0	1
+CP0003064	PT Iskandar Synthetic	Company	Putri Iskandar	1900-01-01	2018-01-01	58 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774544394652	Healthcare	Low	0	1
+CP0003065	Adit Santoso	Individual	Adit Santoso	1985-01-01	1900-01-01	344 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771978078036	Manufacturing	High	1	0
+CP0003066	Raka Kurniawan	Individual	Raka Kurniawan	1985-01-01	1900-01-01	870 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	777432788705	Manufacturing	Low	1	0
+CP0003067	Fajar Setiawan	Individual	Fajar Setiawan	1985-01-01	1900-01-01	327 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	773534100182	Retail	High	1	0
+CP0003068	Adit Mahendra	Individual	Adit Mahendra	1985-01-01	1900-01-01	427 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772141570076	Retail	Medium	1	0
+CP0003069	PT Putra Synthetic	Company	Sari Putra	1900-01-01	2018-01-01	595 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	777378062976	Retail	Low	0	1
+CP0003070	PT Yulianto Synthetic	Company	Indra Yulianto	1900-01-01	2018-01-01	708 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777381815924	Retail	Low	0	1
+CP0003071	Rizky Santoso	Individual	Rizky Santoso	1985-01-01	1900-01-01	600 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	779510560812	Technology	High	1	0
+CP0003072	PT Iskandar Synthetic	Company	Joko Iskandar	1900-01-01	2018-01-01	308 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774853679376	Retail	Low	0	1
+CP0003073	Fajar Wibowo	Individual	Fajar Wibowo	1985-01-01	1900-01-01	763 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	773842161228	Logistics	Low	1	0
+CP0003074	Farah Gunawan	Individual	Farah Gunawan	1985-01-01	1900-01-01	259 Synthetic Avenue	Yogyakarta	GB	GB	Asia Commerce Bank	770944709821	Construction	Medium	1	0
+CP0003075	PT Putra Synthetic	Company	Arif Putra	1900-01-01	2018-01-01	873 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	770714507003	Construction	Medium	0	1
+CP0003076	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	620 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	774851987758	Healthcare	Low	1	0
+CP0003077	Andi Setiawan	Individual	Andi Setiawan	1985-01-01	1900-01-01	369 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773649048587	Manufacturing	Low	1	0
+CP0003078	Hana Darmawan	Individual	Hana Darmawan	1985-01-01	1900-01-01	320 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778660749976	Logistics	Low	1	0
+CP0003079	Arif Putra	Individual	Arif Putra	1985-01-01	1900-01-01	755 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771544244670	Construction	High	1	0
+CP0003080	PT Siregar Synthetic	Company	Maya Siregar	1900-01-01	2018-01-01	83 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771588037974	Manufacturing	Low	0	1
+CP0003081	Gita Siregar	Individual	Gita Siregar	1985-01-01	1900-01-01	45 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771545472389	Logistics	Medium	1	0
+CP0003082	Maya Nugraha	Individual	Maya Nugraha	1985-01-01	1900-01-01	845 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	770315554389	Retail	Low	1	0
+CP0003083	PT Prakoso Synthetic	Company	Putri Prakoso	1900-01-01	2018-01-01	662 Synthetic Avenue	Makassar	US	US	Bank Nusantara	770275167108	Manufacturing	Low	0	1
+CP0003084	Bima Mahendra	Individual	Bima Mahendra	1985-01-01	1900-01-01	257 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779713868016	Healthcare	Low	1	0
+CP0003085	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	218 Synthetic Avenue	Medan	JP	JP	Bank Sentra	771937775606	Technology	Low	1	0
+CP0003086	PT Mahendra Synthetic	Company	Bima Mahendra	1900-01-01	2018-01-01	331 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774179499823	Retail	Medium	0	1
+CP0003087	Andi Setiawan	Individual	Andi Setiawan	1985-01-01	1900-01-01	460 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771816655549	Technology	Medium	1	0
+CP0003088	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	426 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772712283248	Manufacturing	Low	1	0
+CP0003089	PT Suryadi Synthetic	Company	Intan Suryadi	1900-01-01	2018-01-01	835 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778020221003	Manufacturing	High	0	1
+CP0003090	PT Rahardjo Synthetic	Company	Indra Rahardjo	1900-01-01	2018-01-01	845 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	779653067223	Construction	Medium	0	1
+CP0003091	Maya Suryadi	Individual	Maya Suryadi	1985-01-01	1900-01-01	520 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	776315343725	Healthcare	Low	1	0
+CP0003092	Fajar Iskandar	Individual	Fajar Iskandar	1985-01-01	1900-01-01	598 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777267256444	Technology	Low	1	0
+CP0003093	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	389 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	777662479173	Logistics	Medium	1	0
+CP0003094	PT Yulianto Synthetic	Company	Adit Yulianto	1900-01-01	2018-01-01	329 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	775328376599	Logistics	Low	0	1
+CP0003095	Raka Santoso	Individual	Raka Santoso	1985-01-01	1900-01-01	92 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773829600344	Construction	Low	1	0
+CP0003096	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	226 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771766084224	Construction	Low	1	0
+CP0003097	PT Prakoso Synthetic	Company	Andi Prakoso	1900-01-01	2018-01-01	109 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	776855926239	Logistics	Medium	0	1
+CP0003098	Laras Rahardjo	Individual	Laras Rahardjo	1985-01-01	1900-01-01	786 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	775776821734	Retail	Low	1	0
+CP0003099	PT Nugraha Synthetic	Company	Bima Nugraha	1900-01-01	2018-01-01	870 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770125242518	Retail	Low	0	1
+CP0003100	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	790 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771620436055	Technology	High	1	0
+CP0003101	Rizky Budiman	Individual	Rizky Budiman	1985-01-01	1900-01-01	737 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773495131970	Manufacturing	Medium	1	0
+CP0003102	PT Rahardjo Synthetic	Company	Nadia Rahardjo	1900-01-01	2018-01-01	558 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773547453251	Logistics	Low	0	1
+CP0003103	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	357 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775780054485	Technology	Medium	1	0
+CP0003104	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	365 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	778861917426	Logistics	Low	1	0
+CP0003105	Hana Putra	Individual	Hana Putra	1985-01-01	1900-01-01	24 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	770558835908	Manufacturing	Low	1	0
+CP0003106	Adit Rahardjo	Individual	Adit Rahardjo	1985-01-01	1900-01-01	536 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776413275567	Logistics	Low	1	0
+CP0003107	Eka Santoso	Individual	Eka Santoso	1985-01-01	1900-01-01	784 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	770207703412	Technology	Low	1	0
+CP0003108	Naufal Putra	Individual	Naufal Putra	1985-01-01	1900-01-01	246 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770529469827	Manufacturing	Low	1	0
+CP0003109	Laras Iskandar	Individual	Laras Iskandar	1985-01-01	1900-01-01	47 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778833316908	Manufacturing	Medium	1	0
+CP0003110	Gita Mahendra	Individual	Gita Mahendra	1985-01-01	1900-01-01	525 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778850592630	Construction	Medium	1	0
+CP0003111	Putri Yulianto	Individual	Putri Yulianto	1985-01-01	1900-01-01	686 Synthetic Avenue	Surabaya	AU	AU	Asia Commerce Bank	774209222199	Construction	Medium	1	0
+CP0003112	Putri Wibowo	Individual	Putri Wibowo	1985-01-01	1900-01-01	85 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773879658115	Retail	Low	1	0
+CP0003113	Maya Wibowo	Individual	Maya Wibowo	1985-01-01	1900-01-01	890 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778216111770	Healthcare	Medium	1	0
+CP0003114	Intan Nugraha	Individual	Intan Nugraha	1985-01-01	1900-01-01	590 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	775438724206	Manufacturing	Medium	1	0
+CP0003115	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	389 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777056185913	Logistics	Medium	1	0
+CP0003116	Adit Prakoso	Individual	Adit Prakoso	1985-01-01	1900-01-01	211 Synthetic Avenue	Medan	US	US	Bank Sentra	777806473339	Retail	Low	1	0
+CP0003117	PT Mahendra Synthetic	Company	Rizky Mahendra	1900-01-01	2018-01-01	463 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770374509533	Healthcare	Low	0	1
+CP0003118	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	164 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774958793426	Construction	Low	1	0
+CP0003119	PT Mahendra Synthetic	Company	Naufal Mahendra	1900-01-01	2018-01-01	492 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	777725689187	Healthcare	Low	0	1
+CP0003120	PT Suryadi Synthetic	Company	Alya Suryadi	1900-01-01	2018-01-01	257 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774758769747	Retail	High	0	1
+CP0003121	Dewi Adinata	Individual	Dewi Adinata	1985-01-01	1900-01-01	63 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772346284060	Retail	Medium	1	0
+CP0003122	Farah Suryadi	Individual	Farah Suryadi	1985-01-01	1900-01-01	579 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777160557565	Technology	Low	1	0
+CP0003123	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	672 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779156779599	Healthcare	Low	1	0
+CP0003124	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	704 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	773053053161	Healthcare	Low	1	0
+CP0003125	Adit Putra	Individual	Adit Putra	1985-01-01	1900-01-01	381 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770563774284	Manufacturing	Medium	1	0
+CP0003126	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	233 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778408744886	Logistics	Medium	1	0
+CP0003127	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	330 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	778888293270	Healthcare	Medium	1	0
+CP0003128	Kevin Budiman	Individual	Kevin Budiman	1985-01-01	1900-01-01	543 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	770413900774	Manufacturing	Low	1	0
+CP0003129	Hana Putra	Individual	Hana Putra	1985-01-01	1900-01-01	115 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770393252832	Manufacturing	High	1	0
+CP0003130	Dimas Adinata	Individual	Dimas Adinata	1985-01-01	1900-01-01	233 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	770461138446	Retail	Low	1	0
+CP0003131	PT Prakoso Synthetic	Company	Anisa Prakoso	1900-01-01	2018-01-01	508 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775467793995	Logistics	Low	0	1
+CP0003132	Gita Firmansyah	Individual	Gita Firmansyah	1985-01-01	1900-01-01	418 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	772275966726	Construction	Low	1	0
+CP0003133	Anisa Chandra	Individual	Anisa Chandra	1985-01-01	1900-01-01	525 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772635762778	Retail	Medium	1	0
+CP0003134	Laras Hartono	Individual	Laras Hartono	1985-01-01	1900-01-01	459 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779198021116	Logistics	Medium	1	0
+CP0003135	Dewi Kurniawan	Individual	Dewi Kurniawan	1985-01-01	1900-01-01	752 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772590417064	Logistics	Low	1	0
+CP0003136	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	118 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771110119986	Healthcare	Medium	1	0
+CP0003137	PT Gunawan Synthetic	Company	Laras Gunawan	1900-01-01	2018-01-01	416 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	770782276774	Technology	Medium	0	1
+CP0003138	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	156 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774432814798	Manufacturing	Medium	1	0
+CP0003139	Hana Rahardjo	Individual	Hana Rahardjo	1985-01-01	1900-01-01	829 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776981911506	Manufacturing	Low	1	0
+CP0003140	Indra Kurniawan	Individual	Indra Kurniawan	1985-01-01	1900-01-01	407 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776559654698	Logistics	Low	1	0
+CP0003141	Gita Firmansyah	Individual	Gita Firmansyah	1985-01-01	1900-01-01	614 Synthetic Avenue	Bandung	GB	GB	Asia Commerce Bank	774842698689	Technology	Medium	1	0
+CP0003142	PT Adinata Synthetic	Company	Dewi Adinata	1900-01-01	2018-01-01	151 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	775532019306	Manufacturing	Low	0	1
+CP0003143	Putri Budiman	Individual	Putri Budiman	1985-01-01	1900-01-01	374 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773252389981	Construction	Low	1	0
+CP0003144	Gita Nugraha	Individual	Gita Nugraha	1985-01-01	1900-01-01	184 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	779002178385	Construction	Low	1	0
+CP0003145	PT Kurniawan Synthetic	Company	Adit Kurniawan	1900-01-01	2018-01-01	270 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773908354808	Technology	Low	0	1
+CP0003146	Maya Darmawan	Individual	Maya Darmawan	1985-01-01	1900-01-01	574 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	772870068004	Retail	Low	1	0
+CP0003147	Putri Adinata	Individual	Putri Adinata	1985-01-01	1900-01-01	301 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775592369453	Technology	Low	1	0
+CP0003148	Nadia Budiman	Individual	Nadia Budiman	1985-01-01	1900-01-01	236 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	775853510756	Manufacturing	Low	1	0
+CP0003149	PT Gunawan Synthetic	Company	Eka Gunawan	1900-01-01	2018-01-01	581 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	772784788620	Construction	Low	0	1
+CP0003150	Gita Firmansyah	Individual	Gita Firmansyah	1985-01-01	1900-01-01	632 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770817314854	Retail	Low	1	0
+CP0003151	PT Yulianto Synthetic	Company	Rani Yulianto	1900-01-01	2018-01-01	82 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776626237094	Logistics	Low	0	1
+CP0003152	Laras Lesmana	Individual	Laras Lesmana	1985-01-01	1900-01-01	367 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771948432753	Logistics	Low	1	0
+CP0003153	Rizky Iskandar	Individual	Rizky Iskandar	1985-01-01	1900-01-01	207 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770826962564	Technology	Low	1	0
+CP0003154	Rani Hartono	Individual	Rani Hartono	1985-01-01	1900-01-01	555 Synthetic Avenue	Medan	JP	JP	Bank Sentra	770297177297	Technology	Medium	1	0
+CP0003155	Anisa Adinata	Individual	Anisa Adinata	1985-01-01	1900-01-01	535 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775542458556	Technology	High	1	0
+CP0003156	Farah Gunawan	Individual	Farah Gunawan	1985-01-01	1900-01-01	286 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774787323130	Logistics	Medium	1	0
+CP0003157	Eka Santoso	Individual	Eka Santoso	1985-01-01	1900-01-01	409 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775221034955	Technology	Low	1	0
+CP0003158	Gita Setiawan	Individual	Gita Setiawan	1985-01-01	1900-01-01	339 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777684617985	Healthcare	Low	1	0
+CP0003159	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	328 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776984683588	Manufacturing	Low	1	0
+CP0003160	Laras Iskandar	Individual	Laras Iskandar	1985-01-01	1900-01-01	630 Synthetic Avenue	Jakarta	AE	AE	Bank Nusantara	773280862242	Logistics	Medium	1	0
+CP0003161	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	745 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771600331276	Logistics	Low	1	0
+CP0003162	PT Suryadi Synthetic	Company	Anisa Suryadi	1900-01-01	2018-01-01	339 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	776989019731	Healthcare	High	0	1
+CP0003163	Intan Yulianto	Individual	Intan Yulianto	1985-01-01	1900-01-01	588 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777597895200	Construction	Low	1	0
+CP0003164	Raka Lesmana	Individual	Raka Lesmana	1985-01-01	1900-01-01	282 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772616063672	Technology	Low	1	0
+CP0003165	PT Setiawan Synthetic	Company	Hana Setiawan	1900-01-01	2018-01-01	145 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777728980665	Healthcare	Low	0	1
+CP0003166	Laras Setiawan	Individual	Laras Setiawan	1985-01-01	1900-01-01	456 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771445103426	Construction	Low	1	0
+CP0003167	PT Hartono Synthetic	Company	Andi Hartono	1900-01-01	2018-01-01	163 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776872390199	Technology	Low	0	1
+CP0003168	Kevin Adinata	Individual	Kevin Adinata	1985-01-01	1900-01-01	120 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775558616001	Manufacturing	Low	1	0
+CP0003169	Bagus Wijaya	Individual	Bagus Wijaya	1985-01-01	1900-01-01	263 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779624657396	Manufacturing	Low	1	0
+CP0003170	Andi Santoso	Individual	Andi Santoso	1985-01-01	1900-01-01	891 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	770542198913	Retail	Low	1	0
+CP0003171	PT Nugraha Synthetic	Company	Dimas Nugraha	1900-01-01	2018-01-01	445 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779187715259	Healthcare	Low	0	1
+CP0003172	Kevin Nugraha	Individual	Kevin Nugraha	1985-01-01	1900-01-01	685 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777369094247	Construction	Low	1	0
+CP0003173	Dewi Mahendra	Individual	Dewi Mahendra	1985-01-01	1900-01-01	775 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770866627847	Technology	Medium	1	0
+CP0003174	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	592 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773941874784	Logistics	Low	1	0
+CP0003175	Joko Siregar	Individual	Joko Siregar	1985-01-01	1900-01-01	187 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777539928482	Technology	Medium	1	0
+CP0003176	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	581 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775306769029	Technology	Low	1	0
+CP0003177	Farah Setiawan	Individual	Farah Setiawan	1985-01-01	1900-01-01	510 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779285001870	Construction	High	1	0
+CP0003178	PT Nugraha Synthetic	Company	Rani Nugraha	1900-01-01	2018-01-01	613 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772194887981	Healthcare	Low	0	1
+CP0003179	PT Prakoso Synthetic	Company	Indra Prakoso	1900-01-01	2018-01-01	147 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779479789333	Manufacturing	High	0	1
+CP0003180	PT Chandra Synthetic	Company	Hana Chandra	1900-01-01	2018-01-01	50 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	772612127584	Retail	Low	0	1
+CP0003181	Indra Prakoso	Individual	Indra Prakoso	1985-01-01	1900-01-01	42 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	778076317877	Logistics	High	1	0
+CP0003182	PT Wijaya Synthetic	Company	Adit Wijaya	1900-01-01	2018-01-01	225 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772278861324	Construction	Low	0	1
+CP0003183	Farah Nugraha	Individual	Farah Nugraha	1985-01-01	1900-01-01	231 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779302872427	Technology	Low	1	0
+CP0003184	Teguh Kurniawan	Individual	Teguh Kurniawan	1985-01-01	1900-01-01	483 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770169441484	Manufacturing	Low	1	0
+CP0003185	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	209 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776780383615	Logistics	High	1	0
+CP0003186	PT Wibowo Synthetic	Company	Alya Wibowo	1900-01-01	2018-01-01	468 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773724890660	Technology	Low	0	1
+CP0003187	Rani Iskandar	Individual	Rani Iskandar	1985-01-01	1900-01-01	77 Synthetic Avenue	Semarang	JP	JP	Bank Sentra	772700893861	Healthcare	Medium	1	0
+CP0003188	Dimas Santoso	Individual	Dimas Santoso	1985-01-01	1900-01-01	760 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	772775090234	Logistics	Medium	1	0
+CP0003189	Laras Nugraha	Individual	Laras Nugraha	1985-01-01	1900-01-01	863 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771278737210	Technology	Low	1	0
+CP0003190	Alya Iskandar	Individual	Alya Iskandar	1985-01-01	1900-01-01	263 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775722082496	Construction	Medium	1	0
+CP0003191	Laras Setiawan	Individual	Laras Setiawan	1985-01-01	1900-01-01	719 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776604180779	Construction	Medium	1	0
+CP0003192	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	265 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	778177473279	Retail	Low	1	0
+CP0003193	Rani Putra	Individual	Rani Putra	1985-01-01	1900-01-01	802 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	770266770925	Manufacturing	Low	1	0
+CP0003194	PT Iskandar Synthetic	Company	Wulan Iskandar	1900-01-01	2018-01-01	854 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	774641472687	Logistics	Low	0	1
+CP0003195	Arif Siregar	Individual	Arif Siregar	1985-01-01	1900-01-01	642 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773950994336	Technology	Medium	1	0
+CP0003196	Alya Adinata	Individual	Alya Adinata	1985-01-01	1900-01-01	698 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	774933619530	Manufacturing	Low	1	0
+CP0003197	PT Setiawan Synthetic	Company	Rani Setiawan	1900-01-01	2018-01-01	474 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770551667267	Logistics	High	0	1
+CP0003198	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	300 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771820564357	Technology	Medium	1	0
+CP0003199	Sari Rahardjo	Individual	Sari Rahardjo	1985-01-01	1900-01-01	274 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	777935994762	Technology	Medium	1	0
+CP0003200	Wulan Budiman	Individual	Wulan Budiman	1985-01-01	1900-01-01	256 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779716375540	Logistics	Low	1	0
+CP0003201	Alya Budiman	Individual	Alya Budiman	1985-01-01	1900-01-01	846 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773051507739	Manufacturing	Low	1	0
+CP0003202	Nadia Prakoso	Individual	Nadia Prakoso	1985-01-01	1900-01-01	415 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774577301229	Retail	Low	1	0
+CP0003203	Citra Wijaya	Individual	Citra Wijaya	1985-01-01	1900-01-01	203 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773961126120	Construction	Low	1	0
+CP0003204	PT Siregar Synthetic	Company	Intan Siregar	1900-01-01	2018-01-01	632 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777321112726	Manufacturing	High	0	1
+CP0003205	PT Wijaya Synthetic	Company	Putri Wijaya	1900-01-01	2018-01-01	357 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770324294519	Manufacturing	Low	0	1
+CP0003206	Dimas Kurniawan	Individual	Dimas Kurniawan	1985-01-01	1900-01-01	898 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776758985088	Manufacturing	Medium	1	0
+CP0003207	Bagus Suryadi	Individual	Bagus Suryadi	1985-01-01	1900-01-01	366 Synthetic Avenue	Surabaya	GB	GB	Bank Nusantara	774001347302	Construction	Medium	1	0
+CP0003208	Gita Halim	Individual	Gita Halim	1985-01-01	1900-01-01	147 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	777957639964	Logistics	Medium	1	0
+CP0003209	Dewi Firmansyah	Individual	Dewi Firmansyah	1985-01-01	1900-01-01	444 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775109059441	Logistics	Low	1	0
+CP0003210	Eka Halim	Individual	Eka Halim	1985-01-01	1900-01-01	478 Synthetic Avenue	Makassar	AE	AE	Asia Commerce Bank	775650820783	Healthcare	Low	1	0
+CP0003211	Arif Darmawan	Individual	Arif Darmawan	1985-01-01	1900-01-01	827 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774006306175	Manufacturing	Low	1	0
+CP0003212	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	222 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775928958217	Logistics	Medium	1	0
+CP0003213	Arif Yulianto	Individual	Arif Yulianto	1985-01-01	1900-01-01	362 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	777594980016	Healthcare	Low	1	0
+CP0003214	Putri Chandra	Individual	Putri Chandra	1985-01-01	1900-01-01	774 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	771826411763	Retail	Low	1	0
+CP0003215	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	693 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770921400866	Technology	Low	1	0
+CP0003216	Maya Siregar	Individual	Maya Siregar	1985-01-01	1900-01-01	189 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770828750537	Technology	Medium	1	0
+CP0003217	PT Setiawan Synthetic	Company	Kevin Setiawan	1900-01-01	2018-01-01	705 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773276598993	Retail	Low	0	1
+CP0003218	PT Adinata Synthetic	Company	Maya Adinata	1900-01-01	2018-01-01	676 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773617175278	Healthcare	Low	0	1
+CP0003219	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	809 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773983862752	Healthcare	Low	1	0
+CP0003220	Rizky Yulianto	Individual	Rizky Yulianto	1985-01-01	1900-01-01	79 Synthetic Avenue	Denpasar	GB	GB	Asia Commerce Bank	774621690428	Logistics	Low	1	0
+CP0003221	Maya Wibowo	Individual	Maya Wibowo	1985-01-01	1900-01-01	625 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778118596454	Healthcare	Low	1	0
+CP0003222	Nadia Budiman	Individual	Nadia Budiman	1985-01-01	1900-01-01	180 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774741472698	Retail	Low	1	0
+CP0003223	Raka Suryadi	Individual	Raka Suryadi	1985-01-01	1900-01-01	483 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775095321886	Technology	Low	1	0
+CP0003224	Arif Wibowo	Individual	Arif Wibowo	1985-01-01	1900-01-01	302 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	776180983103	Technology	Low	1	0
+CP0003225	Raka Rahardjo	Individual	Raka Rahardjo	1985-01-01	1900-01-01	598 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777303190345	Logistics	High	1	0
+CP0003226	Laras Suryadi	Individual	Laras Suryadi	1985-01-01	1900-01-01	854 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776101037857	Logistics	Medium	1	0
+CP0003227	PT Kurniawan Synthetic	Company	Adit Kurniawan	1900-01-01	2018-01-01	14 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	773979321577	Logistics	Medium	0	1
+CP0003228	PT Setiawan Synthetic	Company	Hana Setiawan	1900-01-01	2018-01-01	68 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771872500955	Retail	Medium	0	1
+CP0003229	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	346 Synthetic Avenue	Makassar	AU	AU	Asia Commerce Bank	772688912191	Logistics	High	1	0
+CP0003230	Rani Santoso	Individual	Rani Santoso	1985-01-01	1900-01-01	710 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	771046204519	Technology	Low	1	0
+CP0003231	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	202 Synthetic Avenue	Bandung	AU	AU	Bank Nusantara	772301718676	Logistics	Low	1	0
+CP0003232	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	758 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776571567055	Technology	Low	1	0
+CP0003233	PT Gunawan Synthetic	Company	Kevin Gunawan	1900-01-01	2018-01-01	550 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	779851579716	Manufacturing	High	0	1
+CP0003234	Joko Kurniawan	Individual	Joko Kurniawan	1985-01-01	1900-01-01	418 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774031125931	Manufacturing	Low	1	0
+CP0003235	Naufal Permana	Individual	Naufal Permana	1985-01-01	1900-01-01	121 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772265362267	Healthcare	Low	1	0
+CP0003236	Maya Kurniawan	Individual	Maya Kurniawan	1985-01-01	1900-01-01	568 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773471371945	Technology	Medium	1	0
+CP0003237	Adit Budiman	Individual	Adit Budiman	1985-01-01	1900-01-01	368 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	777824526380	Retail	Low	1	0
+CP0003238	Dimas Hartono	Individual	Dimas Hartono	1985-01-01	1900-01-01	270 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776167977555	Manufacturing	Medium	1	0
+CP0003239	Laras Wibowo	Individual	Laras Wibowo	1985-01-01	1900-01-01	715 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779266916006	Manufacturing	Low	1	0
+CP0003240	Joko Lesmana	Individual	Joko Lesmana	1985-01-01	1900-01-01	719 Synthetic Avenue	Semarang	JP	JP	Asia Commerce Bank	778317383455	Logistics	High	1	0
+CP0003241	PT Firmansyah Synthetic	Company	Citra Firmansyah	1900-01-01	2018-01-01	588 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774200138054	Retail	Low	0	1
+CP0003242	Teguh Siregar	Individual	Teguh Siregar	1985-01-01	1900-01-01	751 Synthetic Avenue	Bandung	JP	JP	Bank Nusantara	778380537767	Construction	Low	1	0
+CP0003243	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	623 Synthetic Avenue	Bandung	GB	GB	Bank Sentra	770047426305	Manufacturing	Medium	1	0
+CP0003244	PT Chandra Synthetic	Company	Rani Chandra	1900-01-01	2018-01-01	466 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771362494813	Logistics	Low	0	1
+CP0003245	PT Wibowo Synthetic	Company	Anisa Wibowo	1900-01-01	2018-01-01	474 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779438954306	Manufacturing	Low	0	1
+CP0003246	Dimas Putra	Individual	Dimas Putra	1985-01-01	1900-01-01	623 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	778923002806	Retail	Low	1	0
+CP0003247	Rizky Kurniawan	Individual	Rizky Kurniawan	1985-01-01	1900-01-01	315 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776561174987	Construction	Low	1	0
+CP0003248	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	626 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774189959673	Manufacturing	Low	1	0
+CP0003249	Joko Permana	Individual	Joko Permana	1985-01-01	1900-01-01	589 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	774474726917	Construction	Low	1	0
+CP0003250	Indra Gunawan	Individual	Indra Gunawan	1985-01-01	1900-01-01	798 Synthetic Avenue	Makassar	JP	JP	Bank Sentra	772082090312	Construction	Low	1	0
+CP0003251	Eka Mahendra	Individual	Eka Mahendra	1985-01-01	1900-01-01	267 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	772616229206	Healthcare	Low	1	0
+CP0003252	Eka Budiman	Individual	Eka Budiman	1985-01-01	1900-01-01	535 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773333290531	Manufacturing	Low	1	0
+CP0003253	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	217 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774468963792	Logistics	Low	1	0
+CP0003254	Andi Permana	Individual	Andi Permana	1985-01-01	1900-01-01	654 Synthetic Avenue	Semarang	US	US	Bank Sentra	775448965236	Retail	High	1	0
+CP0003255	Intan Putra	Individual	Intan Putra	1985-01-01	1900-01-01	373 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775095062878	Manufacturing	Low	1	0
+CP0003256	Wulan Putra	Individual	Wulan Putra	1985-01-01	1900-01-01	371 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774310057526	Manufacturing	Low	1	0
+CP0003257	Bagus Yulianto	Individual	Bagus Yulianto	1985-01-01	1900-01-01	482 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779338336174	Logistics	Medium	1	0
+CP0003258	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	327 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776099621175	Healthcare	Low	1	0
+CP0003259	Raka Adinata	Individual	Raka Adinata	1985-01-01	1900-01-01	465 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772210169824	Construction	Medium	1	0
+CP0003260	PT Putra Synthetic	Company	Dewi Putra	1900-01-01	2018-01-01	471 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778438987659	Retail	Low	0	1
+CP0003261	Naufal Budiman	Individual	Naufal Budiman	1985-01-01	1900-01-01	852 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777301033021	Technology	Medium	1	0
+CP0003262	Gita Nugraha	Individual	Gita Nugraha	1985-01-01	1900-01-01	548 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776266957142	Healthcare	Medium	1	0
+CP0003263	Alya Mahendra	Individual	Alya Mahendra	1985-01-01	1900-01-01	197 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771453690412	Construction	Low	1	0
+CP0003264	Nadia Wijaya	Individual	Nadia Wijaya	1985-01-01	1900-01-01	88 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778062179302	Retail	Low	1	0
+CP0003265	PT Siregar Synthetic	Company	Gita Siregar	1900-01-01	2018-01-01	188 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778919735454	Retail	Medium	0	1
+CP0003266	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	224 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778622773543	Retail	Medium	1	0
+CP0003267	Kevin Lesmana	Individual	Kevin Lesmana	1985-01-01	1900-01-01	197 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772348458275	Construction	Medium	1	0
+CP0003268	PT Mahendra Synthetic	Company	Naufal Mahendra	1900-01-01	2018-01-01	278 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	773511876122	Construction	Low	0	1
+CP0003269	PT Lesmana Synthetic	Company	Wulan Lesmana	1900-01-01	2018-01-01	120 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774388594103	Logistics	Low	0	1
+CP0003270	Bagus Wijaya	Individual	Bagus Wijaya	1985-01-01	1900-01-01	621 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	779756487621	Manufacturing	High	1	0
+CP0003271	PT Lesmana Synthetic	Company	Maya Lesmana	1900-01-01	2018-01-01	693 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771349664554	Retail	Low	0	1
+CP0003272	Andi Setiawan	Individual	Andi Setiawan	1985-01-01	1900-01-01	59 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772093628774	Retail	Low	1	0
+CP0003273	PT Iskandar Synthetic	Company	Citra Iskandar	1900-01-01	2018-01-01	373 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775085872753	Retail	Low	0	1
+CP0003274	Bima Hartono	Individual	Bima Hartono	1985-01-01	1900-01-01	761 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771414586140	Healthcare	Low	1	0
+CP0003275	Andi Adinata	Individual	Andi Adinata	1985-01-01	1900-01-01	549 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	775650884559	Retail	Medium	1	0
+CP0003276	PT Permana Synthetic	Company	Bagus Permana	1900-01-01	2018-01-01	262 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	773701006142	Technology	Low	0	1
+CP0003277	Alya Chandra	Individual	Alya Chandra	1985-01-01	1900-01-01	305 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777198254367	Construction	Low	1	0
+CP0003278	Rizky Iskandar	Individual	Rizky Iskandar	1985-01-01	1900-01-01	202 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777269257670	Technology	Low	1	0
+CP0003279	Intan Suryadi	Individual	Intan Suryadi	1985-01-01	1900-01-01	813 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775135935337	Retail	Medium	1	0
+CP0003280	PT Chandra Synthetic	Company	Kevin Chandra	1900-01-01	2018-01-01	779 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771580028051	Healthcare	Low	0	1
+CP0003281	Andi Yulianto	Individual	Andi Yulianto	1985-01-01	1900-01-01	476 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775368243744	Logistics	Low	1	0
+CP0003282	PT Iskandar Synthetic	Company	Wulan Iskandar	1900-01-01	2018-01-01	342 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771377376012	Logistics	Low	0	1
+CP0003283	PT Budiman Synthetic	Company	Adit Budiman	1900-01-01	2018-01-01	746 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774508653068	Retail	Low	0	1
+CP0003284	Gita Suryadi	Individual	Gita Suryadi	1985-01-01	1900-01-01	548 Synthetic Avenue	Semarang	AE	AE	Bank Sentra	779476533716	Healthcare	Medium	1	0
+CP0003285	Dewi Permana	Individual	Dewi Permana	1985-01-01	1900-01-01	846 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774207647562	Manufacturing	Low	1	0
+CP0003286	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	452 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770667346615	Manufacturing	Low	1	0
+CP0003287	PT Wibowo Synthetic	Company	Dewi Wibowo	1900-01-01	2018-01-01	137 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	777822836582	Healthcare	Low	0	1
+CP0003288	PT Nugraha Synthetic	Company	Bima Nugraha	1900-01-01	2018-01-01	270 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	773869746835	Healthcare	Low	0	1
+CP0003289	Rizky Santoso	Individual	Rizky Santoso	1985-01-01	1900-01-01	299 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	774144296091	Manufacturing	Low	1	0
+CP0003290	Fajar Putra	Individual	Fajar Putra	1985-01-01	1900-01-01	152 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772168993697	Logistics	Low	1	0
+CP0003291	PT Kurniawan Synthetic	Company	Bagus Kurniawan	1900-01-01	2018-01-01	144 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771609687325	Retail	Medium	0	1
+CP0003292	Sari Permana	Individual	Sari Permana	1985-01-01	1900-01-01	818 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773506251507	Retail	Low	1	0
+CP0003293	Nadia Rahardjo	Individual	Nadia Rahardjo	1985-01-01	1900-01-01	366 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777552037343	Healthcare	Low	1	0
+CP0003294	PT Permana Synthetic	Company	Rani Permana	1900-01-01	2018-01-01	286 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771515042453	Healthcare	Low	0	1
+CP0003295	PT Chandra Synthetic	Company	Fajar Chandra	1900-01-01	2018-01-01	444 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774714492755	Technology	Low	0	1
+CP0003296	Bagus Adinata	Individual	Bagus Adinata	1985-01-01	1900-01-01	308 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	779566583532	Healthcare	Medium	1	0
+CP0003297	Alya Hartono	Individual	Alya Hartono	1985-01-01	1900-01-01	267 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	779816584945	Manufacturing	High	1	0
+CP0003298	PT Iskandar Synthetic	Company	Wulan Iskandar	1900-01-01	2018-01-01	424 Synthetic Avenue	Makassar	AE	AE	Asia Commerce Bank	775871610365	Manufacturing	Medium	0	1
+CP0003299	PT Lesmana Synthetic	Company	Wulan Lesmana	1900-01-01	2018-01-01	100 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771308404990	Logistics	Medium	0	1
+CP0003300	PT Halim Synthetic	Company	Citra Halim	1900-01-01	2018-01-01	319 Synthetic Avenue	Surabaya	JP	JP	Bank Sentra	773023036957	Healthcare	Medium	0	1
+CP0003301	PT Firmansyah Synthetic	Company	Indra Firmansyah	1900-01-01	2018-01-01	251 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776164266870	Construction	Low	0	1
+CP0003302	PT Darmawan Synthetic	Company	Rizky Darmawan	1900-01-01	2018-01-01	782 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	773429603129	Manufacturing	Medium	0	1
+CP0003303	Putri Lesmana	Individual	Putri Lesmana	1985-01-01	1900-01-01	832 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	772997071728	Healthcare	Low	1	0
+CP0003304	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	753 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	770382519743	Construction	Medium	1	0
+CP0003305	Joko Yulianto	Individual	Joko Yulianto	1985-01-01	1900-01-01	401 Synthetic Avenue	Medan	MY	MY	Bank Sentra	776386178446	Manufacturing	Low	1	0
+CP0003306	PT Wibowo Synthetic	Company	Kevin Wibowo	1900-01-01	2018-01-01	160 Synthetic Avenue	Medan	JP	JP	Bank Sentra	771265184086	Construction	Low	0	1
+CP0003307	PT Gunawan Synthetic	Company	Maya Gunawan	1900-01-01	2018-01-01	35 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777702494303	Technology	Low	0	1
+CP0003308	PT Suryadi Synthetic	Company	Rizky Suryadi	1900-01-01	2018-01-01	261 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	776191595222	Construction	Low	0	1
+CP0003309	Intan Darmawan	Individual	Intan Darmawan	1985-01-01	1900-01-01	119 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778586432026	Logistics	Low	1	0
+CP0003310	Teguh Siregar	Individual	Teguh Siregar	1985-01-01	1900-01-01	107 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770922338615	Technology	Low	1	0
+CP0003311	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	290 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	779019120706	Manufacturing	Low	1	0
+CP0003312	Adit Gunawan	Individual	Adit Gunawan	1985-01-01	1900-01-01	96 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776469175368	Logistics	Medium	1	0
+CP0003313	Farah Nugraha	Individual	Farah Nugraha	1985-01-01	1900-01-01	465 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775007760134	Manufacturing	Low	1	0
+CP0003314	Citra Yulianto	Individual	Citra Yulianto	1985-01-01	1900-01-01	622 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772985516741	Manufacturing	Low	1	0
+CP0003315	PT Firmansyah Synthetic	Company	Eka Firmansyah	1900-01-01	2018-01-01	22 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779775222439	Technology	Low	0	1
+CP0003316	PT Santoso Synthetic	Company	Intan Santoso	1900-01-01	2018-01-01	812 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773358945894	Retail	Low	0	1
+CP0003317	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	829 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	778674840562	Retail	Low	1	0
+CP0003318	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	136 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777130033453	Healthcare	Low	1	0
+CP0003319	PT Adinata Synthetic	Company	Fajar Adinata	1900-01-01	2018-01-01	426 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779646336610	Retail	Low	0	1
+CP0003320	PT Lesmana Synthetic	Company	Gita Lesmana	1900-01-01	2018-01-01	165 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773080955981	Healthcare	Low	0	1
+CP0003321	Naufal Prakoso	Individual	Naufal Prakoso	1985-01-01	1900-01-01	194 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	772306592156	Retail	Low	1	0
+CP0003322	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	601 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770454234156	Retail	Medium	1	0
+CP0003323	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	339 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773653722824	Technology	Low	1	0
+CP0003324	Gita Mahendra	Individual	Gita Mahendra	1985-01-01	1900-01-01	482 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771699927283	Retail	Low	1	0
+CP0003325	PT Darmawan Synthetic	Company	Adit Darmawan	1900-01-01	2018-01-01	91 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	772318871647	Manufacturing	Low	0	1
+CP0003326	Indra Mahendra	Individual	Indra Mahendra	1985-01-01	1900-01-01	623 Synthetic Avenue	Jakarta	AE	AE	Asia Commerce Bank	772427735728	Manufacturing	Low	1	0
+CP0003327	Putri Halim	Individual	Putri Halim	1985-01-01	1900-01-01	322 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774307700876	Manufacturing	Medium	1	0
+CP0003328	Naufal Iskandar	Individual	Naufal Iskandar	1985-01-01	1900-01-01	774 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775081555115	Logistics	Low	1	0
+CP0003329	Citra Setiawan	Individual	Citra Setiawan	1985-01-01	1900-01-01	402 Synthetic Avenue	Makassar	JP	JP	Bank Sentra	773103996405	Healthcare	Low	1	0
+CP0003330	Laras Rahardjo	Individual	Laras Rahardjo	1985-01-01	1900-01-01	281 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771628980651	Technology	Medium	1	0
+CP0003331	Bima Santoso	Individual	Bima Santoso	1985-01-01	1900-01-01	427 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	778187794698	Logistics	Medium	1	0
+CP0003332	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	504 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778763990598	Retail	Medium	1	0
+CP0003333	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	813 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770686470895	Healthcare	Medium	1	0
+CP0003334	Maya Halim	Individual	Maya Halim	1985-01-01	1900-01-01	322 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	777945256961	Manufacturing	Low	1	0
+CP0003335	PT Putra Synthetic	Company	Intan Putra	1900-01-01	2018-01-01	761 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	776061089223	Retail	Low	0	1
+CP0003336	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	552 Synthetic Avenue	Jakarta	AU	AU	Bank Nusantara	776031806453	Construction	Low	1	0
+CP0003337	Andi Santoso	Individual	Andi Santoso	1985-01-01	1900-01-01	685 Synthetic Avenue	Surabaya	GB	GB	Bank Nusantara	775869461667	Healthcare	Medium	1	0
+CP0003338	Raka Kurniawan	Individual	Raka Kurniawan	1985-01-01	1900-01-01	192 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776428572479	Retail	Low	1	0
+CP0003339	PT Halim Synthetic	Company	Farah Halim	1900-01-01	2018-01-01	740 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	770928306686	Retail	Low	0	1
+CP0003340	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	29 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	771225949678	Healthcare	Medium	1	0
+CP0003341	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	222 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772489666322	Retail	Medium	1	0
+CP0003342	Alya Nugraha	Individual	Alya Nugraha	1985-01-01	1900-01-01	717 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	772734031284	Logistics	Low	1	0
+CP0003343	Teguh Chandra	Individual	Teguh Chandra	1985-01-01	1900-01-01	775 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	771544482864	Technology	Medium	1	0
+CP0003344	PT Chandra Synthetic	Company	Bima Chandra	1900-01-01	2018-01-01	379 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773059062805	Healthcare	Medium	0	1
+CP0003345	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	807 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	779047980454	Retail	Medium	1	0
+CP0003346	Bima Mahendra	Individual	Bima Mahendra	1985-01-01	1900-01-01	278 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	774465929509	Technology	Low	1	0
+CP0003347	Wulan Chandra	Individual	Wulan Chandra	1985-01-01	1900-01-01	458 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778408325961	Healthcare	Medium	1	0
+CP0003348	Teguh Santoso	Individual	Teguh Santoso	1985-01-01	1900-01-01	686 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779877811235	Construction	Medium	1	0
+CP0003349	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	323 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779469286708	Retail	Low	1	0
+CP0003350	Wulan Budiman	Individual	Wulan Budiman	1985-01-01	1900-01-01	764 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776808847608	Technology	Low	1	0
+CP0003351	Raka Chandra	Individual	Raka Chandra	1985-01-01	1900-01-01	169 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776701987438	Retail	Low	1	0
+CP0003352	Anisa Darmawan	Individual	Anisa Darmawan	1985-01-01	1900-01-01	338 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776835418139	Manufacturing	Medium	1	0
+CP0003353	Fajar Yulianto	Individual	Fajar Yulianto	1985-01-01	1900-01-01	854 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	773839317599	Healthcare	Low	1	0
+CP0003354	PT Firmansyah Synthetic	Company	Fajar Firmansyah	1900-01-01	2018-01-01	209 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774369172545	Retail	Low	0	1
+CP0003355	PT Nugraha Synthetic	Company	Rizky Nugraha	1900-01-01	2018-01-01	487 Synthetic Avenue	Semarang	JP	JP	Asia Commerce Bank	778992275269	Healthcare	Medium	0	1
+CP0003356	Andi Firmansyah	Individual	Andi Firmansyah	1985-01-01	1900-01-01	554 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772094536813	Construction	Low	1	0
+CP0003357	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	659 Synthetic Avenue	Makassar	AE	AE	Bank Sentra	770705658307	Manufacturing	Low	1	0
+CP0003358	Adit Wijaya	Individual	Adit Wijaya	1985-01-01	1900-01-01	141 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775484290204	Technology	Low	1	0
+CP0003359	PT Santoso Synthetic	Company	Arif Santoso	1900-01-01	2018-01-01	418 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773161016697	Construction	Low	0	1
+CP0003360	PT Kurniawan Synthetic	Company	Alya Kurniawan	1900-01-01	2018-01-01	509 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773368777545	Construction	Low	0	1
+CP0003361	Joko Gunawan	Individual	Joko Gunawan	1985-01-01	1900-01-01	402 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	778519290855	Logistics	Low	1	0
+CP0003362	Kevin Iskandar	Individual	Kevin Iskandar	1985-01-01	1900-01-01	416 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	775604862343	Retail	Low	1	0
+CP0003363	Intan Lesmana	Individual	Intan Lesmana	1985-01-01	1900-01-01	498 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	779988854886	Retail	Low	1	0
+CP0003364	Eka Santoso	Individual	Eka Santoso	1985-01-01	1900-01-01	835 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774051654861	Technology	Low	1	0
+CP0003365	Bagus Lesmana	Individual	Bagus Lesmana	1985-01-01	1900-01-01	423 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771363839657	Retail	Low	1	0
+CP0003366	Kevin Setiawan	Individual	Kevin Setiawan	1985-01-01	1900-01-01	477 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775237100714	Retail	High	1	0
+CP0003367	Eka Nugraha	Individual	Eka Nugraha	1985-01-01	1900-01-01	347 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	770973401089	Manufacturing	Medium	1	0
+CP0003368	Dewi Putra	Individual	Dewi Putra	1985-01-01	1900-01-01	328 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777481463680	Manufacturing	Low	1	0
+CP0003369	Maya Iskandar	Individual	Maya Iskandar	1985-01-01	1900-01-01	821 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772707185844	Logistics	Medium	1	0
+CP0003370	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	886 Synthetic Avenue	Makassar	AE	AE	Asia Commerce Bank	774421750293	Healthcare	Low	1	0
+CP0003371	Fajar Gunawan	Individual	Fajar Gunawan	1985-01-01	1900-01-01	685 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771445829943	Healthcare	Low	1	0
+CP0003372	Alya Yulianto	Individual	Alya Yulianto	1985-01-01	1900-01-01	537 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	773202375475	Technology	Low	1	0
+CP0003373	Indra Darmawan	Individual	Indra Darmawan	1985-01-01	1900-01-01	331 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773350671564	Healthcare	Medium	1	0
+CP0003374	Farah Adinata	Individual	Farah Adinata	1985-01-01	1900-01-01	213 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779025730649	Construction	Low	1	0
+CP0003375	Naufal Prakoso	Individual	Naufal Prakoso	1985-01-01	1900-01-01	836 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	778901369382	Healthcare	Low	1	0
+CP0003376	PT Rahardjo Synthetic	Company	Teguh Rahardjo	1900-01-01	2018-01-01	186 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774303793841	Manufacturing	Low	0	1
+CP0003377	PT Chandra Synthetic	Company	Sari Chandra	1900-01-01	2018-01-01	47 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779673618482	Technology	Low	0	1
+CP0003378	Alya Iskandar	Individual	Alya Iskandar	1985-01-01	1900-01-01	611 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	779747927440	Retail	Low	1	0
+CP0003379	PT Adinata Synthetic	Company	Wulan Adinata	1900-01-01	2018-01-01	289 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773896107852	Logistics	Low	0	1
+CP0003380	Citra Darmawan	Individual	Citra Darmawan	1985-01-01	1900-01-01	355 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778552465643	Manufacturing	Low	1	0
+CP0003381	PT Hartono Synthetic	Company	Eka Hartono	1900-01-01	2018-01-01	169 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	773163735048	Construction	Low	0	1
+CP0003382	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	16 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	773648069841	Healthcare	Low	1	0
+CP0003383	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	855 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772179130225	Logistics	Low	1	0
+CP0003384	PT Siregar Synthetic	Company	Rani Siregar	1900-01-01	2018-01-01	448 Synthetic Avenue	Surabaya	US	US	Bank Sentra	775478437558	Construction	Low	0	1
+CP0003385	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	795 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773721174553	Construction	Low	1	0
+CP0003386	PT Wijaya Synthetic	Company	Adit Wijaya	1900-01-01	2018-01-01	73 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	774169938517	Logistics	Low	0	1
+CP0003387	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	865 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	775357488713	Construction	Medium	1	0
+CP0003388	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	293 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	775679963188	Technology	Medium	1	0
+CP0003389	PT Nugraha Synthetic	Company	Dewi Nugraha	1900-01-01	2018-01-01	206 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779511267330	Construction	Medium	0	1
+CP0003390	Dimas Yulianto	Individual	Dimas Yulianto	1985-01-01	1900-01-01	562 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774638923744	Retail	Low	1	0
+CP0003391	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	497 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776136894480	Healthcare	Low	1	0
+CP0003392	Andi Suryadi	Individual	Andi Suryadi	1985-01-01	1900-01-01	50 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	777097748684	Manufacturing	Low	1	0
+CP0003393	Andi Setiawan	Individual	Andi Setiawan	1985-01-01	1900-01-01	570 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	770142306336	Healthcare	Low	1	0
+CP0003394	Intan Firmansyah	Individual	Intan Firmansyah	1985-01-01	1900-01-01	481 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778750469140	Construction	Low	1	0
+CP0003395	PT Setiawan Synthetic	Company	Dimas Setiawan	1900-01-01	2018-01-01	246 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	775152702610	Manufacturing	Low	0	1
+CP0003396	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	868 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	776696879074	Healthcare	Low	1	0
+CP0003397	Alya Santoso	Individual	Alya Santoso	1985-01-01	1900-01-01	8 Synthetic Avenue	Medan	GB	GB	Asia Commerce Bank	772964476752	Logistics	Low	1	0
+CP0003398	Gita Rahardjo	Individual	Gita Rahardjo	1985-01-01	1900-01-01	344 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770440543441	Technology	Low	1	0
+CP0003399	PT Gunawan Synthetic	Company	Indra Gunawan	1900-01-01	2018-01-01	549 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771382684169	Technology	Low	0	1
+CP0003400	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	661 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	779391712439	Technology	Low	1	0
+CP0003401	PT Firmansyah Synthetic	Company	Anisa Firmansyah	1900-01-01	2018-01-01	826 Synthetic Avenue	Semarang	JP	JP	Bank Sentra	775743924077	Retail	Medium	0	1
+CP0003402	Gita Mahendra	Individual	Gita Mahendra	1985-01-01	1900-01-01	21 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771538359737	Retail	Low	1	0
+CP0003403	Maya Kurniawan	Individual	Maya Kurniawan	1985-01-01	1900-01-01	310 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	771427736808	Retail	Low	1	0
+CP0003404	Andi Lesmana	Individual	Andi Lesmana	1985-01-01	1900-01-01	783 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	773656620406	Manufacturing	Medium	1	0
+CP0003405	Bima Putra	Individual	Bima Putra	1985-01-01	1900-01-01	7 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771813399655	Retail	Low	1	0
+CP0003406	Eka Wibowo	Individual	Eka Wibowo	1985-01-01	1900-01-01	222 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777007289073	Manufacturing	Medium	1	0
+CP0003407	PT Yulianto Synthetic	Company	Indra Yulianto	1900-01-01	2018-01-01	646 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779639283236	Logistics	Low	0	1
+CP0003408	Putri Lesmana	Individual	Putri Lesmana	1985-01-01	1900-01-01	69 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777745253502	Healthcare	High	1	0
+CP0003409	PT Hartono Synthetic	Company	Eka Hartono	1900-01-01	2018-01-01	302 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777581907895	Manufacturing	Medium	0	1
+CP0003410	Putri Permana	Individual	Putri Permana	1985-01-01	1900-01-01	603 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	776881065443	Construction	High	1	0
+CP0003411	PT Rahardjo Synthetic	Company	Dewi Rahardjo	1900-01-01	2018-01-01	552 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773425234952	Manufacturing	Medium	0	1
+CP0003412	Fajar Chandra	Individual	Fajar Chandra	1985-01-01	1900-01-01	641 Synthetic Avenue	Denpasar	AE	AE	Asia Commerce Bank	772089447098	Retail	Low	1	0
+CP0003413	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	45 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	775114486600	Technology	Low	1	0
+CP0003414	Rani Setiawan	Individual	Rani Setiawan	1985-01-01	1900-01-01	770 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771308477175	Technology	Low	1	0
+CP0003415	Rani Iskandar	Individual	Rani Iskandar	1985-01-01	1900-01-01	195 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772107870206	Healthcare	Low	1	0
+CP0003416	Fajar Halim	Individual	Fajar Halim	1985-01-01	1900-01-01	576 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	771798920923	Technology	Medium	1	0
+CP0003417	PT Rahardjo Synthetic	Company	Nadia Rahardjo	1900-01-01	2018-01-01	774 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771760400837	Healthcare	Low	0	1
+CP0003418	Intan Santoso	Individual	Intan Santoso	1985-01-01	1900-01-01	723 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777500968929	Construction	Low	1	0
+CP0003419	PT Permana Synthetic	Company	Sari Permana	1900-01-01	2018-01-01	60 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779554961217	Logistics	Low	0	1
+CP0003420	Joko Kurniawan	Individual	Joko Kurniawan	1985-01-01	1900-01-01	598 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770702644360	Healthcare	Low	1	0
+CP0003421	Kevin Yulianto	Individual	Kevin Yulianto	1985-01-01	1900-01-01	607 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	775825007878	Technology	Medium	1	0
+CP0003422	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	531 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779618448157	Manufacturing	High	1	0
+CP0003423	Dimas Iskandar	Individual	Dimas Iskandar	1985-01-01	1900-01-01	796 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	775447344996	Technology	Low	1	0
+CP0003424	Farah Siregar	Individual	Farah Siregar	1985-01-01	1900-01-01	590 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	773399601767	Technology	Low	1	0
+CP0003425	Farah Halim	Individual	Farah Halim	1985-01-01	1900-01-01	318 Synthetic Avenue	Denpasar	AU	AU	Asia Commerce Bank	776214582402	Logistics	Low	1	0
+CP0003426	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	256 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779996767761	Technology	Low	1	0
+CP0003427	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	76 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775601294527	Construction	Medium	0	1
+CP0003428	Joko Budiman	Individual	Joko Budiman	1985-01-01	1900-01-01	154 Synthetic Avenue	Medan	GB	GB	Bank Nusantara	772361190818	Healthcare	Low	1	0
+CP0003429	Sari Setiawan	Individual	Sari Setiawan	1985-01-01	1900-01-01	780 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	777275642646	Healthcare	Low	1	0
+CP0003430	Indra Budiman	Individual	Indra Budiman	1985-01-01	1900-01-01	644 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	774423213548	Healthcare	High	1	0
+CP0003431	Dewi Putra	Individual	Dewi Putra	1985-01-01	1900-01-01	673 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	777146019501	Logistics	Low	1	0
+CP0003432	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	410 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771113511355	Construction	Low	1	0
+CP0003433	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	217 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771429416575	Healthcare	Low	1	0
+CP0003434	Dimas Permana	Individual	Dimas Permana	1985-01-01	1900-01-01	819 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772039802611	Construction	Low	1	0
+CP0003435	Putri Yulianto	Individual	Putri Yulianto	1985-01-01	1900-01-01	831 Synthetic Avenue	Bandung	AE	AE	Bank Nusantara	778392415147	Construction	High	1	0
+CP0003436	Farah Santoso	Individual	Farah Santoso	1985-01-01	1900-01-01	847 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777804469521	Logistics	High	1	0
+CP0003437	PT Suryadi Synthetic	Company	Wulan Suryadi	1900-01-01	2018-01-01	127 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	775060823951	Construction	Low	0	1
+CP0003438	PT Siregar Synthetic	Company	Dimas Siregar	1900-01-01	2018-01-01	98 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770184926349	Retail	Medium	0	1
+CP0003439	PT Nugraha Synthetic	Company	Rani Nugraha	1900-01-01	2018-01-01	90 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770550223615	Manufacturing	Low	0	1
+CP0003440	Farah Putra	Individual	Farah Putra	1985-01-01	1900-01-01	257 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772464095834	Retail	Low	1	0
+CP0003441	Gita Budiman	Individual	Gita Budiman	1985-01-01	1900-01-01	371 Synthetic Avenue	Makassar	GB	GB	Bank Nusantara	772813220740	Technology	Low	1	0
+CP0003442	Naufal Santoso	Individual	Naufal Santoso	1985-01-01	1900-01-01	210 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	772485201330	Retail	Low	1	0
+CP0003443	PT Kurniawan Synthetic	Company	Sari Kurniawan	1900-01-01	2018-01-01	40 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776476308813	Manufacturing	Low	0	1
+CP0003444	Dimas Iskandar	Individual	Dimas Iskandar	1985-01-01	1900-01-01	628 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779177570212	Logistics	Low	1	0
+CP0003445	Kevin Hartono	Individual	Kevin Hartono	1985-01-01	1900-01-01	860 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770907220781	Construction	Low	1	0
+CP0003446	Alya Kurniawan	Individual	Alya Kurniawan	1985-01-01	1900-01-01	737 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778510538364	Manufacturing	Low	1	0
+CP0003447	Bagus Budiman	Individual	Bagus Budiman	1985-01-01	1900-01-01	452 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774614570100	Manufacturing	Medium	1	0
+CP0003448	Dimas Yulianto	Individual	Dimas Yulianto	1985-01-01	1900-01-01	688 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772168085249	Construction	Medium	1	0
+CP0003449	Dimas Iskandar	Individual	Dimas Iskandar	1985-01-01	1900-01-01	373 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	777113129140	Healthcare	High	1	0
+CP0003450	PT Kurniawan Synthetic	Company	Indra Kurniawan	1900-01-01	2018-01-01	275 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771839779419	Logistics	High	0	1
+CP0003451	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	649 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775867726439	Logistics	Medium	1	0
+CP0003452	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	266 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774321223259	Manufacturing	Low	1	0
+CP0003453	PT Putra Synthetic	Company	Dimas Putra	1900-01-01	2018-01-01	822 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774290981014	Logistics	Medium	0	1
+CP0003454	PT Iskandar Synthetic	Company	Arif Iskandar	1900-01-01	2018-01-01	580 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771106401562	Technology	Low	0	1
+CP0003455	Eka Halim	Individual	Eka Halim	1985-01-01	1900-01-01	197 Synthetic Avenue	Medan	AE	AE	Bank Sentra	778380932078	Construction	Low	1	0
+CP0003456	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	82 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772864669327	Healthcare	Low	1	0
+CP0003457	Eka Lesmana	Individual	Eka Lesmana	1985-01-01	1900-01-01	471 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	779074732137	Manufacturing	Low	1	0
+CP0003458	Adit Wibowo	Individual	Adit Wibowo	1985-01-01	1900-01-01	725 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	770911713981	Logistics	Low	1	0
+CP0003459	Fajar Darmawan	Individual	Fajar Darmawan	1985-01-01	1900-01-01	681 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773000138560	Retail	High	1	0
+CP0003460	Nadia Setiawan	Individual	Nadia Setiawan	1985-01-01	1900-01-01	555 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776137751319	Healthcare	High	1	0
+CP0003461	PT Chandra Synthetic	Company	Dimas Chandra	1900-01-01	2018-01-01	446 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772060952494	Logistics	Low	0	1
+CP0003462	Wulan Hartono	Individual	Wulan Hartono	1985-01-01	1900-01-01	166 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773520522036	Healthcare	Low	1	0
+CP0003463	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	4 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	774197116156	Construction	Low	1	0
+CP0003464	Hana Wijaya	Individual	Hana Wijaya	1985-01-01	1900-01-01	584 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779906532267	Logistics	High	1	0
+CP0003465	Rizky Halim	Individual	Rizky Halim	1985-01-01	1900-01-01	598 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772774807436	Retail	Low	1	0
+CP0003466	Indra Yulianto	Individual	Indra Yulianto	1985-01-01	1900-01-01	119 Synthetic Avenue	Makassar	AE	AE	Bank Sentra	777797868027	Manufacturing	Medium	1	0
+CP0003467	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	70 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774675743957	Manufacturing	Medium	1	0
+CP0003468	PT Gunawan Synthetic	Company	Intan Gunawan	1900-01-01	2018-01-01	44 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778144150539	Construction	Low	0	1
+CP0003469	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	193 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771713373706	Technology	Medium	1	0
+CP0003470	Alya Yulianto	Individual	Alya Yulianto	1985-01-01	1900-01-01	637 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	773495551538	Retail	Medium	1	0
+CP0003471	Laras Hartono	Individual	Laras Hartono	1985-01-01	1900-01-01	314 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773889840211	Manufacturing	Medium	1	0
+CP0003472	PT Adinata Synthetic	Company	Maya Adinata	1900-01-01	2018-01-01	519 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	776014372012	Construction	Low	0	1
+CP0003473	Raka Budiman	Individual	Raka Budiman	1985-01-01	1900-01-01	129 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	778180011194	Logistics	Medium	1	0
+CP0003474	Bagus Gunawan	Individual	Bagus Gunawan	1985-01-01	1900-01-01	113 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770504765177	Technology	Low	1	0
+CP0003475	Alya Chandra	Individual	Alya Chandra	1985-01-01	1900-01-01	673 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771399206116	Logistics	Low	1	0
+CP0003476	Fajar Prakoso	Individual	Fajar Prakoso	1985-01-01	1900-01-01	146 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779554656203	Retail	Low	1	0
+CP0003477	PT Santoso Synthetic	Company	Dewi Santoso	1900-01-01	2018-01-01	72 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774926089194	Logistics	Low	0	1
+CP0003478	Gita Rahardjo	Individual	Gita Rahardjo	1985-01-01	1900-01-01	358 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775220731291	Manufacturing	Low	1	0
+CP0003479	Laras Iskandar	Individual	Laras Iskandar	1985-01-01	1900-01-01	609 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773770570930	Logistics	Low	1	0
+CP0003480	PT Suryadi Synthetic	Company	Anisa Suryadi	1900-01-01	2018-01-01	631 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777490060869	Technology	Low	0	1
+CP0003481	PT Gunawan Synthetic	Company	Laras Gunawan	1900-01-01	2018-01-01	852 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775007078006	Technology	High	0	1
+CP0003482	PT Hartono Synthetic	Company	Rani Hartono	1900-01-01	2018-01-01	576 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	779430483508	Technology	Low	0	1
+CP0003483	Nadia Halim	Individual	Nadia Halim	1985-01-01	1900-01-01	761 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	772966060276	Healthcare	Low	1	0
+CP0003484	Anisa Firmansyah	Individual	Anisa Firmansyah	1985-01-01	1900-01-01	562 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777739299579	Healthcare	Low	1	0
+CP0003485	Rani Permana	Individual	Rani Permana	1985-01-01	1900-01-01	891 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	770653617931	Healthcare	Low	1	0
+CP0003486	Dimas Setiawan	Individual	Dimas Setiawan	1985-01-01	1900-01-01	471 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771605206445	Healthcare	Low	1	0
+CP0003487	Kevin Chandra	Individual	Kevin Chandra	1985-01-01	1900-01-01	724 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	777306914995	Healthcare	Medium	1	0
+CP0003488	Bima Santoso	Individual	Bima Santoso	1985-01-01	1900-01-01	615 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778533790560	Retail	Low	1	0
+CP0003489	PT Suryadi Synthetic	Company	Eka Suryadi	1900-01-01	2018-01-01	395 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776161609581	Healthcare	Low	0	1
+CP0003490	Laras Darmawan	Individual	Laras Darmawan	1985-01-01	1900-01-01	360 Synthetic Avenue	Surabaya	US	US	Bank Sentra	774071405324	Technology	Medium	1	0
+CP0003491	PT Wijaya Synthetic	Company	Putri Wijaya	1900-01-01	2018-01-01	514 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771299486173	Retail	Low	0	1
+CP0003492	Dewi Permana	Individual	Dewi Permana	1985-01-01	1900-01-01	288 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778057801592	Construction	Medium	1	0
+CP0003493	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	477 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	778896482137	Healthcare	Low	1	0
+CP0003494	Anisa Setiawan	Individual	Anisa Setiawan	1985-01-01	1900-01-01	666 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	778552830075	Healthcare	High	1	0
+CP0003495	Sari Permana	Individual	Sari Permana	1985-01-01	1900-01-01	784 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774977405977	Manufacturing	Low	1	0
+CP0003496	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	464 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772279130970	Manufacturing	Medium	1	0
+CP0003497	Kevin Firmansyah	Individual	Kevin Firmansyah	1985-01-01	1900-01-01	529 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770574497511	Logistics	Low	1	0
+CP0003498	Joko Iskandar	Individual	Joko Iskandar	1985-01-01	1900-01-01	440 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	770907238897	Retail	Medium	1	0
+CP0003499	Maya Siregar	Individual	Maya Siregar	1985-01-01	1900-01-01	599 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771511036053	Manufacturing	High	1	0
+CP0003500	Maya Iskandar	Individual	Maya Iskandar	1985-01-01	1900-01-01	667 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	778394328799	Retail	Medium	1	0
+CP0003501	Adit Budiman	Individual	Adit Budiman	1985-01-01	1900-01-01	346 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770422179240	Manufacturing	Low	1	0
+CP0003502	Laras Gunawan	Individual	Laras Gunawan	1985-01-01	1900-01-01	16 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	770322136009	Retail	Medium	1	0
+CP0003503	PT Santoso Synthetic	Company	Intan Santoso	1900-01-01	2018-01-01	647 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772305997959	Construction	Low	0	1
+CP0003504	Citra Nugraha	Individual	Citra Nugraha	1985-01-01	1900-01-01	747 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775842055994	Manufacturing	High	1	0
+CP0003505	Hana Yulianto	Individual	Hana Yulianto	1985-01-01	1900-01-01	338 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	771511171168	Logistics	Low	1	0
+CP0003506	Nadia Putra	Individual	Nadia Putra	1985-01-01	1900-01-01	611 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779852200013	Construction	Medium	1	0
+CP0003507	Arif Santoso	Individual	Arif Santoso	1985-01-01	1900-01-01	647 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772994620975	Logistics	Medium	1	0
+CP0003508	Putri Halim	Individual	Putri Halim	1985-01-01	1900-01-01	783 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	778356053906	Manufacturing	Medium	1	0
+CP0003509	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	707 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772867711959	Healthcare	Low	1	0
+CP0003510	Farah Nugraha	Individual	Farah Nugraha	1985-01-01	1900-01-01	91 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	772997140603	Manufacturing	Low	1	0
+CP0003511	Indra Lesmana	Individual	Indra Lesmana	1985-01-01	1900-01-01	513 Synthetic Avenue	Medan	AE	AE	Bank Nusantara	779684154500	Logistics	Low	1	0
+CP0003512	Putri Halim	Individual	Putri Halim	1985-01-01	1900-01-01	185 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771516798874	Construction	Medium	1	0
+CP0003513	Alya Putra	Individual	Alya Putra	1985-01-01	1900-01-01	248 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773203433766	Retail	Medium	1	0
+CP0003514	PT Nugraha Synthetic	Company	Intan Nugraha	1900-01-01	2018-01-01	135 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775542554001	Manufacturing	Low	0	1
+CP0003515	Bima Iskandar	Individual	Bima Iskandar	1985-01-01	1900-01-01	210 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	774737142687	Construction	Medium	1	0
+CP0003516	Alya Chandra	Individual	Alya Chandra	1985-01-01	1900-01-01	390 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775867898459	Construction	Low	1	0
+CP0003517	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	107 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770831412746	Construction	Medium	1	0
+CP0003518	PT Gunawan Synthetic	Company	Sari Gunawan	1900-01-01	2018-01-01	79 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777047244803	Retail	Low	0	1
+CP0003519	Arif Darmawan	Individual	Arif Darmawan	1985-01-01	1900-01-01	307 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778851923773	Healthcare	Low	1	0
+CP0003520	Andi Siregar	Individual	Andi Siregar	1985-01-01	1900-01-01	876 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773735392132	Healthcare	Low	1	0
+CP0003521	Anisa Firmansyah	Individual	Anisa Firmansyah	1985-01-01	1900-01-01	600 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	772401002756	Manufacturing	Low	1	0
+CP0003522	Citra Halim	Individual	Citra Halim	1985-01-01	1900-01-01	40 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777433780267	Healthcare	Medium	1	0
+CP0003523	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	46 Synthetic Avenue	Medan	GB	GB	Bank Sentra	774143732164	Logistics	Low	1	0
+CP0003524	Rizky Halim	Individual	Rizky Halim	1985-01-01	1900-01-01	132 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	771623511085	Logistics	Low	1	0
+CP0003525	Bagus Iskandar	Individual	Bagus Iskandar	1985-01-01	1900-01-01	829 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771452465294	Construction	Low	1	0
+CP0003526	Alya Darmawan	Individual	Alya Darmawan	1985-01-01	1900-01-01	820 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776082481161	Manufacturing	Low	1	0
+CP0003527	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	205 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774468827684	Healthcare	Low	1	0
+CP0003528	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	489 Synthetic Avenue	Semarang	US	US	Bank Nusantara	771347291866	Construction	Low	1	0
+CP0003529	Arif Iskandar	Individual	Arif Iskandar	1985-01-01	1900-01-01	64 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773186111038	Logistics	Medium	1	0
+CP0003530	PT Iskandar Synthetic	Company	Andi Iskandar	1900-01-01	2018-01-01	390 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776826769356	Manufacturing	Medium	0	1
+CP0003531	Farah Firmansyah	Individual	Farah Firmansyah	1985-01-01	1900-01-01	200 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779642732224	Healthcare	Medium	1	0
+CP0003532	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	159 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773709243116	Logistics	Low	1	0
+CP0003533	PT Permana Synthetic	Company	Indra Permana	1900-01-01	2018-01-01	636 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777122376286	Construction	High	0	1
+CP0003534	Andi Prakoso	Individual	Andi Prakoso	1985-01-01	1900-01-01	337 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776339031950	Construction	Low	1	0
+CP0003535	Maya Yulianto	Individual	Maya Yulianto	1985-01-01	1900-01-01	762 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	776588263286	Manufacturing	Low	1	0
+CP0003536	Joko Hartono	Individual	Joko Hartono	1985-01-01	1900-01-01	547 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772301318466	Technology	Low	1	0
+CP0003537	Joko Gunawan	Individual	Joko Gunawan	1985-01-01	1900-01-01	892 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779287953936	Healthcare	Low	1	0
+CP0003538	Sari Permana	Individual	Sari Permana	1985-01-01	1900-01-01	818 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770782865077	Logistics	Low	1	0
+CP0003539	Intan Iskandar	Individual	Intan Iskandar	1985-01-01	1900-01-01	493 Synthetic Avenue	Medan	AU	AU	Bank Sentra	774616191542	Technology	Low	1	0
+CP0003540	Eka Chandra	Individual	Eka Chandra	1985-01-01	1900-01-01	74 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778944859671	Technology	Low	1	0
+CP0003541	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	349 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778753765842	Retail	Low	1	0
+CP0003542	Bima Yulianto	Individual	Bima Yulianto	1985-01-01	1900-01-01	258 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778955736738	Logistics	High	1	0
+CP0003543	PT Kurniawan Synthetic	Company	Wulan Kurniawan	1900-01-01	2018-01-01	508 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	771333204149	Logistics	Low	0	1
+CP0003544	PT Gunawan Synthetic	Company	Kevin Gunawan	1900-01-01	2018-01-01	258 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	773367460268	Retail	Medium	0	1
+CP0003545	Rani Gunawan	Individual	Rani Gunawan	1985-01-01	1900-01-01	354 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771196236615	Technology	Low	1	0
+CP0003546	PT Nugraha Synthetic	Company	Bagus Nugraha	1900-01-01	2018-01-01	516 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	773158860172	Construction	Low	0	1
+CP0003547	Dimas Siregar	Individual	Dimas Siregar	1985-01-01	1900-01-01	66 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772459167127	Technology	Low	1	0
+CP0003548	Rizky Mahendra	Individual	Rizky Mahendra	1985-01-01	1900-01-01	849 Synthetic Avenue	Semarang	AU	AU	Bank Sentra	779474049357	Retail	Medium	1	0
+CP0003549	PT Hartono Synthetic	Company	Farah Hartono	1900-01-01	2018-01-01	539 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778778820796	Construction	Low	0	1
+CP0003550	Dimas Rahardjo	Individual	Dimas Rahardjo	1985-01-01	1900-01-01	370 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773743805260	Healthcare	Low	1	0
+CP0003551	Intan Siregar	Individual	Intan Siregar	1985-01-01	1900-01-01	885 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	779728926203	Logistics	High	1	0
+CP0003552	PT Wijaya Synthetic	Company	Nadia Wijaya	1900-01-01	2018-01-01	93 Synthetic Avenue	Yogyakarta	AE	AE	Bank Sentra	770281405296	Healthcare	Low	0	1
+CP0003553	Wulan Suryadi	Individual	Wulan Suryadi	1985-01-01	1900-01-01	435 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773452696498	Manufacturing	Low	1	0
+CP0003554	PT Darmawan Synthetic	Company	Alya Darmawan	1900-01-01	2018-01-01	369 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773807635811	Logistics	Low	0	1
+CP0003555	PT Hartono Synthetic	Company	Putri Hartono	1900-01-01	2018-01-01	747 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	775604239740	Technology	Low	0	1
+CP0003556	Farah Santoso	Individual	Farah Santoso	1985-01-01	1900-01-01	538 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	775744594683	Manufacturing	Low	1	0
+CP0003557	Dimas Permana	Individual	Dimas Permana	1985-01-01	1900-01-01	336 Synthetic Avenue	Jakarta	AU	AU	Bank Sentra	770778635044	Construction	Low	1	0
+CP0003558	PT Santoso Synthetic	Company	Joko Santoso	1900-01-01	2018-01-01	770 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	773352984231	Retail	Low	0	1
+CP0003559	PT Yulianto Synthetic	Company	Intan Yulianto	1900-01-01	2018-01-01	687 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	771870983798	Construction	High	0	1
+CP0003560	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	57 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779469148260	Retail	Low	1	0
+CP0003561	Andi Halim	Individual	Andi Halim	1985-01-01	1900-01-01	726 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770250559110	Technology	Low	1	0
+CP0003562	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	172 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	770034154582	Construction	Medium	1	0
+CP0003563	PT Putra Synthetic	Company	Teguh Putra	1900-01-01	2018-01-01	894 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772617149117	Healthcare	Medium	0	1
+CP0003564	Citra Permana	Individual	Citra Permana	1985-01-01	1900-01-01	16 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	772606325899	Healthcare	Low	1	0
+CP0003565	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	257 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	772610934710	Healthcare	Low	1	0
+CP0003566	PT Suryadi Synthetic	Company	Naufal Suryadi	1900-01-01	2018-01-01	876 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779129166858	Retail	Low	0	1
+CP0003567	PT Putra Synthetic	Company	Maya Putra	1900-01-01	2018-01-01	689 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774411180135	Construction	Low	0	1
+CP0003568	PT Yulianto Synthetic	Company	Maya Yulianto	1900-01-01	2018-01-01	493 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	779298691937	Logistics	Low	0	1
+CP0003569	Dimas Wibowo	Individual	Dimas Wibowo	1985-01-01	1900-01-01	813 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774402669469	Manufacturing	High	1	0
+CP0003570	PT Permana Synthetic	Company	Kevin Permana	1900-01-01	2018-01-01	97 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771387331432	Retail	Low	0	1
+CP0003571	Indra Setiawan	Individual	Indra Setiawan	1985-01-01	1900-01-01	292 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	777147931875	Retail	Low	1	0
+CP0003572	Arif Mahendra	Individual	Arif Mahendra	1985-01-01	1900-01-01	435 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	772147456055	Retail	Low	1	0
+CP0003573	Fajar Suryadi	Individual	Fajar Suryadi	1985-01-01	1900-01-01	516 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774210039915	Healthcare	Low	1	0
+CP0003574	Bima Gunawan	Individual	Bima Gunawan	1985-01-01	1900-01-01	579 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773526189981	Healthcare	Low	1	0
+CP0003575	PT Wibowo Synthetic	Company	Wulan Wibowo	1900-01-01	2018-01-01	858 Synthetic Avenue	Denpasar	AE	AE	Asia Commerce Bank	774228283567	Retail	Low	0	1
+CP0003576	Sari Gunawan	Individual	Sari Gunawan	1985-01-01	1900-01-01	749 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774931619994	Manufacturing	Low	1	0
+CP0003577	Putri Adinata	Individual	Putri Adinata	1985-01-01	1900-01-01	291 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773182676771	Technology	Low	1	0
+CP0003578	Gita Adinata	Individual	Gita Adinata	1985-01-01	1900-01-01	13 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	776988887671	Technology	Low	1	0
+CP0003579	PT Yulianto Synthetic	Company	Andi Yulianto	1900-01-01	2018-01-01	311 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779750930990	Logistics	Medium	0	1
+CP0003580	PT Siregar Synthetic	Company	Rani Siregar	1900-01-01	2018-01-01	368 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	772251188871	Logistics	Low	0	1
+CP0003581	PT Adinata Synthetic	Company	Dewi Adinata	1900-01-01	2018-01-01	21 Synthetic Avenue	Yogyakarta	JP	JP	Bank Sentra	770373179157	Manufacturing	Low	0	1
+CP0003582	PT Darmawan Synthetic	Company	Adit Darmawan	1900-01-01	2018-01-01	157 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774407686908	Construction	Low	0	1
+CP0003583	PT Prakoso Synthetic	Company	Anisa Prakoso	1900-01-01	2018-01-01	156 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	779796257591	Manufacturing	Low	0	1
+CP0003584	PT Permana Synthetic	Company	Joko Permana	1900-01-01	2018-01-01	804 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777411781258	Healthcare	Low	0	1
+CP0003585	Teguh Firmansyah	Individual	Teguh Firmansyah	1985-01-01	1900-01-01	492 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775057260476	Technology	Low	1	0
+CP0003586	Citra Prakoso	Individual	Citra Prakoso	1985-01-01	1900-01-01	302 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774769963203	Technology	Low	1	0
+CP0003587	Bima Wibowo	Individual	Bima Wibowo	1985-01-01	1900-01-01	803 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779162459401	Retail	Medium	1	0
+CP0003588	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	293 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	771987432537	Logistics	High	1	0
+CP0003589	Intan Iskandar	Individual	Intan Iskandar	1985-01-01	1900-01-01	184 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772510771551	Logistics	Medium	1	0
+CP0003590	PT Prakoso Synthetic	Company	Teguh Prakoso	1900-01-01	2018-01-01	684 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775924387681	Manufacturing	Low	0	1
+CP0003591	Naufal Iskandar	Individual	Naufal Iskandar	1985-01-01	1900-01-01	399 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	779813383806	Manufacturing	Low	1	0
+CP0003592	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	653 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	772226307500	Healthcare	Medium	1	0
+CP0003593	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	402 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779738580291	Construction	Low	1	0
+CP0003594	PT Putra Synthetic	Company	Rizky Putra	1900-01-01	2018-01-01	135 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	778688256249	Retail	Medium	0	1
+CP0003595	Raka Nugraha	Individual	Raka Nugraha	1985-01-01	1900-01-01	7 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775175352014	Retail	Low	1	0
+CP0003596	Bagus Kurniawan	Individual	Bagus Kurniawan	1985-01-01	1900-01-01	23 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	770056492625	Retail	Low	1	0
+CP0003597	Hana Rahardjo	Individual	Hana Rahardjo	1985-01-01	1900-01-01	127 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775085775103	Construction	Medium	1	0
+CP0003598	Maya Adinata	Individual	Maya Adinata	1985-01-01	1900-01-01	566 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772940385276	Logistics	Low	1	0
+CP0003599	PT Kurniawan Synthetic	Company	Putri Kurniawan	1900-01-01	2018-01-01	237 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	772832280415	Construction	Low	0	1
+CP0003600	Gita Suryadi	Individual	Gita Suryadi	1985-01-01	1900-01-01	445 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	774506133460	Technology	Low	1	0
+CP0003601	Nadia Darmawan	Individual	Nadia Darmawan	1985-01-01	1900-01-01	314 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773498457029	Retail	Medium	1	0
+CP0003602	PT Wibowo Synthetic	Company	Nadia Wibowo	1900-01-01	2018-01-01	326 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777067644382	Technology	Low	0	1
+CP0003603	Bagus Gunawan	Individual	Bagus Gunawan	1985-01-01	1900-01-01	236 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775028661828	Retail	Medium	1	0
+CP0003604	Naufal Yulianto	Individual	Naufal Yulianto	1985-01-01	1900-01-01	185 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	774642310711	Logistics	Medium	1	0
+CP0003605	Laras Adinata	Individual	Laras Adinata	1985-01-01	1900-01-01	439 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	771663259608	Construction	Medium	1	0
+CP0003606	Kevin Lesmana	Individual	Kevin Lesmana	1985-01-01	1900-01-01	358 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	773367641931	Manufacturing	Low	1	0
+CP0003607	PT Gunawan Synthetic	Company	Nadia Gunawan	1900-01-01	2018-01-01	97 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	779411234313	Technology	Medium	0	1
+CP0003608	Bagus Yulianto	Individual	Bagus Yulianto	1985-01-01	1900-01-01	386 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779844240959	Retail	Medium	1	0
+CP0003609	PT Rahardjo Synthetic	Company	Dimas Rahardjo	1900-01-01	2018-01-01	129 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777108951065	Logistics	Low	0	1
+CP0003610	Raka Putra	Individual	Raka Putra	1985-01-01	1900-01-01	390 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771527992190	Healthcare	Low	1	0
+CP0003611	Joko Siregar	Individual	Joko Siregar	1985-01-01	1900-01-01	84 Synthetic Avenue	Bandung	AE	AE	Bank Nusantara	771097617668	Construction	Low	1	0
+CP0003612	PT Hartono Synthetic	Company	Naufal Hartono	1900-01-01	2018-01-01	638 Synthetic Avenue	Semarang	US	US	Bank Sentra	770587598325	Manufacturing	Low	0	1
+CP0003613	Fajar Yulianto	Individual	Fajar Yulianto	1985-01-01	1900-01-01	394 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772452953965	Construction	Medium	1	0
+CP0003614	Bagus Prakoso	Individual	Bagus Prakoso	1985-01-01	1900-01-01	734 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776512203095	Logistics	Low	1	0
+CP0003615	Maya Permana	Individual	Maya Permana	1985-01-01	1900-01-01	580 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771325192531	Construction	Low	1	0
+CP0003616	PT Permana Synthetic	Company	Gita Permana	1900-01-01	2018-01-01	608 Synthetic Avenue	Medan	AU	AU	Bank Nusantara	773400121513	Healthcare	High	0	1
+CP0003617	Andi Mahendra	Individual	Andi Mahendra	1985-01-01	1900-01-01	529 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774954057465	Technology	Medium	1	0
+CP0003618	PT Permana Synthetic	Company	Nadia Permana	1900-01-01	2018-01-01	894 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	779970779174	Manufacturing	Low	0	1
+CP0003619	PT Halim Synthetic	Company	Naufal Halim	1900-01-01	2018-01-01	705 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772467597559	Retail	Low	0	1
+CP0003620	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	787 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773370236951	Healthcare	High	1	0
+CP0003621	PT Adinata Synthetic	Company	Anisa Adinata	1900-01-01	2018-01-01	140 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776749724028	Technology	Low	0	1
+CP0003622	PT Nugraha Synthetic	Company	Hana Nugraha	1900-01-01	2018-01-01	353 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772568957008	Manufacturing	Medium	0	1
+CP0003623	Dewi Yulianto	Individual	Dewi Yulianto	1985-01-01	1900-01-01	860 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	777905460791	Technology	Low	1	0
+CP0003624	Eka Adinata	Individual	Eka Adinata	1985-01-01	1900-01-01	268 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	776289541663	Retail	Low	1	0
+CP0003625	PT Putra Synthetic	Company	Arif Putra	1900-01-01	2018-01-01	459 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	776067433826	Retail	Low	0	1
+CP0003626	Indra Budiman	Individual	Indra Budiman	1985-01-01	1900-01-01	701 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	775837498656	Healthcare	Medium	1	0
+CP0003627	Putri Kurniawan	Individual	Putri Kurniawan	1985-01-01	1900-01-01	697 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774893835746	Logistics	Low	1	0
+CP0003628	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	437 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777102994577	Manufacturing	Low	1	0
+CP0003629	PT Kurniawan Synthetic	Company	Hana Kurniawan	1900-01-01	2018-01-01	23 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779663252491	Technology	Low	0	1
+CP0003630	PT Santoso Synthetic	Company	Alya Santoso	1900-01-01	2018-01-01	665 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	777428224121	Technology	Low	0	1
+CP0003631	PT Nugraha Synthetic	Company	Putri Nugraha	1900-01-01	2018-01-01	182 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770440126577	Healthcare	Low	0	1
+CP0003632	Farah Siregar	Individual	Farah Siregar	1985-01-01	1900-01-01	621 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770636576594	Healthcare	Low	1	0
+CP0003633	Citra Siregar	Individual	Citra Siregar	1985-01-01	1900-01-01	501 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777041195554	Logistics	Low	1	0
+CP0003634	PT Prakoso Synthetic	Company	Teguh Prakoso	1900-01-01	2018-01-01	814 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	777500051371	Technology	High	0	1
+CP0003635	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	823 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776603864270	Construction	Low	1	0
+CP0003636	Hana Nugraha	Individual	Hana Nugraha	1985-01-01	1900-01-01	480 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	772390026091	Construction	Medium	1	0
+CP0003637	PT Halim Synthetic	Company	Indra Halim	1900-01-01	2018-01-01	260 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	779651815518	Healthcare	Low	0	1
+CP0003638	Teguh Chandra	Individual	Teguh Chandra	1985-01-01	1900-01-01	520 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770340905855	Technology	Medium	1	0
+CP0003639	Maya Rahardjo	Individual	Maya Rahardjo	1985-01-01	1900-01-01	8 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779549814834	Healthcare	Low	1	0
+CP0003640	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	813 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777218059978	Logistics	Low	1	0
+CP0003641	PT Chandra Synthetic	Company	Farah Chandra	1900-01-01	2018-01-01	849 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772051993608	Healthcare	Low	0	1
+CP0003642	Maya Mahendra	Individual	Maya Mahendra	1985-01-01	1900-01-01	536 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777271327243	Construction	Medium	1	0
+CP0003643	PT Mahendra Synthetic	Company	Dimas Mahendra	1900-01-01	2018-01-01	710 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771847059149	Manufacturing	Medium	0	1
+CP0003644	Putri Firmansyah	Individual	Putri Firmansyah	1985-01-01	1900-01-01	669 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	779747285693	Manufacturing	Low	1	0
+CP0003645	Dimas Iskandar	Individual	Dimas Iskandar	1985-01-01	1900-01-01	891 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774027511668	Retail	Medium	1	0
+CP0003646	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	344 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775316998132	Manufacturing	Low	1	0
+CP0003647	Nadia Wijaya	Individual	Nadia Wijaya	1985-01-01	1900-01-01	113 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771769297418	Retail	High	1	0
+CP0003648	Sari Setiawan	Individual	Sari Setiawan	1985-01-01	1900-01-01	350 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	771457009013	Logistics	Low	1	0
+CP0003649	PT Permana Synthetic	Company	Maya Permana	1900-01-01	2018-01-01	365 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772030421240	Healthcare	Low	0	1
+CP0003650	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	829 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774593610042	Retail	Low	1	0
+CP0003651	Dewi Rahardjo	Individual	Dewi Rahardjo	1985-01-01	1900-01-01	637 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	773819262727	Healthcare	High	1	0
+CP0003652	Bagus Lesmana	Individual	Bagus Lesmana	1985-01-01	1900-01-01	349 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771268467738	Construction	Medium	1	0
+CP0003653	PT Rahardjo Synthetic	Company	Citra Rahardjo	1900-01-01	2018-01-01	742 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776589745907	Logistics	High	0	1
+CP0003654	PT Wibowo Synthetic	Company	Kevin Wibowo	1900-01-01	2018-01-01	560 Synthetic Avenue	Jakarta	AU	AU	Bank Nusantara	779449578544	Healthcare	Low	0	1
+CP0003655	Intan Santoso	Individual	Intan Santoso	1985-01-01	1900-01-01	547 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	778644829962	Construction	Low	1	0
+CP0003656	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	206 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771605789874	Healthcare	Medium	0	1
+CP0003657	Citra Hartono	Individual	Citra Hartono	1985-01-01	1900-01-01	385 Synthetic Avenue	Jakarta	GB	GB	Bank Sentra	777034885914	Construction	Low	1	0
+CP0003658	Dewi Chandra	Individual	Dewi Chandra	1985-01-01	1900-01-01	663 Synthetic Avenue	Bandung	JP	JP	Bank Nusantara	775071810535	Healthcare	Low	1	0
+CP0003659	Hana Wibowo	Individual	Hana Wibowo	1985-01-01	1900-01-01	840 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776124503018	Retail	Medium	1	0
+CP0003660	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	56 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	771693162515	Healthcare	Medium	1	0
+CP0003661	Anisa Wijaya	Individual	Anisa Wijaya	1985-01-01	1900-01-01	505 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	775789847784	Logistics	Low	1	0
+CP0003662	Eka Hartono	Individual	Eka Hartono	1985-01-01	1900-01-01	106 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779061830770	Healthcare	Low	1	0
+CP0003663	Hana Setiawan	Individual	Hana Setiawan	1985-01-01	1900-01-01	203 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773622806237	Logistics	Low	1	0
+CP0003664	Adit Permana	Individual	Adit Permana	1985-01-01	1900-01-01	31 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	774092085479	Manufacturing	Low	1	0
+CP0003665	PT Halim Synthetic	Company	Dewi Halim	1900-01-01	2018-01-01	78 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773717555985	Construction	Low	0	1
+CP0003666	PT Setiawan Synthetic	Company	Putri Setiawan	1900-01-01	2018-01-01	516 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	776385425191	Manufacturing	Low	0	1
+CP0003667	Putri Hartono	Individual	Putri Hartono	1985-01-01	1900-01-01	228 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	770916041220	Logistics	Low	1	0
+CP0003668	PT Rahardjo Synthetic	Company	Kevin Rahardjo	1900-01-01	2018-01-01	434 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	773784219612	Retail	Low	0	1
+CP0003669	PT Rahardjo Synthetic	Company	Andi Rahardjo	1900-01-01	2018-01-01	778 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778894629391	Manufacturing	Low	0	1
+CP0003670	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	523 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779622541192	Construction	Low	1	0
+CP0003671	Hana Yulianto	Individual	Hana Yulianto	1985-01-01	1900-01-01	392 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	771181422023	Construction	High	1	0
+CP0003672	PT Chandra Synthetic	Company	Citra Chandra	1900-01-01	2018-01-01	135 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771644372744	Technology	Medium	0	1
+CP0003673	Gita Nugraha	Individual	Gita Nugraha	1985-01-01	1900-01-01	715 Synthetic Avenue	Yogyakarta	AE	AE	Bank Nusantara	779102741334	Healthcare	High	1	0
+CP0003674	Teguh Permana	Individual	Teguh Permana	1985-01-01	1900-01-01	303 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	776127363019	Logistics	Low	1	0
+CP0003675	Andi Budiman	Individual	Andi Budiman	1985-01-01	1900-01-01	700 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773174681947	Healthcare	Low	1	0
+CP0003676	Fajar Putra	Individual	Fajar Putra	1985-01-01	1900-01-01	8 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	779827681591	Technology	Low	1	0
+CP0003677	Teguh Putra	Individual	Teguh Putra	1985-01-01	1900-01-01	139 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774875762732	Retail	Low	1	0
+CP0003678	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	507 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	778023233952	Manufacturing	Low	1	0
+CP0003679	Farah Mahendra	Individual	Farah Mahendra	1985-01-01	1900-01-01	60 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771474759146	Logistics	Low	1	0
+CP0003680	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	2 Synthetic Avenue	Surabaya	US	US	Bank Sentra	773102190678	Healthcare	Medium	1	0
+CP0003681	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	765 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773367649073	Construction	Medium	1	0
+CP0003682	PT Setiawan Synthetic	Company	Dimas Setiawan	1900-01-01	2018-01-01	495 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776456165746	Manufacturing	Low	0	1
+CP0003683	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	418 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	776696894561	Healthcare	Medium	1	0
+CP0003684	Putri Setiawan	Individual	Putri Setiawan	1985-01-01	1900-01-01	780 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774950416185	Retail	Low	1	0
+CP0003685	Alya Santoso	Individual	Alya Santoso	1985-01-01	1900-01-01	441 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775263324444	Healthcare	Low	1	0
+CP0003686	Adit Permana	Individual	Adit Permana	1985-01-01	1900-01-01	750 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	772210001678	Construction	Low	1	0
+CP0003687	Intan Putra	Individual	Intan Putra	1985-01-01	1900-01-01	4 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775641078275	Healthcare	Low	1	0
+CP0003688	Joko Yulianto	Individual	Joko Yulianto	1985-01-01	1900-01-01	639 Synthetic Avenue	Medan	US	US	Bank Sentra	779933224079	Healthcare	Low	1	0
+CP0003689	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	29 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	779260953139	Manufacturing	Low	1	0
+CP0003690	PT Halim Synthetic	Company	Bima Halim	1900-01-01	2018-01-01	845 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	779696155450	Technology	Medium	0	1
+CP0003691	PT Adinata Synthetic	Company	Teguh Adinata	1900-01-01	2018-01-01	528 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771602400077	Manufacturing	Low	0	1
+CP0003692	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	276 Synthetic Avenue	Medan	AE	AE	Bank Nusantara	770041556674	Logistics	Medium	1	0
+CP0003693	Naufal Wibowo	Individual	Naufal Wibowo	1985-01-01	1900-01-01	217 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	776499478068	Logistics	Medium	1	0
+CP0003694	PT Putra Synthetic	Company	Andi Putra	1900-01-01	2018-01-01	317 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	775543375855	Construction	Medium	0	1
+CP0003695	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	822 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	774426486121	Construction	Low	1	0
+CP0003696	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	318 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775498491917	Logistics	Low	1	0
+CP0003697	Nadia Adinata	Individual	Nadia Adinata	1985-01-01	1900-01-01	212 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779018349230	Technology	Medium	1	0
+CP0003698	Intan Nugraha	Individual	Intan Nugraha	1985-01-01	1900-01-01	850 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778956923307	Construction	Low	1	0
+CP0003699	Putri Nugraha	Individual	Putri Nugraha	1985-01-01	1900-01-01	881 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773685622726	Technology	Low	1	0
+CP0003700	PT Darmawan Synthetic	Company	Bima Darmawan	1900-01-01	2018-01-01	98 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776441489007	Healthcare	Medium	0	1
+CP0003701	PT Yulianto Synthetic	Company	Indra Yulianto	1900-01-01	2018-01-01	204 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776374839289	Technology	Low	0	1
+CP0003702	PT Chandra Synthetic	Company	Sari Chandra	1900-01-01	2018-01-01	811 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779525953566	Construction	Medium	0	1
+CP0003703	PT Nugraha Synthetic	Company	Putri Nugraha	1900-01-01	2018-01-01	494 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	778121989890	Technology	Low	0	1
+CP0003704	Indra Wibowo	Individual	Indra Wibowo	1985-01-01	1900-01-01	244 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775542871919	Manufacturing	Low	1	0
+CP0003705	PT Siregar Synthetic	Company	Adit Siregar	1900-01-01	2018-01-01	355 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770504544568	Healthcare	Low	0	1
+CP0003706	Adit Siregar	Individual	Adit Siregar	1985-01-01	1900-01-01	66 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773035567190	Retail	Medium	1	0
+CP0003707	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	217 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	771874426752	Manufacturing	Low	1	0
+CP0003708	Hana Mahendra	Individual	Hana Mahendra	1985-01-01	1900-01-01	88 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778136334376	Manufacturing	Medium	1	0
+CP0003709	PT Siregar Synthetic	Company	Bagus Siregar	1900-01-01	2018-01-01	550 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778666330227	Healthcare	Medium	0	1
+CP0003710	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	478 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777412932919	Construction	Low	1	0
+CP0003711	PT Gunawan Synthetic	Company	Alya Gunawan	1900-01-01	2018-01-01	761 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	774300606502	Construction	Low	0	1
+CP0003712	Maya Wibowo	Individual	Maya Wibowo	1985-01-01	1900-01-01	70 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771785142274	Logistics	Low	1	0
+CP0003713	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	117 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	775321336598	Logistics	Low	1	0
+CP0003714	Sari Wibowo	Individual	Sari Wibowo	1985-01-01	1900-01-01	94 Synthetic Avenue	Denpasar	US	US	Bank Sentra	777299355441	Logistics	Low	1	0
+CP0003715	PT Permana Synthetic	Company	Gita Permana	1900-01-01	2018-01-01	706 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	770240561646	Technology	Medium	0	1
+CP0003716	Fajar Yulianto	Individual	Fajar Yulianto	1985-01-01	1900-01-01	79 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772941627453	Retail	Low	1	0
+CP0003717	PT Setiawan Synthetic	Company	Raka Setiawan	1900-01-01	2018-01-01	154 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	779434742669	Technology	Medium	0	1
+CP0003718	Adit Gunawan	Individual	Adit Gunawan	1985-01-01	1900-01-01	125 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775847104775	Construction	Low	1	0
+CP0003719	Fajar Gunawan	Individual	Fajar Gunawan	1985-01-01	1900-01-01	191 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778000553160	Technology	Low	1	0
+CP0003720	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	569 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770235621856	Retail	Medium	1	0
+CP0003721	PT Yulianto Synthetic	Company	Putri Yulianto	1900-01-01	2018-01-01	41 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772833301107	Technology	Low	0	1
+CP0003722	PT Rahardjo Synthetic	Company	Arif Rahardjo	1900-01-01	2018-01-01	703 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776512627848	Technology	Low	0	1
+CP0003723	Intan Yulianto	Individual	Intan Yulianto	1985-01-01	1900-01-01	359 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772065061288	Construction	Low	1	0
+CP0003724	PT Wijaya Synthetic	Company	Eka Wijaya	1900-01-01	2018-01-01	641 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776071403010	Construction	Medium	0	1
+CP0003725	Bagus Prakoso	Individual	Bagus Prakoso	1985-01-01	1900-01-01	893 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774444351606	Retail	Low	1	0
+CP0003726	Laras Adinata	Individual	Laras Adinata	1985-01-01	1900-01-01	546 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775150672560	Construction	Low	1	0
+CP0003727	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	30 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776532305948	Construction	Medium	1	0
+CP0003728	Joko Iskandar	Individual	Joko Iskandar	1985-01-01	1900-01-01	466 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	773480401992	Construction	Low	1	0
+CP0003729	PT Siregar Synthetic	Company	Joko Siregar	1900-01-01	2018-01-01	587 Synthetic Avenue	Surabaya	AE	AE	Bank Nusantara	779519922768	Manufacturing	Medium	0	1
+CP0003730	Indra Budiman	Individual	Indra Budiman	1985-01-01	1900-01-01	308 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771803054938	Healthcare	Medium	1	0
+CP0003731	PT Adinata Synthetic	Company	Rani Adinata	1900-01-01	2018-01-01	605 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	777687949337	Technology	Low	0	1
+CP0003732	Wulan Nugraha	Individual	Wulan Nugraha	1985-01-01	1900-01-01	674 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775395406469	Construction	Low	1	0
+CP0003733	PT Wibowo Synthetic	Company	Intan Wibowo	1900-01-01	2018-01-01	142 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778651923281	Retail	Low	0	1
+CP0003734	PT Lesmana Synthetic	Company	Indra Lesmana	1900-01-01	2018-01-01	420 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778961504902	Logistics	Low	0	1
+CP0003735	PT Adinata Synthetic	Company	Kevin Adinata	1900-01-01	2018-01-01	691 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770445124016	Manufacturing	Low	0	1
+CP0003736	Nadia Adinata	Individual	Nadia Adinata	1985-01-01	1900-01-01	43 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779015030575	Retail	Low	1	0
+CP0003737	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	687 Synthetic Avenue	Surabaya	GB	GB	Bank Sentra	777015245704	Retail	Low	1	0
+CP0003738	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	52 Synthetic Avenue	Semarang	AU	AU	Bank Sentra	779214391942	Construction	Low	1	0
+CP0003739	Hana Siregar	Individual	Hana Siregar	1985-01-01	1900-01-01	106 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778983036377	Construction	Medium	1	0
+CP0003740	Teguh Permana	Individual	Teguh Permana	1985-01-01	1900-01-01	143 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772818481349	Logistics	Low	1	0
+CP0003741	Dewi Yulianto	Individual	Dewi Yulianto	1985-01-01	1900-01-01	482 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775076359601	Logistics	Medium	1	0
+CP0003742	Indra Chandra	Individual	Indra Chandra	1985-01-01	1900-01-01	301 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774454086965	Construction	Medium	1	0
+CP0003743	Fajar Darmawan	Individual	Fajar Darmawan	1985-01-01	1900-01-01	395 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778836244659	Construction	Low	1	0
+CP0003744	PT Siregar Synthetic	Company	Wulan Siregar	1900-01-01	2018-01-01	427 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778193825401	Retail	Low	0	1
+CP0003745	Arif Adinata	Individual	Arif Adinata	1985-01-01	1900-01-01	628 Synthetic Avenue	Surabaya	JP	JP	Asia Commerce Bank	779802292195	Technology	Medium	1	0
+CP0003746	Arif Halim	Individual	Arif Halim	1985-01-01	1900-01-01	122 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779180686196	Technology	Medium	1	0
+CP0003747	PT Darmawan Synthetic	Company	Hana Darmawan	1900-01-01	2018-01-01	540 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772552356113	Construction	Low	0	1
+CP0003748	PT Halim Synthetic	Company	Joko Halim	1900-01-01	2018-01-01	236 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776123789691	Logistics	Low	0	1
+CP0003749	Bima Hartono	Individual	Bima Hartono	1985-01-01	1900-01-01	426 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770707784742	Retail	Low	1	0
+CP0003750	Gita Adinata	Individual	Gita Adinata	1985-01-01	1900-01-01	690 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779826489689	Logistics	Low	1	0
+CP0003751	Arif Santoso	Individual	Arif Santoso	1985-01-01	1900-01-01	8 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770632615705	Technology	Low	1	0
+CP0003752	Bagus Lesmana	Individual	Bagus Lesmana	1985-01-01	1900-01-01	215 Synthetic Avenue	Yogyakarta	AE	AE	Bank Sentra	771023392204	Logistics	Low	1	0
+CP0003753	Wulan Setiawan	Individual	Wulan Setiawan	1985-01-01	1900-01-01	781 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776335993555	Logistics	Low	1	0
+CP0003754	Citra Lesmana	Individual	Citra Lesmana	1985-01-01	1900-01-01	761 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774861943424	Retail	Medium	1	0
+CP0003755	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	590 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772465088808	Technology	Low	1	0
+CP0003756	PT Adinata Synthetic	Company	Rani Adinata	1900-01-01	2018-01-01	329 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773647364196	Construction	Medium	0	1
+CP0003757	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	371 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770465584694	Retail	Low	1	0
+CP0003758	Nadia Permana	Individual	Nadia Permana	1985-01-01	1900-01-01	334 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772432473601	Logistics	Low	1	0
+CP0003759	PT Chandra Synthetic	Company	Bima Chandra	1900-01-01	2018-01-01	422 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775917978173	Retail	Medium	0	1
+CP0003760	PT Rahardjo Synthetic	Company	Andi Rahardjo	1900-01-01	2018-01-01	247 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776724528626	Retail	Low	0	1
+CP0003761	Putri Firmansyah	Individual	Putri Firmansyah	1985-01-01	1900-01-01	380 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	778067743522	Technology	Low	1	0
+CP0003762	Bima Darmawan	Individual	Bima Darmawan	1985-01-01	1900-01-01	807 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775695660284	Technology	Low	1	0
+CP0003763	Kevin Firmansyah	Individual	Kevin Firmansyah	1985-01-01	1900-01-01	162 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774640245741	Technology	Low	1	0
+CP0003764	Anisa Budiman	Individual	Anisa Budiman	1985-01-01	1900-01-01	898 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770913252153	Healthcare	Medium	1	0
+CP0003765	Fajar Wijaya	Individual	Fajar Wijaya	1985-01-01	1900-01-01	624 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774234273654	Logistics	Medium	1	0
+CP0003766	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	719 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770088597210	Manufacturing	Medium	0	1
+CP0003767	Fajar Prakoso	Individual	Fajar Prakoso	1985-01-01	1900-01-01	795 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771300507304	Logistics	Low	1	0
+CP0003768	Bagus Prakoso	Individual	Bagus Prakoso	1985-01-01	1900-01-01	565 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	776651746193	Technology	Low	1	0
+CP0003769	Eka Putra	Individual	Eka Putra	1985-01-01	1900-01-01	118 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777367728897	Construction	Low	1	0
+CP0003770	PT Firmansyah Synthetic	Company	Hana Firmansyah	1900-01-01	2018-01-01	293 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772529044121	Logistics	Medium	0	1
+CP0003771	PT Mahendra Synthetic	Company	Alya Mahendra	1900-01-01	2018-01-01	92 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774339300023	Technology	High	0	1
+CP0003772	Fajar Mahendra	Individual	Fajar Mahendra	1985-01-01	1900-01-01	316 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779210692572	Logistics	Low	1	0
+CP0003773	Fajar Chandra	Individual	Fajar Chandra	1985-01-01	1900-01-01	712 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779861910525	Construction	Low	1	0
+CP0003774	Intan Wibowo	Individual	Intan Wibowo	1985-01-01	1900-01-01	99 Synthetic Avenue	Medan	GB	GB	Bank Nusantara	776672105016	Healthcare	Medium	1	0
+CP0003775	Dewi Wibowo	Individual	Dewi Wibowo	1985-01-01	1900-01-01	488 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773953455722	Construction	Medium	1	0
+CP0003776	PT Lesmana Synthetic	Company	Intan Lesmana	1900-01-01	2018-01-01	143 Synthetic Avenue	Bandung	AE	AE	Bank Sentra	773069231043	Logistics	Medium	0	1
+CP0003777	Nadia Yulianto	Individual	Nadia Yulianto	1985-01-01	1900-01-01	777 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772569854743	Retail	Low	1	0
+CP0003778	PT Wibowo Synthetic	Company	Indra Wibowo	1900-01-01	2018-01-01	223 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	775587388175	Logistics	Low	0	1
+CP0003779	PT Hartono Synthetic	Company	Alya Hartono	1900-01-01	2018-01-01	352 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777938399501	Technology	Low	0	1
+CP0003780	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	700 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770112744160	Technology	High	1	0
+CP0003781	PT Kurniawan Synthetic	Company	Nadia Kurniawan	1900-01-01	2018-01-01	466 Synthetic Avenue	Makassar	JP	JP	Asia Commerce Bank	778138247599	Manufacturing	Medium	0	1
+CP0003782	Dewi Prakoso	Individual	Dewi Prakoso	1985-01-01	1900-01-01	303 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778369390277	Manufacturing	Low	1	0
+CP0003783	Eka Lesmana	Individual	Eka Lesmana	1985-01-01	1900-01-01	383 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	771598125806	Logistics	Low	1	0
+CP0003784	Joko Setiawan	Individual	Joko Setiawan	1985-01-01	1900-01-01	47 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778022305211	Manufacturing	Low	1	0
+CP0003785	Eka Rahardjo	Individual	Eka Rahardjo	1985-01-01	1900-01-01	642 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774677052846	Construction	Medium	1	0
+CP0003786	Arif Iskandar	Individual	Arif Iskandar	1985-01-01	1900-01-01	258 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772381090160	Logistics	Low	1	0
+CP0003787	Alya Chandra	Individual	Alya Chandra	1985-01-01	1900-01-01	635 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776765712847	Healthcare	Low	1	0
+CP0003788	PT Budiman Synthetic	Company	Anisa Budiman	1900-01-01	2018-01-01	362 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772077375564	Retail	Medium	0	1
+CP0003789	PT Putra Synthetic	Company	Anisa Putra	1900-01-01	2018-01-01	119 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773332372973	Manufacturing	Low	0	1
+CP0003790	Alya Santoso	Individual	Alya Santoso	1985-01-01	1900-01-01	495 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776522492627	Retail	Medium	1	0
+CP0003791	PT Mahendra Synthetic	Company	Andi Mahendra	1900-01-01	2018-01-01	620 Synthetic Avenue	Medan	AE	AE	Asia Commerce Bank	771123156728	Construction	High	0	1
+CP0003792	Adit Putra	Individual	Adit Putra	1985-01-01	1900-01-01	130 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	777983646110	Construction	Low	1	0
+CP0003793	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	558 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778216617723	Technology	Low	1	0
+CP0003794	Citra Putra	Individual	Citra Putra	1985-01-01	1900-01-01	586 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774494918867	Construction	Medium	1	0
+CP0003795	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	183 Synthetic Avenue	Jakarta	US	US	Asia Commerce Bank	772766890226	Technology	Low	1	0
+CP0003796	Dewi Gunawan	Individual	Dewi Gunawan	1985-01-01	1900-01-01	669 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779954708937	Retail	Low	1	0
+CP0003797	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	85 Synthetic Avenue	Denpasar	AU	AU	Bank Nusantara	770411375520	Healthcare	Low	1	0
+CP0003798	Joko Kurniawan	Individual	Joko Kurniawan	1985-01-01	1900-01-01	731 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	774982491028	Logistics	Low	1	0
+CP0003799	PT Setiawan Synthetic	Company	Bima Setiawan	1900-01-01	2018-01-01	49 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	778901809090	Manufacturing	Low	0	1
+CP0003800	Putri Santoso	Individual	Putri Santoso	1985-01-01	1900-01-01	624 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776436312102	Logistics	High	1	0
+CP0003801	Rani Iskandar	Individual	Rani Iskandar	1985-01-01	1900-01-01	521 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774578041944	Manufacturing	Low	1	0
+CP0003802	Putri Halim	Individual	Putri Halim	1985-01-01	1900-01-01	126 Synthetic Avenue	Makassar	JP	JP	Asia Commerce Bank	773607490975	Technology	Medium	1	0
+CP0003803	Citra Budiman	Individual	Citra Budiman	1985-01-01	1900-01-01	240 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	779994376805	Retail	Low	1	0
+CP0003804	Bagus Putra	Individual	Bagus Putra	1985-01-01	1900-01-01	47 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	775606592047	Manufacturing	Low	1	0
+CP0003805	PT Santoso Synthetic	Company	Laras Santoso	1900-01-01	2018-01-01	780 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775862869954	Manufacturing	Medium	0	1
+CP0003806	Alya Firmansyah	Individual	Alya Firmansyah	1985-01-01	1900-01-01	250 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777670609614	Construction	Low	1	0
+CP0003807	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	627 Synthetic Avenue	Bandung	US	US	Bank Nusantara	779219311034	Retail	Medium	1	0
+CP0003808	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	517 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	773513495367	Logistics	High	1	0
+CP0003809	PT Yulianto Synthetic	Company	Sari Yulianto	1900-01-01	2018-01-01	860 Synthetic Avenue	Jakarta	GB	GB	Asia Commerce Bank	773615703473	Construction	Low	0	1
+CP0003810	PT Lesmana Synthetic	Company	Putri Lesmana	1900-01-01	2018-01-01	230 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770319052908	Technology	Low	0	1
+CP0003811	Hana Mahendra	Individual	Hana Mahendra	1985-01-01	1900-01-01	584 Synthetic Avenue	Medan	MY	MY	Bank Sentra	779886191722	Construction	Medium	1	0
+CP0003812	PT Chandra Synthetic	Company	Rizky Chandra	1900-01-01	2018-01-01	579 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	773454523729	Retail	Low	0	1
+CP0003813	PT Wibowo Synthetic	Company	Arif Wibowo	1900-01-01	2018-01-01	731 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775663511385	Logistics	Low	0	1
+CP0003814	Citra Adinata	Individual	Citra Adinata	1985-01-01	1900-01-01	268 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776333766131	Retail	Low	1	0
+CP0003815	Alya Rahardjo	Individual	Alya Rahardjo	1985-01-01	1900-01-01	745 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	778396448901	Construction	Low	1	0
+CP0003816	Gita Halim	Individual	Gita Halim	1985-01-01	1900-01-01	132 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	779322755655	Construction	Medium	1	0
+CP0003817	Dewi Putra	Individual	Dewi Putra	1985-01-01	1900-01-01	458 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770696228604	Construction	High	1	0
+CP0003818	Joko Prakoso	Individual	Joko Prakoso	1985-01-01	1900-01-01	378 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	778442408622	Retail	Low	1	0
+CP0003819	Rizky Lesmana	Individual	Rizky Lesmana	1985-01-01	1900-01-01	45 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771361293443	Manufacturing	Low	1	0
+CP0003820	Rizky Putra	Individual	Rizky Putra	1985-01-01	1900-01-01	878 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773307936639	Manufacturing	High	1	0
+CP0003821	Sari Putra	Individual	Sari Putra	1985-01-01	1900-01-01	213 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771411545445	Logistics	Medium	1	0
+CP0003822	PT Darmawan Synthetic	Company	Sari Darmawan	1900-01-01	2018-01-01	512 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776097625275	Manufacturing	Medium	0	1
+CP0003823	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	686 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	773129960524	Retail	Low	1	0
+CP0003824	PT Halim Synthetic	Company	Hana Halim	1900-01-01	2018-01-01	142 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	774012347185	Manufacturing	Low	0	1
+CP0003825	PT Siregar Synthetic	Company	Kevin Siregar	1900-01-01	2018-01-01	372 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	770452049145	Logistics	Low	0	1
+CP0003826	PT Nugraha Synthetic	Company	Teguh Nugraha	1900-01-01	2018-01-01	497 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	779371056437	Technology	Low	0	1
+CP0003827	Eka Darmawan	Individual	Eka Darmawan	1985-01-01	1900-01-01	559 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	771985307881	Logistics	Low	1	0
+CP0003828	Dimas Chandra	Individual	Dimas Chandra	1985-01-01	1900-01-01	73 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773962749993	Construction	Low	1	0
+CP0003829	Intan Lesmana	Individual	Intan Lesmana	1985-01-01	1900-01-01	303 Synthetic Avenue	Medan	SG	SG	Bank Sentra	774156115044	Logistics	Medium	1	0
+CP0003830	PT Chandra Synthetic	Company	Bima Chandra	1900-01-01	2018-01-01	567 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771985732420	Technology	Medium	0	1
+CP0003831	Hana Hartono	Individual	Hana Hartono	1985-01-01	1900-01-01	612 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777557510261	Technology	Low	1	0
+CP0003832	PT Iskandar Synthetic	Company	Laras Iskandar	1900-01-01	2018-01-01	304 Synthetic Avenue	Denpasar	SG	SG	Bank Nusantara	774258339223	Technology	Low	0	1
+CP0003833	Putri Mahendra	Individual	Putri Mahendra	1985-01-01	1900-01-01	409 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777125924366	Logistics	Low	1	0
+CP0003834	PT Iskandar Synthetic	Company	Eka Iskandar	1900-01-01	2018-01-01	731 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	778190061894	Healthcare	Low	0	1
+CP0003835	Kevin Gunawan	Individual	Kevin Gunawan	1985-01-01	1900-01-01	292 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	771109820036	Technology	Low	1	0
+CP0003836	PT Hartono Synthetic	Company	Alya Hartono	1900-01-01	2018-01-01	87 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779566848728	Retail	Medium	0	1
+CP0003837	Gita Nugraha	Individual	Gita Nugraha	1985-01-01	1900-01-01	337 Synthetic Avenue	Medan	SG	SG	Bank Sentra	771381971879	Healthcare	High	1	0
+CP0003838	Dewi Permana	Individual	Dewi Permana	1985-01-01	1900-01-01	291 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773962158967	Manufacturing	Medium	1	0
+CP0003839	Andi Yulianto	Individual	Andi Yulianto	1985-01-01	1900-01-01	517 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779402873861	Healthcare	Low	1	0
+CP0003840	Farah Firmansyah	Individual	Farah Firmansyah	1985-01-01	1900-01-01	484 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773806976957	Technology	Low	1	0
+CP0003841	PT Prakoso Synthetic	Company	Kevin Prakoso	1900-01-01	2018-01-01	643 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	772738114560	Construction	Low	0	1
+CP0003842	Farah Suryadi	Individual	Farah Suryadi	1985-01-01	1900-01-01	883 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771244260889	Technology	Low	1	0
+CP0003843	Naufal Chandra	Individual	Naufal Chandra	1985-01-01	1900-01-01	525 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773341239142	Retail	Low	1	0
+CP0003844	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	614 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	771907409308	Healthcare	Medium	1	0
+CP0003845	Adit Nugraha	Individual	Adit Nugraha	1985-01-01	1900-01-01	6 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771035979419	Construction	Medium	1	0
+CP0003846	Dewi Mahendra	Individual	Dewi Mahendra	1985-01-01	1900-01-01	658 Synthetic Avenue	Medan	JP	JP	Bank Sentra	771104963033	Manufacturing	High	1	0
+CP0003847	Raka Permana	Individual	Raka Permana	1985-01-01	1900-01-01	258 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	776029264401	Healthcare	Low	1	0
+CP0003848	Citra Yulianto	Individual	Citra Yulianto	1985-01-01	1900-01-01	316 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775143807837	Retail	Low	1	0
+CP0003849	Adit Suryadi	Individual	Adit Suryadi	1985-01-01	1900-01-01	98 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777640750488	Technology	Low	1	0
+CP0003850	PT Budiman Synthetic	Company	Sari Budiman	1900-01-01	2018-01-01	871 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	775259974690	Technology	Low	0	1
+CP0003851	Joko Yulianto	Individual	Joko Yulianto	1985-01-01	1900-01-01	435 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	771349197599	Healthcare	High	1	0
+CP0003852	Adit Budiman	Individual	Adit Budiman	1985-01-01	1900-01-01	373 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776939776730	Logistics	High	1	0
+CP0003853	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	281 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771695549264	Logistics	Low	1	0
+CP0003854	Rizky Permana	Individual	Rizky Permana	1985-01-01	1900-01-01	802 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	776642497683	Healthcare	Medium	1	0
+CP0003855	PT Budiman Synthetic	Company	Adit Budiman	1900-01-01	2018-01-01	888 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	775815353963	Technology	Medium	0	1
+CP0003856	Dewi Santoso	Individual	Dewi Santoso	1985-01-01	1900-01-01	795 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	770172815135	Construction	Medium	1	0
+CP0003857	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	95 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774170921168	Retail	Low	1	0
+CP0003858	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	554 Synthetic Avenue	Semarang	US	US	Bank Nusantara	772016515603	Technology	Low	1	0
+CP0003859	Joko Wibowo	Individual	Joko Wibowo	1985-01-01	1900-01-01	115 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	777008304346	Construction	Low	1	0
+CP0003860	Laras Firmansyah	Individual	Laras Firmansyah	1985-01-01	1900-01-01	810 Synthetic Avenue	Medan	JP	JP	Asia Commerce Bank	770153499512	Retail	Low	1	0
+CP0003861	PT Santoso Synthetic	Company	Wulan Santoso	1900-01-01	2018-01-01	504 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770489866483	Technology	Low	0	1
+CP0003862	Arif Budiman	Individual	Arif Budiman	1985-01-01	1900-01-01	523 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773471640175	Retail	Low	1	0
+CP0003863	Wulan Rahardjo	Individual	Wulan Rahardjo	1985-01-01	1900-01-01	54 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772421710186	Manufacturing	Low	1	0
+CP0003864	Citra Firmansyah	Individual	Citra Firmansyah	1985-01-01	1900-01-01	567 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773468902973	Construction	Low	1	0
+CP0003865	PT Siregar Synthetic	Company	Bagus Siregar	1900-01-01	2018-01-01	623 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	772015444709	Manufacturing	Low	0	1
+CP0003866	PT Gunawan Synthetic	Company	Kevin Gunawan	1900-01-01	2018-01-01	177 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	778206667532	Manufacturing	Low	0	1
+CP0003867	PT Adinata Synthetic	Company	Citra Adinata	1900-01-01	2018-01-01	610 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776830554526	Construction	Low	0	1
+CP0003868	Raka Hartono	Individual	Raka Hartono	1985-01-01	1900-01-01	134 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	777957025904	Construction	Medium	1	0
+CP0003869	PT Siregar Synthetic	Company	Bima Siregar	1900-01-01	2018-01-01	90 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776412455935	Retail	Low	0	1
+CP0003870	Indra Yulianto	Individual	Indra Yulianto	1985-01-01	1900-01-01	582 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776004176380	Healthcare	Low	1	0
+CP0003871	Fajar Wijaya	Individual	Fajar Wijaya	1985-01-01	1900-01-01	675 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	770527333005	Retail	Low	1	0
+CP0003872	PT Mahendra Synthetic	Company	Dewi Mahendra	1900-01-01	2018-01-01	177 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	777204153594	Retail	Low	0	1
+CP0003873	Joko Adinata	Individual	Joko Adinata	1985-01-01	1900-01-01	666 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774537731247	Healthcare	Low	1	0
+CP0003874	Rani Prakoso	Individual	Rani Prakoso	1985-01-01	1900-01-01	203 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774731267296	Technology	Low	1	0
+CP0003875	Farah Mahendra	Individual	Farah Mahendra	1985-01-01	1900-01-01	223 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775747646855	Manufacturing	Low	1	0
+CP0003876	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	291 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	779138246271	Healthcare	Low	1	0
+CP0003877	PT Adinata Synthetic	Company	Dewi Adinata	1900-01-01	2018-01-01	523 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777276758800	Manufacturing	Medium	0	1
+CP0003878	Eka Hartono	Individual	Eka Hartono	1985-01-01	1900-01-01	735 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	770993503354	Healthcare	Low	1	0
+CP0003879	PT Putra Synthetic	Company	Fajar Putra	1900-01-01	2018-01-01	302 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	775688034351	Construction	Low	0	1
+CP0003880	PT Putra Synthetic	Company	Bagus Putra	1900-01-01	2018-01-01	881 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779222245558	Manufacturing	Low	0	1
+CP0003881	PT Wibowo Synthetic	Company	Naufal Wibowo	1900-01-01	2018-01-01	807 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776926461034	Retail	Low	0	1
+CP0003882	PT Putra Synthetic	Company	Wulan Putra	1900-01-01	2018-01-01	862 Synthetic Avenue	Jakarta	AU	AU	Bank Sentra	775876543534	Technology	Medium	0	1
+CP0003883	Adit Budiman	Individual	Adit Budiman	1985-01-01	1900-01-01	637 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	772088859805	Construction	Low	1	0
+CP0003884	Citra Lesmana	Individual	Citra Lesmana	1985-01-01	1900-01-01	31 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777106274235	Construction	Low	1	0
+CP0003885	PT Prakoso Synthetic	Company	Naufal Prakoso	1900-01-01	2018-01-01	646 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776180157759	Healthcare	Low	0	1
+CP0003886	Indra Chandra	Individual	Indra Chandra	1985-01-01	1900-01-01	423 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775164107264	Construction	Low	1	0
+CP0003887	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	634 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770442463534	Technology	Medium	1	0
+CP0003888	Wulan Setiawan	Individual	Wulan Setiawan	1985-01-01	1900-01-01	203 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777104259354	Manufacturing	High	1	0
+CP0003889	Wulan Firmansyah	Individual	Wulan Firmansyah	1985-01-01	1900-01-01	521 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771240819325	Healthcare	Low	1	0
+CP0003890	Raka Setiawan	Individual	Raka Setiawan	1985-01-01	1900-01-01	74 Synthetic Avenue	Bandung	US	US	Bank Sentra	770489673858	Retail	Medium	1	0
+CP0003891	Andi Budiman	Individual	Andi Budiman	1985-01-01	1900-01-01	124 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	774750897441	Construction	Low	1	0
+CP0003892	Dimas Rahardjo	Individual	Dimas Rahardjo	1985-01-01	1900-01-01	120 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	771349920348	Manufacturing	Low	1	0
+CP0003893	Adit Putra	Individual	Adit Putra	1985-01-01	1900-01-01	633 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776310667089	Healthcare	Low	1	0
+CP0003894	Hana Wibowo	Individual	Hana Wibowo	1985-01-01	1900-01-01	265 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777467119005	Manufacturing	Medium	1	0
+CP0003895	Putri Halim	Individual	Putri Halim	1985-01-01	1900-01-01	669 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778506888373	Construction	Low	1	0
+CP0003896	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	745 Synthetic Avenue	Yogyakarta	JP	JP	Bank Nusantara	776989084281	Construction	Low	1	0
+CP0003897	PT Setiawan Synthetic	Company	Joko Setiawan	1900-01-01	2018-01-01	654 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	778002220898	Retail	Medium	0	1
+CP0003898	Rani Mahendra	Individual	Rani Mahendra	1985-01-01	1900-01-01	656 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	771259968792	Manufacturing	Low	1	0
+CP0003899	Dewi Halim	Individual	Dewi Halim	1985-01-01	1900-01-01	332 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770973019087	Retail	Low	1	0
+CP0003900	PT Wijaya Synthetic	Company	Bima Wijaya	1900-01-01	2018-01-01	640 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777439646654	Retail	Low	0	1
+CP0003901	Teguh Gunawan	Individual	Teguh Gunawan	1985-01-01	1900-01-01	739 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773553573576	Technology	Low	1	0
+CP0003902	Bima Permana	Individual	Bima Permana	1985-01-01	1900-01-01	821 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778283889539	Manufacturing	Low	1	0
+CP0003903	PT Prakoso Synthetic	Company	Teguh Prakoso	1900-01-01	2018-01-01	7 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775997003921	Construction	Low	0	1
+CP0003904	Wulan Firmansyah	Individual	Wulan Firmansyah	1985-01-01	1900-01-01	397 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	770298342295	Retail	Low	1	0
+CP0003905	PT Kurniawan Synthetic	Company	Arif Kurniawan	1900-01-01	2018-01-01	408 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770924544170	Construction	Medium	0	1
+CP0003906	Joko Adinata	Individual	Joko Adinata	1985-01-01	1900-01-01	497 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	770923928685	Logistics	Low	1	0
+CP0003907	PT Wibowo Synthetic	Company	Sari Wibowo	1900-01-01	2018-01-01	817 Synthetic Avenue	Semarang	US	US	Bank Nusantara	770739489857	Logistics	Low	0	1
+CP0003908	Dewi Firmansyah	Individual	Dewi Firmansyah	1985-01-01	1900-01-01	269 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777491918283	Construction	Medium	1	0
+CP0003909	Wulan Suryadi	Individual	Wulan Suryadi	1985-01-01	1900-01-01	103 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776635136088	Healthcare	Low	1	0
+CP0003910	Joko Chandra	Individual	Joko Chandra	1985-01-01	1900-01-01	485 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772352868219	Logistics	Low	1	0
+CP0003911	PT Mahendra Synthetic	Company	Arif Mahendra	1900-01-01	2018-01-01	543 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778204432334	Retail	Low	0	1
+CP0003912	Eka Nugraha	Individual	Eka Nugraha	1985-01-01	1900-01-01	421 Synthetic Avenue	Medan	GB	GB	Asia Commerce Bank	770084532697	Technology	Low	1	0
+CP0003913	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	505 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774285530494	Logistics	Medium	1	0
+CP0003914	PT Firmansyah Synthetic	Company	Anisa Firmansyah	1900-01-01	2018-01-01	603 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775069201649	Technology	Low	0	1
+CP0003915	Joko Permana	Individual	Joko Permana	1985-01-01	1900-01-01	33 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775842194327	Construction	Low	1	0
+CP0003916	PT Budiman Synthetic	Company	Maya Budiman	1900-01-01	2018-01-01	502 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	777921410924	Healthcare	Low	0	1
+CP0003917	PT Yulianto Synthetic	Company	Dewi Yulianto	1900-01-01	2018-01-01	754 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775495143718	Retail	Low	0	1
+CP0003918	Putri Prakoso	Individual	Putri Prakoso	1985-01-01	1900-01-01	40 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772536297052	Retail	Low	1	0
+CP0003919	Anisa Lesmana	Individual	Anisa Lesmana	1985-01-01	1900-01-01	1 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775961321302	Manufacturing	Medium	1	0
+CP0003920	Indra Wibowo	Individual	Indra Wibowo	1985-01-01	1900-01-01	644 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776613994238	Retail	Low	1	0
+CP0003921	Eka Hartono	Individual	Eka Hartono	1985-01-01	1900-01-01	472 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777452446918	Logistics	Low	1	0
+CP0003922	Alya Rahardjo	Individual	Alya Rahardjo	1985-01-01	1900-01-01	30 Synthetic Avenue	Medan	SG	SG	Bank Sentra	772518457410	Manufacturing	Low	1	0
+CP0003923	PT Gunawan Synthetic	Company	Intan Gunawan	1900-01-01	2018-01-01	562 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774918214108	Manufacturing	Low	0	1
+CP0003924	Wulan Hartono	Individual	Wulan Hartono	1985-01-01	1900-01-01	63 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773103439015	Construction	Medium	1	0
+CP0003925	Bagus Setiawan	Individual	Bagus Setiawan	1985-01-01	1900-01-01	227 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772347410649	Logistics	Low	1	0
+CP0003926	Putri Suryadi	Individual	Putri Suryadi	1985-01-01	1900-01-01	884 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777195987025	Retail	Low	1	0
+CP0003927	Wulan Wibowo	Individual	Wulan Wibowo	1985-01-01	1900-01-01	389 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771982110694	Retail	High	1	0
+CP0003928	Adit Mahendra	Individual	Adit Mahendra	1985-01-01	1900-01-01	605 Synthetic Avenue	Semarang	GB	GB	Asia Commerce Bank	772176767942	Technology	Medium	1	0
+CP0003929	PT Kurniawan Synthetic	Company	Gita Kurniawan	1900-01-01	2018-01-01	78 Synthetic Avenue	Medan	MY	MY	Bank Sentra	777129128639	Retail	Low	0	1
+CP0003930	Dimas Rahardjo	Individual	Dimas Rahardjo	1985-01-01	1900-01-01	558 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770308232366	Logistics	Low	1	0
+CP0003931	Kevin Halim	Individual	Kevin Halim	1985-01-01	1900-01-01	159 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774915672218	Technology	Low	1	0
+CP0003932	PT Iskandar Synthetic	Company	Rani Iskandar	1900-01-01	2018-01-01	531 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775921547599	Logistics	Low	0	1
+CP0003933	PT Kurniawan Synthetic	Company	Adit Kurniawan	1900-01-01	2018-01-01	703 Synthetic Avenue	Yogyakarta	AU	AU	Bank Sentra	778048888614	Logistics	High	0	1
+CP0003934	Teguh Darmawan	Individual	Teguh Darmawan	1985-01-01	1900-01-01	893 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	775631112027	Retail	Medium	1	0
+CP0003935	Alya Setiawan	Individual	Alya Setiawan	1985-01-01	1900-01-01	142 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778867242762	Technology	Low	1	0
+CP0003936	Raka Setiawan	Individual	Raka Setiawan	1985-01-01	1900-01-01	404 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772034376510	Healthcare	Low	1	0
+CP0003937	Eka Santoso	Individual	Eka Santoso	1985-01-01	1900-01-01	120 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776924169809	Logistics	Low	1	0
+CP0003938	Rani Nugraha	Individual	Rani Nugraha	1985-01-01	1900-01-01	627 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	776875679894	Retail	Low	1	0
+CP0003939	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	88 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778906693122	Technology	Low	1	0
+CP0003940	Bagus Halim	Individual	Bagus Halim	1985-01-01	1900-01-01	704 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775154129009	Construction	Low	1	0
+CP0003941	Rani Firmansyah	Individual	Rani Firmansyah	1985-01-01	1900-01-01	401 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771778113438	Retail	Low	1	0
+CP0003942	Citra Adinata	Individual	Citra Adinata	1985-01-01	1900-01-01	401 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	770274128811	Healthcare	Low	1	0
+CP0003943	Maya Setiawan	Individual	Maya Setiawan	1985-01-01	1900-01-01	305 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772147138266	Healthcare	Low	1	0
+CP0003944	Adit Hartono	Individual	Adit Hartono	1985-01-01	1900-01-01	465 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775905355295	Retail	Low	1	0
+CP0003945	Putri Darmawan	Individual	Putri Darmawan	1985-01-01	1900-01-01	565 Synthetic Avenue	Denpasar	GB	GB	Bank Sentra	777594998698	Retail	Low	1	0
+CP0003946	Farah Firmansyah	Individual	Farah Firmansyah	1985-01-01	1900-01-01	305 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773533502516	Logistics	Low	1	0
+CP0003947	Farah Chandra	Individual	Farah Chandra	1985-01-01	1900-01-01	766 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776842425158	Technology	Medium	1	0
+CP0003948	Intan Adinata	Individual	Intan Adinata	1985-01-01	1900-01-01	464 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	772941491271	Logistics	Low	1	0
+CP0003949	Dewi Lesmana	Individual	Dewi Lesmana	1985-01-01	1900-01-01	827 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	771524849755	Manufacturing	High	1	0
+CP0003950	PT Prakoso Synthetic	Company	Hana Prakoso	1900-01-01	2018-01-01	326 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	778006052054	Construction	Medium	0	1
+CP0003951	PT Prakoso Synthetic	Company	Adit Prakoso	1900-01-01	2018-01-01	34 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	770563656925	Retail	Low	0	1
+CP0003952	Kevin Darmawan	Individual	Kevin Darmawan	1985-01-01	1900-01-01	712 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773024990939	Logistics	Medium	1	0
+CP0003953	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	431 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	771952095501	Logistics	Low	1	0
+CP0003954	Andi Budiman	Individual	Andi Budiman	1985-01-01	1900-01-01	186 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	774757666300	Technology	Low	1	0
+CP0003955	Rizky Kurniawan	Individual	Rizky Kurniawan	1985-01-01	1900-01-01	31 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	775748407932	Construction	Low	1	0
+CP0003956	Laras Wijaya	Individual	Laras Wijaya	1985-01-01	1900-01-01	96 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773452727886	Construction	Medium	1	0
+CP0003957	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	755 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777841365398	Logistics	Low	1	0
+CP0003958	PT Putra Synthetic	Company	Sari Putra	1900-01-01	2018-01-01	44 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779807332654	Technology	Medium	0	1
+CP0003959	PT Yulianto Synthetic	Company	Hana Yulianto	1900-01-01	2018-01-01	216 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	771716017168	Manufacturing	Low	0	1
+CP0003960	PT Prakoso Synthetic	Company	Citra Prakoso	1900-01-01	2018-01-01	843 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	779055258191	Manufacturing	Low	0	1
+CP0003961	Dewi Gunawan	Individual	Dewi Gunawan	1985-01-01	1900-01-01	525 Synthetic Avenue	Bandung	AU	AU	Bank Nusantara	775218088598	Technology	Medium	1	0
+CP0003962	PT Iskandar Synthetic	Company	Eka Iskandar	1900-01-01	2018-01-01	657 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775249432860	Technology	Medium	0	1
+CP0003963	Naufal Siregar	Individual	Naufal Siregar	1985-01-01	1900-01-01	743 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777209787778	Construction	Low	1	0
+CP0003964	PT Suryadi Synthetic	Company	Laras Suryadi	1900-01-01	2018-01-01	699 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	778289223044	Technology	Low	0	1
+CP0003965	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	856 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	775292665647	Construction	Medium	1	0
+CP0003966	PT Nugraha Synthetic	Company	Wulan Nugraha	1900-01-01	2018-01-01	501 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774981181138	Construction	Low	0	1
+CP0003967	PT Putra Synthetic	Company	Putri Putra	1900-01-01	2018-01-01	20 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775731589337	Manufacturing	Low	0	1
+CP0003968	Joko Nugraha	Individual	Joko Nugraha	1985-01-01	1900-01-01	88 Synthetic Avenue	Semarang	GB	GB	Bank Sentra	770888595335	Retail	Low	1	0
+CP0003969	Putri Santoso	Individual	Putri Santoso	1985-01-01	1900-01-01	229 Synthetic Avenue	Yogyakarta	GB	GB	Bank Nusantara	777974396478	Logistics	Medium	1	0
+CP0003970	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	727 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774916627538	Technology	Low	1	0
+CP0003971	Naufal Siregar	Individual	Naufal Siregar	1985-01-01	1900-01-01	359 Synthetic Avenue	Makassar	JP	JP	Bank Nusantara	778100404793	Retail	Low	1	0
+CP0003972	PT Darmawan Synthetic	Company	Dimas Darmawan	1900-01-01	2018-01-01	468 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772896925022	Construction	Low	0	1
+CP0003973	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	496 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776890483585	Construction	Low	1	0
+CP0003974	PT Wibowo Synthetic	Company	Gita Wibowo	1900-01-01	2018-01-01	142 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773461250250	Technology	Medium	0	1
+CP0003975	Rizky Rahardjo	Individual	Rizky Rahardjo	1985-01-01	1900-01-01	376 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774641555932	Technology	Medium	1	0
+CP0003976	PT Mahendra Synthetic	Company	Arif Mahendra	1900-01-01	2018-01-01	229 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773230740380	Manufacturing	High	0	1
+CP0003977	PT Halim Synthetic	Company	Indra Halim	1900-01-01	2018-01-01	201 Synthetic Avenue	Medan	AU	AU	Bank Sentra	770559872510	Construction	Medium	0	1
+CP0003978	Indra Firmansyah	Individual	Indra Firmansyah	1985-01-01	1900-01-01	613 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777288071334	Manufacturing	High	1	0
+CP0003979	PT Permana Synthetic	Company	Kevin Permana	1900-01-01	2018-01-01	208 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	775483243615	Logistics	Low	0	1
+CP0003980	PT Yulianto Synthetic	Company	Bima Yulianto	1900-01-01	2018-01-01	442 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770630940559	Manufacturing	Low	0	1
+CP0003981	Naufal Rahardjo	Individual	Naufal Rahardjo	1985-01-01	1900-01-01	580 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777196160948	Logistics	Low	1	0
+CP0003982	Adit Lesmana	Individual	Adit Lesmana	1985-01-01	1900-01-01	360 Synthetic Avenue	Jakarta	JP	JP	Bank Nusantara	775149274615	Construction	Low	1	0
+CP0003983	Andi Santoso	Individual	Andi Santoso	1985-01-01	1900-01-01	799 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	772192107036	Healthcare	Medium	1	0
+CP0003984	Nadia Putra	Individual	Nadia Putra	1985-01-01	1900-01-01	827 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770177556609	Construction	Low	1	0
+CP0003985	Maya Permana	Individual	Maya Permana	1985-01-01	1900-01-01	64 Synthetic Avenue	Medan	AU	AU	Asia Commerce Bank	772782826605	Manufacturing	Low	1	0
+CP0003986	Eka Hartono	Individual	Eka Hartono	1985-01-01	1900-01-01	61 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	777470151183	Construction	Low	1	0
+CP0003987	PT Chandra Synthetic	Company	Dewi Chandra	1900-01-01	2018-01-01	738 Synthetic Avenue	Bandung	AU	AU	Asia Commerce Bank	771883709858	Logistics	Medium	0	1
+CP0003988	Citra Santoso	Individual	Citra Santoso	1985-01-01	1900-01-01	734 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	772041323321	Healthcare	High	1	0
+CP0003989	Nadia Wijaya	Individual	Nadia Wijaya	1985-01-01	1900-01-01	298 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776863069081	Construction	Low	1	0
+CP0003990	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	130 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770571547724	Logistics	Low	1	0
+CP0003991	PT Santoso Synthetic	Company	Indra Santoso	1900-01-01	2018-01-01	260 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776539696818	Construction	Medium	0	1
+CP0003992	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	419 Synthetic Avenue	Surabaya	MY	MY	Bank Sentra	770338553431	Construction	Medium	1	0
+CP0003993	Joko Gunawan	Individual	Joko Gunawan	1985-01-01	1900-01-01	120 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776478933543	Retail	Low	1	0
+CP0003994	Maya Mahendra	Individual	Maya Mahendra	1985-01-01	1900-01-01	241 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776250563127	Technology	Low	1	0
+CP0003995	Bima Wijaya	Individual	Bima Wijaya	1985-01-01	1900-01-01	508 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773687858912	Manufacturing	Medium	1	0
+CP0003996	Hana Hartono	Individual	Hana Hartono	1985-01-01	1900-01-01	338 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775561444673	Healthcare	Low	1	0
+CP0003997	Naufal Darmawan	Individual	Naufal Darmawan	1985-01-01	1900-01-01	501 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	771411797496	Retail	Low	1	0
+CP0003998	Raka Wibowo	Individual	Raka Wibowo	1985-01-01	1900-01-01	518 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773296386025	Manufacturing	Low	1	0
+CP0003999	Maya Suryadi	Individual	Maya Suryadi	1985-01-01	1900-01-01	172 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778518890174	Healthcare	High	1	0
+CP0004000	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	700 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771536656890	Retail	Low	1	0
+CP0004001	PT Hartono Synthetic	Company	Bima Hartono	1900-01-01	2018-01-01	73 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771431662915	Retail	Low	0	1
+CP0004002	Bima Budiman	Individual	Bima Budiman	1985-01-01	1900-01-01	88 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774139795030	Manufacturing	Low	1	0
+CP0004003	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	354 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778619654863	Technology	Low	1	0
+CP0004004	Maya Budiman	Individual	Maya Budiman	1985-01-01	1900-01-01	114 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	777413013580	Technology	Low	1	0
+CP0004005	Alya Adinata	Individual	Alya Adinata	1985-01-01	1900-01-01	248 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777533983924	Construction	High	1	0
+CP0004006	Farah Lesmana	Individual	Farah Lesmana	1985-01-01	1900-01-01	158 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771014387276	Logistics	Medium	1	0
+CP0004007	Adit Yulianto	Individual	Adit Yulianto	1985-01-01	1900-01-01	830 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774877076633	Manufacturing	Low	1	0
+CP0004008	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	151 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779726454631	Manufacturing	Low	1	0
+CP0004009	Rani Chandra	Individual	Rani Chandra	1985-01-01	1900-01-01	733 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777523709895	Manufacturing	High	1	0
+CP0004010	PT Setiawan Synthetic	Company	Nadia Setiawan	1900-01-01	2018-01-01	849 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	776913709750	Logistics	Low	0	1
+CP0004011	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	464 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771018806938	Construction	Low	1	0
+CP0004012	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	598 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	775620140772	Manufacturing	Low	1	0
+CP0004013	PT Wibowo Synthetic	Company	Dewi Wibowo	1900-01-01	2018-01-01	410 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770814676601	Technology	Medium	0	1
+CP0004014	Sari Suryadi	Individual	Sari Suryadi	1985-01-01	1900-01-01	367 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777131049831	Retail	Low	1	0
+CP0004015	PT Prakoso Synthetic	Company	Intan Prakoso	1900-01-01	2018-01-01	185 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772821215590	Construction	Low	0	1
+CP0004016	Gita Mahendra	Individual	Gita Mahendra	1985-01-01	1900-01-01	199 Synthetic Avenue	Medan	GB	GB	Bank Nusantara	775596997105	Logistics	High	1	0
+CP0004017	Citra Lesmana	Individual	Citra Lesmana	1985-01-01	1900-01-01	761 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	772480081581	Healthcare	Low	1	0
+CP0004018	PT Halim Synthetic	Company	Eka Halim	1900-01-01	2018-01-01	725 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777113578963	Healthcare	Low	0	1
+CP0004019	Bagus Gunawan	Individual	Bagus Gunawan	1985-01-01	1900-01-01	749 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	773503011923	Technology	Low	1	0
+CP0004020	Citra Gunawan	Individual	Citra Gunawan	1985-01-01	1900-01-01	746 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776344351667	Logistics	Low	1	0
+CP0004021	PT Adinata Synthetic	Company	Raka Adinata	1900-01-01	2018-01-01	601 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	776500481375	Manufacturing	Low	0	1
+CP0004022	PT Prakoso Synthetic	Company	Dimas Prakoso	1900-01-01	2018-01-01	14 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	778087292974	Retail	Medium	0	1
+CP0004023	PT Permana Synthetic	Company	Joko Permana	1900-01-01	2018-01-01	712 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771834713701	Logistics	Medium	0	1
+CP0004024	PT Halim Synthetic	Company	Bima Halim	1900-01-01	2018-01-01	125 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773880561432	Manufacturing	Low	0	1
+CP0004025	Joko Chandra	Individual	Joko Chandra	1985-01-01	1900-01-01	33 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775406117317	Healthcare	High	1	0
+CP0004026	Rani Hartono	Individual	Rani Hartono	1985-01-01	1900-01-01	171 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775363825167	Healthcare	Low	1	0
+CP0004027	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	132 Synthetic Avenue	Medan	JP	JP	Asia Commerce Bank	770187197262	Construction	Medium	1	0
+CP0004028	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	241 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778058461152	Retail	High	0	1
+CP0004029	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	72 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779067776646	Manufacturing	Low	1	0
+CP0004030	PT Hartono Synthetic	Company	Sari Hartono	1900-01-01	2018-01-01	561 Synthetic Avenue	Semarang	US	US	Bank Nusantara	776630248587	Technology	Low	0	1
+CP0004031	Dewi Halim	Individual	Dewi Halim	1985-01-01	1900-01-01	767 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776084123433	Technology	High	1	0
+CP0004032	Fajar Kurniawan	Individual	Fajar Kurniawan	1985-01-01	1900-01-01	463 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770357857352	Technology	Low	1	0
+CP0004033	Nadia Halim	Individual	Nadia Halim	1985-01-01	1900-01-01	159 Synthetic Avenue	Bandung	GB	GB	Asia Commerce Bank	773500866624	Manufacturing	Low	1	0
+CP0004034	Anisa Firmansyah	Individual	Anisa Firmansyah	1985-01-01	1900-01-01	650 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778579077609	Manufacturing	High	1	0
+CP0004035	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	596 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779822178328	Healthcare	High	1	0
+CP0004036	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	731 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776795416657	Logistics	Low	1	0
+CP0004037	Putri Wibowo	Individual	Putri Wibowo	1985-01-01	1900-01-01	236 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770847204669	Healthcare	Medium	1	0
+CP0004038	PT Mahendra Synthetic	Company	Maya Mahendra	1900-01-01	2018-01-01	117 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	778060921195	Construction	Medium	0	1
+CP0004039	Wulan Siregar	Individual	Wulan Siregar	1985-01-01	1900-01-01	519 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	775734662392	Manufacturing	Low	1	0
+CP0004040	Nadia Putra	Individual	Nadia Putra	1985-01-01	1900-01-01	881 Synthetic Avenue	Denpasar	MY	MY	Asia Commerce Bank	770898962874	Logistics	Low	1	0
+CP0004041	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	200 Synthetic Avenue	Jakarta	GB	GB	Bank Sentra	774054686033	Logistics	Medium	1	0
+CP0004042	PT Chandra Synthetic	Company	Kevin Chandra	1900-01-01	2018-01-01	237 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770020295247	Healthcare	Low	0	1
+CP0004043	Indra Kurniawan	Individual	Indra Kurniawan	1985-01-01	1900-01-01	601 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	774539512331	Retail	Medium	1	0
+CP0004044	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	141 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771756872952	Healthcare	High	1	0
+CP0004045	Gita Putra	Individual	Gita Putra	1985-01-01	1900-01-01	140 Synthetic Avenue	Denpasar	US	US	Asia Commerce Bank	776080290445	Manufacturing	Medium	1	0
+CP0004046	Bagus Firmansyah	Individual	Bagus Firmansyah	1985-01-01	1900-01-01	367 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778724865884	Manufacturing	Medium	1	0
+CP0004047	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	704 Synthetic Avenue	Medan	SG	SG	Bank Sentra	774284321177	Logistics	Low	1	0
+CP0004048	Andi Siregar	Individual	Andi Siregar	1985-01-01	1900-01-01	729 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776469294041	Manufacturing	Low	1	0
+CP0004049	Gita Adinata	Individual	Gita Adinata	1985-01-01	1900-01-01	101 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770650374957	Healthcare	Medium	1	0
+CP0004050	PT Iskandar Synthetic	Company	Indra Iskandar	1900-01-01	2018-01-01	795 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778040334631	Technology	Low	0	1
+CP0004051	Dewi Chandra	Individual	Dewi Chandra	1985-01-01	1900-01-01	654 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771264614161	Healthcare	Medium	1	0
+CP0004052	PT Permana Synthetic	Company	Arif Permana	1900-01-01	2018-01-01	117 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774070912606	Healthcare	Low	0	1
+CP0004053	PT Prakoso Synthetic	Company	Bima Prakoso	1900-01-01	2018-01-01	139 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772406050438	Technology	Low	0	1
+CP0004054	Nadia Wibowo	Individual	Nadia Wibowo	1985-01-01	1900-01-01	357 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772041355360	Healthcare	Low	1	0
+CP0004055	Intan Adinata	Individual	Intan Adinata	1985-01-01	1900-01-01	193 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773213674136	Construction	High	1	0
+CP0004056	Gita Mahendra	Individual	Gita Mahendra	1985-01-01	1900-01-01	673 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	770084911305	Healthcare	Medium	1	0
+CP0004057	Citra Halim	Individual	Citra Halim	1985-01-01	1900-01-01	30 Synthetic Avenue	Denpasar	GB	GB	Bank Sentra	779177041881	Manufacturing	Low	1	0
+CP0004058	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	183 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	771595133174	Manufacturing	Low	1	0
+CP0004059	Sari Setiawan	Individual	Sari Setiawan	1985-01-01	1900-01-01	193 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775225046350	Logistics	Low	1	0
+CP0004060	PT Putra Synthetic	Company	Laras Putra	1900-01-01	2018-01-01	659 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	771807108016	Manufacturing	Low	0	1
+CP0004061	Wulan Budiman	Individual	Wulan Budiman	1985-01-01	1900-01-01	669 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770324330977	Technology	Low	1	0
+CP0004062	PT Adinata Synthetic	Company	Citra Adinata	1900-01-01	2018-01-01	237 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772486267631	Technology	Low	0	1
+CP0004063	Nadia Suryadi	Individual	Nadia Suryadi	1985-01-01	1900-01-01	138 Synthetic Avenue	Medan	US	US	Asia Commerce Bank	770341760168	Healthcare	Medium	1	0
+CP0004064	Arif Wibowo	Individual	Arif Wibowo	1985-01-01	1900-01-01	516 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	778897205088	Healthcare	Low	1	0
+CP0004065	PT Prakoso Synthetic	Company	Andi Prakoso	1900-01-01	2018-01-01	574 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	777488786384	Manufacturing	Low	0	1
+CP0004066	Andi Yulianto	Individual	Andi Yulianto	1985-01-01	1900-01-01	208 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770909979539	Technology	Low	1	0
+CP0004067	Citra Firmansyah	Individual	Citra Firmansyah	1985-01-01	1900-01-01	81 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	777867388514	Construction	Low	1	0
+CP0004068	PT Firmansyah Synthetic	Company	Rani Firmansyah	1900-01-01	2018-01-01	256 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770847648221	Technology	Medium	0	1
+CP0004069	Bima Darmawan	Individual	Bima Darmawan	1985-01-01	1900-01-01	616 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775661649702	Logistics	Medium	1	0
+CP0004070	PT Kurniawan Synthetic	Company	Dimas Kurniawan	1900-01-01	2018-01-01	133 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	772801371754	Retail	Low	0	1
+CP0004071	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	226 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	778378439038	Logistics	Low	1	0
+CP0004072	Kevin Lesmana	Individual	Kevin Lesmana	1985-01-01	1900-01-01	2 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771465394497	Manufacturing	Medium	1	0
+CP0004073	Gita Budiman	Individual	Gita Budiman	1985-01-01	1900-01-01	412 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776761497808	Retail	Low	1	0
+CP0004074	Wulan Wijaya	Individual	Wulan Wijaya	1985-01-01	1900-01-01	567 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771776003988	Construction	Low	1	0
+CP0004075	Gita Firmansyah	Individual	Gita Firmansyah	1985-01-01	1900-01-01	90 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	776009343847	Construction	Low	1	0
+CP0004076	Rizky Budiman	Individual	Rizky Budiman	1985-01-01	1900-01-01	655 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	770318289750	Technology	Low	1	0
+CP0004077	Joko Permana	Individual	Joko Permana	1985-01-01	1900-01-01	361 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774950207242	Healthcare	Medium	1	0
+CP0004078	PT Iskandar Synthetic	Company	Citra Iskandar	1900-01-01	2018-01-01	665 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773904556474	Healthcare	Low	0	1
+CP0004079	PT Wibowo Synthetic	Company	Rizky Wibowo	1900-01-01	2018-01-01	353 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	779608255141	Technology	High	0	1
+CP0004080	PT Prakoso Synthetic	Company	Arif Prakoso	1900-01-01	2018-01-01	872 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777733305610	Logistics	Medium	0	1
+CP0004081	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	592 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773472061795	Manufacturing	Medium	1	0
+CP0004082	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	114 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	774127810763	Logistics	Low	1	0
+CP0004083	Bima Kurniawan	Individual	Bima Kurniawan	1985-01-01	1900-01-01	193 Synthetic Avenue	Medan	GB	GB	Bank Sentra	778138299436	Healthcare	Medium	1	0
+CP0004084	Maya Yulianto	Individual	Maya Yulianto	1985-01-01	1900-01-01	409 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773786191074	Technology	Low	1	0
+CP0004085	PT Iskandar Synthetic	Company	Bagus Iskandar	1900-01-01	2018-01-01	101 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770993451189	Retail	Low	0	1
+CP0004086	PT Suryadi Synthetic	Company	Rani Suryadi	1900-01-01	2018-01-01	769 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	770633092824	Retail	Low	0	1
+CP0004087	Nadia Mahendra	Individual	Nadia Mahendra	1985-01-01	1900-01-01	521 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776747470317	Manufacturing	Low	1	0
+CP0004088	Joko Wibowo	Individual	Joko Wibowo	1985-01-01	1900-01-01	140 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777181196158	Retail	Low	1	0
+CP0004089	Joko Budiman	Individual	Joko Budiman	1985-01-01	1900-01-01	800 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774019162386	Logistics	Medium	1	0
+CP0004090	PT Halim Synthetic	Company	Andi Halim	1900-01-01	2018-01-01	93 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774304494626	Logistics	Medium	0	1
+CP0004091	Kevin Wibowo	Individual	Kevin Wibowo	1985-01-01	1900-01-01	842 Synthetic Avenue	Jakarta	AE	AE	Bank Sentra	775961166397	Retail	Medium	1	0
+CP0004092	PT Gunawan Synthetic	Company	Joko Gunawan	1900-01-01	2018-01-01	523 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	777560129676	Healthcare	Low	0	1
+CP0004093	PT Adinata Synthetic	Company	Dewi Adinata	1900-01-01	2018-01-01	434 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779104772813	Healthcare	Low	0	1
+CP0004094	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	205 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771324413383	Manufacturing	Low	1	0
+CP0004095	Rizky Budiman	Individual	Rizky Budiman	1985-01-01	1900-01-01	470 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778718822691	Construction	Low	1	0
+CP0004096	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	243 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773434442689	Technology	Medium	1	0
+CP0004097	Joko Siregar	Individual	Joko Siregar	1985-01-01	1900-01-01	340 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778151954420	Construction	Medium	1	0
+CP0004098	PT Siregar Synthetic	Company	Anisa Siregar	1900-01-01	2018-01-01	751 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777037297228	Retail	Low	0	1
+CP0004099	PT Halim Synthetic	Company	Rizky Halim	1900-01-01	2018-01-01	880 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	771852261980	Healthcare	Low	0	1
+CP0004100	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	683 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776321066124	Retail	High	1	0
+CP0004101	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	623 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770353809806	Technology	Medium	1	0
+CP0004102	PT Setiawan Synthetic	Company	Intan Setiawan	1900-01-01	2018-01-01	363 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779769157251	Logistics	Medium	0	1
+CP0004103	PT Firmansyah Synthetic	Company	Rani Firmansyah	1900-01-01	2018-01-01	453 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771021497703	Logistics	Medium	0	1
+CP0004104	PT Darmawan Synthetic	Company	Bagus Darmawan	1900-01-01	2018-01-01	479 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777801365192	Technology	Low	0	1
+CP0004105	Bagus Rahardjo	Individual	Bagus Rahardjo	1985-01-01	1900-01-01	191 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771716528251	Retail	High	1	0
+CP0004106	Wulan Setiawan	Individual	Wulan Setiawan	1985-01-01	1900-01-01	64 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777933054002	Logistics	High	1	0
+CP0004107	Fajar Wibowo	Individual	Fajar Wibowo	1985-01-01	1900-01-01	819 Synthetic Avenue	Semarang	AU	AU	Bank Sentra	777722541254	Construction	High	1	0
+CP0004108	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	234 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778268291736	Logistics	Low	1	0
+CP0004109	PT Mahendra Synthetic	Company	Farah Mahendra	1900-01-01	2018-01-01	267 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	775784524320	Technology	Low	0	1
+CP0004110	Bima Firmansyah	Individual	Bima Firmansyah	1985-01-01	1900-01-01	800 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776138047145	Technology	Medium	1	0
+CP0004111	Joko Mahendra	Individual	Joko Mahendra	1985-01-01	1900-01-01	635 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772667959868	Retail	Medium	1	0
+CP0004112	Nadia Adinata	Individual	Nadia Adinata	1985-01-01	1900-01-01	325 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779049250215	Construction	Medium	1	0
+CP0004113	Adit Iskandar	Individual	Adit Iskandar	1985-01-01	1900-01-01	493 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776996067766	Construction	Low	1	0
+CP0004114	PT Firmansyah Synthetic	Company	Sari Firmansyah	1900-01-01	2018-01-01	368 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777362222013	Retail	Low	0	1
+CP0004115	PT Firmansyah Synthetic	Company	Rizky Firmansyah	1900-01-01	2018-01-01	781 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	773628153089	Technology	Medium	0	1
+CP0004116	PT Suryadi Synthetic	Company	Indra Suryadi	1900-01-01	2018-01-01	82 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771221208498	Retail	Low	0	1
+CP0004117	Naufal Setiawan	Individual	Naufal Setiawan	1985-01-01	1900-01-01	155 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773534652722	Healthcare	Low	1	0
+CP0004118	Fajar Lesmana	Individual	Fajar Lesmana	1985-01-01	1900-01-01	598 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	773362266945	Logistics	Low	1	0
+CP0004119	Hana Nugraha	Individual	Hana Nugraha	1985-01-01	1900-01-01	713 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	774175056763	Manufacturing	Low	1	0
+CP0004120	PT Chandra Synthetic	Company	Indra Chandra	1900-01-01	2018-01-01	896 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776584387588	Logistics	Low	0	1
+CP0004121	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	674 Synthetic Avenue	Makassar	US	US	Bank Sentra	777338830669	Logistics	Low	1	0
+CP0004122	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	314 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779684152533	Healthcare	Medium	1	0
+CP0004123	Putri Santoso	Individual	Putri Santoso	1985-01-01	1900-01-01	676 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775328520548	Retail	Medium	1	0
+CP0004124	Indra Adinata	Individual	Indra Adinata	1985-01-01	1900-01-01	193 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778998845300	Construction	Low	1	0
+CP0004125	PT Santoso Synthetic	Company	Sari Santoso	1900-01-01	2018-01-01	764 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778249521256	Construction	Medium	0	1
+CP0004126	Dewi Darmawan	Individual	Dewi Darmawan	1985-01-01	1900-01-01	383 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774618088348	Construction	High	1	0
+CP0004127	Alya Darmawan	Individual	Alya Darmawan	1985-01-01	1900-01-01	96 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	773762106770	Retail	Medium	1	0
+CP0004128	Arif Siregar	Individual	Arif Siregar	1985-01-01	1900-01-01	423 Synthetic Avenue	Jakarta	US	US	Bank Sentra	770649210674	Construction	Low	1	0
+CP0004129	PT Chandra Synthetic	Company	Bagus Chandra	1900-01-01	2018-01-01	435 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	779110223719	Construction	Low	0	1
+CP0004130	Nadia Wijaya	Individual	Nadia Wijaya	1985-01-01	1900-01-01	794 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	779157190731	Construction	Low	1	0
+CP0004131	PT Gunawan Synthetic	Company	Arif Gunawan	1900-01-01	2018-01-01	654 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774341476430	Healthcare	Low	0	1
+CP0004132	Dewi Hartono	Individual	Dewi Hartono	1985-01-01	1900-01-01	870 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	778393898958	Logistics	Low	1	0
+CP0004133	Laras Gunawan	Individual	Laras Gunawan	1985-01-01	1900-01-01	425 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779207680207	Manufacturing	Low	1	0
+CP0004134	Andi Hartono	Individual	Andi Hartono	1985-01-01	1900-01-01	843 Synthetic Avenue	Medan	US	US	Bank Sentra	773424247062	Healthcare	Medium	1	0
+CP0004135	PT Hartono Synthetic	Company	Laras Hartono	1900-01-01	2018-01-01	158 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770097816583	Manufacturing	Low	0	1
+CP0004136	Joko Nugraha	Individual	Joko Nugraha	1985-01-01	1900-01-01	302 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770850886091	Retail	Medium	1	0
+CP0004137	Eka Permana	Individual	Eka Permana	1985-01-01	1900-01-01	262 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775743268131	Technology	Medium	1	0
+CP0004138	PT Adinata Synthetic	Company	Adit Adinata	1900-01-01	2018-01-01	260 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775705658673	Logistics	Low	0	1
+CP0004139	PT Lesmana Synthetic	Company	Naufal Lesmana	1900-01-01	2018-01-01	854 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772867269707	Manufacturing	Low	0	1
+CP0004140	Arif Kurniawan	Individual	Arif Kurniawan	1985-01-01	1900-01-01	489 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	776610084998	Healthcare	Low	1	0
+CP0004141	Sari Lesmana	Individual	Sari Lesmana	1985-01-01	1900-01-01	280 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	775618015379	Manufacturing	Medium	1	0
+CP0004142	Bima Adinata	Individual	Bima Adinata	1985-01-01	1900-01-01	39 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774139839776	Construction	Low	1	0
+CP0004143	PT Adinata Synthetic	Company	Rani Adinata	1900-01-01	2018-01-01	736 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	773391905768	Technology	Low	0	1
+CP0004144	PT Iskandar Synthetic	Company	Dimas Iskandar	1900-01-01	2018-01-01	690 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773708797094	Construction	Low	0	1
+CP0004145	Eka Kurniawan	Individual	Eka Kurniawan	1985-01-01	1900-01-01	897 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778556035479	Retail	Low	1	0
+CP0004146	Teguh Firmansyah	Individual	Teguh Firmansyah	1985-01-01	1900-01-01	532 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	771567787803	Manufacturing	Low	1	0
+CP0004147	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	436 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779598411053	Healthcare	Low	1	0
+CP0004148	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	75 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771877212450	Technology	Low	1	0
+CP0004149	Putri Putra	Individual	Putri Putra	1985-01-01	1900-01-01	646 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774871253595	Technology	Low	1	0
+CP0004150	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	186 Synthetic Avenue	Denpasar	AE	AE	Asia Commerce Bank	772042699644	Logistics	Medium	1	0
+CP0004151	PT Darmawan Synthetic	Company	Kevin Darmawan	1900-01-01	2018-01-01	341 Synthetic Avenue	Jakarta	US	US	Bank Sentra	774964091308	Construction	High	0	1
+CP0004152	PT Iskandar Synthetic	Company	Hana Iskandar	1900-01-01	2018-01-01	727 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775529183365	Retail	Medium	0	1
+CP0004153	PT Nugraha Synthetic	Company	Alya Nugraha	1900-01-01	2018-01-01	134 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	772744475110	Healthcare	Low	0	1
+CP0004154	Citra Mahendra	Individual	Citra Mahendra	1985-01-01	1900-01-01	122 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771907946717	Technology	Medium	1	0
+CP0004155	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	135 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	773523466004	Retail	Low	1	0
+CP0004156	Raka Rahardjo	Individual	Raka Rahardjo	1985-01-01	1900-01-01	553 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	779812402906	Healthcare	Medium	1	0
+CP0004157	PT Siregar Synthetic	Company	Kevin Siregar	1900-01-01	2018-01-01	228 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	777050127538	Technology	Low	0	1
+CP0004158	Anisa Budiman	Individual	Anisa Budiman	1985-01-01	1900-01-01	91 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778598434965	Retail	Medium	1	0
+CP0004159	Arif Suryadi	Individual	Arif Suryadi	1985-01-01	1900-01-01	465 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	778815017331	Technology	Medium	1	0
+CP0004160	PT Chandra Synthetic	Company	Adit Chandra	1900-01-01	2018-01-01	42 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779020388240	Manufacturing	Low	0	1
+CP0004161	Bagus Rahardjo	Individual	Bagus Rahardjo	1985-01-01	1900-01-01	91 Synthetic Avenue	Medan	SG	SG	Asia Commerce Bank	777775675500	Construction	Low	1	0
+CP0004162	Dimas Lesmana	Individual	Dimas Lesmana	1985-01-01	1900-01-01	305 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775812681319	Logistics	Low	1	0
+CP0004163	PT Wijaya Synthetic	Company	Rizky Wijaya	1900-01-01	2018-01-01	108 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	772729666827	Manufacturing	Medium	0	1
+CP0004164	Intan Putra	Individual	Intan Putra	1985-01-01	1900-01-01	21 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775129717963	Manufacturing	Low	1	0
+CP0004165	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	285 Synthetic Avenue	Makassar	AU	AU	Asia Commerce Bank	772605319663	Manufacturing	Medium	1	0
+CP0004166	Andi Mahendra	Individual	Andi Mahendra	1985-01-01	1900-01-01	451 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773323808846	Manufacturing	Low	1	0
+CP0004167	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	92 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774065645633	Healthcare	Low	1	0
+CP0004168	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	805 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	771379234436	Construction	Low	1	0
+CP0004169	PT Hartono Synthetic	Company	Arif Hartono	1900-01-01	2018-01-01	129 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778454145110	Retail	Medium	0	1
+CP0004170	Bagus Prakoso	Individual	Bagus Prakoso	1985-01-01	1900-01-01	667 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777853848621	Healthcare	Low	1	0
+CP0004171	Andi Chandra	Individual	Andi Chandra	1985-01-01	1900-01-01	46 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	773519320083	Manufacturing	Low	1	0
+CP0004172	Joko Yulianto	Individual	Joko Yulianto	1985-01-01	1900-01-01	163 Synthetic Avenue	Surabaya	JP	JP	Asia Commerce Bank	776110608230	Construction	Medium	1	0
+CP0004173	PT Yulianto Synthetic	Company	Alya Yulianto	1900-01-01	2018-01-01	848 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773818596050	Construction	Low	0	1
+CP0004174	Hana Suryadi	Individual	Hana Suryadi	1985-01-01	1900-01-01	131 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	778133613671	Logistics	Medium	1	0
+CP0004175	PT Halim Synthetic	Company	Bima Halim	1900-01-01	2018-01-01	178 Synthetic Avenue	Medan	AE	AE	Bank Sentra	773511791478	Construction	Low	0	1
+CP0004176	Bagus Putra	Individual	Bagus Putra	1985-01-01	1900-01-01	361 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	771625616072	Manufacturing	Low	1	0
+CP0004177	Sari Firmansyah	Individual	Sari Firmansyah	1985-01-01	1900-01-01	555 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	773765443469	Healthcare	Low	1	0
+CP0004178	Kevin Santoso	Individual	Kevin Santoso	1985-01-01	1900-01-01	379 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774164420210	Manufacturing	Low	1	0
+CP0004179	Teguh Santoso	Individual	Teguh Santoso	1985-01-01	1900-01-01	502 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770603454861	Logistics	High	1	0
+CP0004180	Sari Putra	Individual	Sari Putra	1985-01-01	1900-01-01	296 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	774921876961	Healthcare	Low	1	0
+CP0004181	Adit Rahardjo	Individual	Adit Rahardjo	1985-01-01	1900-01-01	768 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	771637233104	Retail	Low	1	0
+CP0004182	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	492 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778964644409	Technology	Low	1	0
+CP0004183	Intan Permana	Individual	Intan Permana	1985-01-01	1900-01-01	703 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770078982741	Construction	Medium	1	0
+CP0004184	Bagus Budiman	Individual	Bagus Budiman	1985-01-01	1900-01-01	611 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	770603999403	Retail	Medium	1	0
+CP0004185	Eka Firmansyah	Individual	Eka Firmansyah	1985-01-01	1900-01-01	812 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779191695319	Construction	Medium	1	0
+CP0004186	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	533 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	774548827197	Logistics	Low	1	0
+CP0004187	Farah Adinata	Individual	Farah Adinata	1985-01-01	1900-01-01	392 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770847535119	Technology	Low	1	0
+CP0004188	Farah Firmansyah	Individual	Farah Firmansyah	1985-01-01	1900-01-01	257 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776091094056	Technology	Medium	1	0
+CP0004189	PT Lesmana Synthetic	Company	Anisa Lesmana	1900-01-01	2018-01-01	22 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777053339502	Retail	Low	0	1
+CP0004190	Citra Adinata	Individual	Citra Adinata	1985-01-01	1900-01-01	163 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774629382694	Manufacturing	Low	1	0
+CP0004191	PT Budiman Synthetic	Company	Rizky Budiman	1900-01-01	2018-01-01	743 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	771191944710	Retail	Low	0	1
+CP0004192	Wulan Iskandar	Individual	Wulan Iskandar	1985-01-01	1900-01-01	299 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	778543626805	Retail	Low	1	0
+CP0004193	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	557 Synthetic Avenue	Jakarta	US	US	Bank Sentra	777513261099	Construction	Low	1	0
+CP0004194	Rani Kurniawan	Individual	Rani Kurniawan	1985-01-01	1900-01-01	701 Synthetic Avenue	Denpasar	AU	AU	Asia Commerce Bank	774414530765	Technology	Medium	1	0
+CP0004195	Fajar Darmawan	Individual	Fajar Darmawan	1985-01-01	1900-01-01	102 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777579930180	Manufacturing	Low	1	0
+CP0004196	Naufal Hartono	Individual	Naufal Hartono	1985-01-01	1900-01-01	609 Synthetic Avenue	Surabaya	AU	AU	Bank Nusantara	774916094620	Retail	Low	1	0
+CP0004197	Fajar Adinata	Individual	Fajar Adinata	1985-01-01	1900-01-01	658 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770088326821	Retail	Low	1	0
+CP0004198	Anisa Setiawan	Individual	Anisa Setiawan	1985-01-01	1900-01-01	799 Synthetic Avenue	Denpasar	US	US	Asia Commerce Bank	774545324044	Manufacturing	Low	1	0
+CP0004199	Bagus Wijaya	Individual	Bagus Wijaya	1985-01-01	1900-01-01	435 Synthetic Avenue	Surabaya	AE	AE	Bank Nusantara	771276556998	Construction	Low	1	0
+CP0004200	Arif Wibowo	Individual	Arif Wibowo	1985-01-01	1900-01-01	85 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	774641549552	Healthcare	Low	1	0
+CP0004201	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	29 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	776827253829	Manufacturing	Low	1	0
+CP0004202	Eka Siregar	Individual	Eka Siregar	1985-01-01	1900-01-01	827 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773022370392	Retail	Low	1	0
+CP0004203	Laras Yulianto	Individual	Laras Yulianto	1985-01-01	1900-01-01	93 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770081426659	Construction	Low	1	0
+CP0004204	Teguh Wibowo	Individual	Teguh Wibowo	1985-01-01	1900-01-01	561 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	772528065671	Construction	Medium	1	0
+CP0004205	Teguh Yulianto	Individual	Teguh Yulianto	1985-01-01	1900-01-01	167 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778402143451	Healthcare	Low	1	0
+CP0004206	Hana Budiman	Individual	Hana Budiman	1985-01-01	1900-01-01	88 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	779445063323	Retail	Medium	1	0
+CP0004207	Naufal Wijaya	Individual	Naufal Wijaya	1985-01-01	1900-01-01	202 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778872125943	Technology	Low	1	0
+CP0004208	Hana Chandra	Individual	Hana Chandra	1985-01-01	1900-01-01	365 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	775556059215	Technology	Low	1	0
+CP0004209	Arif Santoso	Individual	Arif Santoso	1985-01-01	1900-01-01	268 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	777092509667	Healthcare	Low	1	0
+CP0004210	PT Darmawan Synthetic	Company	Anisa Darmawan	1900-01-01	2018-01-01	755 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778579555353	Healthcare	Medium	0	1
+CP0004211	Alya Nugraha	Individual	Alya Nugraha	1985-01-01	1900-01-01	153 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	773239515715	Manufacturing	Low	1	0
+CP0004212	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	141 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774061619906	Retail	Low	1	0
+CP0004213	Bima Budiman	Individual	Bima Budiman	1985-01-01	1900-01-01	828 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770328519962	Retail	Medium	1	0
+CP0004214	Hana Chandra	Individual	Hana Chandra	1985-01-01	1900-01-01	579 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771892032503	Manufacturing	High	1	0
+CP0004215	PT Adinata Synthetic	Company	Bima Adinata	1900-01-01	2018-01-01	665 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773923011106	Construction	Low	0	1
+CP0004216	Eka Setiawan	Individual	Eka Setiawan	1985-01-01	1900-01-01	797 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	774861874790	Retail	Low	1	0
+CP0004217	Dewi Yulianto	Individual	Dewi Yulianto	1985-01-01	1900-01-01	232 Synthetic Avenue	Jakarta	AU	AU	Bank Nusantara	771969224415	Construction	Medium	1	0
+CP0004218	PT Wibowo Synthetic	Company	Intan Wibowo	1900-01-01	2018-01-01	61 Synthetic Avenue	Semarang	US	US	Bank Nusantara	777959774960	Healthcare	Low	0	1
+CP0004219	Eka Setiawan	Individual	Eka Setiawan	1985-01-01	1900-01-01	264 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779040071042	Logistics	Low	1	0
+CP0004220	Sari Nugraha	Individual	Sari Nugraha	1985-01-01	1900-01-01	550 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	774797647492	Manufacturing	Low	1	0
+CP0004221	Andi Mahendra	Individual	Andi Mahendra	1985-01-01	1900-01-01	857 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771547827301	Manufacturing	Low	1	0
+CP0004222	PT Nugraha Synthetic	Company	Maya Nugraha	1900-01-01	2018-01-01	131 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778733880254	Construction	Low	0	1
+CP0004223	Fajar Putra	Individual	Fajar Putra	1985-01-01	1900-01-01	61 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	770408661085	Manufacturing	Low	1	0
+CP0004224	Rizky Santoso	Individual	Rizky Santoso	1985-01-01	1900-01-01	198 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778676934486	Construction	Medium	1	0
+CP0004225	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	301 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	779563934692	Retail	Medium	1	0
+CP0004226	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	120 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778347315170	Construction	Medium	1	0
+CP0004227	Arif Kurniawan	Individual	Arif Kurniawan	1985-01-01	1900-01-01	7 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774806369174	Logistics	High	1	0
+CP0004228	Joko Setiawan	Individual	Joko Setiawan	1985-01-01	1900-01-01	281 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	776191091858	Manufacturing	Medium	1	0
+CP0004229	Andi Permana	Individual	Andi Permana	1985-01-01	1900-01-01	182 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779220874680	Logistics	Low	1	0
+CP0004230	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	504 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777221116924	Retail	Low	1	0
+CP0004231	Indra Darmawan	Individual	Indra Darmawan	1985-01-01	1900-01-01	704 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777984807557	Retail	Medium	1	0
+CP0004232	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	494 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	778495665851	Construction	Medium	1	0
+CP0004233	Bima Wijaya	Individual	Bima Wijaya	1985-01-01	1900-01-01	500 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776809841842	Manufacturing	High	1	0
+CP0004234	Indra Nugraha	Individual	Indra Nugraha	1985-01-01	1900-01-01	195 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	770849375068	Healthcare	Medium	1	0
+CP0004235	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	493 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	776042665310	Healthcare	Low	1	0
+CP0004236	Intan Lesmana	Individual	Intan Lesmana	1985-01-01	1900-01-01	821 Synthetic Avenue	Surabaya	AU	AU	Bank Sentra	775238287288	Logistics	High	1	0
+CP0004237	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	752 Synthetic Avenue	Medan	SG	SG	Bank Sentra	771104667679	Construction	Low	1	0
+CP0004238	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	239 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775491990985	Manufacturing	Low	1	0
+CP0004239	Kevin Hartono	Individual	Kevin Hartono	1985-01-01	1900-01-01	757 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772777068687	Healthcare	Low	1	0
+CP0004240	Kevin Lesmana	Individual	Kevin Lesmana	1985-01-01	1900-01-01	63 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772976972887	Logistics	Low	1	0
+CP0004241	Farah Kurniawan	Individual	Farah Kurniawan	1985-01-01	1900-01-01	792 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774829119570	Logistics	Low	1	0
+CP0004242	PT Iskandar Synthetic	Company	Adit Iskandar	1900-01-01	2018-01-01	815 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777089609034	Manufacturing	Low	0	1
+CP0004243	Nadia Nugraha	Individual	Nadia Nugraha	1985-01-01	1900-01-01	735 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	779249931747	Healthcare	High	1	0
+CP0004244	Teguh Hartono	Individual	Teguh Hartono	1985-01-01	1900-01-01	593 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773647797125	Retail	Medium	1	0
+CP0004245	Eka Iskandar	Individual	Eka Iskandar	1985-01-01	1900-01-01	418 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774049034387	Logistics	Low	1	0
+CP0004246	Adit Budiman	Individual	Adit Budiman	1985-01-01	1900-01-01	70 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770075655849	Healthcare	Low	1	0
+CP0004247	Naufal Siregar	Individual	Naufal Siregar	1985-01-01	1900-01-01	300 Synthetic Avenue	Surabaya	GB	GB	Bank Nusantara	771289419972	Manufacturing	Low	1	0
+CP0004248	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	175 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775230343003	Retail	Low	1	0
+CP0004249	Alya Setiawan	Individual	Alya Setiawan	1985-01-01	1900-01-01	269 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	777708963581	Retail	Low	1	0
+CP0004250	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	821 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779620958344	Retail	High	1	0
+CP0004251	PT Permana Synthetic	Company	Wulan Permana	1900-01-01	2018-01-01	91 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779865679292	Logistics	Low	0	1
+CP0004252	PT Kurniawan Synthetic	Company	Hana Kurniawan	1900-01-01	2018-01-01	766 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	774982559987	Logistics	Medium	0	1
+CP0004253	Arif Putra	Individual	Arif Putra	1985-01-01	1900-01-01	32 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774573096590	Retail	Low	1	0
+CP0004254	Hana Putra	Individual	Hana Putra	1985-01-01	1900-01-01	819 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779074385100	Construction	Low	1	0
+CP0004255	PT Rahardjo Synthetic	Company	Andi Rahardjo	1900-01-01	2018-01-01	743 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	777696472538	Technology	Low	0	1
+CP0004256	Dewi Firmansyah	Individual	Dewi Firmansyah	1985-01-01	1900-01-01	258 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772208731043	Technology	Medium	1	0
+CP0004257	Joko Budiman	Individual	Joko Budiman	1985-01-01	1900-01-01	293 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774910014444	Retail	Medium	1	0
+CP0004258	Citra Permana	Individual	Citra Permana	1985-01-01	1900-01-01	435 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778294662666	Manufacturing	Low	1	0
+CP0004259	Kevin Iskandar	Individual	Kevin Iskandar	1985-01-01	1900-01-01	107 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	771794387814	Construction	Low	1	0
+CP0004260	Fajar Setiawan	Individual	Fajar Setiawan	1985-01-01	1900-01-01	402 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776305975049	Retail	Low	1	0
+CP0004261	Dimas Chandra	Individual	Dimas Chandra	1985-01-01	1900-01-01	333 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	770190572388	Construction	Low	1	0
+CP0004262	Intan Rahardjo	Individual	Intan Rahardjo	1985-01-01	1900-01-01	339 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778360553957	Logistics	Low	1	0
+CP0004263	Rizky Nugraha	Individual	Rizky Nugraha	1985-01-01	1900-01-01	525 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779919383444	Retail	Low	1	0
+CP0004264	PT Iskandar Synthetic	Company	Eka Iskandar	1900-01-01	2018-01-01	254 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777139025872	Technology	Low	0	1
+CP0004265	Rizky Prakoso	Individual	Rizky Prakoso	1985-01-01	1900-01-01	888 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770042496741	Manufacturing	Low	1	0
+CP0004266	PT Nugraha Synthetic	Company	Putri Nugraha	1900-01-01	2018-01-01	840 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772492944349	Retail	Medium	0	1
+CP0004267	Rani Permana	Individual	Rani Permana	1985-01-01	1900-01-01	80 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	774316098883	Logistics	Low	1	0
+CP0004268	Naufal Nugraha	Individual	Naufal Nugraha	1985-01-01	1900-01-01	737 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774476846453	Manufacturing	Medium	1	0
+CP0004269	PT Yulianto Synthetic	Company	Kevin Yulianto	1900-01-01	2018-01-01	240 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	779344830366	Logistics	Low	0	1
+CP0004270	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	17 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	770590244571	Manufacturing	High	1	0
+CP0004271	PT Darmawan Synthetic	Company	Putri Darmawan	1900-01-01	2018-01-01	543 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777461612930	Retail	Low	0	1
+CP0004272	Rani Chandra	Individual	Rani Chandra	1985-01-01	1900-01-01	211 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774067107108	Construction	Low	1	0
+CP0004273	PT Siregar Synthetic	Company	Dimas Siregar	1900-01-01	2018-01-01	343 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	778567436901	Construction	Low	0	1
+CP0004274	Raka Prakoso	Individual	Raka Prakoso	1985-01-01	1900-01-01	56 Synthetic Avenue	Yogyakarta	AU	AU	Bank Nusantara	776872972738	Construction	Medium	1	0
+CP0004275	PT Nugraha Synthetic	Company	Citra Nugraha	1900-01-01	2018-01-01	457 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772860843123	Logistics	Low	0	1
+CP0004276	Bagus Iskandar	Individual	Bagus Iskandar	1985-01-01	1900-01-01	698 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	772110131843	Construction	Low	1	0
+CP0004277	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	62 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775750973417	Logistics	Low	1	0
+CP0004278	Andi Wijaya	Individual	Andi Wijaya	1985-01-01	1900-01-01	655 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777520581701	Healthcare	High	1	0
+CP0004279	Hana Mahendra	Individual	Hana Mahendra	1985-01-01	1900-01-01	144 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774572528711	Construction	Low	1	0
+CP0004280	PT Prakoso Synthetic	Company	Bagus Prakoso	1900-01-01	2018-01-01	310 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778846380427	Manufacturing	Low	0	1
+CP0004281	Raka Mahendra	Individual	Raka Mahendra	1985-01-01	1900-01-01	44 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771494943361	Technology	Low	1	0
+CP0004282	Kevin Wijaya	Individual	Kevin Wijaya	1985-01-01	1900-01-01	604 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770732157137	Retail	Low	1	0
+CP0004283	PT Nugraha Synthetic	Company	Maya Nugraha	1900-01-01	2018-01-01	708 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	775603907831	Manufacturing	Medium	0	1
+CP0004284	Anisa Adinata	Individual	Anisa Adinata	1985-01-01	1900-01-01	569 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779466093986	Logistics	Medium	1	0
+CP0004285	Farah Lesmana	Individual	Farah Lesmana	1985-01-01	1900-01-01	837 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771431384062	Technology	Low	1	0
+CP0004286	Wulan Santoso	Individual	Wulan Santoso	1985-01-01	1900-01-01	144 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772691566498	Construction	Medium	1	0
+CP0004287	Anisa Darmawan	Individual	Anisa Darmawan	1985-01-01	1900-01-01	261 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	778311363352	Construction	Low	1	0
+CP0004288	Gita Siregar	Individual	Gita Siregar	1985-01-01	1900-01-01	861 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	770166724466	Technology	Low	1	0
+CP0004289	Laras Hartono	Individual	Laras Hartono	1985-01-01	1900-01-01	534 Synthetic Avenue	Surabaya	GB	GB	Bank Sentra	770715089861	Retail	High	1	0
+CP0004290	Maya Siregar	Individual	Maya Siregar	1985-01-01	1900-01-01	406 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	772129281005	Logistics	Low	1	0
+CP0004291	Fajar Nugraha	Individual	Fajar Nugraha	1985-01-01	1900-01-01	622 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773715328538	Logistics	Low	1	0
+CP0004292	Adit Adinata	Individual	Adit Adinata	1985-01-01	1900-01-01	722 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779873288377	Manufacturing	Low	1	0
+CP0004293	PT Lesmana Synthetic	Company	Joko Lesmana	1900-01-01	2018-01-01	682 Synthetic Avenue	Yogyakarta	AE	AE	Bank Nusantara	779372715570	Construction	Low	0	1
+CP0004294	Laras Iskandar	Individual	Laras Iskandar	1985-01-01	1900-01-01	420 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770453078478	Retail	High	1	0
+CP0004295	PT Iskandar Synthetic	Company	Bagus Iskandar	1900-01-01	2018-01-01	31 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772428926321	Retail	Low	0	1
+CP0004296	Bima Setiawan	Individual	Bima Setiawan	1985-01-01	1900-01-01	851 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	770505477605	Manufacturing	Low	1	0
+CP0004297	PT Santoso Synthetic	Company	Andi Santoso	1900-01-01	2018-01-01	409 Synthetic Avenue	Surabaya	GB	GB	Bank Sentra	770329156344	Retail	Low	0	1
+CP0004298	Maya Chandra	Individual	Maya Chandra	1985-01-01	1900-01-01	185 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	775628830915	Retail	Medium	1	0
+CP0004299	Arif Chandra	Individual	Arif Chandra	1985-01-01	1900-01-01	130 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772576259029	Manufacturing	Low	1	0
+CP0004300	Joko Putra	Individual	Joko Putra	1985-01-01	1900-01-01	290 Synthetic Avenue	Makassar	JP	JP	Asia Commerce Bank	774700170219	Healthcare	High	1	0
+CP0004301	Fajar Putra	Individual	Fajar Putra	1985-01-01	1900-01-01	829 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	772412742307	Retail	High	1	0
+CP0004302	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	669 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770032446669	Healthcare	Low	1	0
+CP0004303	Laras Halim	Individual	Laras Halim	1985-01-01	1900-01-01	314 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777331816238	Retail	Low	1	0
+CP0004304	PT Yulianto Synthetic	Company	Dimas Yulianto	1900-01-01	2018-01-01	487 Synthetic Avenue	Semarang	JP	JP	Bank Sentra	778785153904	Construction	Low	0	1
+CP0004305	Teguh Yulianto	Individual	Teguh Yulianto	1985-01-01	1900-01-01	314 Synthetic Avenue	Medan	AE	AE	Bank Nusantara	773459974705	Manufacturing	Medium	1	0
+CP0004306	PT Mahendra Synthetic	Company	Gita Mahendra	1900-01-01	2018-01-01	138 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773600288050	Logistics	Low	0	1
+CP0004307	Joko Halim	Individual	Joko Halim	1985-01-01	1900-01-01	602 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776746752643	Technology	Low	1	0
+CP0004308	PT Santoso Synthetic	Company	Bima Santoso	1900-01-01	2018-01-01	44 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773154342156	Logistics	Low	0	1
+CP0004309	Dimas Chandra	Individual	Dimas Chandra	1985-01-01	1900-01-01	399 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	771454865721	Construction	High	1	0
+CP0004310	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	410 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778147617992	Technology	Low	1	0
+CP0004311	PT Santoso Synthetic	Company	Andi Santoso	1900-01-01	2018-01-01	393 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777318477476	Healthcare	Medium	0	1
+CP0004312	Indra Yulianto	Individual	Indra Yulianto	1985-01-01	1900-01-01	873 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776211041413	Logistics	Medium	1	0
+CP0004313	PT Siregar Synthetic	Company	Bagus Siregar	1900-01-01	2018-01-01	832 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776217618738	Technology	Low	0	1
+CP0004314	Joko Suryadi	Individual	Joko Suryadi	1985-01-01	1900-01-01	357 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770716053722	Manufacturing	High	1	0
+CP0004315	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	293 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	770196597378	Manufacturing	Low	1	0
+CP0004316	PT Setiawan Synthetic	Company	Joko Setiawan	1900-01-01	2018-01-01	661 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771473436328	Technology	Medium	0	1
+CP0004317	Andi Wibowo	Individual	Andi Wibowo	1985-01-01	1900-01-01	562 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	770489053486	Retail	Low	1	0
+CP0004318	Rani Suryadi	Individual	Rani Suryadi	1985-01-01	1900-01-01	468 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778716222817	Logistics	Medium	1	0
+CP0004319	Nadia Putra	Individual	Nadia Putra	1985-01-01	1900-01-01	351 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	778306456831	Logistics	Medium	1	0
+CP0004320	Kevin Halim	Individual	Kevin Halim	1985-01-01	1900-01-01	872 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777535385452	Technology	Low	1	0
+CP0004321	Kevin Santoso	Individual	Kevin Santoso	1985-01-01	1900-01-01	334 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777230577063	Logistics	Low	1	0
+CP0004322	PT Chandra Synthetic	Company	Rani Chandra	1900-01-01	2018-01-01	881 Synthetic Avenue	Medan	SG	SG	Bank Sentra	777821098045	Logistics	Low	0	1
+CP0004323	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	214 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775532001296	Healthcare	Low	1	0
+CP0004324	Kevin Firmansyah	Individual	Kevin Firmansyah	1985-01-01	1900-01-01	106 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772585854180	Logistics	Low	1	0
+CP0004325	Anisa Nugraha	Individual	Anisa Nugraha	1985-01-01	1900-01-01	753 Synthetic Avenue	Jakarta	JP	JP	Asia Commerce Bank	772943382163	Logistics	Medium	1	0
+CP0004326	Nadia Adinata	Individual	Nadia Adinata	1985-01-01	1900-01-01	401 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773929027148	Retail	Medium	1	0
+CP0004327	Kevin Gunawan	Individual	Kevin Gunawan	1985-01-01	1900-01-01	356 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771567669840	Healthcare	Medium	1	0
+CP0004328	Sari Darmawan	Individual	Sari Darmawan	1985-01-01	1900-01-01	645 Synthetic Avenue	Bandung	US	US	Bank Nusantara	779359084657	Logistics	Low	1	0
+CP0004329	Naufal Permana	Individual	Naufal Permana	1985-01-01	1900-01-01	638 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	775332995415	Logistics	High	1	0
+CP0004330	Rizky Rahardjo	Individual	Rizky Rahardjo	1985-01-01	1900-01-01	313 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774198152011	Manufacturing	Low	1	0
+CP0004331	PT Setiawan Synthetic	Company	Gita Setiawan	1900-01-01	2018-01-01	711 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771264901602	Retail	Low	0	1
+CP0004332	Gita Wibowo	Individual	Gita Wibowo	1985-01-01	1900-01-01	729 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772202988458	Retail	Low	1	0
+CP0004333	Rani Siregar	Individual	Rani Siregar	1985-01-01	1900-01-01	103 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	779931113064	Retail	Low	1	0
+CP0004334	Sari Firmansyah	Individual	Sari Firmansyah	1985-01-01	1900-01-01	599 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770289384333	Construction	Low	1	0
+CP0004335	Citra Yulianto	Individual	Citra Yulianto	1985-01-01	1900-01-01	872 Synthetic Avenue	Semarang	SG	SG	Bank Nusantara	775265026579	Technology	Low	1	0
+CP0004336	Dewi Darmawan	Individual	Dewi Darmawan	1985-01-01	1900-01-01	646 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775315455235	Healthcare	Low	1	0
+CP0004337	PT Darmawan Synthetic	Company	Anisa Darmawan	1900-01-01	2018-01-01	186 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777526039830	Logistics	Low	0	1
+CP0004338	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	537 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777779249907	Manufacturing	Medium	1	0
+CP0004339	Indra Nugraha	Individual	Indra Nugraha	1985-01-01	1900-01-01	745 Synthetic Avenue	Jakarta	SG	SG	Bank Sentra	777983078367	Logistics	Medium	1	0
+CP0004340	Raka Putra	Individual	Raka Putra	1985-01-01	1900-01-01	142 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	772311263207	Logistics	Medium	1	0
+CP0004341	Putri Setiawan	Individual	Putri Setiawan	1985-01-01	1900-01-01	169 Synthetic Avenue	Jakarta	AE	AE	Asia Commerce Bank	772012300439	Retail	Medium	1	0
+CP0004342	Bagus Nugraha	Individual	Bagus Nugraha	1985-01-01	1900-01-01	881 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779063733353	Healthcare	Low	1	0
+CP0004343	Bagus Hartono	Individual	Bagus Hartono	1985-01-01	1900-01-01	435 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771791422361	Technology	Medium	1	0
+CP0004344	PT Iskandar Synthetic	Company	Maya Iskandar	1900-01-01	2018-01-01	646 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771138804773	Logistics	High	0	1
+CP0004345	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	332 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771408837692	Logistics	Low	1	0
+CP0004346	Andi Iskandar	Individual	Andi Iskandar	1985-01-01	1900-01-01	893 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	772137787978	Healthcare	Low	1	0
+CP0004347	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	852 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	772724867125	Healthcare	Low	1	0
+CP0004348	PT Prakoso Synthetic	Company	Kevin Prakoso	1900-01-01	2018-01-01	403 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776051078014	Manufacturing	Low	0	1
+CP0004349	Farah Budiman	Individual	Farah Budiman	1985-01-01	1900-01-01	450 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779757459425	Construction	Medium	1	0
+CP0004350	Citra Mahendra	Individual	Citra Mahendra	1985-01-01	1900-01-01	713 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777535154296	Retail	Low	1	0
+CP0004351	Alya Firmansyah	Individual	Alya Firmansyah	1985-01-01	1900-01-01	111 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772131624898	Technology	Low	1	0
+CP0004352	Maya Putra	Individual	Maya Putra	1985-01-01	1900-01-01	607 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	778765411765	Manufacturing	Low	1	0
+CP0004353	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	396 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773019081678	Technology	Medium	1	0
+CP0004354	Rani Iskandar	Individual	Rani Iskandar	1985-01-01	1900-01-01	588 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	777733584512	Technology	Low	1	0
+CP0004355	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	663 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779225069807	Manufacturing	High	1	0
+CP0004356	Dewi Nugraha	Individual	Dewi Nugraha	1985-01-01	1900-01-01	96 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778845588479	Healthcare	Low	1	0
+CP0004357	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	430 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772759423793	Technology	Medium	1	0
+CP0004358	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	601 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774713988836	Logistics	Medium	1	0
+CP0004359	Fajar Santoso	Individual	Fajar Santoso	1985-01-01	1900-01-01	865 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770397774986	Manufacturing	Medium	1	0
+CP0004360	PT Prakoso Synthetic	Company	Kevin Prakoso	1900-01-01	2018-01-01	469 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778914505452	Logistics	Low	0	1
+CP0004361	Wulan Lesmana	Individual	Wulan Lesmana	1985-01-01	1900-01-01	691 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778451469687	Manufacturing	Low	1	0
+CP0004362	Sari Setiawan	Individual	Sari Setiawan	1985-01-01	1900-01-01	356 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776368143997	Logistics	Medium	1	0
+CP0004363	Eka Budiman	Individual	Eka Budiman	1985-01-01	1900-01-01	313 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	772856229057	Logistics	Low	1	0
+CP0004364	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	670 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	775445937472	Construction	Low	1	0
+CP0004365	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	4 Synthetic Avenue	Semarang	JP	JP	Asia Commerce Bank	772719554681	Healthcare	Medium	1	0
+CP0004366	Nadia Iskandar	Individual	Nadia Iskandar	1985-01-01	1900-01-01	372 Synthetic Avenue	Bandung	JP	JP	Asia Commerce Bank	774746175673	Healthcare	Medium	1	0
+CP0004367	PT Budiman Synthetic	Company	Kevin Budiman	1900-01-01	2018-01-01	406 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	776714762326	Healthcare	Low	0	1
+CP0004368	PT Firmansyah Synthetic	Company	Maya Firmansyah	1900-01-01	2018-01-01	204 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774298481423	Healthcare	Low	0	1
+CP0004369	Citra Wibowo	Individual	Citra Wibowo	1985-01-01	1900-01-01	509 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775453461282	Healthcare	Low	1	0
+CP0004370	Nadia Mahendra	Individual	Nadia Mahendra	1985-01-01	1900-01-01	351 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	776489620402	Construction	Low	1	0
+CP0004371	Joko Santoso	Individual	Joko Santoso	1985-01-01	1900-01-01	644 Synthetic Avenue	Semarang	AU	AU	Bank Sentra	772942136432	Manufacturing	Low	1	0
+CP0004372	Putri Gunawan	Individual	Putri Gunawan	1985-01-01	1900-01-01	34 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772689665193	Construction	Low	1	0
+CP0004373	Putri Halim	Individual	Putri Halim	1985-01-01	1900-01-01	179 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	777887618173	Manufacturing	Low	1	0
+CP0004374	Indra Santoso	Individual	Indra Santoso	1985-01-01	1900-01-01	324 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772336314393	Construction	Medium	1	0
+CP0004375	Intan Setiawan	Individual	Intan Setiawan	1985-01-01	1900-01-01	892 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773391969135	Manufacturing	Low	1	0
+CP0004376	Rizky Hartono	Individual	Rizky Hartono	1985-01-01	1900-01-01	133 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	778068340163	Logistics	Medium	1	0
+CP0004377	PT Mahendra Synthetic	Company	Maya Mahendra	1900-01-01	2018-01-01	360 Synthetic Avenue	Medan	ID	ID	Bank Sentra	779097914648	Manufacturing	Medium	0	1
+CP0004378	Adit Chandra	Individual	Adit Chandra	1985-01-01	1900-01-01	891 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774239811658	Healthcare	Low	1	0
+CP0004379	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	350 Synthetic Avenue	Denpasar	SG	SG	Bank Sentra	771349317497	Manufacturing	High	1	0
+CP0004380	Dimas Chandra	Individual	Dimas Chandra	1985-01-01	1900-01-01	248 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772818221523	Logistics	Low	1	0
+CP0004381	Dewi Firmansyah	Individual	Dewi Firmansyah	1985-01-01	1900-01-01	870 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771123445016	Manufacturing	Medium	1	0
+CP0004382	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	811 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778763606043	Logistics	Low	1	0
+CP0004383	Arif Adinata	Individual	Arif Adinata	1985-01-01	1900-01-01	624 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778477968337	Healthcare	Low	1	0
+CP0004384	PT Hartono Synthetic	Company	Rani Hartono	1900-01-01	2018-01-01	7 Synthetic Avenue	Yogyakarta	AE	AE	Asia Commerce Bank	771994573542	Logistics	Low	0	1
+CP0004385	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	795 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777298720318	Healthcare	Medium	1	0
+CP0004386	PT Iskandar Synthetic	Company	Hana Iskandar	1900-01-01	2018-01-01	134 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776619799140	Retail	Low	0	1
+CP0004387	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	116 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771883003590	Manufacturing	Low	1	0
+CP0004388	Hana Setiawan	Individual	Hana Setiawan	1985-01-01	1900-01-01	873 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770834001738	Technology	Medium	1	0
+CP0004389	Andi Nugraha	Individual	Andi Nugraha	1985-01-01	1900-01-01	472 Synthetic Avenue	Medan	ID	ID	Bank Sentra	774588028880	Construction	Low	1	0
+CP0004390	Laras Firmansyah	Individual	Laras Firmansyah	1985-01-01	1900-01-01	466 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	774200944126	Technology	Low	1	0
+CP0004391	Maya Kurniawan	Individual	Maya Kurniawan	1985-01-01	1900-01-01	82 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	775448362363	Healthcare	Medium	1	0
+CP0004392	Bima Chandra	Individual	Bima Chandra	1985-01-01	1900-01-01	595 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770496593935	Construction	Low	1	0
+CP0004393	Adit Kurniawan	Individual	Adit Kurniawan	1985-01-01	1900-01-01	598 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773261109818	Healthcare	Low	1	0
+CP0004394	Maya Adinata	Individual	Maya Adinata	1985-01-01	1900-01-01	455 Synthetic Avenue	Denpasar	AE	AE	Asia Commerce Bank	773368910030	Logistics	Low	1	0
+CP0004395	PT Chandra Synthetic	Company	Raka Chandra	1900-01-01	2018-01-01	638 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772692000504	Technology	Medium	0	1
+CP0004396	Maya Siregar	Individual	Maya Siregar	1985-01-01	1900-01-01	249 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776395410314	Retail	Low	1	0
+CP0004397	Bima Halim	Individual	Bima Halim	1985-01-01	1900-01-01	30 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	771017771139	Technology	Low	1	0
+CP0004398	PT Adinata Synthetic	Company	Rizky Adinata	1900-01-01	2018-01-01	170 Synthetic Avenue	Semarang	GB	GB	Bank Nusantara	775287699097	Healthcare	Low	0	1
+CP0004399	Naufal Darmawan	Individual	Naufal Darmawan	1985-01-01	1900-01-01	518 Synthetic Avenue	Denpasar	GB	GB	Bank Nusantara	777493480590	Healthcare	Low	1	0
+CP0004400	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	535 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770371474815	Construction	Medium	1	0
+CP0004401	PT Darmawan Synthetic	Company	Arif Darmawan	1900-01-01	2018-01-01	592 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773146869165	Logistics	Low	0	1
+CP0004402	Gita Setiawan	Individual	Gita Setiawan	1985-01-01	1900-01-01	609 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	770116561006	Manufacturing	Low	1	0
+CP0004403	PT Nugraha Synthetic	Company	Naufal Nugraha	1900-01-01	2018-01-01	77 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	775946715322	Logistics	Low	0	1
+CP0004404	PT Halim Synthetic	Company	Dimas Halim	1900-01-01	2018-01-01	279 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777927706116	Construction	Medium	0	1
+CP0004405	PT Darmawan Synthetic	Company	Farah Darmawan	1900-01-01	2018-01-01	104 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774782600272	Technology	Low	0	1
+CP0004406	Rizky Kurniawan	Individual	Rizky Kurniawan	1985-01-01	1900-01-01	339 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776788148056	Manufacturing	Medium	1	0
+CP0004407	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	536 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	773483923755	Construction	Low	1	0
+CP0004408	Bima Putra	Individual	Bima Putra	1985-01-01	1900-01-01	366 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779389420154	Logistics	Medium	1	0
+CP0004409	PT Budiman Synthetic	Company	Raka Budiman	1900-01-01	2018-01-01	199 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778127927227	Technology	Low	0	1
+CP0004410	PT Lesmana Synthetic	Company	Raka Lesmana	1900-01-01	2018-01-01	346 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	770428164201	Retail	Low	0	1
+CP0004411	Intan Putra	Individual	Intan Putra	1985-01-01	1900-01-01	682 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770101771226	Logistics	Low	1	0
+CP0004412	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	795 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773318171454	Manufacturing	High	1	0
+CP0004413	Bima Adinata	Individual	Bima Adinata	1985-01-01	1900-01-01	445 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776895877730	Logistics	Low	1	0
+CP0004414	Sari Lesmana	Individual	Sari Lesmana	1985-01-01	1900-01-01	247 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774520171501	Healthcare	Low	1	0
+CP0004415	Joko Chandra	Individual	Joko Chandra	1985-01-01	1900-01-01	32 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779367117537	Technology	Medium	1	0
+CP0004416	PT Prakoso Synthetic	Company	Farah Prakoso	1900-01-01	2018-01-01	811 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	772785444562	Construction	Low	0	1
+CP0004417	PT Firmansyah Synthetic	Company	Rani Firmansyah	1900-01-01	2018-01-01	272 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773140336970	Retail	Medium	0	1
+CP0004418	Raka Nugraha	Individual	Raka Nugraha	1985-01-01	1900-01-01	213 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	773138814298	Manufacturing	Medium	1	0
+CP0004419	Teguh Halim	Individual	Teguh Halim	1985-01-01	1900-01-01	859 Synthetic Avenue	Medan	SG	SG	Bank Sentra	772851023931	Technology	Low	1	0
+CP0004420	Sari Gunawan	Individual	Sari Gunawan	1985-01-01	1900-01-01	588 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	776711564430	Technology	High	1	0
+CP0004421	Andi Lesmana	Individual	Andi Lesmana	1985-01-01	1900-01-01	186 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	778498454970	Healthcare	Low	1	0
+CP0004422	Sari Darmawan	Individual	Sari Darmawan	1985-01-01	1900-01-01	591 Synthetic Avenue	Medan	AE	AE	Bank Nusantara	770111980631	Construction	Medium	1	0
+CP0004423	PT Rahardjo Synthetic	Company	Andi Rahardjo	1900-01-01	2018-01-01	752 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	772113393817	Logistics	Low	0	1
+CP0004424	Bagus Mahendra	Individual	Bagus Mahendra	1985-01-01	1900-01-01	764 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	773332251573	Manufacturing	Low	1	0
+CP0004425	Citra Permana	Individual	Citra Permana	1985-01-01	1900-01-01	569 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	776304609289	Retail	High	1	0
+CP0004426	Bagus Adinata	Individual	Bagus Adinata	1985-01-01	1900-01-01	634 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776926521890	Logistics	Low	1	0
+CP0004427	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	684 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	777479405851	Manufacturing	Low	1	0
+CP0004428	PT Adinata Synthetic	Company	Joko Adinata	1900-01-01	2018-01-01	584 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773136790788	Construction	Medium	0	1
+CP0004429	Alya Wibowo	Individual	Alya Wibowo	1985-01-01	1900-01-01	698 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	773341067553	Healthcare	Low	1	0
+CP0004430	PT Halim Synthetic	Company	Raka Halim	1900-01-01	2018-01-01	898 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770503779363	Healthcare	Low	0	1
+CP0004431	PT Putra Synthetic	Company	Joko Putra	1900-01-01	2018-01-01	366 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779604805071	Manufacturing	Low	0	1
+CP0004432	PT Adinata Synthetic	Company	Fajar Adinata	1900-01-01	2018-01-01	540 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	778182000826	Construction	Medium	0	1
+CP0004433	PT Darmawan Synthetic	Company	Sari Darmawan	1900-01-01	2018-01-01	449 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779833875724	Technology	Low	0	1
+CP0004434	PT Wibowo Synthetic	Company	Adit Wibowo	1900-01-01	2018-01-01	256 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775943227770	Manufacturing	Low	0	1
+CP0004435	PT Halim Synthetic	Company	Teguh Halim	1900-01-01	2018-01-01	835 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770746831237	Construction	Low	0	1
+CP0004436	PT Mahendra Synthetic	Company	Citra Mahendra	1900-01-01	2018-01-01	496 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	776976050906	Manufacturing	Low	0	1
+CP0004437	Bima Adinata	Individual	Bima Adinata	1985-01-01	1900-01-01	489 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774261540675	Retail	Low	1	0
+CP0004438	PT Prakoso Synthetic	Company	Putri Prakoso	1900-01-01	2018-01-01	509 Synthetic Avenue	Makassar	US	US	Asia Commerce Bank	771404792055	Logistics	Low	0	1
+CP0004439	Hana Rahardjo	Individual	Hana Rahardjo	1985-01-01	1900-01-01	149 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	775598657708	Manufacturing	Low	1	0
+CP0004440	PT Wibowo Synthetic	Company	Hana Wibowo	1900-01-01	2018-01-01	669 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	774708298628	Construction	Low	0	1
+CP0004441	PT Lesmana Synthetic	Company	Bima Lesmana	1900-01-01	2018-01-01	31 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778412144833	Technology	Low	0	1
+CP0004442	PT Setiawan Synthetic	Company	Sari Setiawan	1900-01-01	2018-01-01	397 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	772277259718	Construction	Low	0	1
+CP0004443	PT Firmansyah Synthetic	Company	Naufal Firmansyah	1900-01-01	2018-01-01	566 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	778551889919	Retail	Low	0	1
+CP0004444	Farah Wibowo	Individual	Farah Wibowo	1985-01-01	1900-01-01	676 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776154115637	Construction	Medium	1	0
+CP0004445	Hana Gunawan	Individual	Hana Gunawan	1985-01-01	1900-01-01	546 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770840653974	Healthcare	Low	1	0
+CP0004446	PT Gunawan Synthetic	Company	Joko Gunawan	1900-01-01	2018-01-01	680 Synthetic Avenue	Medan	SG	SG	Bank Sentra	770716425735	Healthcare	Low	0	1
+CP0004447	Raka Siregar	Individual	Raka Siregar	1985-01-01	1900-01-01	57 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	770226262140	Healthcare	Low	1	0
+CP0004448	Putri Adinata	Individual	Putri Adinata	1985-01-01	1900-01-01	165 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776938121146	Construction	Low	1	0
+CP0004449	PT Rahardjo Synthetic	Company	Naufal Rahardjo	1900-01-01	2018-01-01	663 Synthetic Avenue	Surabaya	GB	GB	Bank Sentra	772596224742	Retail	Low	0	1
+CP0004450	Andi Budiman	Individual	Andi Budiman	1985-01-01	1900-01-01	871 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774134410041	Healthcare	Low	1	0
+CP0004451	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	91 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770787407362	Technology	Low	1	0
+CP0004452	PT Nugraha Synthetic	Company	Laras Nugraha	1900-01-01	2018-01-01	75 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778478945644	Technology	Low	0	1
+CP0004453	Joko Permana	Individual	Joko Permana	1985-01-01	1900-01-01	785 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773359960532	Manufacturing	Low	1	0
+CP0004454	PT Nugraha Synthetic	Company	Maya Nugraha	1900-01-01	2018-01-01	420 Synthetic Avenue	Medan	ID	ID	Bank Sentra	778595339583	Technology	Low	0	1
+CP0004455	Bima Permana	Individual	Bima Permana	1985-01-01	1900-01-01	201 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	778302279270	Technology	Low	1	0
+CP0004456	Wulan Kurniawan	Individual	Wulan Kurniawan	1985-01-01	1900-01-01	744 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772202151936	Retail	Low	1	0
+CP0004457	Rani Gunawan	Individual	Rani Gunawan	1985-01-01	1900-01-01	34 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	771354873892	Manufacturing	Low	1	0
+CP0004458	PT Gunawan Synthetic	Company	Raka Gunawan	1900-01-01	2018-01-01	298 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	779445880482	Manufacturing	Low	0	1
+CP0004459	Citra Yulianto	Individual	Citra Yulianto	1985-01-01	1900-01-01	260 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779388404143	Construction	Medium	1	0
+CP0004460	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	118 Synthetic Avenue	Jakarta	AU	AU	Asia Commerce Bank	775505248703	Retail	Low	1	0
+CP0004461	PT Wijaya Synthetic	Company	Bagus Wijaya	1900-01-01	2018-01-01	289 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	779755027186	Healthcare	Medium	0	1
+CP0004462	PT Halim Synthetic	Company	Eka Halim	1900-01-01	2018-01-01	519 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	770165988583	Construction	Low	0	1
+CP0004463	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	501 Synthetic Avenue	Medan	MY	MY	Bank Sentra	774815182226	Healthcare	Low	1	0
+CP0004464	Farah Setiawan	Individual	Farah Setiawan	1985-01-01	1900-01-01	341 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	773469670788	Construction	High	1	0
+CP0004465	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	751 Synthetic Avenue	Surabaya	AU	AU	Asia Commerce Bank	776614584966	Healthcare	Low	1	0
+CP0004466	Bima Gunawan	Individual	Bima Gunawan	1985-01-01	1900-01-01	797 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	774327642026	Logistics	Medium	1	0
+CP0004467	Gita Suryadi	Individual	Gita Suryadi	1985-01-01	1900-01-01	294 Synthetic Avenue	Denpasar	US	US	Asia Commerce Bank	771517681608	Logistics	Medium	1	0
+CP0004468	Alya Suryadi	Individual	Alya Suryadi	1985-01-01	1900-01-01	810 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771849866773	Healthcare	Low	1	0
+CP0004469	Teguh Budiman	Individual	Teguh Budiman	1985-01-01	1900-01-01	565 Synthetic Avenue	Medan	US	US	Bank Nusantara	772596032457	Manufacturing	Low	1	0
+CP0004470	Andi Kurniawan	Individual	Andi Kurniawan	1985-01-01	1900-01-01	640 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	772620660271	Logistics	Low	1	0
+CP0004471	Arif Hartono	Individual	Arif Hartono	1985-01-01	1900-01-01	282 Synthetic Avenue	Denpasar	US	US	Bank Nusantara	772257520319	Retail	Medium	1	0
+CP0004472	Fajar Setiawan	Individual	Fajar Setiawan	1985-01-01	1900-01-01	363 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	772812661553	Logistics	Low	1	0
+CP0004473	Raka Wijaya	Individual	Raka Wijaya	1985-01-01	1900-01-01	140 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770233197408	Retail	Low	1	0
+CP0004474	PT Putra Synthetic	Company	Putri Putra	1900-01-01	2018-01-01	560 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773110920100	Retail	Medium	0	1
+CP0004475	PT Kurniawan Synthetic	Company	Farah Kurniawan	1900-01-01	2018-01-01	459 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	773424358623	Manufacturing	Low	0	1
+CP0004476	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	87 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778881169661	Manufacturing	Medium	1	0
+CP0004477	PT Wibowo Synthetic	Company	Naufal Wibowo	1900-01-01	2018-01-01	493 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773201195800	Technology	Medium	0	1
+CP0004478	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	257 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	775429322857	Logistics	High	1	0
+CP0004479	Gita Siregar	Individual	Gita Siregar	1985-01-01	1900-01-01	440 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770509877035	Technology	Medium	1	0
+CP0004480	PT Gunawan Synthetic	Company	Alya Gunawan	1900-01-01	2018-01-01	450 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773877876349	Construction	Low	0	1
+CP0004481	Gita Nugraha	Individual	Gita Nugraha	1985-01-01	1900-01-01	321 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779879868068	Manufacturing	Medium	1	0
+CP0004482	Naufal Wibowo	Individual	Naufal Wibowo	1985-01-01	1900-01-01	545 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775722238604	Technology	Low	1	0
+CP0004483	PT Siregar Synthetic	Company	Maya Siregar	1900-01-01	2018-01-01	11 Synthetic Avenue	Makassar	US	US	Bank Nusantara	770837369868	Construction	Low	0	1
+CP0004484	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	686 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774627709274	Retail	Low	1	0
+CP0004485	PT Suryadi Synthetic	Company	Andi Suryadi	1900-01-01	2018-01-01	311 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	779011760248	Technology	Low	0	1
+CP0004486	Wulan Kurniawan	Individual	Wulan Kurniawan	1985-01-01	1900-01-01	558 Synthetic Avenue	Makassar	GB	GB	Bank Sentra	774915946114	Construction	Low	1	0
+CP0004487	Bagus Chandra	Individual	Bagus Chandra	1985-01-01	1900-01-01	144 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779482855346	Manufacturing	Low	1	0
+CP0004488	PT Iskandar Synthetic	Company	Sari Iskandar	1900-01-01	2018-01-01	531 Synthetic Avenue	Yogyakarta	GB	GB	Bank Sentra	776488009902	Retail	Low	0	1
+CP0004489	Andi Prakoso	Individual	Andi Prakoso	1985-01-01	1900-01-01	545 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777127068712	Logistics	Low	1	0
+CP0004490	PT Chandra Synthetic	Company	Sari Chandra	1900-01-01	2018-01-01	54 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	772211189062	Technology	Low	0	1
+CP0004491	Citra Wibowo	Individual	Citra Wibowo	1985-01-01	1900-01-01	116 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	775877012508	Technology	Low	1	0
+CP0004492	Naufal Siregar	Individual	Naufal Siregar	1985-01-01	1900-01-01	74 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770528975301	Logistics	Low	1	0
+CP0004493	Andi Firmansyah	Individual	Andi Firmansyah	1985-01-01	1900-01-01	633 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	772124483186	Logistics	Low	1	0
+CP0004494	Indra Permana	Individual	Indra Permana	1985-01-01	1900-01-01	164 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772295954679	Retail	Low	1	0
+CP0004495	PT Rahardjo Synthetic	Company	Intan Rahardjo	1900-01-01	2018-01-01	451 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773929791565	Construction	Low	0	1
+CP0004496	Farah Chandra	Individual	Farah Chandra	1985-01-01	1900-01-01	480 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	774263306272	Logistics	Low	1	0
+CP0004497	Hana Yulianto	Individual	Hana Yulianto	1985-01-01	1900-01-01	754 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	773482835003	Technology	Medium	1	0
+CP0004498	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	704 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	773373782271	Retail	High	1	0
+CP0004499	Teguh Rahardjo	Individual	Teguh Rahardjo	1985-01-01	1900-01-01	427 Synthetic Avenue	Bandung	US	US	Bank Sentra	770617312105	Technology	Low	1	0
+CP0004500	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	541 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777775206899	Construction	Low	1	0
+CP0004501	Maya Darmawan	Individual	Maya Darmawan	1985-01-01	1900-01-01	775 Synthetic Avenue	Jakarta	US	US	Bank Sentra	775678634454	Logistics	Medium	1	0
+CP0004502	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	33 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772819091770	Logistics	Medium	1	0
+CP0004503	Maya Chandra	Individual	Maya Chandra	1985-01-01	1900-01-01	312 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773090968497	Manufacturing	Low	1	0
+CP0004504	Maya Putra	Individual	Maya Putra	1985-01-01	1900-01-01	471 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777264596343	Logistics	Medium	1	0
+CP0004505	Nadia Darmawan	Individual	Nadia Darmawan	1985-01-01	1900-01-01	225 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	773112576115	Logistics	Low	1	0
+CP0004506	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	347 Synthetic Avenue	Medan	SG	SG	Bank Sentra	776495999900	Technology	High	1	0
+CP0004507	PT Kurniawan Synthetic	Company	Adit Kurniawan	1900-01-01	2018-01-01	523 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776593216376	Logistics	Low	0	1
+CP0004508	PT Prakoso Synthetic	Company	Bima Prakoso	1900-01-01	2018-01-01	126 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774177502572	Logistics	Low	0	1
+CP0004509	PT Mahendra Synthetic	Company	Rizky Mahendra	1900-01-01	2018-01-01	344 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	775410211433	Logistics	Low	0	1
+CP0004510	PT Adinata Synthetic	Company	Laras Adinata	1900-01-01	2018-01-01	688 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777523109875	Technology	Medium	0	1
+CP0004511	Anisa Halim	Individual	Anisa Halim	1985-01-01	1900-01-01	815 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777844417165	Construction	Low	1	0
+CP0004512	PT Santoso Synthetic	Company	Alya Santoso	1900-01-01	2018-01-01	887 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775592257883	Healthcare	Low	0	1
+CP0004513	Indra Gunawan	Individual	Indra Gunawan	1985-01-01	1900-01-01	830 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771457069115	Retail	Low	1	0
+CP0004514	Citra Permana	Individual	Citra Permana	1985-01-01	1900-01-01	429 Synthetic Avenue	Semarang	US	US	Bank Sentra	778743639859	Logistics	Medium	1	0
+CP0004515	PT Mahendra Synthetic	Company	Anisa Mahendra	1900-01-01	2018-01-01	210 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	776404729327	Technology	Medium	0	1
+CP0004516	Andi Darmawan	Individual	Andi Darmawan	1985-01-01	1900-01-01	832 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777326070241	Technology	Low	1	0
+CP0004517	Wulan Setiawan	Individual	Wulan Setiawan	1985-01-01	1900-01-01	371 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	778040727247	Logistics	Medium	1	0
+CP0004518	Dewi Gunawan	Individual	Dewi Gunawan	1985-01-01	1900-01-01	31 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	775451481672	Technology	Medium	1	0
+CP0004519	PT Prakoso Synthetic	Company	Fajar Prakoso	1900-01-01	2018-01-01	758 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779433401320	Technology	High	0	1
+CP0004520	Wulan Prakoso	Individual	Wulan Prakoso	1985-01-01	1900-01-01	550 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	778748703964	Manufacturing	Low	1	0
+CP0004521	Adit Mahendra	Individual	Adit Mahendra	1985-01-01	1900-01-01	457 Synthetic Avenue	Medan	ID	ID	Bank Sentra	772792092490	Technology	Low	1	0
+CP0004522	Alya Suryadi	Individual	Alya Suryadi	1985-01-01	1900-01-01	465 Synthetic Avenue	Jakarta	SG	SG	Asia Commerce Bank	775179287012	Healthcare	Low	1	0
+CP0004523	PT Iskandar Synthetic	Company	Kevin Iskandar	1900-01-01	2018-01-01	410 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771277078114	Retail	Low	0	1
+CP0004524	Farah Nugraha	Individual	Farah Nugraha	1985-01-01	1900-01-01	557 Synthetic Avenue	Surabaya	US	US	Bank Sentra	776714367339	Manufacturing	Low	1	0
+CP0004525	PT Darmawan Synthetic	Company	Arif Darmawan	1900-01-01	2018-01-01	791 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	772566806266	Retail	Medium	0	1
+CP0004526	PT Putra Synthetic	Company	Joko Putra	1900-01-01	2018-01-01	746 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771168064876	Retail	Low	0	1
+CP0004527	PT Permana Synthetic	Company	Nadia Permana	1900-01-01	2018-01-01	545 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	776376032315	Manufacturing	Medium	0	1
+CP0004528	PT Siregar Synthetic	Company	Citra Siregar	1900-01-01	2018-01-01	871 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779082358433	Construction	Low	0	1
+CP0004529	Citra Permana	Individual	Citra Permana	1985-01-01	1900-01-01	227 Synthetic Avenue	Yogyakarta	MY	MY	Bank Nusantara	771753240558	Technology	Low	1	0
+CP0004530	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	520 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	774171418441	Logistics	Low	1	0
+CP0004531	Sari Iskandar	Individual	Sari Iskandar	1985-01-01	1900-01-01	461 Synthetic Avenue	Medan	AE	AE	Bank Sentra	771725876953	Healthcare	Low	1	0
+CP0004532	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	107 Synthetic Avenue	Yogyakarta	US	US	Bank Nusantara	778640202700	Manufacturing	Low	0	1
+CP0004533	PT Kurniawan Synthetic	Company	Indra Kurniawan	1900-01-01	2018-01-01	795 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	779194364599	Healthcare	High	0	1
+CP0004534	Anisa Lesmana	Individual	Anisa Lesmana	1985-01-01	1900-01-01	273 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	777234639685	Logistics	Low	1	0
+CP0004535	Andi Putra	Individual	Andi Putra	1985-01-01	1900-01-01	392 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777890447060	Retail	Low	1	0
+CP0004536	Sari Hartono	Individual	Sari Hartono	1985-01-01	1900-01-01	315 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778953803450	Retail	Low	1	0
+CP0004537	PT Suryadi Synthetic	Company	Intan Suryadi	1900-01-01	2018-01-01	678 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773638110754	Healthcare	Low	0	1
+CP0004538	Wulan Chandra	Individual	Wulan Chandra	1985-01-01	1900-01-01	415 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779213446973	Technology	Medium	1	0
+CP0004539	Putri Permana	Individual	Putri Permana	1985-01-01	1900-01-01	471 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	776402711746	Construction	Medium	1	0
+CP0004540	PT Budiman Synthetic	Company	Hana Budiman	1900-01-01	2018-01-01	21 Synthetic Avenue	Yogyakarta	AE	AE	Bank Nusantara	775809202948	Healthcare	Low	0	1
+CP0004541	Rizky Adinata	Individual	Rizky Adinata	1985-01-01	1900-01-01	546 Synthetic Avenue	Jakarta	AU	AU	Bank Sentra	772838474377	Retail	Low	1	0
+CP0004542	Bagus Putra	Individual	Bagus Putra	1985-01-01	1900-01-01	417 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	773536330071	Technology	Low	1	0
+CP0004543	Kevin Permana	Individual	Kevin Permana	1985-01-01	1900-01-01	733 Synthetic Avenue	Surabaya	SG	SG	Bank Nusantara	770679430861	Logistics	Medium	1	0
+CP0004544	Putri Chandra	Individual	Putri Chandra	1985-01-01	1900-01-01	152 Synthetic Avenue	Semarang	AU	AU	Asia Commerce Bank	778239971305	Construction	Medium	1	0
+CP0004545	PT Lesmana Synthetic	Company	Nadia Lesmana	1900-01-01	2018-01-01	101 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	773484509747	Technology	Low	0	1
+CP0004546	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	803 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	772589705552	Manufacturing	Medium	1	0
+CP0004547	PT Nugraha Synthetic	Company	Maya Nugraha	1900-01-01	2018-01-01	438 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	776546846830	Construction	Medium	0	1
+CP0004548	PT Halim Synthetic	Company	Eka Halim	1900-01-01	2018-01-01	85 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	773209208645	Manufacturing	Low	0	1
+CP0004549	Joko Chandra	Individual	Joko Chandra	1985-01-01	1900-01-01	174 Synthetic Avenue	Makassar	AU	AU	Bank Sentra	777843336499	Healthcare	Low	1	0
+CP0004550	Andi Setiawan	Individual	Andi Setiawan	1985-01-01	1900-01-01	357 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770521367367	Logistics	Medium	1	0
+CP0004551	Adit Halim	Individual	Adit Halim	1985-01-01	1900-01-01	193 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778934164158	Construction	Medium	1	0
+CP0004552	Hana Budiman	Individual	Hana Budiman	1985-01-01	1900-01-01	6 Synthetic Avenue	Makassar	JP	JP	Asia Commerce Bank	775736090897	Construction	Medium	1	0
+CP0004553	PT Halim Synthetic	Company	Citra Halim	1900-01-01	2018-01-01	754 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	773072230975	Logistics	High	0	1
+CP0004554	PT Darmawan Synthetic	Company	Dimas Darmawan	1900-01-01	2018-01-01	96 Synthetic Avenue	Yogyakarta	US	US	Bank Sentra	776383833050	Retail	Low	0	1
+CP0004555	PT Prakoso Synthetic	Company	Laras Prakoso	1900-01-01	2018-01-01	157 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778062477174	Construction	Medium	0	1
+CP0004556	PT Siregar Synthetic	Company	Bagus Siregar	1900-01-01	2018-01-01	340 Synthetic Avenue	Jakarta	MY	MY	Asia Commerce Bank	777921972302	Healthcare	Low	0	1
+CP0004557	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	724 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777050620823	Logistics	Low	1	0
+CP0004558	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	721 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773860340850	Retail	Medium	1	0
+CP0004559	Andi Firmansyah	Individual	Andi Firmansyah	1985-01-01	1900-01-01	712 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	777725417062	Healthcare	Low	1	0
+CP0004560	Nadia Lesmana	Individual	Nadia Lesmana	1985-01-01	1900-01-01	728 Synthetic Avenue	Surabaya	SG	SG	Asia Commerce Bank	771799885007	Retail	Medium	1	0
+CP0004561	Raka Mahendra	Individual	Raka Mahendra	1985-01-01	1900-01-01	369 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779157912317	Technology	Low	1	0
+CP0004562	PT Halim Synthetic	Company	Putri Halim	1900-01-01	2018-01-01	493 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773432307252	Technology	Medium	0	1
+CP0004563	Adit Suryadi	Individual	Adit Suryadi	1985-01-01	1900-01-01	89 Synthetic Avenue	Jakarta	MY	MY	Bank Nusantara	773833637888	Retail	Medium	1	0
+CP0004564	Nadia Gunawan	Individual	Nadia Gunawan	1985-01-01	1900-01-01	661 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778076151194	Technology	Low	1	0
+CP0004565	Nadia Firmansyah	Individual	Nadia Firmansyah	1985-01-01	1900-01-01	563 Synthetic Avenue	Denpasar	GB	GB	Asia Commerce Bank	776220880786	Manufacturing	High	1	0
+CP0004566	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	745 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771927235021	Healthcare	Low	1	0
+CP0004567	PT Gunawan Synthetic	Company	Rizky Gunawan	1900-01-01	2018-01-01	465 Synthetic Avenue	Jakarta	GB	GB	Bank Sentra	773348651618	Healthcare	Low	0	1
+CP0004568	Nadia Nugraha	Individual	Nadia Nugraha	1985-01-01	1900-01-01	534 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	772295661896	Retail	Medium	1	0
+CP0004569	Dimas Suryadi	Individual	Dimas Suryadi	1985-01-01	1900-01-01	566 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772746805329	Manufacturing	Medium	1	0
+CP0004570	Dimas Prakoso	Individual	Dimas Prakoso	1985-01-01	1900-01-01	759 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771878528943	Technology	Medium	1	0
+CP0004571	PT Wijaya Synthetic	Company	Raka Wijaya	1900-01-01	2018-01-01	62 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	775895791350	Construction	Low	0	1
+CP0004572	Fajar Prakoso	Individual	Fajar Prakoso	1985-01-01	1900-01-01	455 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778041084872	Healthcare	Low	1	0
+CP0004573	Dewi Nugraha	Individual	Dewi Nugraha	1985-01-01	1900-01-01	610 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	779522118680	Technology	Low	1	0
+CP0004574	PT Firmansyah Synthetic	Company	Dewi Firmansyah	1900-01-01	2018-01-01	477 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770665913239	Construction	Low	0	1
+CP0004575	Alya Santoso	Individual	Alya Santoso	1985-01-01	1900-01-01	891 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776919741635	Healthcare	High	1	0
+CP0004576	PT Halim Synthetic	Company	Naufal Halim	1900-01-01	2018-01-01	113 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777367497088	Healthcare	Low	0	1
+CP0004577	Putri Prakoso	Individual	Putri Prakoso	1985-01-01	1900-01-01	240 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772437149059	Manufacturing	Low	1	0
+CP0004578	PT Suryadi Synthetic	Company	Hana Suryadi	1900-01-01	2018-01-01	134 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775034129491	Logistics	Low	0	1
+CP0004579	Kevin Darmawan	Individual	Kevin Darmawan	1985-01-01	1900-01-01	89 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	776769321531	Manufacturing	Low	1	0
+CP0004580	PT Hartono Synthetic	Company	Citra Hartono	1900-01-01	2018-01-01	408 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779886362262	Logistics	Low	0	1
+CP0004581	Hana Suryadi	Individual	Hana Suryadi	1985-01-01	1900-01-01	155 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	772148721445	Construction	Low	1	0
+CP0004582	PT Chandra Synthetic	Company	Hana Chandra	1900-01-01	2018-01-01	710 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	776283065255	Logistics	Low	0	1
+CP0004583	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	310 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	776579509667	Construction	Low	1	0
+CP0004584	PT Kurniawan Synthetic	Company	Andi Kurniawan	1900-01-01	2018-01-01	88 Synthetic Avenue	Yogyakarta	SG	SG	Asia Commerce Bank	772966430587	Technology	Low	0	1
+CP0004585	Hana Hartono	Individual	Hana Hartono	1985-01-01	1900-01-01	111 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773914071463	Healthcare	Medium	1	0
+CP0004586	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	351 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	777522383550	Logistics	Low	1	0
+CP0004587	Teguh Gunawan	Individual	Teguh Gunawan	1985-01-01	1900-01-01	407 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	774769126296	Logistics	Medium	1	0
+CP0004588	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	116 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	777741535765	Technology	Low	1	0
+CP0004589	Maya Santoso	Individual	Maya Santoso	1985-01-01	1900-01-01	156 Synthetic Avenue	Yogyakarta	JP	JP	Asia Commerce Bank	774112418346	Technology	Low	1	0
+CP0004590	PT Budiman Synthetic	Company	Rizky Budiman	1900-01-01	2018-01-01	77 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779864423554	Logistics	High	0	1
+CP0004591	PT Kurniawan Synthetic	Company	Fajar Kurniawan	1900-01-01	2018-01-01	854 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777645069633	Healthcare	Low	0	1
+CP0004592	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	57 Synthetic Avenue	Bandung	GB	GB	Asia Commerce Bank	771982175482	Logistics	Low	1	0
+CP0004593	Arif Prakoso	Individual	Arif Prakoso	1985-01-01	1900-01-01	213 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	772694142898	Logistics	High	1	0
+CP0004594	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	809 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770943177796	Technology	Low	1	0
+CP0004595	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	804 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778402122256	Logistics	Low	1	0
+CP0004596	Rani Iskandar	Individual	Rani Iskandar	1985-01-01	1900-01-01	422 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775814439084	Construction	Low	1	0
+CP0004597	Bagus Siregar	Individual	Bagus Siregar	1985-01-01	1900-01-01	883 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	770145503082	Retail	Low	1	0
+CP0004598	Alya Budiman	Individual	Alya Budiman	1985-01-01	1900-01-01	19 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	775783099764	Construction	High	1	0
+CP0004599	Naufal Gunawan	Individual	Naufal Gunawan	1985-01-01	1900-01-01	387 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779832171886	Technology	Low	1	0
+CP0004600	Indra Wibowo	Individual	Indra Wibowo	1985-01-01	1900-01-01	100 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774191030721	Construction	Low	1	0
+CP0004601	Andi Kurniawan	Individual	Andi Kurniawan	1985-01-01	1900-01-01	207 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775568985269	Technology	Medium	1	0
+CP0004602	Bagus Wijaya	Individual	Bagus Wijaya	1985-01-01	1900-01-01	123 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774287328223	Retail	Low	1	0
+CP0004603	Arif Setiawan	Individual	Arif Setiawan	1985-01-01	1900-01-01	39 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777669710628	Construction	Medium	1	0
+CP0004604	PT Suryadi Synthetic	Company	Alya Suryadi	1900-01-01	2018-01-01	776 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	777256176806	Technology	Medium	0	1
+CP0004605	Andi Hartono	Individual	Andi Hartono	1985-01-01	1900-01-01	16 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	775930541455	Technology	Medium	1	0
+CP0004606	Indra Halim	Individual	Indra Halim	1985-01-01	1900-01-01	841 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770496826538	Construction	Low	1	0
+CP0004607	PT Putra Synthetic	Company	Raka Putra	1900-01-01	2018-01-01	596 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	774794839904	Manufacturing	Low	0	1
+CP0004608	Teguh Firmansyah	Individual	Teguh Firmansyah	1985-01-01	1900-01-01	701 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	779440168284	Construction	Low	1	0
+CP0004609	Naufal Setiawan	Individual	Naufal Setiawan	1985-01-01	1900-01-01	866 Synthetic Avenue	Surabaya	US	US	Bank Sentra	779623090855	Manufacturing	Low	1	0
+CP0004610	Bima Iskandar	Individual	Bima Iskandar	1985-01-01	1900-01-01	24 Synthetic Avenue	Bandung	GB	GB	Bank Nusantara	772472163133	Construction	Medium	1	0
+CP0004611	PT Siregar Synthetic	Company	Farah Siregar	1900-01-01	2018-01-01	720 Synthetic Avenue	Bandung	AE	AE	Bank Nusantara	776540631193	Manufacturing	Low	0	1
+CP0004612	Dimas Wijaya	Individual	Dimas Wijaya	1985-01-01	1900-01-01	582 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772754687723	Manufacturing	Low	1	0
+CP0004613	Raka Iskandar	Individual	Raka Iskandar	1985-01-01	1900-01-01	349 Synthetic Avenue	Makassar	JP	JP	Bank Nusantara	778585804302	Manufacturing	High	1	0
+CP0004614	Arif Wibowo	Individual	Arif Wibowo	1985-01-01	1900-01-01	115 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770583501533	Technology	Low	1	0
+CP0004615	Indra Rahardjo	Individual	Indra Rahardjo	1985-01-01	1900-01-01	403 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	779254964873	Retail	Low	1	0
+CP0004616	PT Permana Synthetic	Company	Fajar Permana	1900-01-01	2018-01-01	9 Synthetic Avenue	Yogyakarta	MY	MY	Asia Commerce Bank	777468160005	Retail	Low	0	1
+CP0004617	PT Lesmana Synthetic	Company	Bagus Lesmana	1900-01-01	2018-01-01	244 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777226294029	Retail	Low	0	1
+CP0004618	Kevin Halim	Individual	Kevin Halim	1985-01-01	1900-01-01	430 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	777241100666	Construction	Medium	1	0
+CP0004619	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	873 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	777759054096	Logistics	High	1	0
+CP0004620	Teguh Halim	Individual	Teguh Halim	1985-01-01	1900-01-01	353 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	772021888390	Healthcare	Medium	1	0
+CP0004621	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	149 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774692578018	Technology	Medium	1	0
+CP0004622	Adit Lesmana	Individual	Adit Lesmana	1985-01-01	1900-01-01	543 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	770527381970	Healthcare	Low	1	0
+CP0004623	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	662 Synthetic Avenue	Surabaya	GB	GB	Asia Commerce Bank	770325193260	Logistics	Medium	1	0
+CP0004624	Alya Siregar	Individual	Alya Siregar	1985-01-01	1900-01-01	834 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	770008672579	Construction	Low	1	0
+CP0004625	PT Nugraha Synthetic	Company	Intan Nugraha	1900-01-01	2018-01-01	222 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	771962498314	Manufacturing	Low	0	1
+CP0004626	Dimas Iskandar	Individual	Dimas Iskandar	1985-01-01	1900-01-01	186 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773209992493	Manufacturing	High	1	0
+CP0004627	Kevin Prakoso	Individual	Kevin Prakoso	1985-01-01	1900-01-01	711 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	771736818906	Construction	High	1	0
+CP0004628	PT Iskandar Synthetic	Company	Maya Iskandar	1900-01-01	2018-01-01	167 Synthetic Avenue	Surabaya	GB	GB	Bank Nusantara	779242456033	Healthcare	Low	0	1
+CP0004629	Arif Halim	Individual	Arif Halim	1985-01-01	1900-01-01	135 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774713803017	Retail	Medium	1	0
+CP0004630	Bagus Gunawan	Individual	Bagus Gunawan	1985-01-01	1900-01-01	9 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772014448785	Retail	Low	1	0
+CP0004631	PT Adinata Synthetic	Company	Raka Adinata	1900-01-01	2018-01-01	778 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	777842247546	Construction	Low	0	1
+CP0004632	Hana Wibowo	Individual	Hana Wibowo	1985-01-01	1900-01-01	18 Synthetic Avenue	Jakarta	US	US	Bank Nusantara	779271153672	Healthcare	Low	1	0
+CP0004633	Hana Iskandar	Individual	Hana Iskandar	1985-01-01	1900-01-01	235 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775693671087	Retail	High	1	0
+CP0004634	PT Santoso Synthetic	Company	Bima Santoso	1900-01-01	2018-01-01	652 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774959082265	Construction	Medium	0	1
+CP0004635	PT Iskandar Synthetic	Company	Rizky Iskandar	1900-01-01	2018-01-01	648 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778225265535	Construction	Low	0	1
+CP0004636	Farah Gunawan	Individual	Farah Gunawan	1985-01-01	1900-01-01	538 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777989003688	Construction	Low	1	0
+CP0004637	Raka Gunawan	Individual	Raka Gunawan	1985-01-01	1900-01-01	115 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	773534516340	Healthcare	Medium	1	0
+CP0004638	Rizky Nugraha	Individual	Rizky Nugraha	1985-01-01	1900-01-01	885 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770769158138	Technology	Medium	1	0
+CP0004639	PT Setiawan Synthetic	Company	Laras Setiawan	1900-01-01	2018-01-01	543 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776923788177	Retail	Low	0	1
+CP0004640	Citra Halim	Individual	Citra Halim	1985-01-01	1900-01-01	503 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	777615059472	Manufacturing	Low	1	0
+CP0004641	PT Adinata Synthetic	Company	Gita Adinata	1900-01-01	2018-01-01	56 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774783833325	Manufacturing	Low	0	1
+CP0004642	Farah Iskandar	Individual	Farah Iskandar	1985-01-01	1900-01-01	712 Synthetic Avenue	Denpasar	JP	JP	Asia Commerce Bank	774983686193	Healthcare	Medium	1	0
+CP0004643	Bagus Adinata	Individual	Bagus Adinata	1985-01-01	1900-01-01	305 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772132457233	Technology	Low	1	0
+CP0004644	PT Prakoso Synthetic	Company	Kevin Prakoso	1900-01-01	2018-01-01	102 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	779441985164	Manufacturing	Low	0	1
+CP0004645	Teguh Adinata	Individual	Teguh Adinata	1985-01-01	1900-01-01	724 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	773569490405	Construction	Low	1	0
+CP0004646	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	324 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773801928257	Retail	Low	1	0
+CP0004647	PT Halim Synthetic	Company	Rani Halim	1900-01-01	2018-01-01	368 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779012011579	Construction	Medium	0	1
+CP0004648	Wulan Mahendra	Individual	Wulan Mahendra	1985-01-01	1900-01-01	196 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774480923140	Healthcare	Low	1	0
+CP0004649	Farah Chandra	Individual	Farah Chandra	1985-01-01	1900-01-01	47 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779405604947	Healthcare	Low	1	0
+CP0004650	Citra Iskandar	Individual	Citra Iskandar	1985-01-01	1900-01-01	725 Synthetic Avenue	Surabaya	AE	AE	Bank Nusantara	774844353329	Construction	Low	1	0
+CP0004651	Rizky Budiman	Individual	Rizky Budiman	1985-01-01	1900-01-01	352 Synthetic Avenue	Jakarta	GB	GB	Bank Sentra	775897362047	Healthcare	Low	1	0
+CP0004652	Bima Chandra	Individual	Bima Chandra	1985-01-01	1900-01-01	247 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771865030665	Construction	Low	1	0
+CP0004653	Dewi Gunawan	Individual	Dewi Gunawan	1985-01-01	1900-01-01	176 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777498697033	Healthcare	Low	1	0
+CP0004654	PT Hartono Synthetic	Company	Farah Hartono	1900-01-01	2018-01-01	236 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	777814154853	Retail	Low	0	1
+CP0004655	Bagus Mahendra	Individual	Bagus Mahendra	1985-01-01	1900-01-01	510 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	775827745434	Logistics	Medium	1	0
+CP0004656	Wulan Darmawan	Individual	Wulan Darmawan	1985-01-01	1900-01-01	277 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775771499704	Construction	Low	1	0
+CP0004657	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	583 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	771317228618	Manufacturing	Low	1	0
+CP0004658	PT Wibowo Synthetic	Company	Andi Wibowo	1900-01-01	2018-01-01	218 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	775159612032	Logistics	Low	0	1
+CP0004659	Adit Santoso	Individual	Adit Santoso	1985-01-01	1900-01-01	197 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	776977239095	Healthcare	Medium	1	0
+CP0004660	Maya Santoso	Individual	Maya Santoso	1985-01-01	1900-01-01	560 Synthetic Avenue	Surabaya	GB	GB	Bank Nusantara	774301185320	Technology	Low	1	0
+CP0004661	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	147 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	776590024119	Construction	Medium	1	0
+CP0004662	Alya Halim	Individual	Alya Halim	1985-01-01	1900-01-01	362 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778215455940	Logistics	Low	1	0
+CP0004663	Rani Permana	Individual	Rani Permana	1985-01-01	1900-01-01	362 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774624070096	Logistics	Low	1	0
+CP0004664	PT Chandra Synthetic	Company	Alya Chandra	1900-01-01	2018-01-01	771 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773125536745	Technology	Low	0	1
+CP0004665	PT Firmansyah Synthetic	Company	Eka Firmansyah	1900-01-01	2018-01-01	157 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	772494273442	Logistics	Medium	0	1
+CP0004666	Citra Kurniawan	Individual	Citra Kurniawan	1985-01-01	1900-01-01	856 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	774945963670	Technology	Low	1	0
+CP0004667	Hana Halim	Individual	Hana Halim	1985-01-01	1900-01-01	204 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	770596945233	Manufacturing	Low	1	0
+CP0004668	Farah Darmawan	Individual	Farah Darmawan	1985-01-01	1900-01-01	823 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	778023101523	Technology	Low	1	0
+CP0004669	PT Santoso Synthetic	Company	Raka Santoso	1900-01-01	2018-01-01	556 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	779080176043	Healthcare	Low	0	1
+CP0004670	Gita Budiman	Individual	Gita Budiman	1985-01-01	1900-01-01	757 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777144252406	Healthcare	Low	1	0
+CP0004671	Kevin Budiman	Individual	Kevin Budiman	1985-01-01	1900-01-01	409 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	778739222524	Healthcare	Low	1	0
+CP0004672	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	331 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771781880459	Healthcare	Low	1	0
+CP0004673	PT Chandra Synthetic	Company	Indra Chandra	1900-01-01	2018-01-01	631 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778831789726	Healthcare	High	0	1
+CP0004674	Bima Halim	Individual	Bima Halim	1985-01-01	1900-01-01	101 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	779217216581	Manufacturing	Low	1	0
+CP0004675	Teguh Iskandar	Individual	Teguh Iskandar	1985-01-01	1900-01-01	873 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	779404749538	Healthcare	Low	1	0
+CP0004676	Maya Budiman	Individual	Maya Budiman	1985-01-01	1900-01-01	895 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775671292022	Technology	Low	1	0
+CP0004677	Raka Firmansyah	Individual	Raka Firmansyah	1985-01-01	1900-01-01	613 Synthetic Avenue	Semarang	JP	JP	Bank Nusantara	774109635128	Logistics	Low	1	0
+CP0004678	PT Darmawan Synthetic	Company	Sari Darmawan	1900-01-01	2018-01-01	17 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773036003334	Healthcare	Low	0	1
+CP0004679	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	804 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777152582846	Technology	Low	1	0
+CP0004680	Gita Prakoso	Individual	Gita Prakoso	1985-01-01	1900-01-01	362 Synthetic Avenue	Semarang	AU	AU	Bank Nusantara	775319298039	Construction	High	1	0
+CP0004681	Arif Wijaya	Individual	Arif Wijaya	1985-01-01	1900-01-01	3 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	771348133515	Retail	Low	1	0
+CP0004682	PT Permana Synthetic	Company	Anisa Permana	1900-01-01	2018-01-01	607 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775012355482	Retail	Low	0	1
+CP0004683	Rani Wibowo	Individual	Rani Wibowo	1985-01-01	1900-01-01	159 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	775182404513	Logistics	Medium	1	0
+CP0004684	PT Santoso Synthetic	Company	Intan Santoso	1900-01-01	2018-01-01	19 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778424259758	Retail	Medium	0	1
+CP0004685	Maya Hartono	Individual	Maya Hartono	1985-01-01	1900-01-01	428 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	777959566909	Logistics	Low	1	0
+CP0004686	Fajar Halim	Individual	Fajar Halim	1985-01-01	1900-01-01	265 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	775271294307	Manufacturing	Medium	1	0
+CP0004687	Andi Halim	Individual	Andi Halim	1985-01-01	1900-01-01	269 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	771856856675	Manufacturing	Low	1	0
+CP0004688	Wulan Adinata	Individual	Wulan Adinata	1985-01-01	1900-01-01	218 Synthetic Avenue	Surabaya	US	US	Asia Commerce Bank	775933414609	Logistics	Low	1	0
+CP0004689	Anisa Suryadi	Individual	Anisa Suryadi	1985-01-01	1900-01-01	163 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777360495900	Healthcare	Low	1	0
+CP0004690	PT Yulianto Synthetic	Company	Dimas Yulianto	1900-01-01	2018-01-01	130 Synthetic Avenue	Medan	US	US	Bank Sentra	779031257323	Logistics	Medium	0	1
+CP0004691	PT Halim Synthetic	Company	Hana Halim	1900-01-01	2018-01-01	747 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	773416616447	Healthcare	Low	0	1
+CP0004692	Andi Rahardjo	Individual	Andi Rahardjo	1985-01-01	1900-01-01	661 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	778842215217	Construction	Low	1	0
+CP0004693	Citra Siregar	Individual	Citra Siregar	1985-01-01	1900-01-01	63 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777285229482	Healthcare	Low	1	0
+CP0004694	Indra Suryadi	Individual	Indra Suryadi	1985-01-01	1900-01-01	479 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777479185312	Technology	Low	1	0
+CP0004695	Nadia Hartono	Individual	Nadia Hartono	1985-01-01	1900-01-01	720 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775306484180	Logistics	High	1	0
+CP0004696	PT Adinata Synthetic	Company	Dewi Adinata	1900-01-01	2018-01-01	61 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775019662082	Technology	Low	0	1
+CP0004697	Dewi Firmansyah	Individual	Dewi Firmansyah	1985-01-01	1900-01-01	180 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775723777100	Retail	Low	1	0
+CP0004698	Fajar Kurniawan	Individual	Fajar Kurniawan	1985-01-01	1900-01-01	879 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771768075629	Retail	Low	1	0
+CP0004699	Fajar Gunawan	Individual	Fajar Gunawan	1985-01-01	1900-01-01	75 Synthetic Avenue	Makassar	AU	AU	Asia Commerce Bank	777306650354	Logistics	High	1	0
+CP0004700	PT Setiawan Synthetic	Company	Arif Setiawan	1900-01-01	2018-01-01	144 Synthetic Avenue	Yogyakarta	SG	SG	Bank Nusantara	775848587962	Construction	Medium	0	1
+CP0004701	PT Santoso Synthetic	Company	Citra Santoso	1900-01-01	2018-01-01	470 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	771204039056	Technology	Low	0	1
+CP0004702	Rani Wijaya	Individual	Rani Wijaya	1985-01-01	1900-01-01	659 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770531686568	Logistics	Low	1	0
+CP0004703	PT Halim Synthetic	Company	Adit Halim	1900-01-01	2018-01-01	435 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	771071731325	Technology	Medium	0	1
+CP0004704	Intan Halim	Individual	Intan Halim	1985-01-01	1900-01-01	690 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771063271004	Manufacturing	Medium	1	0
+CP0004705	Putri Santoso	Individual	Putri Santoso	1985-01-01	1900-01-01	833 Synthetic Avenue	Denpasar	JP	JP	Bank Sentra	773201599168	Technology	Low	1	0
+CP0004706	Dewi Prakoso	Individual	Dewi Prakoso	1985-01-01	1900-01-01	147 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	770428167330	Healthcare	Low	1	0
+CP0004707	Gita Hartono	Individual	Gita Hartono	1985-01-01	1900-01-01	686 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	777616182846	Retail	Low	1	0
+CP0004708	Sari Hartono	Individual	Sari Hartono	1985-01-01	1900-01-01	562 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	776343346468	Manufacturing	Medium	1	0
+CP0004709	Dimas Putra	Individual	Dimas Putra	1985-01-01	1900-01-01	667 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	770162597968	Retail	Low	1	0
+CP0004710	PT Setiawan Synthetic	Company	Eka Setiawan	1900-01-01	2018-01-01	107 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	772645850690	Retail	Low	0	1
+CP0004711	Raka Permana	Individual	Raka Permana	1985-01-01	1900-01-01	405 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	779675029914	Retail	Medium	1	0
+CP0004712	Dewi Siregar	Individual	Dewi Siregar	1985-01-01	1900-01-01	557 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774753115366	Retail	Low	1	0
+CP0004713	Kevin Wijaya	Individual	Kevin Wijaya	1985-01-01	1900-01-01	74 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772069249794	Logistics	Medium	1	0
+CP0004714	Adit Halim	Individual	Adit Halim	1985-01-01	1900-01-01	131 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	774673252712	Construction	Low	1	0
+CP0004715	PT Hartono Synthetic	Company	Rani Hartono	1900-01-01	2018-01-01	411 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	778684552289	Technology	Medium	0	1
+CP0004716	Laras Lesmana	Individual	Laras Lesmana	1985-01-01	1900-01-01	201 Synthetic Avenue	Medan	ID	ID	Bank Sentra	771759824865	Manufacturing	Medium	1	0
+CP0004717	Adit Suryadi	Individual	Adit Suryadi	1985-01-01	1900-01-01	491 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	771822203990	Technology	Low	1	0
+CP0004718	Raka Chandra	Individual	Raka Chandra	1985-01-01	1900-01-01	326 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772041493007	Manufacturing	High	1	0
+CP0004719	PT Darmawan Synthetic	Company	Andi Darmawan	1900-01-01	2018-01-01	483 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778840534846	Retail	Low	0	1
+CP0004720	Citra Hartono	Individual	Citra Hartono	1985-01-01	1900-01-01	111 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	778077199302	Manufacturing	Low	1	0
+CP0004721	PT Santoso Synthetic	Company	Andi Santoso	1900-01-01	2018-01-01	246 Synthetic Avenue	Medan	US	US	Asia Commerce Bank	770009409300	Logistics	Medium	0	1
+CP0004722	Hana Lesmana	Individual	Hana Lesmana	1985-01-01	1900-01-01	522 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774964033587	Manufacturing	Medium	1	0
+CP0004723	Kevin Halim	Individual	Kevin Halim	1985-01-01	1900-01-01	740 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778146513812	Construction	Low	1	0
+CP0004724	Bagus Chandra	Individual	Bagus Chandra	1985-01-01	1900-01-01	221 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	777609531350	Manufacturing	Low	1	0
+CP0004725	Intan Budiman	Individual	Intan Budiman	1985-01-01	1900-01-01	750 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771802482900	Healthcare	Low	1	0
+CP0004726	Wulan Yulianto	Individual	Wulan Yulianto	1985-01-01	1900-01-01	724 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	773289565826	Manufacturing	Medium	1	0
+CP0004727	Arif Prakoso	Individual	Arif Prakoso	1985-01-01	1900-01-01	746 Synthetic Avenue	Makassar	AU	AU	Asia Commerce Bank	778011283913	Construction	Medium	1	0
+CP0004728	Alya Nugraha	Individual	Alya Nugraha	1985-01-01	1900-01-01	812 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	778739053251	Healthcare	Medium	1	0
+CP0004729	PT Suryadi Synthetic	Company	Fajar Suryadi	1900-01-01	2018-01-01	114 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	778847928807	Healthcare	Low	0	1
+CP0004730	Putri Wijaya	Individual	Putri Wijaya	1985-01-01	1900-01-01	115 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777561482243	Technology	Low	1	0
+CP0004731	Joko Setiawan	Individual	Joko Setiawan	1985-01-01	1900-01-01	364 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775895168065	Logistics	High	1	0
+CP0004732	Laras Adinata	Individual	Laras Adinata	1985-01-01	1900-01-01	621 Synthetic Avenue	Makassar	MY	MY	Asia Commerce Bank	772986388246	Retail	Medium	1	0
+CP0004733	Dimas Nugraha	Individual	Dimas Nugraha	1985-01-01	1900-01-01	612 Synthetic Avenue	Bandung	US	US	Bank Sentra	778024127664	Construction	Low	1	0
+CP0004734	Dimas Putra	Individual	Dimas Putra	1985-01-01	1900-01-01	859 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	776210489840	Construction	Medium	1	0
+CP0004735	PT Lesmana Synthetic	Company	Hana Lesmana	1900-01-01	2018-01-01	847 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776561458271	Healthcare	Low	0	1
+CP0004736	Joko Yulianto	Individual	Joko Yulianto	1985-01-01	1900-01-01	99 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	770920872721	Construction	Low	1	0
+CP0004737	PT Prakoso Synthetic	Company	Hana Prakoso	1900-01-01	2018-01-01	875 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771040004473	Construction	Medium	0	1
+CP0004738	Bagus Setiawan	Individual	Bagus Setiawan	1985-01-01	1900-01-01	595 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772105441963	Logistics	Medium	1	0
+CP0004739	PT Lesmana Synthetic	Company	Dimas Lesmana	1900-01-01	2018-01-01	616 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775914297766	Retail	High	0	1
+CP0004740	Bagus Wijaya	Individual	Bagus Wijaya	1985-01-01	1900-01-01	322 Synthetic Avenue	Bandung	AU	AU	Bank Sentra	778196228380	Manufacturing	Low	1	0
+CP0004741	PT Chandra Synthetic	Company	Teguh Chandra	1900-01-01	2018-01-01	683 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	772663165267	Logistics	Low	0	1
+CP0004742	Andi Prakoso	Individual	Andi Prakoso	1985-01-01	1900-01-01	250 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774279773064	Technology	Low	1	0
+CP0004743	Naufal Prakoso	Individual	Naufal Prakoso	1985-01-01	1900-01-01	773 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	772246060522	Logistics	Low	1	0
+CP0004744	Andi Lesmana	Individual	Andi Lesmana	1985-01-01	1900-01-01	396 Synthetic Avenue	Medan	US	US	Asia Commerce Bank	777345308408	Construction	Low	1	0
+CP0004745	Farah Adinata	Individual	Farah Adinata	1985-01-01	1900-01-01	139 Synthetic Avenue	Denpasar	MY	MY	Bank Sentra	774432084051	Manufacturing	Medium	1	0
+CP0004746	PT Wijaya Synthetic	Company	Teguh Wijaya	1900-01-01	2018-01-01	809 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771073924866	Healthcare	Low	0	1
+CP0004747	Farah Wibowo	Individual	Farah Wibowo	1985-01-01	1900-01-01	649 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	779732197865	Technology	Medium	1	0
+CP0004748	PT Wijaya Synthetic	Company	Adit Wijaya	1900-01-01	2018-01-01	783 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	773590287002	Manufacturing	Low	0	1
+CP0004749	Raka Putra	Individual	Raka Putra	1985-01-01	1900-01-01	644 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	775528213002	Manufacturing	Low	1	0
+CP0004750	Adit Putra	Individual	Adit Putra	1985-01-01	1900-01-01	715 Synthetic Avenue	Jakarta	JP	JP	Bank Sentra	779301177956	Logistics	Low	1	0
+CP0004751	Farah Hartono	Individual	Farah Hartono	1985-01-01	1900-01-01	398 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	773075645964	Healthcare	Low	1	0
+CP0004752	Indra Prakoso	Individual	Indra Prakoso	1985-01-01	1900-01-01	397 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	775780438509	Technology	Low	1	0
+CP0004753	Fajar Suryadi	Individual	Fajar Suryadi	1985-01-01	1900-01-01	500 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	775349489479	Construction	Medium	1	0
+CP0004754	Citra Wibowo	Individual	Citra Wibowo	1985-01-01	1900-01-01	709 Synthetic Avenue	Makassar	JP	JP	Bank Nusantara	777341442201	Construction	Low	1	0
+CP0004755	Alya Prakoso	Individual	Alya Prakoso	1985-01-01	1900-01-01	897 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	776436733856	Construction	Low	1	0
+CP0004756	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	760 Synthetic Avenue	Medan	ID	ID	Bank Sentra	776008928760	Manufacturing	Medium	1	0
+CP0004757	PT Iskandar Synthetic	Company	Wulan Iskandar	1900-01-01	2018-01-01	177 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771780725931	Healthcare	Low	0	1
+CP0004758	Hana Rahardjo	Individual	Hana Rahardjo	1985-01-01	1900-01-01	449 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	777289775078	Logistics	Low	1	0
+CP0004759	Arif Firmansyah	Individual	Arif Firmansyah	1985-01-01	1900-01-01	37 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775427373782	Healthcare	Low	1	0
+CP0004760	Raka Siregar	Individual	Raka Siregar	1985-01-01	1900-01-01	175 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776145142257	Technology	Low	1	0
+CP0004761	PT Gunawan Synthetic	Company	Laras Gunawan	1900-01-01	2018-01-01	236 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	777879031849	Logistics	Low	0	1
+CP0004762	Rizky Prakoso	Individual	Rizky Prakoso	1985-01-01	1900-01-01	179 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	775968053825	Healthcare	High	1	0
+CP0004763	Gita Chandra	Individual	Gita Chandra	1985-01-01	1900-01-01	179 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	774866610385	Manufacturing	Medium	1	0
+CP0004764	Rani Setiawan	Individual	Rani Setiawan	1985-01-01	1900-01-01	705 Synthetic Avenue	Medan	MY	MY	Asia Commerce Bank	779075782601	Construction	Medium	1	0
+CP0004765	Arif Rahardjo	Individual	Arif Rahardjo	1985-01-01	1900-01-01	657 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	779243724938	Construction	Low	1	0
+CP0004766	Dewi Chandra	Individual	Dewi Chandra	1985-01-01	1900-01-01	721 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771860449365	Technology	Low	1	0
+CP0004767	Rizky Wibowo	Individual	Rizky Wibowo	1985-01-01	1900-01-01	268 Synthetic Avenue	Denpasar	SG	SG	Asia Commerce Bank	775915260454	Technology	Low	1	0
+CP0004768	Intan Permana	Individual	Intan Permana	1985-01-01	1900-01-01	267 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	777516246739	Healthcare	Low	1	0
+CP0004769	PT Permana Synthetic	Company	Bagus Permana	1900-01-01	2018-01-01	387 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	775089725978	Construction	Low	0	1
+CP0004770	Naufal Halim	Individual	Naufal Halim	1985-01-01	1900-01-01	207 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	771050415357	Technology	High	1	0
+CP0004771	Indra Yulianto	Individual	Indra Yulianto	1985-01-01	1900-01-01	606 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	777868460268	Manufacturing	Low	1	0
+CP0004772	Eka Putra	Individual	Eka Putra	1985-01-01	1900-01-01	695 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774860390631	Logistics	Low	1	0
+CP0004773	Gita Gunawan	Individual	Gita Gunawan	1985-01-01	1900-01-01	474 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777409001450	Healthcare	Low	1	0
+CP0004774	Hana Suryadi	Individual	Hana Suryadi	1985-01-01	1900-01-01	389 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775874892848	Construction	Medium	1	0
+CP0004775	Farah Yulianto	Individual	Farah Yulianto	1985-01-01	1900-01-01	772 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	778891024901	Retail	Low	1	0
+CP0004776	PT Firmansyah Synthetic	Company	Laras Firmansyah	1900-01-01	2018-01-01	8 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772911867767	Logistics	Low	0	1
+CP0004777	Kevin Siregar	Individual	Kevin Siregar	1985-01-01	1900-01-01	388 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772462246805	Healthcare	Low	1	0
+CP0004778	Kevin Santoso	Individual	Kevin Santoso	1985-01-01	1900-01-01	511 Synthetic Avenue	Yogyakarta	AE	AE	Bank Nusantara	777901550734	Retail	Low	1	0
+CP0004779	Nadia Santoso	Individual	Nadia Santoso	1985-01-01	1900-01-01	713 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774916262376	Manufacturing	Medium	1	0
+CP0004780	Adit Setiawan	Individual	Adit Setiawan	1985-01-01	1900-01-01	849 Synthetic Avenue	Yogyakarta	SG	SG	Bank Sentra	777088006802	Technology	Medium	1	0
+CP0004781	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	604 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	774816650918	Healthcare	Low	1	0
+CP0004782	PT Iskandar Synthetic	Company	Alya Iskandar	1900-01-01	2018-01-01	273 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	774741067456	Construction	Medium	0	1
+CP0004783	PT Firmansyah Synthetic	Company	Wulan Firmansyah	1900-01-01	2018-01-01	850 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	770634100025	Retail	Low	0	1
+CP0004784	PT Adinata Synthetic	Company	Eka Adinata	1900-01-01	2018-01-01	513 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776545105902	Construction	Low	0	1
+CP0004785	PT Firmansyah Synthetic	Company	Adit Firmansyah	1900-01-01	2018-01-01	501 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772252795154	Logistics	Low	0	1
+CP0004786	PT Rahardjo Synthetic	Company	Teguh Rahardjo	1900-01-01	2018-01-01	17 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	771008512677	Healthcare	Low	0	1
+CP0004787	Alya Permana	Individual	Alya Permana	1985-01-01	1900-01-01	232 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777808570351	Healthcare	Medium	1	0
+CP0004788	PT Budiman Synthetic	Company	Hana Budiman	1900-01-01	2018-01-01	833 Synthetic Avenue	Denpasar	US	US	Bank Sentra	777685367925	Retail	Low	0	1
+CP0004789	Hana Wijaya	Individual	Hana Wijaya	1985-01-01	1900-01-01	447 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	775896855016	Construction	Low	1	0
+CP0004790	Putri Suryadi	Individual	Putri Suryadi	1985-01-01	1900-01-01	344 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	779268914599	Manufacturing	Medium	1	0
+CP0004791	Fajar Hartono	Individual	Fajar Hartono	1985-01-01	1900-01-01	443 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770203929847	Logistics	Low	1	0
+CP0004792	Farah Chandra	Individual	Farah Chandra	1985-01-01	1900-01-01	550 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771902962503	Manufacturing	Low	1	0
+CP0004793	PT Hartono Synthetic	Company	Fajar Hartono	1900-01-01	2018-01-01	502 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777768411947	Manufacturing	Medium	0	1
+CP0004794	Farah Wijaya	Individual	Farah Wijaya	1985-01-01	1900-01-01	22 Synthetic Avenue	Semarang	US	US	Asia Commerce Bank	771068372803	Healthcare	Medium	1	0
+CP0004795	Joko Firmansyah	Individual	Joko Firmansyah	1985-01-01	1900-01-01	70 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	773422880046	Retail	Medium	1	0
+CP0004796	PT Chandra Synthetic	Company	Raka Chandra	1900-01-01	2018-01-01	491 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773923265768	Healthcare	Low	0	1
+CP0004797	Raka Lesmana	Individual	Raka Lesmana	1985-01-01	1900-01-01	785 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773357383527	Logistics	Medium	1	0
+CP0004798	Alya Rahardjo	Individual	Alya Rahardjo	1985-01-01	1900-01-01	4 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	776674426918	Healthcare	Low	1	0
+CP0004799	Maya Nugraha	Individual	Maya Nugraha	1985-01-01	1900-01-01	13 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	774880306199	Logistics	Low	1	0
+CP0004800	Bima Siregar	Individual	Bima Siregar	1985-01-01	1900-01-01	308 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	775389637821	Construction	Low	1	0
+CP0004801	Sari Yulianto	Individual	Sari Yulianto	1985-01-01	1900-01-01	289 Synthetic Avenue	Yogyakarta	US	US	Asia Commerce Bank	778545974970	Manufacturing	Low	1	0
+CP0004802	Citra Mahendra	Individual	Citra Mahendra	1985-01-01	1900-01-01	79 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779484297489	Retail	Medium	1	0
+CP0004803	Wulan Wibowo	Individual	Wulan Wibowo	1985-01-01	1900-01-01	289 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	771980226296	Technology	High	1	0
+CP0004804	Rani Nugraha	Individual	Rani Nugraha	1985-01-01	1900-01-01	849 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772832113382	Manufacturing	Low	1	0
+CP0004805	Alya Chandra	Individual	Alya Chandra	1985-01-01	1900-01-01	829 Synthetic Avenue	Surabaya	MY	MY	Bank Nusantara	776100205436	Manufacturing	Low	1	0
+CP0004806	Bima Wibowo	Individual	Bima Wibowo	1985-01-01	1900-01-01	102 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	776040616888	Manufacturing	Medium	1	0
+CP0004807	Intan Yulianto	Individual	Intan Yulianto	1985-01-01	1900-01-01	757 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776030177374	Healthcare	Medium	1	0
+CP0004808	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	180 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774638066775	Logistics	Low	1	0
+CP0004809	Dimas Setiawan	Individual	Dimas Setiawan	1985-01-01	1900-01-01	250 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774727078749	Retail	Medium	1	0
+CP0004810	Citra Adinata	Individual	Citra Adinata	1985-01-01	1900-01-01	731 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773907552563	Manufacturing	Medium	1	0
+CP0004811	Citra Chandra	Individual	Citra Chandra	1985-01-01	1900-01-01	781 Synthetic Avenue	Makassar	SG	SG	Bank Sentra	771931704929	Retail	Low	1	0
+CP0004812	PT Iskandar Synthetic	Company	Adit Iskandar	1900-01-01	2018-01-01	388 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778166640239	Logistics	Low	0	1
+CP0004813	Intan Darmawan	Individual	Intan Darmawan	1985-01-01	1900-01-01	176 Synthetic Avenue	Yogyakarta	MY	MY	Bank Sentra	776594172532	Technology	Low	1	0
+CP0004814	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	794 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	777206113635	Retail	Low	1	0
+CP0004815	Farah Mahendra	Individual	Farah Mahendra	1985-01-01	1900-01-01	866 Synthetic Avenue	Makassar	SG	SG	Asia Commerce Bank	773493985448	Healthcare	Low	1	0
+CP0004816	Andi Hartono	Individual	Andi Hartono	1985-01-01	1900-01-01	660 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	774466216055	Construction	Low	1	0
+CP0004817	PT Gunawan Synthetic	Company	Sari Gunawan	1900-01-01	2018-01-01	381 Synthetic Avenue	Semarang	SG	SG	Asia Commerce Bank	779742152726	Manufacturing	Low	0	1
+CP0004818	Laras Iskandar	Individual	Laras Iskandar	1985-01-01	1900-01-01	562 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779262774660	Healthcare	High	1	0
+CP0004819	Indra Kurniawan	Individual	Indra Kurniawan	1985-01-01	1900-01-01	735 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	772672661390	Manufacturing	Low	1	0
+CP0004820	Citra Firmansyah	Individual	Citra Firmansyah	1985-01-01	1900-01-01	656 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775730248912	Technology	Low	1	0
+CP0004821	Arif Adinata	Individual	Arif Adinata	1985-01-01	1900-01-01	430 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	774602707794	Construction	Low	1	0
+CP0004822	Dimas Iskandar	Individual	Dimas Iskandar	1985-01-01	1900-01-01	419 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777559087002	Construction	Low	1	0
+CP0004823	Wulan Lesmana	Individual	Wulan Lesmana	1985-01-01	1900-01-01	569 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	779459017736	Technology	Medium	1	0
+CP0004824	PT Suryadi Synthetic	Company	Bagus Suryadi	1900-01-01	2018-01-01	675 Synthetic Avenue	Bandung	SG	SG	Bank Sentra	778835319982	Logistics	Medium	0	1
+CP0004825	Indra Santoso	Individual	Indra Santoso	1985-01-01	1900-01-01	529 Synthetic Avenue	Denpasar	JP	JP	Bank Nusantara	778775584386	Logistics	Low	1	0
+CP0004826	Intan Santoso	Individual	Intan Santoso	1985-01-01	1900-01-01	736 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777005665395	Logistics	High	1	0
+CP0004827	PT Prakoso Synthetic	Company	Raka Prakoso	1900-01-01	2018-01-01	783 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	772826814184	Logistics	Low	0	1
+CP0004828	Gita Setiawan	Individual	Gita Setiawan	1985-01-01	1900-01-01	590 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778599604618	Healthcare	Medium	1	0
+CP0004829	PT Nugraha Synthetic	Company	Farah Nugraha	1900-01-01	2018-01-01	280 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	778822799258	Logistics	Medium	0	1
+CP0004830	Hana Halim	Individual	Hana Halim	1985-01-01	1900-01-01	479 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778998109639	Logistics	Medium	1	0
+CP0004831	Intan Chandra	Individual	Intan Chandra	1985-01-01	1900-01-01	32 Synthetic Avenue	Semarang	AE	AE	Bank Nusantara	775806256169	Technology	Low	1	0
+CP0004832	Intan Putra	Individual	Intan Putra	1985-01-01	1900-01-01	166 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	772336312853	Construction	Medium	1	0
+CP0004833	Rani Darmawan	Individual	Rani Darmawan	1985-01-01	1900-01-01	596 Synthetic Avenue	Surabaya	JP	JP	Bank Sentra	779910107063	Construction	Low	1	0
+CP0004834	Dimas Wijaya	Individual	Dimas Wijaya	1985-01-01	1900-01-01	248 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	778055746380	Construction	Low	1	0
+CP0004835	Intan Iskandar	Individual	Intan Iskandar	1985-01-01	1900-01-01	744 Synthetic Avenue	Semarang	SG	SG	Bank Sentra	771823833665	Logistics	Low	1	0
+CP0004836	Nadia Permana	Individual	Nadia Permana	1985-01-01	1900-01-01	619 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	777291289453	Construction	Medium	1	0
+CP0004837	Nadia Setiawan	Individual	Nadia Setiawan	1985-01-01	1900-01-01	133 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771492251299	Logistics	Low	1	0
+CP0004838	Raka Siregar	Individual	Raka Siregar	1985-01-01	1900-01-01	488 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	778645680466	Manufacturing	Medium	1	0
+CP0004839	Rani Setiawan	Individual	Rani Setiawan	1985-01-01	1900-01-01	468 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	777101847316	Technology	Medium	1	0
+CP0004840	Raka Kurniawan	Individual	Raka Kurniawan	1985-01-01	1900-01-01	482 Synthetic Avenue	Semarang	MY	MY	Asia Commerce Bank	778343765686	Logistics	Low	1	0
+CP0004841	Naufal Rahardjo	Individual	Naufal Rahardjo	1985-01-01	1900-01-01	287 Synthetic Avenue	Jakarta	MY	MY	Bank Sentra	778887568568	Manufacturing	High	1	0
+CP0004842	PT Wibowo Synthetic	Company	Bagus Wibowo	1900-01-01	2018-01-01	210 Synthetic Avenue	Denpasar	AU	AU	Bank Sentra	773420897456	Retail	Medium	0	1
+CP0004843	Wulan Kurniawan	Individual	Wulan Kurniawan	1985-01-01	1900-01-01	314 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	777310887563	Healthcare	Low	1	0
+CP0004844	Citra Suryadi	Individual	Citra Suryadi	1985-01-01	1900-01-01	196 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	779576931781	Construction	Low	1	0
+CP0004845	Dewi Iskandar	Individual	Dewi Iskandar	1985-01-01	1900-01-01	385 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771546826975	Logistics	Low	1	0
+CP0004846	Wulan Hartono	Individual	Wulan Hartono	1985-01-01	1900-01-01	680 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	773716413921	Manufacturing	Low	1	0
+CP0004847	Maya Gunawan	Individual	Maya Gunawan	1985-01-01	1900-01-01	793 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779214117642	Technology	Low	1	0
+CP0004848	Nadia Hartono	Individual	Nadia Hartono	1985-01-01	1900-01-01	21 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	778651218761	Healthcare	Medium	1	0
+CP0004849	PT Adinata Synthetic	Company	Andi Adinata	1900-01-01	2018-01-01	848 Synthetic Avenue	Surabaya	US	US	Bank Sentra	770158141930	Logistics	Low	0	1
+CP0004850	Raka Adinata	Individual	Raka Adinata	1985-01-01	1900-01-01	808 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	772097142826	Technology	Low	1	0
+CP0004851	Indra Hartono	Individual	Indra Hartono	1985-01-01	1900-01-01	271 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773596708592	Logistics	Low	1	0
+CP0004852	Rani Darmawan	Individual	Rani Darmawan	1985-01-01	1900-01-01	812 Synthetic Avenue	Makassar	MY	MY	Bank Sentra	771324434544	Retail	High	1	0
+CP0004853	Hana Putra	Individual	Hana Putra	1985-01-01	1900-01-01	565 Synthetic Avenue	Medan	AE	AE	Asia Commerce Bank	773129987314	Manufacturing	Medium	1	0
+CP0004854	PT Yulianto Synthetic	Company	Joko Yulianto	1900-01-01	2018-01-01	635 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	776607141750	Construction	Low	0	1
+CP0004855	Arif Adinata	Individual	Arif Adinata	1985-01-01	1900-01-01	342 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	770478535895	Construction	Low	1	0
+CP0004856	Eka Kurniawan	Individual	Eka Kurniawan	1985-01-01	1900-01-01	135 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	775707175452	Retail	Low	1	0
+CP0004857	PT Prakoso Synthetic	Company	Putri Prakoso	1900-01-01	2018-01-01	837 Synthetic Avenue	Medan	SG	SG	Bank Nusantara	777335517630	Logistics	Low	0	1
+CP0004858	Kevin Setiawan	Individual	Kevin Setiawan	1985-01-01	1900-01-01	18 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772922373071	Technology	Low	1	0
+CP0004859	Nadia Iskandar	Individual	Nadia Iskandar	1985-01-01	1900-01-01	86 Synthetic Avenue	Medan	ID	ID	Bank Sentra	775980381459	Retail	Low	1	0
+CP0004860	Bima Prakoso	Individual	Bima Prakoso	1985-01-01	1900-01-01	660 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773445463561	Logistics	Low	1	0
+CP0004861	Kevin Chandra	Individual	Kevin Chandra	1985-01-01	1900-01-01	616 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	776934347247	Logistics	Low	1	0
+CP0004862	Farah Firmansyah	Individual	Farah Firmansyah	1985-01-01	1900-01-01	575 Synthetic Avenue	Denpasar	AE	AE	Bank Nusantara	779364279435	Technology	Low	1	0
+CP0004863	Kevin Rahardjo	Individual	Kevin Rahardjo	1985-01-01	1900-01-01	689 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	779473418514	Construction	Low	1	0
+CP0004864	Anisa Rahardjo	Individual	Anisa Rahardjo	1985-01-01	1900-01-01	830 Synthetic Avenue	Surabaya	MY	MY	Asia Commerce Bank	773156333548	Healthcare	Low	1	0
+CP0004865	Maya Adinata	Individual	Maya Adinata	1985-01-01	1900-01-01	295 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	776656754620	Construction	Medium	1	0
+CP0004866	Teguh Mahendra	Individual	Teguh Mahendra	1985-01-01	1900-01-01	861 Synthetic Avenue	Bandung	US	US	Asia Commerce Bank	770052738232	Healthcare	Medium	1	0
+CP0004867	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	393 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	776183699728	Manufacturing	Low	1	0
+CP0004868	Sari Darmawan	Individual	Sari Darmawan	1985-01-01	1900-01-01	879 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	777247068586	Logistics	Low	1	0
+CP0004869	PT Wijaya Synthetic	Company	Citra Wijaya	1900-01-01	2018-01-01	44 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	777306850877	Technology	Low	0	1
+CP0004870	Dewi Lesmana	Individual	Dewi Lesmana	1985-01-01	1900-01-01	261 Synthetic Avenue	Semarang	MY	MY	Bank Sentra	779949229820	Manufacturing	Low	1	0
+CP0004871	PT Gunawan Synthetic	Company	Eka Gunawan	1900-01-01	2018-01-01	82 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773240900533	Logistics	Low	0	1
+CP0004872	Arif Kurniawan	Individual	Arif Kurniawan	1985-01-01	1900-01-01	389 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770516713851	Retail	Medium	1	0
+CP0004873	Wulan Suryadi	Individual	Wulan Suryadi	1985-01-01	1900-01-01	208 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774101669210	Logistics	Low	1	0
+CP0004874	Rizky Lesmana	Individual	Rizky Lesmana	1985-01-01	1900-01-01	831 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	771005496651	Manufacturing	Low	1	0
+CP0004875	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	693 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	773732139322	Logistics	Low	1	0
+CP0004876	PT Nugraha Synthetic	Company	Adit Nugraha	1900-01-01	2018-01-01	724 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775264118225	Technology	Low	0	1
+CP0004877	Teguh Darmawan	Individual	Teguh Darmawan	1985-01-01	1900-01-01	643 Synthetic Avenue	Bandung	SG	SG	Bank Nusantara	778165151149	Retail	Low	1	0
+CP0004878	PT Nugraha Synthetic	Company	Eka Nugraha	1900-01-01	2018-01-01	102 Synthetic Avenue	Jakarta	GB	GB	Bank Nusantara	776120060805	Construction	Low	0	1
+CP0004879	Rizky Siregar	Individual	Rizky Siregar	1985-01-01	1900-01-01	674 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	771723280854	Healthcare	Low	1	0
+CP0004880	Gita Setiawan	Individual	Gita Setiawan	1985-01-01	1900-01-01	589 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	771193854391	Manufacturing	Low	1	0
+CP0004881	Kevin Permana	Individual	Kevin Permana	1985-01-01	1900-01-01	200 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771494581133	Healthcare	Low	1	0
+CP0004882	PT Setiawan Synthetic	Company	Kevin Setiawan	1900-01-01	2018-01-01	502 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	775115070582	Manufacturing	Low	0	1
+CP0004883	Hana Putra	Individual	Hana Putra	1985-01-01	1900-01-01	854 Synthetic Avenue	Jakarta	ID	ID	Asia Commerce Bank	770672202227	Construction	Low	1	0
+CP0004884	PT Gunawan Synthetic	Company	Adit Gunawan	1900-01-01	2018-01-01	718 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	778009953351	Manufacturing	Low	0	1
+CP0004885	Andi Yulianto	Individual	Andi Yulianto	1985-01-01	1900-01-01	703 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	770486403480	Logistics	Low	1	0
+CP0004886	PT Santoso Synthetic	Company	Joko Santoso	1900-01-01	2018-01-01	406 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	772394131219	Retail	Low	0	1
+CP0004887	Farah Putra	Individual	Farah Putra	1985-01-01	1900-01-01	663 Synthetic Avenue	Medan	ID	ID	Bank Sentra	773142451160	Retail	Low	1	0
+CP0004888	Teguh Putra	Individual	Teguh Putra	1985-01-01	1900-01-01	855 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	774387923858	Construction	Medium	1	0
+CP0004889	Joko Rahardjo	Individual	Joko Rahardjo	1985-01-01	1900-01-01	749 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	779889724294	Retail	Low	1	0
+CP0004890	PT Iskandar Synthetic	Company	Wulan Iskandar	1900-01-01	2018-01-01	374 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779782530341	Logistics	Medium	0	1
+CP0004891	Putri Halim	Individual	Putri Halim	1985-01-01	1900-01-01	581 Synthetic Avenue	Semarang	US	US	Bank Sentra	773805333783	Healthcare	Low	1	0
+CP0004892	Fajar Rahardjo	Individual	Fajar Rahardjo	1985-01-01	1900-01-01	696 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775756741624	Manufacturing	Low	1	0
+CP0004893	Citra Hartono	Individual	Citra Hartono	1985-01-01	1900-01-01	834 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	775594334873	Retail	Low	1	0
+CP0004894	PT Iskandar Synthetic	Company	Andi Iskandar	1900-01-01	2018-01-01	635 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	771721451080	Logistics	Low	0	1
+CP0004895	Fajar Budiman	Individual	Fajar Budiman	1985-01-01	1900-01-01	460 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	772904223730	Technology	Medium	1	0
+CP0004896	Bagus Permana	Individual	Bagus Permana	1985-01-01	1900-01-01	180 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771994982533	Manufacturing	High	1	0
+CP0004897	Kevin Permana	Individual	Kevin Permana	1985-01-01	1900-01-01	338 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	777275826806	Healthcare	Low	1	0
+CP0004898	Anisa Gunawan	Individual	Anisa Gunawan	1985-01-01	1900-01-01	244 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	770983724707	Technology	Medium	1	0
+CP0004899	Teguh Halim	Individual	Teguh Halim	1985-01-01	1900-01-01	685 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775351311709	Construction	Low	1	0
+CP0004900	PT Kurniawan Synthetic	Company	Kevin Kurniawan	1900-01-01	2018-01-01	777 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	773383017237	Retail	High	0	1
+CP0004901	PT Darmawan Synthetic	Company	Gita Darmawan	1900-01-01	2018-01-01	201 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	773069598838	Technology	Low	0	1
+CP0004902	PT Nugraha Synthetic	Company	Farah Nugraha	1900-01-01	2018-01-01	252 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	775000357576	Retail	Medium	0	1
+CP0004903	PT Iskandar Synthetic	Company	Raka Iskandar	1900-01-01	2018-01-01	646 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	773980170908	Technology	Low	0	1
+CP0004904	Kevin Yulianto	Individual	Kevin Yulianto	1985-01-01	1900-01-01	724 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	771158865267	Construction	Low	1	0
+CP0004905	Gita Lesmana	Individual	Gita Lesmana	1985-01-01	1900-01-01	62 Synthetic Avenue	Yogyakarta	AU	AU	Asia Commerce Bank	777111974825	Construction	Low	1	0
+CP0004906	PT Siregar Synthetic	Company	Dimas Siregar	1900-01-01	2018-01-01	547 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	770894637787	Construction	Medium	0	1
+CP0004907	Raka Setiawan	Individual	Raka Setiawan	1985-01-01	1900-01-01	304 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	775887174305	Manufacturing	Low	1	0
+CP0004908	PT Permana Synthetic	Company	Adit Permana	1900-01-01	2018-01-01	515 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	770173164515	Technology	Low	0	1
+CP0004909	Teguh Iskandar	Individual	Teguh Iskandar	1985-01-01	1900-01-01	791 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	775153274430	Healthcare	Low	1	0
+CP0004910	Hana Permana	Individual	Hana Permana	1985-01-01	1900-01-01	257 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	777757336820	Construction	Low	1	0
+CP0004911	Nadia Nugraha	Individual	Nadia Nugraha	1985-01-01	1900-01-01	676 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773823671163	Logistics	Low	1	0
+CP0004912	Andi Mahendra	Individual	Andi Mahendra	1985-01-01	1900-01-01	148 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	774753408186	Manufacturing	Medium	1	0
+CP0004913	Joko Hartono	Individual	Joko Hartono	1985-01-01	1900-01-01	730 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	772312483800	Technology	Low	1	0
+CP0004914	Anisa Siregar	Individual	Anisa Siregar	1985-01-01	1900-01-01	473 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	779106816151	Technology	Medium	1	0
+CP0004915	Wulan Wijaya	Individual	Wulan Wijaya	1985-01-01	1900-01-01	85 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	779822278370	Technology	Low	1	0
+CP0004916	PT Chandra Synthetic	Company	Citra Chandra	1900-01-01	2018-01-01	250 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	777302519236	Logistics	Low	0	1
+CP0004917	Sari Wibowo	Individual	Sari Wibowo	1985-01-01	1900-01-01	704 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	774844830049	Logistics	Low	1	0
+CP0004918	PT Wijaya Synthetic	Company	Putri Wijaya	1900-01-01	2018-01-01	558 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	770004432270	Logistics	Low	0	1
+CP0004919	Dimas Firmansyah	Individual	Dimas Firmansyah	1985-01-01	1900-01-01	654 Synthetic Avenue	Bandung	JP	JP	Bank Nusantara	774227014262	Construction	Low	1	0
+CP0004920	Arif Siregar	Individual	Arif Siregar	1985-01-01	1900-01-01	556 Synthetic Avenue	Denpasar	AE	AE	Asia Commerce Bank	774328385316	Construction	Low	1	0
+CP0004921	Citra Lesmana	Individual	Citra Lesmana	1985-01-01	1900-01-01	553 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	774205415966	Healthcare	Low	1	0
+CP0004922	Adit Yulianto	Individual	Adit Yulianto	1985-01-01	1900-01-01	473 Synthetic Avenue	Semarang	US	US	Bank Sentra	773385147038	Retail	Medium	1	0
+CP0004923	Naufal Mahendra	Individual	Naufal Mahendra	1985-01-01	1900-01-01	858 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	771524687052	Logistics	Low	1	0
+CP0004924	PT Kurniawan Synthetic	Company	Nadia Kurniawan	1900-01-01	2018-01-01	563 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	773177471079	Manufacturing	Low	0	1
+CP0004925	Bagus Lesmana	Individual	Bagus Lesmana	1985-01-01	1900-01-01	863 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	771273558138	Technology	Low	1	0
+CP0004926	PT Kurniawan Synthetic	Company	Indra Kurniawan	1900-01-01	2018-01-01	559 Synthetic Avenue	Denpasar	MY	MY	Bank Nusantara	777696137558	Technology	Low	0	1
+CP0004927	PT Mahendra Synthetic	Company	Sari Mahendra	1900-01-01	2018-01-01	616 Synthetic Avenue	Medan	AE	AE	Asia Commerce Bank	779974149508	Manufacturing	Low	0	1
+CP0004928	Nadia Santoso	Individual	Nadia Santoso	1985-01-01	1900-01-01	378 Synthetic Avenue	Bandung	MY	MY	Bank Sentra	777233080097	Construction	Low	1	0
+CP0004929	Intan Wijaya	Individual	Intan Wijaya	1985-01-01	1900-01-01	798 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	776779172505	Manufacturing	Low	1	0
+CP0004930	PT Halim Synthetic	Company	Indra Halim	1900-01-01	2018-01-01	821 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	776414297038	Healthcare	Medium	0	1
+CP0004931	Putri Lesmana	Individual	Putri Lesmana	1985-01-01	1900-01-01	613 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777718924423	Manufacturing	Low	1	0
+CP0004932	PT Putra Synthetic	Company	Rizky Putra	1900-01-01	2018-01-01	657 Synthetic Avenue	Bandung	AE	AE	Asia Commerce Bank	770189858506	Construction	Low	0	1
+CP0004933	Laras Nugraha	Individual	Laras Nugraha	1985-01-01	1900-01-01	832 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	773620004650	Construction	High	1	0
+CP0004934	PT Wijaya Synthetic	Company	Andi Wijaya	1900-01-01	2018-01-01	214 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	772677105883	Retail	Low	0	1
+CP0004935	Bagus Siregar	Individual	Bagus Siregar	1985-01-01	1900-01-01	587 Synthetic Avenue	Surabaya	ID	ID	Bank Sentra	771178103157	Healthcare	Low	1	0
+CP0004936	Intan Mahendra	Individual	Intan Mahendra	1985-01-01	1900-01-01	42 Synthetic Avenue	Surabaya	JP	JP	Bank Nusantara	776234378061	Healthcare	Low	1	0
+CP0004937	Sari Darmawan	Individual	Sari Darmawan	1985-01-01	1900-01-01	175 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772121364420	Manufacturing	Medium	1	0
+CP0004938	Dewi Kurniawan	Individual	Dewi Kurniawan	1985-01-01	1900-01-01	264 Synthetic Avenue	Makassar	ID	ID	Bank Sentra	776750596835	Retail	Medium	1	0
+CP0004939	PT Putra Synthetic	Company	Putri Putra	1900-01-01	2018-01-01	885 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	774350682947	Manufacturing	Medium	0	1
+CP0004940	PT Budiman Synthetic	Company	Joko Budiman	1900-01-01	2018-01-01	483 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772333251626	Technology	Low	0	1
+CP0004941	Eka Halim	Individual	Eka Halim	1985-01-01	1900-01-01	325 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	777300988496	Logistics	Low	1	0
+CP0004942	PT Wijaya Synthetic	Company	Putri Wijaya	1900-01-01	2018-01-01	283 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771425608660	Healthcare	Medium	0	1
+CP0004943	Indra Siregar	Individual	Indra Siregar	1985-01-01	1900-01-01	652 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	770041538641	Construction	Low	1	0
+CP0004944	Raka Kurniawan	Individual	Raka Kurniawan	1985-01-01	1900-01-01	3 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	777494319046	Manufacturing	Medium	1	0
+CP0004945	Adit Darmawan	Individual	Adit Darmawan	1985-01-01	1900-01-01	446 Synthetic Avenue	Medan	ID	ID	Bank Sentra	770082618002	Retail	Low	1	0
+CP0004946	Fajar Suryadi	Individual	Fajar Suryadi	1985-01-01	1900-01-01	119 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	778561844602	Healthcare	Low	1	0
+CP0004947	Naufal Firmansyah	Individual	Naufal Firmansyah	1985-01-01	1900-01-01	840 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	774004015381	Construction	Medium	1	0
+CP0004948	PT Setiawan Synthetic	Company	Eka Setiawan	1900-01-01	2018-01-01	863 Synthetic Avenue	Makassar	AU	AU	Bank Nusantara	774107062110	Logistics	High	0	1
+CP0004949	Eka Gunawan	Individual	Eka Gunawan	1985-01-01	1900-01-01	883 Synthetic Avenue	Jakarta	ID	ID	Bank Sentra	777210168530	Logistics	Medium	1	0
+CP0004950	Nadia Siregar	Individual	Nadia Siregar	1985-01-01	1900-01-01	173 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	779890796028	Technology	Low	1	0
+CP0004951	Nadia Permana	Individual	Nadia Permana	1985-01-01	1900-01-01	636 Synthetic Avenue	Yogyakarta	ID	ID	Asia Commerce Bank	772571403917	Retail	Low	1	0
+CP0004952	Anisa Wibowo	Individual	Anisa Wibowo	1985-01-01	1900-01-01	113 Synthetic Avenue	Medan	SG	SG	Bank Sentra	773505437762	Retail	Low	1	0
+CP0004953	PT Wibowo Synthetic	Company	Dimas Wibowo	1900-01-01	2018-01-01	895 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	771435051836	Healthcare	Low	0	1
+CP0004954	Rani Budiman	Individual	Rani Budiman	1985-01-01	1900-01-01	670 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	771017627764	Technology	Low	1	0
+CP0004955	Kevin Nugraha	Individual	Kevin Nugraha	1985-01-01	1900-01-01	513 Synthetic Avenue	Makassar	MY	MY	Bank Nusantara	779648074842	Healthcare	Medium	1	0
+CP0004956	Kevin Suryadi	Individual	Kevin Suryadi	1985-01-01	1900-01-01	223 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	773759620081	Healthcare	High	1	0
+CP0004957	Gita Kurniawan	Individual	Gita Kurniawan	1985-01-01	1900-01-01	366 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	771283092287	Logistics	Low	1	0
+CP0004958	Citra Rahardjo	Individual	Citra Rahardjo	1985-01-01	1900-01-01	120 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	775606360824	Retail	Low	1	0
+CP0004959	Arif Gunawan	Individual	Arif Gunawan	1985-01-01	1900-01-01	741 Synthetic Avenue	Bandung	AU	AU	Asia Commerce Bank	770062722519	Manufacturing	Low	1	0
+CP0004960	Citra Siregar	Individual	Citra Siregar	1985-01-01	1900-01-01	612 Synthetic Avenue	Makassar	AE	AE	Bank Nusantara	776850152108	Technology	Low	1	0
+CP0004961	Gita Siregar	Individual	Gita Siregar	1985-01-01	1900-01-01	349 Synthetic Avenue	Denpasar	ID	ID	Bank Sentra	776307587285	Technology	Medium	1	0
+CP0004962	PT Wijaya Synthetic	Company	Bima Wijaya	1900-01-01	2018-01-01	586 Synthetic Avenue	Bandung	MY	MY	Asia Commerce Bank	773097313065	Construction	Low	0	1
+CP0004963	Naufal Firmansyah	Individual	Naufal Firmansyah	1985-01-01	1900-01-01	81 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	776215762697	Retail	Low	1	0
+CP0004964	Farah Prakoso	Individual	Farah Prakoso	1985-01-01	1900-01-01	534 Synthetic Avenue	Jakarta	SG	SG	Bank Nusantara	779250521538	Logistics	Low	1	0
+CP0004965	Sari Siregar	Individual	Sari Siregar	1985-01-01	1900-01-01	547 Synthetic Avenue	Surabaya	ID	ID	Bank Nusantara	774914807880	Construction	High	1	0
+CP0004966	PT Mahendra Synthetic	Company	Wulan Mahendra	1900-01-01	2018-01-01	296 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	774002404277	Manufacturing	Low	0	1
+CP0004967	Rizky Halim	Individual	Rizky Halim	1985-01-01	1900-01-01	275 Synthetic Avenue	Medan	AU	AU	Bank Sentra	771714512719	Construction	Low	1	0
+CP0004968	Maya Lesmana	Individual	Maya Lesmana	1985-01-01	1900-01-01	211 Synthetic Avenue	Yogyakarta	ID	ID	Bank Sentra	774097944027	Retail	Low	1	0
+CP0004969	PT Mahendra Synthetic	Company	Bima Mahendra	1900-01-01	2018-01-01	529 Synthetic Avenue	Medan	ID	ID	Bank Nusantara	775262969829	Construction	Low	0	1
+CP0004970	Rani Rahardjo	Individual	Rani Rahardjo	1985-01-01	1900-01-01	424 Synthetic Avenue	Makassar	ID	ID	Asia Commerce Bank	774440186524	Construction	Medium	1	0
+CP0004971	Andi Prakoso	Individual	Andi Prakoso	1985-01-01	1900-01-01	164 Synthetic Avenue	Medan	ID	ID	Asia Commerce Bank	774331242298	Construction	Low	1	0
+CP0004972	PT Firmansyah Synthetic	Company	Arif Firmansyah	1900-01-01	2018-01-01	403 Synthetic Avenue	Semarang	ID	ID	Bank Nusantara	770020562796	Technology	Medium	0	1
+CP0004973	Hana Budiman	Individual	Hana Budiman	1985-01-01	1900-01-01	386 Synthetic Avenue	Surabaya	ID	ID	Asia Commerce Bank	771375696384	Healthcare	Low	1	0
+CP0004974	Kevin Gunawan	Individual	Kevin Gunawan	1985-01-01	1900-01-01	264 Synthetic Avenue	Medan	ID	ID	Bank Sentra	777000359360	Healthcare	Medium	1	0
+CP0004975	Bima Rahardjo	Individual	Bima Rahardjo	1985-01-01	1900-01-01	729 Synthetic Avenue	Medan	MY	MY	Bank Nusantara	779184307490	Logistics	Low	1	0
+CP0004976	PT Siregar Synthetic	Company	Arif Siregar	1900-01-01	2018-01-01	79 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	775189338593	Manufacturing	Low	0	1
+CP0004977	PT Darmawan Synthetic	Company	Kevin Darmawan	1900-01-01	2018-01-01	22 Synthetic Avenue	Makassar	ID	ID	Bank Nusantara	775000397932	Manufacturing	High	0	1
+CP0004978	Anisa Yulianto	Individual	Anisa Yulianto	1985-01-01	1900-01-01	505 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	772235444725	Construction	High	1	0
+CP0004979	PT Gunawan Synthetic	Company	Adit Gunawan	1900-01-01	2018-01-01	27 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	771962613524	Construction	Low	0	1
+CP0004980	Wulan Hartono	Individual	Wulan Hartono	1985-01-01	1900-01-01	593 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	771618955142	Retail	Medium	1	0
+CP0004981	PT Wibowo Synthetic	Company	Maya Wibowo	1900-01-01	2018-01-01	541 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	771489058798	Technology	Low	0	1
+CP0004982	Kevin Putra	Individual	Kevin Putra	1985-01-01	1900-01-01	482 Synthetic Avenue	Medan	AU	AU	Bank Sentra	775145860245	Construction	Low	1	0
+CP0004983	PT Nugraha Synthetic	Company	Intan Nugraha	1900-01-01	2018-01-01	268 Synthetic Avenue	Semarang	ID	ID	Asia Commerce Bank	779726957450	Manufacturing	Low	0	1
+CP0004984	Laras Mahendra	Individual	Laras Mahendra	1985-01-01	1900-01-01	494 Synthetic Avenue	Denpasar	ID	ID	Bank Nusantara	772081191996	Construction	Low	1	0
+CP0004985	Sari Gunawan	Individual	Sari Gunawan	1985-01-01	1900-01-01	135 Synthetic Avenue	Semarang	ID	ID	Bank Sentra	772818613607	Retail	Low	1	0
+CP0004986	PT Budiman Synthetic	Company	Farah Budiman	1900-01-01	2018-01-01	29 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	770371690902	Manufacturing	Low	0	1
+CP0004987	Adit Santoso	Individual	Adit Santoso	1985-01-01	1900-01-01	44 Synthetic Avenue	Bandung	ID	ID	Asia Commerce Bank	773672553562	Healthcare	Low	1	0
+CP0004988	PT Rahardjo Synthetic	Company	Alya Rahardjo	1900-01-01	2018-01-01	382 Synthetic Avenue	Denpasar	ID	ID	Asia Commerce Bank	776497378580	Technology	Low	0	1
+CP0004989	Sari Adinata	Individual	Sari Adinata	1985-01-01	1900-01-01	464 Synthetic Avenue	Bandung	SG	SG	Asia Commerce Bank	777114578349	Healthcare	Medium	1	0
+CP0004990	PT Permana Synthetic	Company	Wulan Permana	1900-01-01	2018-01-01	118 Synthetic Avenue	Denpasar	JP	JP	Bank Sentra	771832431690	Technology	High	0	1
+CP0004991	Putri Iskandar	Individual	Putri Iskandar	1985-01-01	1900-01-01	637 Synthetic Avenue	Medan	JP	JP	Bank Nusantara	776788754042	Logistics	Medium	1	0
+CP0004992	Nadia Kurniawan	Individual	Nadia Kurniawan	1985-01-01	1900-01-01	372 Synthetic Avenue	Bandung	ID	ID	Bank Sentra	776973256542	Retail	Low	1	0
+CP0004993	Rizky Permana	Individual	Rizky Permana	1985-01-01	1900-01-01	138 Synthetic Avenue	Jakarta	ID	ID	Bank Nusantara	779202655628	Healthcare	High	1	0
+CP0004994	Kevin Darmawan	Individual	Kevin Darmawan	1985-01-01	1900-01-01	451 Synthetic Avenue	Yogyakarta	ID	ID	Bank Nusantara	770587830177	Logistics	Medium	1	0
+CP0004995	Laras Siregar	Individual	Laras Siregar	1985-01-01	1900-01-01	772 Synthetic Avenue	Bandung	ID	ID	Bank Nusantara	770598051978	Retail	Low	1	0
+CP0004996	Eka Permana	Individual	Eka Permana	1985-01-01	1900-01-01	748 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	778223771185	Manufacturing	Medium	1	0
+CP0004997	Maya Halim	Individual	Maya Halim	1985-01-01	1900-01-01	360 Synthetic Avenue	Surabaya	SG	SG	Bank Sentra	770080948449	Technology	Low	1	0
+CP0004998	Eka Suryadi	Individual	Eka Suryadi	1985-01-01	1900-01-01	807 Synthetic Avenue	Makassar	SG	SG	Bank Nusantara	771350055577	Healthcare	Low	1	0
+CP0004999	Rizky Kurniawan	Individual	Rizky Kurniawan	1985-01-01	1900-01-01	483 Synthetic Avenue	Bandung	MY	MY	Bank Nusantara	770006268689	Construction	Low	1	0
+CP0005000	Sari Firmansyah	Individual	Sari Firmansyah	1985-01-01	1900-01-01	554 Synthetic Avenue	Semarang	MY	MY	Bank Nusantara	772382932633	Logistics	High	1	0
+\.
+
+
+--
+-- PostgreSQL database dump complete
+--
+
+\unrestrict dQFp28Ox7iWGzEJWjChX2YzdfvhhvJiiYGfhhAB4UcMmhwkSaN2qS549Tfp5DCJ
+
