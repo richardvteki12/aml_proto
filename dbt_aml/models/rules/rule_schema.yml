@@ -1,0 +1,64 @@
+version: 2
+
+seeds:
+  - name: rule_catalogue
+    description: Governed catalogue of the twenty prototype AML monitoring rules.
+    columns:
+      - name: rule_id
+        tests: [not_null, unique]
+      - name: risk_level
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Critical", "High", "Medium", "Low"]
+
+  - name: rule_parameters
+    description: Numeric prototype monitoring parameters for the rule engine.
+    columns:
+      - name: rule_id
+        tests: [not_null]
+      - name: parameter_name
+        tests: [not_null]
+      - name: numeric_value
+        tests: [not_null]
+
+  - name: high_risk_countries
+    description: Maintainable synthetic prototype country configuration.
+    columns:
+      - name: country_code
+        tests: [not_null, unique]
+
+models:
+  - name: transaction_rule_evaluation
+    description: One row per transaction with boolean outcomes for all twenty rule definitions.
+    columns:
+      - name: transaction_id
+        tests: [not_null, unique]
+      - name: failed_transaction_retry_proxy_triggered
+        tests: [not_null]
+
+  - name: fct_aml_rule_hits
+    description: One row for each enabled AML monitoring rule hit.
+    columns:
+      - name: transaction_id
+        tests: [not_null]
+      - name: rule_id
+        tests: [not_null]
+      - name: risk_level
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Critical", "High", "Medium", "Low"]
+
+  - name: fct_aml_alerts
+    description: One alert summary per transaction that has at least one enabled rule hit.
+    columns:
+      - name: transaction_id
+        tests: [not_null, unique]
+      - name: triggered_rule_count
+        tests: [not_null]
+      - name: highest_risk_level
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["Critical", "High", "Medium", "Low"]

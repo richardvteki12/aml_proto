@@ -1,0 +1,30 @@
+# Python runtime artefacts
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints/
+
+# Local configuration and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_dsa
+**/profiles.yml
+
+# Build and dependency artefacts outside nested project ignores
+node_modules/
+.next/
+dist/
+build/
+target/
+dbt_packages/
+logs/
+
+# OS/editor artefacts
+.DS_Store
+Thumbs.db

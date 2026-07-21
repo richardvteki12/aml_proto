@@ -2,3 +2,4 @@ notebooks/joined_tables.csv filter=lfs diff=lfs merge=lfs -text
 data/raw/transactions.csv filter=lfs diff=lfs merge=lfs -text
 sql/raw_transactions.sql filter=lfs diff=lfs merge=lfs -text
 data/processed/transaction_feature_abt.csv filter=lfs diff=lfs merge=lfs -text
+*.joblib filter=lfs diff=lfs merge=lfs -text

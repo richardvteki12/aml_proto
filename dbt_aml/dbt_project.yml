@@ -1,0 +1,43 @@
+name: aml_dbt
+version: "1.0.0"
+config-version: 2
+
+# This must match the profile name in %USERPROFILE%/.dbt/profiles.yml.
+profile: aml_dbt
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+macro-paths: ["macros"]
+seed-paths: ["seeds"]
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  aml_dbt:
+    staging:
+      +materialized: view
+      +schema: staging
+      +tags: ["aml", "staging"]
+    intermediate:
+      +materialized: view
+      +schema: intermediate
+      +tags: ["aml", "intermediate"]
+    marts:
+      +materialized: table
+      +schema: mart
+      +tags: ["aml", "mart", "abt"]
+    rules:
+      +materialized: table
+      +schema: rules
+      +tags: ["aml", "rules", "monitoring"]
+
+seeds:
+  aml_dbt:
+    +schema: reference
+
+# Prototype monitoring parameters only. They are not regulatory thresholds.
+vars:
+  structuring_single_transaction_max_idr: 100000000

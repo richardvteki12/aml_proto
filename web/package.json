@@ -1,0 +1,25 @@
+{
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "node ./node_modules/next/dist/bin/next dev",
+    "build": "node ./node_modules/next/dist/bin/next build",
+    "start": "node ./node_modules/next/dist/bin/next start",
+    "lint": "node ./node_modules/eslint/bin/eslint.js",
+    "refresh:dashboard": "E:\\Anaconda3\\envs\\super\\python.exe python\\build_dashboard_snapshot.py"
+  },
+  "dependencies": {
+    "next": "16.2.10",
+    "react": "19.2.4",
+    "react-dom": "19.2.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^19",
+    "@types/react-dom": "^19",
+    "eslint": "^9",
+    "eslint-config-next": "16.2.10",
+    "typescript": "^5"
+  }
+}

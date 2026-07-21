@@ -1,0 +1,51 @@
+{
+  "model_name": "Local Outlier Factor",
+  "selected_parameters": {
+    "n_neighbors": 50,
+    "algorithm": "ball_tree",
+    "leaf_size": 40,
+    "contamination": "auto"
+  },
+  "scope_scenarios": [
+    "AML-S01",
+    "AML-S02",
+    "AML-S03",
+    "AML-S04",
+    "AML-S05"
+  ],
+  "population": "successful transactions; AML-S06 to AML-S10 excluded",
+  "temporal_split": {
+    "train_end_exclusive": "2026-03-27 00:00:00",
+    "validation_end_exclusive": "2026-05-14 00:00:00"
+  },
+  "review_top_fraction": 0.01,
+  "lof_reference_sample_size": 15000,
+  "validation_reference_threshold_train_only": 1.2301333259984115,
+  "final_test_metrics": {
+    "rows": 48621,
+    "known_aml_positives": 85,
+    "positive_rate_pct": 0.17482157915304086,
+    "roc_auc": 0.9069677813436235,
+    "average_precision": 0.3125441211608396,
+    "random_precision_baseline": 0.0017482157915304087,
+    "top_fraction": 0.01,
+    "top_k_rows": 487,
+    "top_k_true_positives": 48,
+    "precision_at_top_k": 0.09856262833675565,
+    "recall_at_top_k": 0.5647058823529412,
+    "average_precision_lift_vs_random": 178.778914293661,
+    "rule_missed_known_aml": 24,
+    "rule_miss_recovered_in_top_k": 3,
+    "rule_miss_recovery_at_top_k": 0.125
+  },
+  "production_refit": {
+    "rows_used": 194599,
+    "estimator_fit_rows": 15000,
+    "fit_seconds": 54.44555110001238,
+    "threshold_policy": "rank each incoming batch and select review_top_fraction"
+  },
+  "artifact_files": {
+    "validation_locked_model": "models\\aml_anomaly_detection\\validation_locked_model.joblib",
+    "production_model": "models\\aml_anomaly_detection\\best_anomaly_model.joblib"
+  }
+}

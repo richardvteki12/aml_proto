@@ -1,0 +1,21 @@
+rule_id,rule_name,risk_level,is_enabled,is_applicable,implementation_note
+R01,Large Transaction,Medium,true,true,Configurable amount threshold
+R02,Cash Transaction,Medium,true,true,Configurable cash amount threshold
+R03,Structuring Smurfing,High,true,true,Uses prior small successful outbound transactions
+R04,Rapid Fund Movement,High,true,true,Uses prior successful inbound amount and timing
+R05,Dormant Account,High,true,true,Uses strict prior account activity timestamp
+R06,High Velocity,Medium,true,true,Uses prior one hour and twenty four hour activity
+R07,Round Amount,Low,true,true,Uses configurable minimum amount and round amount feature
+R08,Transaction Spike,High,true,true,Uses prior thirty day successful outbound baseline
+R09,High Risk Country,High,true,true,Uses maintainable synthetic prototype country reference
+R10,Sanction Match,Critical,true,true,Exact normalized name candidate requires investigation
+R11,PEP Customer,High,true,true,PEP combined with unusual amount behaviour
+R12,Many Beneficiaries,Medium,true,true,Uses prior twenty four hour distinct beneficiary count
+R13,Many Senders,Medium,true,true,Uses prior twenty four hour distinct inbound sender count
+R14,Circular Transaction,High,true,true,Detects direct prior reverse flow only
+R15,Frequent International Transfer,High,true,true,Uses prior seven day international outbound count
+R16,Unusual Transaction Time,Low,true,true,Uses configurable unusual hour range
+R17,High Risk Merchant,Medium,false,false,Disabled because merchant risk data is unavailable
+R18,Inconsistent Customer Profile,High,true,true,Uses transaction amount to monthly income ratio
+R19,Multiple Device IP,High,true,true,Uses prior other customer counts by device or IP
+R20,Failed Screening Retry,Medium,false,false,Disabled because screening failure reason is unavailable

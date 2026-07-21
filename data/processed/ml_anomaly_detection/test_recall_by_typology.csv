@@ -1,0 +1,6 @@
+scenario_id,scenario_name,known_aml_rows,top_k_hits,recall_at_top_k,mean_anomaly_score
+AML-S01,Structuring / Smurfing,20,8,0.4,1.1810201383836871
+AML-S02,Sudden Transaction Spike,9,1,0.1111111111111111,1.1884250957406262
+AML-S03,Rapid Movement of Funds,20,20,1.0,1.7320002637718193
+AML-S04,Dormant Account Reactivation,20,18,0.9,1.3514421800265626
+AML-S05,Multiple Senders to One Receiver,16,1,0.0625,1.1058229577062018
