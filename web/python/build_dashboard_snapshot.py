@@ -72,11 +72,54 @@ def row_to_metrics(row: pd.Series) -> dict[str, float | int | str]:
     }
 
 
+def rule_ids_for_row(row: pd.Series) -> list[str]:
+    """Return every active rule that flags one ABT transaction."""
+
+    return [rule_id for rule_id, _, _, flag_column, _ in RULES if bool(row[flag_column])]
+
+
+def coverage_case_from_row(row: pd.Series) -> dict[str, object]:
+    """Create a PII-free, transaction-level row for the Rule coverage table."""
+
+    rule_ids = rule_ids_for_row(row)
+    return {
+        "transactionId": str(row["transaction_id"]),
+        "scenarioId": str(row["scenario_id"]),
+        "scenarioName": str(row["scenario_name"]),
+        "transactionTimestamp": str(row["transaction_timestamp"]),
+        "amountIdr": number(row["amount_idr_equivalent"], digits=2),
+        "ruleHitIds": rule_ids,
+        "status": "rule_hit" if rule_ids else "rule_miss",
+    }
+
+
+def hybrid_channel(row: pd.Series) -> str:
+    """Classify a holdout AML row without using its label for detection."""
+
+    if bool(row["any_rule_alert"]) and bool(row["is_top_k_alert"]):
+        return "both"
+    if bool(row["any_rule_alert"]):
+        return "rule_only"
+    if bool(row["is_top_k_alert"]):
+        return "ml_only"
+    return "missed"
+
+
 def main() -> None:
     abt_path = PROCESSED_DIR / "transaction_feature_abt.csv"
     flag_columns = [rule[3] for rule in RULES]
-    # Only Page 1 aggregation columns are loaded from the 250k-row ABT.
-    abt = pd.read_csv(abt_path, usecols=["transaction_id", "is_success", *flag_columns])
+    # The page needs only this compact, PII-free subset of the 250k-row ABT.
+    # It is enough for aggregate metrics and for explaining each injected case.
+    abt = pd.read_csv(
+        abt_path,
+        usecols=[
+            "transaction_id",
+            "transaction_timestamp",
+            "amount_idr_equivalent",
+            "is_success",
+            *flag_columns,
+        ],
+    )
     abt[flag_columns] = abt[flag_columns].fillna(False).astype(bool)
 
     ground_truth = pd.read_csv(GROUND_TRUTH_PATH)
@@ -114,16 +157,129 @@ def main() -> None:
     typology_recall = pd.read_csv(ML_DIR / "test_recall_by_typology.csv")
     test_scores = pd.read_csv(
         ML_DIR / "test_scored_transactions.csv",
-        usecols=["known_aml_label", "any_rule_alert", "is_top_k_alert"],
+        usecols=[
+            "transaction_id",
+            "transaction_timestamp",
+            "scenario_id",
+            "scenario_name",
+            "known_aml_label",
+            "any_rule_alert",
+            "anomaly_score",
+            "is_top_k_alert",
+            "anomaly_rank",
+        ],
     )
+    test_scores["any_rule_alert"] = test_scores["any_rule_alert"].fillna(0).astype(int).eq(1)
+    test_scores["is_top_k_alert"] = test_scores["is_top_k_alert"].fillna(0).astype(int).eq(1)
     metadata = json.loads(MODEL_METADATA_PATH.read_text(encoding="utf-8"))
     final_test = metadata["final_test_metrics"]
     selected = tuning.sort_values(["average_precision", "roc_auc"], ascending=False).iloc[0]
 
-    test_known = test_scores.loc[test_scores["known_aml_label"].eq(1)]
-    rule_missed = test_known.loc[test_known["any_rule_alert"].eq(0)]
-    recovered = rule_missed.loc[rule_missed["is_top_k_alert"].eq(1)]
-    combined = test_known.loc[test_known["any_rule_alert"].eq(1) | test_known["is_top_k_alert"].eq(1)]
+    # Population A: all 500 active injections.  This is the denominator for rule coverage.
+    active_detail = active_truth.merge(
+        abt,
+        on="transaction_id",
+        how="left",
+        validate="one_to_one",
+    )
+    if active_detail["transaction_timestamp"].isna().any():
+        missing = active_detail.loc[active_detail["transaction_timestamp"].isna(), "transaction_id"].head(5).tolist()
+        raise ValueError(f"Active ground truth transaction missing from ABT: {missing}")
+
+    active_detail["rule_hit_ids"] = active_detail.apply(rule_ids_for_row, axis=1)
+    active_detail["any_rule_alert"] = active_detail["rule_hit_ids"].map(bool)
+    active_detail = active_detail.sort_values(
+        ["scenario_id", "transaction_timestamp", "transaction_id"],
+        kind="stable",
+    )
+    rule_coverage_rows = [coverage_case_from_row(row) for _, row in active_detail.iterrows()]
+    rule_coverage_caught = int(active_detail["any_rule_alert"].sum())
+    rule_coverage_missed = int(len(active_detail) - rule_coverage_caught)
+
+    rule_coverage_by_scenario: list[dict[str, object]] = []
+    for scenario_id, group in active_detail.groupby("scenario_id", sort=True):
+        caught = int(group["any_rule_alert"].sum())
+        total = int(len(group))
+        rule_coverage_by_scenario.append(
+            {
+                "scenarioId": str(scenario_id),
+                "scenarioName": str(group["scenario_name"].iloc[0]),
+                "population": total,
+                "ruleCaught": caught,
+                "ruleMissed": total - caught,
+                "recallPct": pct(caught, total),
+            }
+        )
+
+    # Population B: only the final, unseen ML holdout (85 known AML rows).
+    # Its metrics must never be mixed with the 500-row rule-coverage population above.
+    test_known = test_scores.loc[test_scores["known_aml_label"].eq(1)].copy()
+    if not set(test_known["scenario_id"].dropna()).issubset(ACTIVE_SCENARIOS):
+        raise ValueError("Final holdout contains a scenario outside the active AML scope.")
+    test_known["detection_channel"] = test_known.apply(hybrid_channel, axis=1)
+    holdout_detail = test_known.merge(
+        abt[["transaction_id", "amount_idr_equivalent"]],
+        on="transaction_id",
+        how="left",
+        validate="one_to_one",
+    )
+    if holdout_detail["amount_idr_equivalent"].isna().any():
+        missing = holdout_detail.loc[
+            holdout_detail["amount_idr_equivalent"].isna(), "transaction_id"
+        ].head(5).tolist()
+        raise ValueError(f"Final-holdout transaction missing from ABT: {missing}")
+    holdout_detail = holdout_detail.sort_values(["anomaly_rank", "transaction_id"], kind="stable")
+
+    holdout_rows = [
+        {
+            "transactionId": str(row["transaction_id"]),
+            "scenarioId": str(row["scenario_id"]),
+            "scenarioName": str(row["scenario_name"]),
+            "transactionTimestamp": str(row["transaction_timestamp"]),
+            "amountIdr": number(row["amount_idr_equivalent"], digits=2),
+            "anomalyScore": number(row["anomaly_score"]),
+            "anomalyRank": int(row["anomaly_rank"]),
+            "channel": str(row["detection_channel"]),
+        }
+        for _, row in holdout_detail.iterrows()
+    ]
+    channel_counts = holdout_detail["detection_channel"].value_counts().to_dict()
+    both_captured = int(channel_counts.get("both", 0))
+    rule_only_captured = int(channel_counts.get("rule_only", 0))
+    ml_only_captured = int(channel_counts.get("ml_only", 0))
+    missed_by_both = int(channel_counts.get("missed", 0))
+    combined_captured = both_captured + rule_only_captured + ml_only_captured
+
+    holdout_by_scenario: list[dict[str, object]] = []
+    for scenario_id, group in holdout_detail.groupby("scenario_id", sort=True):
+        channel_counts_by_scenario = group["detection_channel"].value_counts().to_dict()
+        total = int(len(group))
+        both = int(channel_counts_by_scenario.get("both", 0))
+        rule_only = int(channel_counts_by_scenario.get("rule_only", 0))
+        ml_only = int(channel_counts_by_scenario.get("ml_only", 0))
+        missed = int(channel_counts_by_scenario.get("missed", 0))
+        holdout_by_scenario.append(
+            {
+                "scenarioId": str(scenario_id),
+                "scenarioName": str(group["scenario_name"].iloc[0]),
+                "population": total,
+                "both": both,
+                "ruleOnly": rule_only,
+                "mlOnly": ml_only,
+                "missed": missed,
+                "combined": both + rule_only + ml_only,
+                "combinedRecallPct": pct(both + rule_only + ml_only, total),
+            }
+        )
+
+    if len(rule_coverage_rows) != len(active_truth):
+        raise ValueError("Rule coverage output is incomplete.")
+    if len(holdout_rows) != len(test_known) or combined_captured + missed_by_both != len(test_known):
+        raise ValueError("Final holdout coverage output is inconsistent.")
+
+    rule_missed = test_known.loc[~test_known["any_rule_alert"]]
+    recovered = rule_missed.loc[rule_missed["is_top_k_alert"]]
+    combined = test_known.loc[test_known["any_rule_alert"] | test_known["is_top_k_alert"]]
 
     scenario_rows = []
     for scenario_id, group in ground_truth.groupby("scenario_id", sort=True):
@@ -156,6 +312,25 @@ def main() -> None:
             "activeScopeTransactions": int(len(active_truth)),
             "activeScenarios": ACTIVE_SCENARIOS,
             "scenarios": scenario_rows,
+            "ruleCoverage": {
+                "population": int(len(active_detail)),
+                "ruleCaught": rule_coverage_caught,
+                "ruleMissed": rule_coverage_missed,
+                "recallPct": pct(rule_coverage_caught, len(active_detail)),
+                "byScenario": rule_coverage_by_scenario,
+                "rows": rule_coverage_rows,
+            },
+            "holdoutHybrid": {
+                "population": int(len(holdout_detail)),
+                "both": both_captured,
+                "ruleOnly": rule_only_captured,
+                "mlOnly": ml_only_captured,
+                "missed": missed_by_both,
+                "combined": combined_captured,
+                "combinedRecallPct": pct(combined_captured, len(holdout_detail)),
+                "byScenario": holdout_by_scenario,
+                "rows": holdout_rows,
+            },
         },
         "rules": {
             "population": int(len(abt)),
@@ -209,8 +384,8 @@ def main() -> None:
             "mlTopOnePctCaptured": int(test_known["is_top_k_alert"].sum()),
             "ruleMissed": int(len(rule_missed)),
             "ruleMissRecoveredByMl": int(len(recovered)),
-            "combinedCaptured": int(len(combined)),
-            "combinedRecallPct": pct(len(combined), len(test_known)),
+            "combinedCaptured": combined_captured,
+            "combinedRecallPct": pct(combined_captured, len(test_known)),
         },
     }
 

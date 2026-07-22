@@ -1,4 +1,5 @@
 import { AppHeader } from "@/components/AppHeader";
+import { GroundTruthCoverage } from "@/components/GroundTruthCoverage";
 import { loadDashboardData } from "@/lib/dashboard";
 
 const integer = new Intl.NumberFormat("id-ID");
@@ -148,6 +149,11 @@ export default function EvaluationPage() {
             </div>
           </div>
         </section>
+
+        <GroundTruthCoverage
+          ruleCoverage={data.groundTruth.ruleCoverage}
+          holdoutHybrid={data.groundTruth.holdoutHybrid}
+        />
 
         <section className="section" aria-labelledby="ml-title">
           <h2 id="ml-title" className="section-heading">ML anomaly evaluation</h2>

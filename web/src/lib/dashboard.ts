@@ -1,6 +1,42 @@
 import fs from "node:fs";
 import path from "node:path";
 
+export type GroundTruthRuleCase = {
+  transactionId: string;
+  scenarioId: string;
+  scenarioName: string;
+  transactionTimestamp: string;
+  amountIdr: number;
+  ruleHitIds: string[];
+  status: "rule_hit" | "rule_miss";
+};
+
+export type GroundTruthHoldoutCase = {
+  transactionId: string;
+  scenarioId: string;
+  scenarioName: string;
+  transactionTimestamp: string;
+  amountIdr: number;
+  anomalyScore: number;
+  anomalyRank: number;
+  channel: "both" | "rule_only" | "ml_only" | "missed";
+};
+
+type CoverageByScenario = {
+  scenarioId: string;
+  scenarioName: string;
+  population: number;
+  ruleCaught?: number;
+  ruleMissed?: number;
+  recallPct?: number;
+  both?: number;
+  ruleOnly?: number;
+  mlOnly?: number;
+  missed?: number;
+  combined?: number;
+  combinedRecallPct?: number;
+};
+
 export type DashboardData = {
   generatedAt: string;
   sourceNote: string;
@@ -26,6 +62,25 @@ export type DashboardData = {
       scenarioGroups: number;
       inActiveScope: boolean;
     }>;
+    ruleCoverage: {
+      population: number;
+      ruleCaught: number;
+      ruleMissed: number;
+      recallPct: number;
+      byScenario: CoverageByScenario[];
+      rows: GroundTruthRuleCase[];
+    };
+    holdoutHybrid: {
+      population: number;
+      both: number;
+      ruleOnly: number;
+      mlOnly: number;
+      missed: number;
+      combined: number;
+      combinedRecallPct: number;
+      byScenario: CoverageByScenario[];
+      rows: GroundTruthHoldoutCase[];
+    };
   };
   rules: {
     population: number;
