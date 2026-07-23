@@ -21,8 +21,8 @@ const currency = new Intl.NumberFormat("id-ID", {
 });
 
 const ruleStatusLabel = {
-  rule_hit: "Rule hit",
-  rule_miss: "Rule miss",
+  rule_hit: "Terdeteksi oleh rule",
+  rule_miss: "Belum terdeteksi oleh rule",
 } as const;
 
 const hybridChannelLabel = {
@@ -103,119 +103,61 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
 
   return (
     <section className="section" aria-labelledby="coverage-title" data-testid="ground-truth-coverage">
-      <h2 id="coverage-title" className="section-heading">Ground truth coverage</h2>
+      <h2 id="coverage-title" className="section-heading">2. Cakupan rule terhadap ground truth AML sintetik</h2>
       <p className="section-intro">
-        Ground truth adalah label yang sengaja disuntikkan ke data sintetik untuk mengukur
-        cakupan deteksi. Label ini tidak menjadi input saat model anomaly detection dilatih.
+        Denominator bagian ini hanya 500 transaksi AML sintetik dari AML-S01 sampai AML-S05.
+        Satu transaksi tetap dihitung satu kali, walaupun memicu lebih dari satu rule.
       </p>
 
       <div className="metric-grid">
         <article className="metric-card">
           <span className="metric-value">{integer.format(ruleCoverage.population)}</span>
-          <span className="metric-label">Injeksi AML aktif</span>
-          <span className="metric-caption">AML-S01 sampai AML-S05 untuk cakupan rule</span>
+          <span className="metric-label">Kasus AML sintetik dalam evaluasi rule</span>
+          <span className="metric-caption">AML-S01 sampai AML-S05; masing-masing 100 transaksi.</span>
         </article>
         <article className="metric-card">
           <span className="metric-value">{integer.format(ruleCoverage.ruleCaught)}</span>
-          <span className="metric-label">Tertangkap minimal satu rule</span>
-          <span className="metric-caption">Transaction-level, bukan sekadar jumlah hit rule</span>
+          <span className="metric-label">Kasus ground truth terdeteksi oleh minimal satu rule</span>
+          <span className="metric-caption">{integer.format(ruleCoverage.ruleCaught)} transaksi unik dari {integer.format(ruleCoverage.population)}; ini adalah hit rule.</span>
         </article>
         <article className="metric-card">
           <span className="metric-value">{integer.format(ruleCoverage.ruleMissed)}</span>
-          <span className="metric-label">Belum tertangkap rule</span>
-          <span className="metric-caption">Kasus untuk dianalisis lebih lanjut oleh ML atau investigator</span>
+          <span className="metric-label">Kasus ground truth belum terdeteksi oleh rule</span>
+          <span className="metric-caption">Ini adalah miss rule; dapat menjadi kandidat review ML atau investigasi.</span>
         </article>
         <article className="metric-card">
           <span className="metric-value">{percent(ruleCoverage.recallPct)}</span>
-          <span className="metric-label">Recall rule pada 500 injeksi</span>
-          <span className="metric-caption">Denominator berbeda dari final ML holdout</span>
+          <span className="metric-label">Recall rule</span>
+          <span className="metric-caption">{integer.format(ruleCoverage.ruleCaught)} ÷ {integer.format(ruleCoverage.population)}; bukan persentase dari seluruh ABT.</span>
         </article>
-      </div>
-
-      <div className="coverage-layout">
-        <article className="panel">
-          <div className="panel-header">
-            <h3 className="panel-title">Cakupan rule per tipologi</h3>
-            <p className="panel-subtitle">Seluruh 500 injeksi pada scope aktif.</p>
-          </div>
-          <div className="table-wrap">
-            <table className="data-table compact-table">
-              <thead>
-                <tr>
-                  <th>Tipologi</th>
-                  <th className="numeric">Ground truth</th>
-                  <th className="numeric">Rule hit</th>
-                  <th className="numeric">Rule miss</th>
-                  <th className="numeric">Recall</th>
-                </tr>
-              </thead>
-              <tbody>
-                {ruleCoverage.byScenario.map((item) => (
-                  <tr key={item.scenarioId}>
-                    <td><span className="mono">{item.scenarioId}</span> {item.scenarioName}</td>
-                    <td className="numeric">{integer.format(item.population)}</td>
-                    <td className="numeric">{integer.format(item.ruleCaught ?? 0)}</td>
-                    <td className="numeric">{integer.format(item.ruleMissed ?? 0)}</td>
-                    <td className="numeric">{percent(item.recallPct ?? 0)}</td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
-          </div>
-        </article>
-
-        <aside className="notice coverage-notice">
-          <strong>Dua denominator, dua pertanyaan.</strong><br />
-          <span className="mono">500</span> mengukur seberapa luas red flag menangkap semua injeksi
-          AML aktif. <span className="mono">{integer.format(holdoutHybrid.population)}</span> mengukur
-          hasil gabungan Rule + ML hanya pada final holdout yang belum dilihat model. Angka ini
-          sengaja tidak digabung agar evaluasi ML tetap adil.
-        </aside>
       </div>
 
       <article className="panel" style={{ marginTop: 24 }}>
         <div className="panel-header">
-          <h3 className="panel-title">Matriks Rule + ML pada final holdout</h3>
-          <p className="panel-subtitle">
-            {integer.format(holdoutHybrid.population)} transaksi known AML pada set test akhir.
-            Kebijakan ML adalah review skor top 1% per batch.
-          </p>
+          <h3 className="panel-title">Cakupan ground truth per tipologi</h3>
+          <p className="panel-subtitle">Setiap baris berisi 100 transaksi AML ground truth dari satu tipologi.</p>
         </div>
         <div className="table-wrap">
-          <table className="data-table compact-table">
+          <table className="data-table compact-table ground-truth-coverage-table">
             <thead>
               <tr>
-                <th>Channel deteksi</th>
-                <th className="numeric">Kasus</th>
-                <th className="numeric">Proporsi holdout</th>
-                <th>Makna</th>
+                <th>Tipologi ground truth</th>
+                <th className="numeric">Kasus AML</th>
+                <th className="numeric">Terdeteksi oleh rule</th>
+                <th className="numeric">Belum terdeteksi</th>
+                <th className="numeric">Recall</th>
               </tr>
             </thead>
             <tbody>
-              <tr>
-                <td><span className="case-badge both">Rule + ML</span></td>
-                <td className="numeric">{integer.format(holdoutHybrid.both)}</td>
-                <td className="numeric">{percent((holdoutHybrid.both / holdoutHybrid.population) * 100)}</td>
-                <td>Keduanya memberi sinyal untuk transaksi yang sama.</td>
-              </tr>
-              <tr>
-                <td><span className="case-badge rule-only">Rule saja</span></td>
-                <td className="numeric">{integer.format(holdoutHybrid.ruleOnly)}</td>
-                <td className="numeric">{percent((holdoutHybrid.ruleOnly / holdoutHybrid.population) * 100)}</td>
-                <td>Pola eksplisit tertangkap rule, tetapi tidak masuk antrean top 1% ML.</td>
-              </tr>
-              <tr>
-                <td><span className="case-badge ml-only">ML saja</span></td>
-                <td className="numeric">{integer.format(holdoutHybrid.mlOnly)}</td>
-                <td className="numeric">{percent((holdoutHybrid.mlOnly / holdoutHybrid.population) * 100)}</td>
-                <td>Nilai tambah ML: kasus lolos rule tetapi naik ke ranking anomali teratas.</td>
-              </tr>
-              <tr>
-                <td><span className="case-badge missed">Belum tertangkap</span></td>
-                <td className="numeric">{integer.format(holdoutHybrid.missed)}</td>
-                <td className="numeric">{percent((holdoutHybrid.missed / holdoutHybrid.population) * 100)}</td>
-                <td>Belum diprioritaskan oleh dua lapisan pada kebijakan threshold saat ini.</td>
-              </tr>
+              {ruleCoverage.byScenario.map((item) => (
+                <tr key={item.scenarioId}>
+                  <td><span className="mono">{item.scenarioId}</span> {item.scenarioName}</td>
+                  <td className="numeric">{integer.format(item.population)}</td>
+                  <td className="numeric">{integer.format(item.ruleCaught ?? 0)}</td>
+                  <td className="numeric">{integer.format(item.ruleMissed ?? 0)}</td>
+                  <td className="numeric">{percent(item.recallPct ?? 0)}</td>
+                </tr>
+              ))}
             </tbody>
           </table>
         </div>
@@ -223,7 +165,7 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
 
       <article className="panel" style={{ marginTop: 24 }}>
         <div className="panel-header">
-          <h3 className="panel-title">Daftar kasus ground truth</h3>
+            <h3 className="panel-title">Daftar kasus ground truth</h3>
           <p className="panel-subtitle">
             Filter dan buka kasus secara transaction-level. Data yang ditampilkan sengaja tidak
             menyertakan nama, alamat, atau identifier nasabah.
@@ -238,7 +180,7 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
               aria-pressed={isRulePerspective}
               data-testid="coverage-view-rules"
             >
-              Rule coverage ({integer.format(ruleCoverage.population)})
+              Cakupan rule ({integer.format(ruleCoverage.population)} AML ground truth)
             </button>
             <button
               className={`coverage-tab ${!isRulePerspective ? "active" : ""}`}
@@ -247,7 +189,7 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
               aria-pressed={!isRulePerspective}
               data-testid="coverage-view-hybrid"
             >
-              Final holdout Rule + ML ({integer.format(holdoutHybrid.population)})
+              Final holdout Rule + ML ({integer.format(holdoutHybrid.population)} AML)
             </button>
           </div>
 
@@ -266,7 +208,7 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
               </select>
             </label>
             <label className="field">
-              <span>{isRulePerspective ? "Status rule" : "Channel deteksi"}</span>
+              <span>{isRulePerspective ? "Status deteksi rule" : "Channel deteksi"}</span>
               <select
                 value={statusFilter}
                 onChange={(event) => resetPageForFilter(() => setStatusFilter(event.target.value))}
@@ -275,8 +217,8 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
                 <option value="all">Semua status</option>
                 {isRulePerspective ? (
                   <>
-                    <option value="rule_hit">Rule hit</option>
-                    <option value="rule_miss">Rule miss</option>
+                    <option value="rule_hit">Terdeteksi oleh rule</option>
+                    <option value="rule_miss">Belum terdeteksi oleh rule</option>
                   </>
                 ) : (
                   <>
@@ -309,8 +251,8 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
                     <th>Tipologi</th>
                     <th>Waktu transaksi</th>
                     <th className="numeric">Nominal</th>
-                    <th>Rule yang match</th>
-                    <th>Status</th>
+                        <th>Rule yang mendeteksi</th>
+                        <th>Status deteksi rule</th>
                   </tr>
                 ) : (
                   <tr>
@@ -386,6 +328,54 @@ export function GroundTruthCoverage({ ruleCoverage, holdoutHybrid }: Props) {
               </button>
             </div>
           </div>
+        </div>
+      </article>
+
+      <article className="panel" style={{ marginTop: 24 }}>
+        <div className="panel-header">
+          <h3 className="panel-title">3. Evaluasi gabungan Rule + ML pada final holdout</h3>
+          <p className="panel-subtitle">
+            {integer.format(holdoutHybrid.population)} transaksi known AML pada set test akhir.
+            Kebijakan ML adalah review skor top 1% per batch.
+          </p>
+        </div>
+        <div className="table-wrap">
+          <table className="data-table compact-table">
+            <thead>
+              <tr>
+                <th>Channel deteksi</th>
+                <th className="numeric">Kasus</th>
+                <th className="numeric">Proporsi holdout</th>
+                <th>Makna</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span className="case-badge both">Rule + ML</span></td>
+                <td className="numeric">{integer.format(holdoutHybrid.both)}</td>
+                <td className="numeric">{percent((holdoutHybrid.both / holdoutHybrid.population) * 100)}</td>
+                <td>Keduanya memberi sinyal untuk transaksi yang sama.</td>
+              </tr>
+              <tr>
+                <td><span className="case-badge rule-only">Rule saja</span></td>
+                <td className="numeric">{integer.format(holdoutHybrid.ruleOnly)}</td>
+                <td className="numeric">{percent((holdoutHybrid.ruleOnly / holdoutHybrid.population) * 100)}</td>
+                <td>Pola eksplisit terdeteksi oleh rule, tetapi tidak masuk antrean top 1% ML.</td>
+              </tr>
+              <tr>
+                <td><span className="case-badge ml-only">ML saja</span></td>
+                <td className="numeric">{integer.format(holdoutHybrid.mlOnly)}</td>
+                <td className="numeric">{percent((holdoutHybrid.mlOnly / holdoutHybrid.population) * 100)}</td>
+                <td>Nilai tambah ML: kasus belum terdeteksi oleh rule tetapi naik ke ranking anomali teratas.</td>
+              </tr>
+              <tr>
+                <td><span className="case-badge missed">Belum tertangkap</span></td>
+                <td className="numeric">{integer.format(holdoutHybrid.missed)}</td>
+                <td className="numeric">{percent((holdoutHybrid.missed / holdoutHybrid.population) * 100)}</td>
+                <td>Belum diprioritaskan oleh dua lapisan pada kebijakan threshold saat ini.</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </article>
     </section>

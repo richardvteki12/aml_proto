@@ -53,8 +53,10 @@ export default function EvaluationPage() {
             </article>
             <article className="metric-card">
               <span className="metric-value">{integer.format(data.groundTruth.activeScopeTransactions)}</span>
-              <span className="metric-label">Ground truth dalam scope aktif</span>
-              <span className="metric-caption">dari {integer.format(data.groundTruth.allInjectedTransactions)} injeksi AML</span>
+              <span className="metric-label">Ground truth untuk lima rule aktif</span>
+              <span className="metric-caption">
+                {integer.format(data.groundTruth.activeScopeTransactions)} dari {integer.format(data.groundTruth.allInjectedTransactions)} injeksi AML
+              </span>
             </article>
           </div>
         </section>
@@ -64,8 +66,8 @@ export default function EvaluationPage() {
             <div className="panel-header">
               <h2 id="ground-truth-title" className="panel-title">Ground truth sintetik</h2>
               <p className="panel-subtitle">
-                Sepuluh skenario disuntikkan generator. Lima skenario pertama adalah scope rule
-                dan label ML pada versi ini.
+                Sepuluh skenario disuntikkan generator. Lima skenario pertama dipakai untuk
+                evaluasi rule dan label ML pada versi ini.
               </p>
             </div>
             <div className="table-wrap">
@@ -75,7 +77,7 @@ export default function EvaluationPage() {
                     <th>Scenario</th>
                     <th>Tipologi</th>
                     <th className="numeric">Transaksi</th>
-                    <th>Scope sekarang</th>
+                    <th>Dipakai pada evaluasi</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -107,45 +109,65 @@ export default function EvaluationPage() {
 
         <section className="section" aria-labelledby="rule-title">
           <h2 id="rule-title" className="section-heading">Rule-based evaluation</h2>
-          <div className="metric-grid">
+          <div className="rule-stage-header rule-stage-header-first">
+            <p className="eyebrow">1. CANDIDATE RULE HIT</p>
+            <h3 className="subsection-title">Candidate Rule Hit pada seluruh ABT</h3>
+            <p className="section-intro">
+              Candidate Rule Hit berarti transaksi memenuhi kondisi suatu rule dan masuk antrean
+              review. Bukan konfirmasi bahwa transaksi tersebut AML.
+            </p>
+          </div>
+          <div className="metric-grid metric-grid-two">
+            <article className="metric-card">
+              <span className="metric-value">{integer.format(data.rules.population)}</span>
+              <span className="metric-label">Transaksi ABT dianalisis</span>
+              <span className="metric-caption">Semua transaksi yang menjadi input lima rule aktif.</span>
+            </article>
             <article className="metric-card">
               <span className="metric-value">{integer.format(data.rules.anyRuleCandidateHits)}</span>
-              <span className="metric-label">Candidate red flags</span>
-              <span className="metric-caption">{percent(data.rules.candidateRatePct)} dari seluruh ABT</span>
-            </article>
-            <article className="metric-card">
-              <span className="metric-value">{percent(data.rules.activeScopeRecallPct)}</span>
-              <span className="metric-label">Recall rule pada scope aktif</span>
-              <span className="metric-caption">{integer.format(data.rules.activeScopeHits)} / {integer.format(data.groundTruth.activeScopeTransactions)}</span>
-            </article>
-            <article className="metric-card">
-              <span className="metric-value">{integer.format(data.rules.allGroundTruthHits)}</span>
-              <span className="metric-label">Ground truth tersentuh rule</span>
-              <span className="metric-caption">Mencakup 10 skenario generator</span>
-            </article>
-            <article className="metric-card">
-              <span className="metric-value">5</span>
-              <span className="metric-label">Rule aktif</span>
-              <span className="metric-caption">Red flag yang transparan dan dapat dijelaskan</span>
+              <span className="metric-label">Transaksi dengan minimal satu Candidate Rule Hit</span>
+              <span className="metric-caption">
+                {percent(data.rules.candidateRatePct)} dari seluruh ABT; masuk antrean review,
+                bukan konfirmasi AML.
+              </span>
             </article>
           </div>
           <div className="panel" style={{ marginTop: 24 }}>
             <div className="panel-header">
-              <h3 className="panel-title">Hit dan recall per rule</h3>
-              <p className="panel-subtitle">Jumlah hit seluruh ABT dibandingkan dengan recall pada tipologi ground truth yang sesuai.</p>
+              <h3 className="panel-title">Candidate Rule Hit per Rule</h3>
+              <p className="panel-subtitle">
+                Setiap angka di bawah adalah jumlah Candidate Rule Hit pada transaksi ABT.
+              </p>
             </div>
-            <div className="panel-body bar-list">
-              {data.rules.items.map((rule) => (
-                <div className="bar-row" key={rule.id}>
-                  <div className="bar-label">
-                    <span className="mono">{rule.id}</span> {rule.name} <span className={`badge ${severityClass(rule.severity)}`}>{rule.severity}</span>
-                  </div>
-                  <div className="bar-track" aria-label={`${rule.name} recall ${rule.recallPct}%`}>
-                    <div className="bar-fill" style={{ width: `${Math.max(rule.recallPct, 1)}%` }} />
-                  </div>
-                  <div className="bar-value">{integer.format(rule.candidateHits)} hit · {percent(rule.recallPct)}</div>
-                </div>
-              ))}
+            <div className="table-wrap">
+              <table className="data-table candidate-alert-table">
+                <thead>
+                  <tr>
+                    <th>Rule</th>
+                    <th className="numeric">Candidate Rule Hit</th>
+                    <th className="numeric">Proporsi dari seluruh ABT</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {data.rules.items.map((rule) => (
+                    <tr key={rule.id}>
+                      <td>
+                        <span className="mono">{rule.id}</span> {rule.name}{" "}
+                        <span className={`badge ${severityClass(rule.severity)}`}>{rule.severity}</span>
+                      </td>
+                      <td className="numeric">
+                        <strong>{integer.format(rule.candidateHits)}</strong>
+                      </td>
+                      <td className="numeric">
+                        <strong>{percent(rule.candidateRatePct)}</strong>
+                        <span className="table-subtext">
+                          dari {integer.format(data.rules.population)} transaksi ABT
+                        </span>
+                      </td>
+                    </tr>
+                  ))}
+                </tbody>
+              </table>
             </div>
           </div>
         </section>

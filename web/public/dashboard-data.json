@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-22T01:18:31.974244+00:00",
+  "generatedAt": "2026-07-23T03:57:25.439317+00:00",
   "sourceNote": "Dihitung dari artefak CSV dan model metadata yang sudah ada; tidak ada training saat page dibuka.",
   "overview": {
     "customers": 10000,
@@ -6332,8 +6332,6 @@
     "candidateRatePct": 2.0556,
     "activeScopeHits": 373,
     "activeScopeRecallPct": 74.6,
-    "allGroundTruthHits": 433,
-    "allGroundTruthRecallPct": 43.3,
     "items": [
       {
         "id": "RB01",
@@ -6344,8 +6342,7 @@
         "candidateRatePct": 0.0108,
         "groundTruthTransactions": 100,
         "ownTypologyTruePositiveHits": 27,
-        "recallPct": 27.0,
-        "allGroundTruthHits": 27
+        "recallPct": 27.0
       },
       {
         "id": "RB02",
@@ -6356,8 +6353,7 @@
         "candidateRatePct": 1.9152,
         "groundTruthTransactions": 100,
         "ownTypologyTruePositiveHits": 100,
-        "recallPct": 100.0,
-        "allGroundTruthHits": 183
+        "recallPct": 100.0
       },
       {
         "id": "RB03",
@@ -6368,8 +6364,7 @@
         "candidateRatePct": 0.0424,
         "groundTruthTransactions": 100,
         "ownTypologyTruePositiveHits": 100,
-        "recallPct": 100.0,
-        "allGroundTruthHits": 100
+        "recallPct": 100.0
       },
       {
         "id": "RB04",
@@ -6380,8 +6375,7 @@
         "candidateRatePct": 0.0404,
         "groundTruthTransactions": 100,
         "ownTypologyTruePositiveHits": 100,
-        "recallPct": 100.0,
-        "allGroundTruthHits": 101
+        "recallPct": 100.0
       },
       {
         "id": "RB05",
@@ -6392,8 +6386,7 @@
         "candidateRatePct": 0.0524,
         "groundTruthTransactions": 100,
         "ownTypologyTruePositiveHits": 30,
-        "recallPct": 30.0,
-        "allGroundTruthHits": 30
+        "recallPct": 30.0
       }
     ]
   },

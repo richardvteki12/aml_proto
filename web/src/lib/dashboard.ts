@@ -88,8 +88,6 @@ export type DashboardData = {
     candidateRatePct: number;
     activeScopeHits: number;
     activeScopeRecallPct: number;
-    allGroundTruthHits: number;
-    allGroundTruthRecallPct: number;
     items: Array<{
       id: string;
       name: string;
@@ -100,7 +98,6 @@ export type DashboardData = {
       groundTruthTransactions: number;
       ownTypologyTruePositiveHits: number;
       recallPct: number;
-      allGroundTruthHits: number;
     }>;
   };
   ml: {

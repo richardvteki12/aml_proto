@@ -124,12 +124,10 @@ def main() -> None:
 
     ground_truth = pd.read_csv(GROUND_TRUTH_PATH)
     active_truth = ground_truth.loc[ground_truth["scenario_id"].isin(ACTIVE_SCENARIOS)].copy()
-    truth_lookup = ground_truth.set_index("transaction_id")
 
     rule_rows: list[dict[str, object]] = []
     for rule_id, rule_name, scenario_id, flag_column, severity in RULES:
         flagged = abt.loc[abt[flag_column], "transaction_id"]
-        matched_truth = truth_lookup.reindex(flagged).dropna(subset=["scenario_id"])
         own_truth = ground_truth.loc[ground_truth["scenario_id"].eq(scenario_id), "transaction_id"]
         own_hits = int(flagged.isin(own_truth).sum())
         rule_rows.append(
@@ -143,13 +141,11 @@ def main() -> None:
                 "groundTruthTransactions": int(len(own_truth)),
                 "ownTypologyTruePositiveHits": own_hits,
                 "recallPct": pct(own_hits, len(own_truth)),
-                "allGroundTruthHits": int(len(matched_truth)),
             }
         )
 
     any_rule = abt[flag_columns].any(axis=1)
     active_truth_ids = set(active_truth["transaction_id"])
-    all_truth_ids = set(ground_truth["transaction_id"])
     any_rule_ids = set(abt.loc[any_rule, "transaction_id"])
 
     baseline = pd.read_csv(ML_DIR / "baseline_model_comparison.csv")
@@ -338,8 +334,6 @@ def main() -> None:
             "candidateRatePct": pct(any_rule.sum(), len(abt)),
             "activeScopeHits": int(len(any_rule_ids.intersection(active_truth_ids))),
             "activeScopeRecallPct": pct(len(any_rule_ids.intersection(active_truth_ids)), len(active_truth_ids)),
-            "allGroundTruthHits": int(len(any_rule_ids.intersection(all_truth_ids))),
-            "allGroundTruthRecallPct": pct(len(any_rule_ids.intersection(all_truth_ids)), len(all_truth_ids)),
             "items": rule_rows,
         },
         "ml": {
